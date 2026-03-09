@@ -19,6 +19,9 @@
     <properties>
         <spring.maven.artifact.version>4.3.25.RELEASE</spring.maven.artifact.version>
         <egovframework.rte.version>3.10.0</egovframework.rte.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <maven.compiler.encoding>UTF-8</maven.compiler.encoding>
     </properties>
 
     <repositories>
@@ -45,7 +48,7 @@
     </repositories>
 
     <dependencies>
-        <!-- log4j 보안?�치 버전 -->
+        <!-- log4j 보안?�치 버전 -->
         <dependency>
             <groupId>org.apache.logging.log4j</groupId>
             <artifactId>log4j-core</artifactId>
@@ -57,7 +60,7 @@
             <version>2.17.1</version>
         </dependency>
 
-        <!-- ?��??�레?�워???�행?�경 -->
+        <!-- ?��??�레?�워???�행?�경 -->
         <dependency>
             <groupId>egovframework.rte</groupId>
             <artifactId>egovframework.rte.ptl.mvc</artifactId>
