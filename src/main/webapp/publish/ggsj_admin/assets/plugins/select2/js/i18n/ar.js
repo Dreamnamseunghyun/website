@@ -1,3 +1,0 @@
-﻿/*! Select2 4.0.4 | https://github.com/select2/select2/blob/master/LICENSE.md */
-
-(function(){if(jQuery&&jQuery.fn&&jQuery.fn.select2&&jQuery.fn.select2.amd)var e=jQuery.fn.select2.amd;return e.define("select2/i18n/ar",[],function(){return{errorLoading:function(){return"?碼 ???? 魔幕??? 碼??魔碼痲寞"},inputTooLong:function(e){var t=e.input.length-e.maximum;return"碼?邈寞碼立 幕莫? "+t+" 晩?碼巒邈"},inputTooShort:function(e){var t=e.minimum-e.input.length;return"碼?邈寞碼立 瑪彎碼?馬 "+t+" 晩?碼巒邈"},loadingMore:function(){return"寞碼邈? 魔幕??? ?魔碼痲寞 瑪彎碼??馬..."},maximumSelected:function(e){return"魔卍魔慢?晩 瑪漠魔?碼邈 "+e.maximum+" 磨??膜 ??慢"},noResults:function(){return"?? ?魔? 碼?晩麻?邈 晩?? 粒? ?魔碼痲寞"},searching:function(){return"寞碼邈? 碼?磨幕麻??}}}),{define:e.define,require:e.require}})();

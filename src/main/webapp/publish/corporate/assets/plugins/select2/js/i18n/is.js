@@ -1,3 +1,0 @@
-﻿/*! Select2 4.0.4 | https://github.com/select2/select2/blob/master/LICENSE.md */
-
-(function(){if(jQuery&&jQuery.fn&&jQuery.fn.select2&&jQuery.fn.select2.amd)var e=jQuery.fn.select2.amd;return e.define("select2/i18n/is",[],function(){return{inputTooLong:function(e){var t=e.input.length-e.maximum,n="Vinsamlegast stytti챨 texta um "+t+" staf";return t<=1?n:n+"i"},inputTooShort:function(e){var t=e.minimum-e.input.length,n="Vinsamlegast skrifi챨 "+t+" staf";return t>1&&(n+="i"),n+=" 챠 vi챨b처t",n},loadingMore:function(){return"S챈ki fleiri ni챨urst철챨ur??},maximumSelected:function(e){return"횧첬 getur a챨eins vali챨 "+e.maximum+" atri챨i"},noResults:function(){return"Ekkert fannst"},searching:function(){return"Leita??}}}),{define:e.define,require:e.require}})();

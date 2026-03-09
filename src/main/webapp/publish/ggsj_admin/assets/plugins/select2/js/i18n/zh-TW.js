@@ -1,3 +1,0 @@
-﻿/*! Select2 4.0.4 | https://github.com/select2/select2/blob/master/LICENSE.md */
-
-(function(){if(jQuery&&jQuery.fn&&jQuery.fn.select2&&jQuery.fn.select2.amd)var e=jQuery.fn.select2.amd;return e.define("select2/i18n/zh-TW",[],function(){return{inputTooLong:function(e){var t=e.input.length-e.maximum,n="獄뗥닼??+t+"?뗥춻??;return n},inputTooShort:function(e){var t=e.minimum-e.input.length,n="獄뗥냽雍멨뀯"+t+"?뗥춻??;return n},loadingMore:function(){return"雍됧뀯訝??},maximumSelected:function(e){var t="鵝졾룵?썽겦?뉑?鸚?+e.maximum+"??;return t},noResults:function(){return"亦믤쐣?얍댆?며Е?꾦쟿??},searching:function(){return"?쒎컠訝??}}}),{define:e.define,require:e.require}})();
