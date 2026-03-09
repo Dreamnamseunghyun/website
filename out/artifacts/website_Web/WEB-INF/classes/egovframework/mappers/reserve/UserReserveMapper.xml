@@ -1,0 +1,589 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="kr.co.sitebuilder.reserve.service.mapper.UserReserveMapper">
+    <select id="selectCopayCompanyCheckupTypeList" resultType="CompanyCheckupTypeVO" parameterType="ReserveVO">
+        SELECT CCT.company_checkup_type_id
+             , CCT.company_checkup_type_code
+             , CCT.company_checkup_type_name
+             , CCT.hospital_pay
+          FROM company_checkup CC
+                       LEFT JOIN company_checkup_type CCT ON CC.company_checkup_id = CCT.company_checkup_id
+         WHERE CC.company_id = #{companyId}
+           AND CC.checkup_year = #{checkupYear}
+           AND CCT.type_copay = 1
+    </select>
+
+    <resultMap id="mapReserve" type="ReserveVO" autoMapping="true">
+        <id property="reservationId" column="reservation_id"/>
+        <result property="employeeNameCrypt" column="employee_name"/>
+        <result property="reservationNameCrypt" column="reservation_name"/>
+        <collection property="checkupItems" ofType="CheckupItemVO" autoMapping="true">
+            <id property="checkupContractItemId" column="checkup_contract_item_id"/>
+            <result property="copay" column="item_copay"/>
+        </collection>
+    </resultMap>
+
+    <select id="selectReserveList" resultMap="mapReserve" parameterType="ReserveVO">
+        SELECT E.user_id
+        , E.employee_code
+        , E.employee_name
+        , E.myself
+        , EC.support_type
+        , EC.special_checkup
+        , CC.reserve_date_begin
+        , CC.reserve_date_end
+        , CC.checkup_date_begin
+        , CC.checkup_date_end
+        , R.reservation_id
+        , R.reservation_state
+        , R.desired_at
+        , R.checkuped_at
+        , R.confirmed_at
+        , CCT.company_checkup_type_code
+        , CCT.company_checkup_type_name
+        , CCST.sub_type_name
+        , HCV.hospital_center_name
+        , HCV.preday
+        FROM employee E
+        JOIN employee_checkup EC ON E.user_id = EC.user_id
+        JOIN company_checkup CC ON EC.company_checkup_id = CC.company_checkup_id AND CC.checkup_year = #{checkupYear}
+        JOIN company_checkup_type CCT ON EC.company_checkup_type_id = CCT.company_checkup_type_id
+        LEFT JOIN reservation R ON EC.employee_checkup_id = R.employee_checkup_id AND (R.reservation_state != 0 OR R.confirmed_at IS NULL)
+        LEFT JOIN checkup_contract_sub_type CCST ON R.checkup_contract_sub_type_id = CCST.checkup_contract_sub_type_id
+        LEFT JOIN checkup_contract_type CCT2 ON CCST.checkup_contract_type_id = CCT2.checkup_contract_type_id
+        LEFT JOIN hospital_center_view HCV ON CCT2.center_id = HCV.center_id
+        WHERE E.company_id = #{companyId}
+        AND E.employee_code = #{employeeCode}
+        <if test="userId != null">
+            AND E.user_id = #{userId}
+        </if>
+        ORDER BY E.myself DESC, EC.support_type, E.employee_name
+    </select>
+
+    <select id="selectReserveDetail" resultMap="mapReserve" parameterType="ReserveVO">
+        SELECT E.user_id
+             , E.employee_code
+             , E.employee_name
+             , E.myself
+             , EC.support_type
+             , EC.special_checkup
+             , CC.reserve_date_begin
+             , CC.reserve_date_end
+             , CC.checkup_date_begin
+             , CC.checkup_date_end
+             , R.reservation_id
+             , R.checkup_contract_sub_type_id
+             , R.reservation_state
+             , R.reservation_name
+             , R.birth
+             , R.sex
+             , R.email
+             , R.mobile
+             , R.zipcode
+             , R.address1
+             , R.address2
+             , R.employee_notes
+             , R.desired_at
+             , R.checkuped_at
+             , R.confirmed_at
+             , IFNULL(R.upgrade_pay, 0)            AS upgrade_pay
+             , IFNULL(R.support_pay, 0)            AS support_pay
+             , IFNULL(R.copay, 0)                  AS copay
+             , IFNULL(R.hospital_pay, 0)           AS hospital_pay
+             , IFNULL(R.platform_pay, 0)           AS platform_pay
+             , IFNULL(R.sum_item_copay, 0)         AS sum_item_copay
+             , IFNULL(R.sum_item_discount_bill, 0) AS sum_item_discount_bill
+             , CCT.company_checkup_type_code
+             , CCT.company_checkup_type_name
+             , CCST.sub_type_name
+             , HCV.center_id
+             , HCV.hospital_center_name
+             , HCV.preday
+             , RI.checkup_contract_item_id
+             , RI.register
+             , IFNULL(RI.copay, 0)                 AS item_copay
+             , IF(RI.discount_bill, RI.discount_bill ,HC.bill)       AS discount_bill
+             , I.item_name
+          FROM employee E
+                       JOIN employee_checkup EC ON E.user_id = EC.user_id
+                       JOIN company_checkup CC
+                  ON EC.company_checkup_id = CC.company_checkup_id AND CC.checkup_year = #{checkupYear}
+                       JOIN company_checkup_type CCT ON EC.company_checkup_type_id = CCT.company_checkup_type_id
+                       JOIN reservation R ON EC.employee_checkup_id = R.employee_checkup_id AND
+                                             (R.reservation_state != 0 OR R.confirmed_at IS NULL)
+                       JOIN checkup_contract_sub_type CCST
+                  ON R.checkup_contract_sub_type_id = CCST.checkup_contract_sub_type_id
+                       JOIN checkup_contract_type CCT2 ON CCST.checkup_contract_type_id = CCT2.checkup_contract_type_id
+                       JOIN hospital_center_view HCV ON CCT2.center_id = HCV.center_id
+                       LEFT JOIN reservation_item RI ON R.reservation_id = RI.reservation_id
+                       LEFT JOIN checkup_contract_item CCI ON RI.checkup_contract_item_id = CCI.checkup_contract_item_id
+                       LEFT JOIN item I ON CCI.item_id = I.item_id
+                       LEFT JOIN hospital_checkup HC on I.item_id = HC.item_id
+        WHERE E.company_id = #{companyId}
+           AND E.employee_code = #{employeeCode}
+           AND E.user_id = #{userId}
+           AND R.reservation_id = #{reservationId}
+         ORDER BY IF(CCI.register = '2', 'Z', CCI.register)
+    </select>
+
+    <select id="selectCheckupTypePay" parameterType="ReserveVO" resultType="ReserveVO">
+        SELECT IFNULL(CCST.upgrade_pay, 0) AS upgrade_pay
+             , IFNULL(C.support_pay, 0)    AS support_pay
+             , IFNULL(C.copay, 0)          AS copay
+             , IFNULL(C.hospital_pay, 0)   AS hospital_pay
+             , IFNULL(C.platform_pay, 0)   AS platform_pay
+          FROM checkup_contract_sub_type CCST
+                       JOIN checkup_contract_type CCT ON CCST.checkup_contract_type_id = CCT.checkup_contract_type_id
+                       JOIN company_checkup_type C ON CCT.company_checkup_type_id = C.company_checkup_type_id
+         WHERE CCST.deleted_at IS NULL
+           AND C.deleted_at IS NULL
+           AND CCST.checkup_contract_sub_type_id = #{checkupContractSubTypeId}
+    </select>
+
+    <select id="selectCheckupItemPay" parameterType="ReserveVO" resultType="ReserveVO">
+        SELECT IFNULL(SUM(RI.copay), 0)         AS sum_item_copay
+             , IFNULL(SUM(RI.discount_bill), 0) AS sum_item_discount_bill
+          FROM reservation_item RI
+                       JOIN checkup_contract_item CCI ON RI.checkup_contract_item_id = CCI.checkup_contract_item_id
+         WHERE CCI.deleted_at IS NULL
+           AND RI.reservation_id = #{reservationId}
+    </select>
+
+    <select id="selectReserveState" resultType="ReserveVO" parameterType="ReserveVO">
+        SELECT reservation_id, reservation_state
+        FROM reservation
+        WHERE employee_checkup_id = sf_employee_checkup_id(#{userId}, #{checkupYear})
+          AND (reservation_state != 0 OR confirmed_at IS NULL)
+    </select>
+
+    <delete id="deleteReservationItem" parameterType="ReserveVO">
+        DELETE
+          FROM reservation_item
+         WHERE reservation_id = #{reservationId}
+    </delete>
+
+    <insert id="insertReservationItem" parameterType="ReserveVO">
+        INSERT
+          INTO reservation_item ( reservation_id
+                                , checkup_contract_item_id
+                                , register
+                                , copay
+                                , discount_bill
+                                , created_user_id)
+        SELECT #{reservationId}
+             , checkup_contract_item_id
+             , register
+<!--             , IFNULL(copay, 0) AS copay-->
+        , IF(register = '2', copay=null, IFNULL(copay, 0)) AS copay
+        , IF(register = '2', IF(IFNULL(discount_bill, 0) = 0, HC.bill, discount_bill), 0) AS discount_bill
+             , #{sessionUserId}
+          FROM checkup_contract_item
+            LEFT JOIN hospital_checkup HC ON checkup_contract_item.item_id = HC.item_id
+         WHERE checkup_contract_item_id IN
+        <foreach collection="selectedItemIds" item="itemId" separator="," open="(" close=")">
+            #{itemId}
+        </foreach>
+        GROUP BY checkup_contract_item_id
+    </insert>
+
+    <insert id="insertReserve" parameterType="ReserveVO">
+        INSERT INTO reservation
+                ( reservation_id
+                , employee_checkup_id
+                , checkup_contract_sub_type_id
+                , reservation_state
+                , reservation_name
+                , birth
+                , sex
+                , email
+                , mobile
+                , zipcode
+                , address1
+                , address2
+                , employee_notes
+                , hospital_notes
+                , platform_notes
+                , upgrade_pay
+                , support_pay
+                , copay
+                , hospital_pay
+                , platform_pay
+                , sum_item_copay
+                , sum_item_discount_bill
+                , registered_at
+                , desired_at
+                , created_user_id
+                , updated_user_id)
+        VALUES ( #{reservationId}
+               , sf_employee_checkup_id(#{userId}, #{checkupYear})
+               , #{checkupContractSubTypeId}
+               , #{reservationState}
+               , #{reservationNameCrypt}
+               , #{birth}
+               , #{sex}
+               , #{email}
+               , #{mobile}
+               , #{zipcode}
+               , #{address1}
+               , #{address2}
+               , #{employeeNotes}
+               , #{hospitalNotes}
+               , #{platformNotes}
+               , #{upgradePay}
+               , #{supportPay}
+               , #{copay}
+               , #{hospitalPay}
+               , #{platformPay}
+               , #{sumItemCopay}
+               , #{sumItemDiscountBill}
+               , NOW()
+               , #{desiredAt}
+               , #{sessionUserId}
+               , #{sessionUserId})
+        ON DUPLICATE KEY UPDATE  registered_at                = NOW()
+                               , created_at                   = NOW()
+                               , created_user_id              = VALUES(created_user_id)
+                               , updated_at                   = NOW()
+                               , updated_user_id              = VALUES(updated_user_id)
+        <if test="checkupContractSubTypeId != null">
+            , checkup_contract_sub_type_id = VALUES(checkup_contract_sub_type_id)
+        </if>
+        <if test="reservationState != null">
+            , reservation_state            = VALUES(reservation_state)
+        </if>
+        <if test="reservationName != null">
+            , reservation_name             = VALUES(reservation_name)
+        </if>
+        <if test="birth != null">
+            , birth                        = VALUES(birth)
+        </if>
+        <if test="sex != null">
+            , sex                          = VALUES(sex)
+        </if>
+        <if test="email != null">
+            , email                        = VALUES(email)
+        </if>
+        <if test="mobile != null">
+            , mobile                       = VALUES(mobile)
+        </if>
+        <if test="zipcode != null">
+            , zipcode                      = VALUES(zipcode)
+        </if>
+        <if test="address1 != null">
+            , address1                     = VALUES(address1)
+        </if>
+        <if test="address2 != null">
+            , address2                     = VALUES(address2)
+        </if>
+        <if test="employeeNotes != null">
+            , employee_notes               = VALUES(employee_notes)
+        </if>
+        <if test="hospitalNotes != null">
+            , hospital_notes               = VALUES(hospital_notes)
+        </if>
+        <if test="platformNotes != null">
+            , platform_notes               = VALUES(platform_notes)
+        </if>
+        <if test="upgradePay != null">
+            , upgrade_pay                  = VALUES(upgrade_pay)
+        </if>
+        <if test="supportPay != null">
+            , support_pay                  = VALUES(support_pay)
+        </if>
+        <if test="copay != null">
+            , copay                        = VALUES(copay)
+        </if>
+        <if test="hospitalPay != null">
+            , hospital_pay                 = VALUES(hospital_pay)
+        </if>
+        <if test="platformPay != null">
+            , platform_pay                 = VALUES(platform_pay)
+        </if>
+        <if test="sumItemCopay != null">
+            , sum_item_copay               = VALUES(sum_item_copay)
+        </if>
+        <if test="sumItemDiscountBill != null">
+            , sum_item_discount_bill       = VALUES(sum_item_discount_bill)
+        </if>
+        <if test="desiredAt != null">
+            , desired_at                   = VALUES(desired_at)
+        </if>
+        <selectKey keyProperty="reservationId" order="AFTER" resultType="Integer">
+            SELECT LAST_INSERT_ID()
+        </selectKey>
+    </insert>
+
+    <update id="updateReserveNotes" parameterType="ReserveVO">
+        UPDATE reservation
+           SET updated_at      = NOW()
+             , updated_user_id = #{sessionUserId}
+             , employee_notes  = #{employeeNotes}
+         WHERE reservation_id = #{reservationId}
+    </update>
+
+    <update id="updateReserve" parameterType="ReserveVO">
+        # UserReserveMapper.updateReserve
+                UPDATE reservation
+                   SET confirmed_at                = NULL
+                     , updated_at                   = NOW()
+                     , updated_user_id              = #{sessionUserId}
+        <if test="checkupContractSubTypeId != null">
+                     , checkup_contract_sub_type_id = #{checkupContractSubTypeId}
+        </if>
+        <if test="reservationState != null">
+                     , reservation_state            = #{reservationState}
+            <if test="reservationState == 0">
+                     , canceled_at = NOW()
+                     , canceled_user_id             = #{sessionUserId}
+            </if>
+        </if>
+        <if test="reservationName != null">
+                     , reservation_name             = #{reservationNameCrypt}
+        </if>
+        <if test="birth != null">
+                     , birth                        = #{birth}
+        </if>
+        <if test="sex != null">
+                     , sex                          = #{sex}
+        </if>
+        <if test="email != null">
+                     , email                        = #{email}
+        </if>
+        <if test="mobile != null">
+                     , mobile                       = #{mobile}
+        </if>
+        <if test="zipcode != null">
+                     , zipcode                      = #{zipcode}
+        </if>
+        <if test="address1 != null">
+                     , address1                     = #{address1}
+        </if>
+        <if test="address2 != null">
+                     , address2                     = #{address2}
+        </if>
+        <if test="employeeNotes != null">
+                     , employee_notes               = #{employeeNotes}
+        </if>
+        <if test="hospitalNotes != null">
+                     , hospital_notes               = #{hospitalNotes}
+        </if>
+        <if test="platformNotes != null">
+                     , platform_notes               = #{platformNotes}
+        </if>
+        <if test="upgradePay != null">
+                     , upgrade_pay                  = #{upgradePay}
+        </if>
+        <if test="supportPay != null">
+                     , support_pay                  = #{supportPay}
+        </if>
+        <if test="copay != null">
+                     , copay                        = #{copay}
+        </if>
+        <if test="hospitalPay != null">
+                     , hospital_pay                 = #{hospitalPay}
+        </if>
+        <if test="platformPay != null">
+                     , platform_pay                 = #{platformPay}
+        </if>
+        <if test="sumItemCopay != null">
+                     , sum_item_copay               = #{sumItemCopay}
+        </if>
+        <if test="sumItemDiscountBill != null">
+                     , sum_item_discount_bill       = #{sumItemDiscountBill}
+        </if>
+        <if test="desiredAt != null">
+                     , desired_at                   = #{desiredAt}
+        </if>
+                 WHERE reservation_id = #{reservationId}
+                   AND reservation_state != 0
+    </update>
+
+    <resultMap id="mapCenter" type="CenterVO" autoMapping="true">
+        <id property="centerId" column="center_id"/>
+        <collection property="hsubcontracts" ofType="HsubcontractVO" autoMapping="true"/>
+    </resultMap>
+
+    <select id="selectCenterList" parameterType="ReserveVO" resultMap="mapCenter">
+        # UserReserveMapper.selectCenterList
+                SELECT CCST.checkup_contract_sub_type_id
+                     , CCST.sub_type_name
+                     , HCV.hospital_center_name
+                     , HCV.center_id
+                     , HCV.address1
+                     , HCV.address2
+                     , HCV.advertisement
+                     , HCV.center_adv_filename1
+                  FROM employee_checkup EC
+                    JOIN company_checkup CC on EC.company_checkup_id = CC.company_checkup_id
+                                JOIN checkup_contract_type CCT
+                          ON EC.company_checkup_type_id = CCT.company_checkup_type_id
+                               JOIN hospital_center_view HCV
+                          ON CCT.center_id = HCV.center_id
+                               JOIN checkup_contract_sub_type CCST
+                          ON CCT.checkup_contract_type_id = CCST.checkup_contract_type_id
+        <if test="itemIdList != null">
+                               JOIN (
+                          SELECT CCI.checkup_contract_sub_type_id, COUNT(*)
+                            FROM checkup_contract_item CCI
+                                         JOIN item I ON CCI.item_id = I.item_id
+                           WHERE CCI.deleted_at IS NULL
+                             AND I.deleted_at IS NULL
+                             AND I.no_use = '0'
+                             AND CCI.register != '0'
+                             AND CCI.item_id IN
+            <foreach collection="itemIdList" item="itemId" separator="," open="(" close=")">
+                                 #{itemId}
+            </foreach>
+                           GROUP BY CCI.checkup_contract_sub_type_id
+                          HAVING COUNT(*) >= ${itemIdList.size}
+                          ) T ON T.checkup_contract_sub_type_id = CCST.checkup_contract_sub_type_id
+        </if>
+                 WHERE CCST.deleted_at IS NULL
+                   AND EC.deleted_at IS NULL
+                   AND EC.user_id = #{userId}
+        <if test="sido != null and sido != ''">
+                   AND HCV.sido = #{sido}
+        </if>
+        <if test="sigungu != null and sigungu != ''">
+                   AND HCV.sigungu = #{sigungu}
+        </if>
+        <if test="specialCheckup == 1">
+                   AND HCV.able_special = 1
+        </if>
+        <if test="centerName != null and centerName != ''">
+                   AND HCV.hospital_center_name LIKE CONCAT('%', #{centerName}, '%')
+        </if>
+        <if test="desiredAt != null and desiredAmpm != null and desiredAmpm != ''">
+                   AND HCV.center_id NOT IN (
+                       SELECT DISTINCT center_id
+                         FROM day_off
+                        WHERE day_off = DATE(#{desiredAt})
+                          AND am_pm = #{desiredAmpm}
+                       )
+                   AND DATE_ADD(DATE(NOW()), INTERVAL HCV.preday DAY) <![CDATA[<=]]> DATE(#{desiredAt})
+        </if>
+        AND CC.checkup_year = 2022
+        ORDER BY HCV.hospital_center_name
+    </select>
+
+    <select id="selectCheckupContractItemList" resultType="CheckupItemVO" parameterType="ReserveVO">
+        SELECT I.item_id
+             , I.item_name
+             , I.item_desc
+             , CCI.checkup_contract_item_id
+             , CCI.register
+             , CCI.copay
+             , CCI.discount_bill
+          FROM employee_checkup EC
+                       JOIN checkup_contract_type CCT ON EC.company_checkup_type_id = CCT.company_checkup_type_id
+                       JOIN checkup_contract_sub_type CCST
+                  ON CCT.checkup_contract_type_id = CCST.checkup_contract_type_id
+                       JOIN checkup_contract_item CCI
+                  ON CCST.checkup_contract_sub_type_id = CCI.checkup_contract_sub_type_id
+                       JOIN item I ON CCI.item_id = I.item_id
+         WHERE CCST.deleted_at IS NULL
+           AND CCI.deleted_at IS NULL
+           AND CCI.register != '0'
+           AND I.deleted_at IS NULL
+           AND I.no_use = '0'
+           AND EC.user_id = #{userId}
+           AND CCI.item_id IN
+        <foreach collection="itemIdList" item="itemId" separator="," open="(" close=")">
+            #{itemId}
+        </foreach>
+    </select>
+
+    <resultMap id="mapCheckupRegister" type="CheckupRegisterVO" autoMapping="true">
+        <id property="register" column="register"/>
+        <collection property="checkupItemClasses" ofType="CheckupItemClassVO" autoMapping="true">
+            <id property="itemClassId" column="item_class_id"/>
+            <collection property="checkupItemCategories" ofType="CheckupItemCategoryVO" autoMapping="true">
+                <id property="itemCategoryId" column="item_category_id"/>
+                <collection property="checkupItems" ofType="CheckupItemVO" autoMapping="true">
+                    <id property="itemId" column="item_id"/>
+                </collection>
+            </collection>
+        </collection>
+    </resultMap>
+    <select id="selectCheckupRegisterList" resultMap="mapCheckupRegister" parameterType="ReserveVO">
+        SELECT CCI.register
+             , CCST.select_a_count
+             , CCST.select_b_count
+             , CCST.select_c_count
+             , CCST.select_d_count
+             , CCST.select_e_count
+             , CCST.select_f_count
+             , CCST.select_a_memo
+             , CCST.select_b_memo
+             , CCST.select_c_memo
+             , CCST.select_d_memo
+             , CCST.select_e_memo
+             , CCST.select_f_memo
+             , IC.item_class_id
+             , IC.item_class_code
+             , IC.item_class_name
+             , IC2.item_category_id
+             , IC2.item_category_code
+             , IC2.item_category_name
+             , I.item_id
+             , I.item_code
+             , I.item_name
+             , I.item_desc
+             , CCI.checkup_contract_item_id
+             , CCI.checkup_contract_item_memo
+             , CCI.copay
+             , CCI.discount_bill
+             , HC.bill
+        FROM item_class IC
+                       JOIN item_category IC2 ON IC.item_class_id = IC2.item_class_id
+                       JOIN item I ON IC2.item_category_id = I.item_category_id
+                       JOIN checkup_contract_item CCI ON I.item_id = CCI.item_id
+                       JOIN checkup_contract_sub_type CCST
+                  ON CCI.checkup_contract_sub_type_id = CCST.checkup_contract_sub_type_id
+                       JOIN checkup_contract_type CCT ON CCT.checkup_contract_type_id = CCST.checkup_contract_type_id
+                       JOIN checkup_contract CC ON CCT.checkup_contract_id = CC.checkup_contract_id
+                       JOIN company_checkup C on CC.company_checkup_id = C.company_checkup_id
+                       LEFT JOIN hospital_checkup HC ON HC.hospital_id = CC.hospital_id AND HC.checkup_year = C.checkup_year AND I.item_id = HC.item_id
+        WHERE IC.deleted_at IS NULL
+           AND IC2.deleted_at IS NULL
+           AND I.deleted_at IS NULL
+           AND I.no_use = 0
+           AND CCI.register != '0'
+           AND CCI.deleted_at IS NULL
+           AND CCST.deleted_at IS NULL
+           AND CCST.checkup_contract_sub_type_id = #{checkupContractSubTypeId}
+         ORDER BY IF(CCI.register = '2', 'Z', CCI.register)
+                , IF(IC.item_class_code = 'F', 'Z', IC.item_class_code)
+                , IC2.item_category_code, I.item_code
+    </select>
+
+    <resultMap id="mapCheckupItemClass" type="CheckupItemClassVO" autoMapping="true">
+        <id property="itemClassId" column="item_class_id"/>
+        <collection property="checkupItemCategories" ofType="CheckupItemCategoryVO" autoMapping="true">
+            <id property="itemCategoryId" column="item_category_id"/>
+            <collection property="checkupItems" ofType="CheckupItemVO" autoMapping="true">
+                <id property="itemId" column="item_id"/>
+            </collection>
+        </collection>
+    </resultMap>
+    <select id="selectCheckupItemClassList" resultMap="mapCheckupItemClass">
+        SELECT IC.item_class_id
+             , IC.item_class_code
+             , IC.item_class_name
+             , IC2.item_category_id
+             , IC2.item_category_name
+             , I.item_id
+             , I.item_name
+             , I.item_desc
+          FROM item_class IC
+                       JOIN item_category IC2 ON IC.item_class_id = IC2.item_class_id
+                       JOIN item I ON IC2.item_category_id = I.item_category_id
+         WHERE IC.deleted_at IS NULL
+           AND IC2.deleted_at IS NULL
+           AND I.deleted_at IS NULL
+           AND I.no_use = 0
+         ORDER BY IF(IC.item_class_code = 'F', 'Z', IC.item_class_code)
+                , IC2.item_category_code, I.item_code
+    </select>
+</mapper>

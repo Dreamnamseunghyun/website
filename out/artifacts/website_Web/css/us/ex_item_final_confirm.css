@@ -1,0 +1,51 @@
+
+
+
+
+.confirmCost .confirmList, .confirmUser .confirmList {font-size:18px;  margin-bottom: 15px;}
+.confirmCost .confirmList span.point {color:#34b2bb; text-decoration:underline;}
+.confirmCost .confirmTable {border:4px solid #16a1bd;}
+.confirmCost .confirmTable table {width:100%;}
+.confirmCost .confirmTable table tr td {padding:5px 50px;}
+.confirmCost .confirmTable table tr td:nth-child(2) {text-align:right;}
+.confirmCost .confirmTable table tr td.title {font-size:22px;}
+.confirmCost .confirmTable table tr td.date {font-size:22px;}
+.confirmCost .confirmTable table tr td.costTotal {font-size:33px;}
+.confirmCost .confirmTable table tr td.costTotal span.total {font-size:35px; color:#f42c3f;}
+.confirmCost .confirmTable table tr.detail {background:#e7e7e7;}
+.confirmCost .confirmTable table tr.detail td .title_dot{color:#333; margin:0 10px 0 20px;}
+.confirmCost .confirmTable table tr.detail td.title {font-size:18px;}
+.confirmCost .confirmTable table tr.detail td.cost {font-size:18px;}
+.confirmCost .confirmTable table tr.detail.detail_sub_title td{padding:10px 50px;}
+.confirmCost .confirmTable table .point{color:#f18e2b;}
+.confirmCost .confirmTable table tr:first-child td {padding-top:30px;}
+.confirmCost .confirmTable table tr:last-child td {padding-bottom:30px;}
+
+
+.confirmUser .confirmItems {border-top:2px solid #33a6ac;}
+.confirmUser .confirmItems table {width:100%;}
+.confirmUser .confirmItems table td {border-bottom:1px solid #dde2e6;}
+.confirmUser .confirmItems table td.title {background:#f2f2f2; font-size:18px; padding:25px 40px; position:relative;}
+.confirmUser .confirmItems table td.title.required:after {content:'*'; position:absolute; left:30px; font-size:18px; color:#f42c3f;}
+.confirmUser .confirmItems table td.form {padding:10px 20px;}
+.confirmUser .confirmItems table td.form input.formName {border:1px solid #acbdbf; padding:8px 15px; width:460px; font-size:16px;}
+.confirmUser .confirmItems table td.form input.formName::placeholder {color:#c7c7c7;}
+.confirmUser .confirmItems table td.form:after {content:''; display:block; clear:both;}
+.confirmUser .confirmItems table td.form .radiaArea {width:100px; float:left;}
+.confirmUser .confirmItems table td.form .formCell {border:1px solid #acbdbf; padding:8px 15px; width:120px; font-size:16px;}
+.confirmUser .confirmItems table td.form input.addr-input-box {background:#f4f6f9; border:1px solid #9b9dad; width:230px; padding:8px 15px;}
+.confirmUser .confirmItems table td.form a.addrSearch {display:inline-block; font-size:18px; color:#fff; background:#33a6ac; padding:8px 30px; border:1px solid #33a6ac; margin-left:5px;}
+
+.confirmUser .confirmItems table td.form input.input-box {border:1px solid #acbdbf; padding:8px 15px; width:460px; font-size:16px; float:left}
+
+
+
+
+
+.confirmUser .input_type1 label{width:360px; border-radius: 0;}
+
+
+.confirmUser_btn{padding:40px 0 35px 0;  }
+
+
+.confirmUser .email_type .input_type1 label{width:250px;}

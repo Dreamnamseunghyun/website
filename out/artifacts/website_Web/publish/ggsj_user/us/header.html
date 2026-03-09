@@ -1,0 +1,120 @@
+﻿<div class="container">
+     <h1 class="logo"><a href="index.html"></a></h1>
+     <nav>
+         <ul class="h_nav">
+             <li>
+                <a><span class="h_title">嫄닿컯寃吏??덉빟</span></a>
+                <div class="sub_menu">
+                    <ul class="sub_menu_list">
+                        <li><a href="target_information.html"><span>?덉빟?섍린</span><i class="xi-angle-right-min"></i></a></li>
+                        <li><a href="target_information.html"><span>?덉빟 議고쉶</span><i class="xi-angle-right-min"></i></a></li>
+                        <li><a href="target_information.html"><span>蹂寃?諛?痍⑥냼</span><i class="xi-angle-right-min"></i></a></li>
+                    </ul>
+                </div>
+            </li>
+
+             <li><a><span class="h_title">寃곌낵 議고쉶</span></a>
+                 <div class="sub_menu">
+                                <ul class="sub_menu_list">
+                                   <li><a href="check_result.html"><span>嫄닿컯寃吏?寃곌낵議고쉶</span><i class="xi-angle-right-min"></i></a></li>
+                                </ul>
+                 </div>
+             </li>
+
+             <li><a><span class="h_title">怨좉컼?쇳꽣</span></a>
+                 <div class="sub_menu">
+                                <ul class="sub_menu_list">
+                                   <li><a href="notice.html"><span>怨듭??ы빆</span><i class="xi-angle-right-min"></i></a></li>
+                                   <li><a href="faq.html"><span>?먯＜ 臾삳뒗 吏덈Ц</span><i class="xi-angle-right-min"></i></a></li>
+                                   <li><a href="inquiry.html"><span>1:1 臾몄쓽?섍린</span><i class="xi-angle-right-min"></i></a></li>
+                                </ul>
+                 </div>
+             </li>
+             <li><a href="common_sense.html"><span class="h_title">嫄닿컯 ?곸떇</span></a></li>
+             <li>
+             <a href="mypage.html"><span class="h_title">留덉씠?섏씠吏</span></a>
+
+             </li>
+             <li class="h_login"><a href="login.html">濡쒓렇??/a></li>
+         </ul>
+     </nav>
+
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+<script>
+$("header .logo > a").load("logo.html");
+
+
+//?ㅻ뜑 ?ㅽ겕濡ㅻ떎??    $(function () {
+
+        var header_height = $("header").height() - 40;
+
+        $(window).scroll(function () {
+            var scroll = getCurrentScroll();
+            if (scroll >= header_height) {
+                $('header').addClass('scroll_down');
+            } else {
+                $('header').removeClass('scroll_down');
+            }
+        });
+
+
+        //?뚮뜑???ㅽ겕濡??대젮媛?덉쑝硫?        $("document").ready(function () {
+            var render_scroll = $(document).scrollTop();
+            if (render_scroll >= 10) {
+                $('header').addClass('scroll_down');
+            } else {
+                $('header').removeClass('scroll_down');
+            }
+
+        })
+
+        function getCurrentScroll() {
+            return window.pageYOffset || document.documentElement.scrollTop;
+        }
+    });
+
+
+    /*btn*/
+    $(".btn .btn_inner").mouseenter(function (e) {
+        var parentOffset = $(this).offset();
+
+        var relX = e.pageX - parentOffset.left;
+        var relY = e.pageY - parentOffset.top;
+        $(this).prev(".button_on_circle").css({"left": relX, "top": relY});
+        $(this).prev(".button_on_circle").removeClass("desplode-circle");
+        $(this).prev(".button_on_circle").addClass("explode-circle");
+
+    });
+
+    $(".btn .btn_inner").mouseleave(function (e) {
+
+        var parentOffset = $(this).offset();
+
+        var relX = e.pageX - parentOffset.left;
+        var relY = e.pageY - parentOffset.top;
+        $(this).prev(".button_on_circle").css({"left": relX, "top": relY});
+        $(this).prev(".button_on_circle").removeClass("explode-circle");
+        $(this).prev(".button_on_circle").addClass("desplode-circle");
+
+    });
+
+
+    $("header .sub_menu").on("mouseover focusin", function () {
+        $(this).parents("li").addClass("hover")
+    })
+
+    $("header .sub_menu").on("mouseleave blur", function () {
+        $(this).parents("li").removeClass("hover")
+    })
+
+    function delay_alert(){
+        Swal.fire('?꾩옱 ?섏씠吏 以鍮?以묒뿉 ?덉뒿?덈떎.\n 鍮좊Ⅸ ?쒖씪 ?댁뿉 ?ㅽ뵂?섎룄濡?n?섍쿋?듬땲??:D', '', 'error' );
+    }
+
+
+</script>
+
+

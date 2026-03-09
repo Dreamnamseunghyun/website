@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="kr.co.sitebuilder.common.service.mapper.CommonMapper">
+    <select id="selectCompanyList" resultType="CommonCompanyVO">
+        SELECT C.company_id
+        , C.company_code
+        , C.company_name
+        , C.business_no
+        , C.id_placeholder
+        , C.pw_type
+        , C.no_use
+        , C.use_noti_talk
+        , CC.company_checkup_id
+        , CC.checkup_year
+        , CC.checkup_date_begin
+        , CC.checkup_date_end
+        , CC.reserve_date_begin
+        , CC.reserve_date_end
+        FROM company C
+        <choose>
+            <when test="listType == @kr.co.sitebuilder.common.ListType@ALL">
+                LEFT JOIN company_checkup CC ON C.company_id = CC.company_id AND CC.deleted_at IS NULL
+            </when>
+            <when test="listType == @kr.co.sitebuilder.common.ListType@YEAR">
+                JOIN company_checkup CC ON C.company_id = CC.company_id AND CC.checkup_year = #{year} AND CC.deleted_at
+                IS NULL
+            </when>
+            <when test="listType == @kr.co.sitebuilder.common.ListType@LAST_ALL">
+                LEFT JOIN (
+                SELECT company_id
+                , MAX(checkup_year) AS checkup_year
+                FROM company_checkup
+                WHERE deleted_at IS NULL
+                GROUP BY company_id
+                ) LAST_CC ON C.company_id = LAST_CC.company_id
+                LEFT JOIN company_checkup CC ON LAST_CC.company_id = CC.company_id AND LAST_CC.checkup_year =
+                CC.checkup_year
+            </when>
+            <when test="listType == @kr.co.sitebuilder.common.ListType@LAST">
+                JOIN (
+                SELECT company_id
+                , MAX(checkup_year) AS checkup_year
+                FROM company_checkup
+                WHERE deleted_at IS NULL
+                GROUP BY company_id
+                ) LAST_CC ON C.company_id = LAST_CC.company_id
+                JOIN company_checkup CC ON LAST_CC.company_id = CC.company_id AND LAST_CC.checkup_year = CC.checkup_year
+            </when>
+        </choose>
+        WHERE C.deleted_at IS NULL
+        ORDER BY CC.checkup_year DESC, C.company_name
+    </select>
+
+    <select id="selectCompanyCheckupTypeList" resultType="CommonCompanyCheckupTypeVO">
+        SELECT CCT.company_checkup_type_id
+        , CCT.company_checkup_id
+        , CCT.company_checkup_type_code
+        , CCT.company_checkup_type_name
+        , CCT.support_pay
+        , CCT.copay
+        , CCT.hospital_pay
+        , CCT.platform_pay
+        , CCT.type_self
+        , CCT.type_family
+        , CCT.type_copay
+        FROM company_checkup_type CCT JOIN company_checkup CC ON CC.company_checkup_id = CCT.company_checkup_id
+        WHERE CCT.deleted_at IS NULL
+        <choose>
+            <when test="companyCheckupId != null">
+                AND CC.company_checkup_id = #{companyCheckupId}
+                AND CC.checkup_year = #{checkupYear}
+            </when>
+            <when test="companyId != 0">
+                AND CC.company_id = #{companyId}
+                AND CC.checkup_year = #{checkupYear}
+            </when>
+            <otherwise>
+                AND CC.checkup_year = #{checkupYear}
+            </otherwise>
+        </choose>
+    </select>
+
+    <select id="selectHospitalList" resultType="CommonHospitalVO">
+        SELECT H.hospital_id
+             , H.hospital_code
+             , H.hospital_name
+             , H.business_no
+        FROM hospital H
+        ORDER BY H.hospital_name
+    </select>
+
+    <select id="selectCenterList" resultType="CommonCenterVO">
+        SELECT hospital_id
+             , hospital_code
+             , hospital_name
+             , center_id
+             , center_code
+             , center_name
+             , hospital_center_name
+        FROM hospital_center_view
+        ORDER BY hospital_center_name
+    </select>
+
+    <select id="checkCenterList" resultType="CommonCenterVO">
+        SELECT hospital_id
+             , hospital_code
+             , hospital_name
+             , center_id
+             , center_code
+             , center_name
+             , hospital_center_name
+        FROM hospital_center_view
+        WHERE hospital_id = #{hospitalId}
+    </select>
+
+    <select id="checkCenterCodeList" resultType="CommonCenterVO">
+        SELECT hospital_id
+             , hospital_code
+             , hospital_name
+             , center_id
+             , center_code
+             , center_name
+             , hospital_center_name
+        FROM hospital_center_view
+        WHERE hospital_code = #{hospitalCode}
+          AND center_code = #{centerCode}
+    </select>
+
+    <resultMap id="mapAddress" type="AddressVO" autoMapping="true">
+        <id property="sido" column="sido"/>
+        <collection property="sigungu" ofType="String">
+            <result column="sigungu"/>
+        </collection>
+    </resultMap>
+    <select id="selectCenterAddress" resultMap="mapAddress">
+        SELECT sido_name    AS sido
+             , sigungu_name AS sigungu
+        FROM address_sigungu
+        WHERE deleted_at IS NULL
+        ORDER BY sido, sigungu
+    </select>
+
+    <select id="selectCompanyLoginPlaceHolder" resultType="CompanyVO" parameterType="String">
+        # CommonMapper.selectCompanyLoginPlaceHolder
+                SELECT id_placeholder, pw_type
+                  FROM company
+                 WHERE company_code = #{companyCode}
+                   AND deleted_at IS NULL
+    </select>
+</mapper>

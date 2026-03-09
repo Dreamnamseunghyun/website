@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="kr.co.sitebuilder.commune.service.mapper.QnaMapper">
+    <resultMap id="mapQna" type="QnaVO" autoMapping="true">
+        <id property="qnaId" column="qna_id"/>
+        <result property="employeeNameCrypt" column="employee_name"/>
+    </resultMap>
+    <select id="selectQnaList" resultMap="mapQna">
+        SELECT Q.qna_id
+             , Q.title
+             , Q.category
+             , Q.question
+             , Q.user_id
+             , Q.answer
+             , Q.answer_id
+             , Q.question_at
+             , Q.answer_at
+             , Q.answer_check
+             , PM.platform_manager_name
+             , EP.employee_name
+             , CP.company_name
+        FROM qna Q
+                     LEFT JOIN platform_manager PM
+                ON Q.answer_id = PM.user_id
+                     LEFT JOIN employee EP
+                ON Q.user_id = EP.user_id
+                     LEFT JOIN company CP
+                ON EP.company_id = CP.company_id
+        WHERE Q.deleted_at IS NULL
+          AND PM.deleted_at IS NULL
+          AND EP.deleted_at IS NULL
+        ORDER BY Q.question_at DESC
+    </select>
+
+    <select id="selectQna" resultMap="mapQna" parameterType="QnaVO">
+        SELECT Q.qna_id
+             , Q.title
+             , Q.category
+             , Q.question
+             , Q.user_id
+             , Q.answer
+             , Q.answer_id
+             , Q.question_at
+             , Q.answer_at
+             , Q.answer_check
+             , PM.platform_manager_name
+             , EP.employee_name
+             , CP.company_name
+        FROM qna Q
+                     LEFT JOIN platform_manager PM
+                ON Q.answer_id = PM.user_id
+                     LEFT JOIN employee EP
+                ON Q.user_id = EP.user_id
+                     LEFT JOIN company CP
+                ON EP.company_id = CP.company_id
+        WHERE Q.deleted_at IS NULL
+          AND PM.deleted_at IS NULL
+          AND EP.deleted_at IS NULL
+          AND Q.qna_id = #{qnaId}
+    </select>
+
+    <select id="selectUsQnaList" resultMap="mapQna">
+        SELECT Q.qna_id
+             , Q.title
+             , Q.category
+             , Q.question
+             , Q.user_id
+             , Q.answer
+             , Q.answer_id
+             , Q.question_at
+             , Q.answer_at
+             , Q.answer_check
+             , PM.platform_manager_name
+             , EP.employee_name
+             , CP.company_name
+        FROM qna Q
+                     LEFT JOIN platform_manager PM
+                ON Q.answer_id = PM.user_id
+                     LEFT JOIN employee EP
+                ON Q.user_id = EP.user_id
+                     LEFT JOIN company CP
+                ON EP.company_id = CP.company_id
+        WHERE Q.deleted_at IS NULL
+          AND PM.deleted_at IS NULL
+          AND EP.deleted_at IS NULL
+          AND Q.user_id = #{userId}
+        ORDER BY Q.question_at DESC
+    </select>
+
+    <insert id="insertUsQna" parameterType="QnaVO">
+        INSERT INTO qna
+        ( title
+        , question
+        , category
+        , question_at
+        , user_id
+        , created_user_id
+        , updated_user_id)
+        VALUES ( #{title}
+        , #{question}
+        , #{category}
+        , NOW()
+        , #{sessionUserId}
+        , #{sessionUserId}
+        , #{sessionUserId})
+        <selectKey keyProperty="qnaId" order="AFTER" resultType="Integer">
+            SELECT LAST_INSERT_ID()
+        </selectKey>
+    </insert>
+
+    <insert id="insertQna" parameterType="QnaVO">
+        INSERT INTO qna
+        ( answer
+        , answer_id
+        , answer_check
+        , created_user_id
+        , updated_user_id)
+        VALUES ( #{answer}
+        , #{sessionUserId}
+        , #{answerCheck}
+        , #{sessionUserId}
+        , #{sessionUserId})
+        <selectKey keyProperty="qnaId" order="AFTER" resultType="Integer">
+            SELECT LAST_INSERT_ID()
+        </selectKey>
+    </insert>
+
+    <update id="updateQna" parameterType="QnaVO">
+        UPDATE qna
+        SET answer          = #{answer}
+          , answer_id       = #{sessionUserId}
+          , answer_check    = #{answerCheck}
+          , answer_at       = NOW()
+          , updated_at      = NOW()
+          , created_user_id = #{sessionUserId}
+          , updated_user_id = #{sessionUserId}
+        WHERE qna_id = #{qnaId}
+    </update>
+
+    <update id="deleteQna" parameterType="QnaVO">
+        UPDATE qna
+        SET deleted_at      = NOW()
+          , updated_user_id = #{sessionUserId}
+        WHERE qna_id = #{qnaId}
+    </update>
+</mapper>
