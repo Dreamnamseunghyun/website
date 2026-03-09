@@ -1,0 +1,662 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="kr.co.sitebuilder.company.service.mapper.CompanyMapper">
+    <!-- Map of company_checkup_type -->
+    <resultMap id="mapCompanyCheckupType" type="CompanyCheckupTypeVO" autoMapping="true">
+        <id property="companyCheckupTypeId" column="company_checkup_type_id"/>
+    </resultMap>
+
+    <!-- Map of company_checkup -->
+    <resultMap id="mapCompanyCheckup" type="CompanyCheckupVO" autoMapping="true">
+        <id property="companyCheckupId" column="company_checkup_id"/>
+        <collection property="companyCheckupTypes" ofType="CompanyCheckupTypeVO" resultMap="mapCompanyCheckupType"
+                    autoMapping="true"/>
+    </resultMap>
+
+    <!-- Map of company -->
+    <resultMap id="mapCompany" type="CompanyVO" autoMapping="true">
+        <id property="companyId" column="company_id"/>
+        <association property="companyCheckup" javaType="CompanyCheckupVO" resultMap="mapCompanyCheckup"
+                     autoMapping="true"/>
+        <collection property="contractManager" ofType="CompanyManagerVO">
+            <result column="user_id" property="userId"/>
+            <result column="contract_manager_name" property="companyManagerNameCrypt"/>
+            <result column="contract_manager_email" property="email"/>
+            <result column="contract_manager_telephone" property="telephone"/>
+            <result column="contract_manager_mobile" property="mobile"/>
+            <result column="account" property="account"/>
+            <result column="result" property="result"/>
+            <result column="contract" property="contract"/>
+        </collection>
+        <collection property="accountManager" ofType="CompanyManagerVO">
+            <result column="user_id" property="userId"/>
+            <result column="account_manager_name" property="companyManagerNameCrypt"/>
+            <result column="account_manager_email" property="email"/>
+            <result column="account_manager_telephone" property="telephone"/>
+            <result column="account_manager_mobile" property="mobile"/>
+            <result column="account" property="account"/>
+            <result column="result" property="result"/>
+            <result column="contract" property="contract"/>
+        </collection>
+        <collection property="resultManager" ofType="CompanyManagerVO">
+            <result column="user_id" property="userId"/>
+            <result column="result_manager_name" property="companyManagerNameCrypt"/>
+            <result column="result_manager_email" property="email"/>
+            <result column="result_manager_telephone" property="telephone"/>
+            <result column="result_manager_mobile" property="mobile"/>
+            <result column="account" property="account"/>
+            <result column="result" property="result"/>
+            <result column="contract" property="contract"/>
+        </collection>
+    </resultMap>
+
+    <!-- Select Company List -->
+    <select id="selectCompanyList" resultMap="mapCompany" parameterType="Integer">
+        # CompanyMapper.selectCompanyList
+        SELECT C.company_id
+        , C.company_code
+        , C.company_name
+        , C.business_no
+        , C.id_placeholder
+        , C.pw_type
+        , C.no_use
+        , C.use_noti_talk
+        , C.ci_filename
+        , C.ci_filename AS org_ci_filename
+        , CC.company_checkup_id
+        , CC.checkup_year
+        , CC.employee_number
+        , CC.family_number
+        , CC.checkup_date_begin
+        , CC.checkup_date_end
+        , CC.reserve_date_begin
+        , CC.reserve_date_end
+        , CC.sales_manager
+        , CC.assist_manager
+        , CC.notes
+        , CCT.company_checkup_type_id
+        , CCT.company_checkup_type_code
+        , CCT.company_checkup_type_name
+        , CCT.support_pay
+        , CCT.copay
+        , CCT.hospital_pay
+        , CCT.platform_pay
+        , CCT.type_self
+        , CCT.type_family
+        , CCT.type_copay
+        , CM.account
+        , CM.contract
+        , CM.result
+        , CASE CM.result WHEN 1 THEN CM.company_manager_name END AS result_manager_name
+        , CASE CM.result WHEN 1 THEN CM.email END AS result_manager_email
+        , CASE CM.result WHEN 1 THEN CM.telephone END AS result_manager_telephone
+        , CASE CM.result WHEN 1 THEN CM.mobile END AS result_manager_mobile
+        , CASE CM.contract WHEN 1 THEN CM.company_manager_name END AS contract_manager_name
+        , CASE CM.contract WHEN 1 THEN CM.email END AS contract_manager_email
+        , CASE CM.contract WHEN 1 THEN CM.telephone END AS contract_manager_telephone
+        , CASE CM.contract WHEN 1 THEN CM.mobile END AS contract_manager_mobile
+        , CASE CM.account WHEN 1 THEN CM.company_manager_name END AS account_manager_name
+        , CASE CM.account WHEN 1 THEN CM.email END AS account_manager_email
+        , CASE CM.account WHEN 1 THEN CM.telephone END AS account_manager_telephone
+        , CASE CM.account WHEN 1 THEN CM.mobile END AS account_manager_mobile
+        , CM.user_id
+        FROM company C
+        <choose>
+            <when test="checkupYear != 0 and checkupYear != null">
+                JOIN company_checkup CC
+                ON C.company_id = CC.company_id AND CC.checkup_year = #{checkupYear}
+                LEFT JOIN company_checkup_type CCT
+                ON CC.company_checkup_id = CCT.company_checkup_id AND CCT.deleted_at IS NULL
+            </when>
+            <otherwise>
+                LEFT JOIN (
+                SELECT company_id
+                , MAX(checkup_year) AS checkup_year
+                FROM company_checkup
+                WHERE deleted_at IS NULL
+                GROUP BY company_id
+                ) LAST_CC
+                ON C.company_id = LAST_CC.company_id
+                LEFT JOIN company_checkup CC
+                ON LAST_CC.company_id = CC.company_id AND LAST_CC.checkup_year = CC.checkup_year
+                LEFT JOIN company_checkup_type CCT
+                ON CC.company_checkup_id = CCT.company_checkup_id AND CCT.deleted_at IS NULL
+            </otherwise>
+        </choose>
+        LEFT JOIN company_manager CM
+        ON C.company_id = CM.company_id
+        WHERE C.deleted_at IS NULL
+        AND CC.deleted_at IS NULL
+        AND CM.deleted_at IS NULL
+        ORDER BY CC.checkup_year DESC, C.company_name
+    </select>
+
+    <!-- Select Company -->
+    <select id="selectCompany" resultMap="mapCompany" parameterType="CompanyVO">
+        # CompanyMapper.selectCompany
+        SELECT C.company_id
+        , C.company_code
+        , C.company_name
+        , C.business_no
+        , C.id_placeholder
+        , C.pw_type
+        , C.no_use
+        , C.use_noti_talk
+        , C.ci_filename
+        , C.ci_filename AS org_ci_filename
+        , C.account_user_id
+        , C.sales_user_id
+        , C.admin_user_id
+        , CC.company_checkup_id
+        , CC.checkup_year
+        , CC.employee_number
+        , CC.family_number
+        , CC.checkup_date_begin
+        , CC.checkup_date_end
+        , CC.reserve_date_begin
+        , CC.reserve_date_end
+        , CC.expected_total_support_pay
+        , CC.expected_total_platform_pay
+        , CC.expected_total_etc_pay
+        , CC.sales_manager
+        , CC.assist_manager
+        , CC.notes
+        , CCT.company_checkup_type_id
+        , CCT.company_checkup_type_code
+        , CCT.company_checkup_type_name
+        , CCT.support_pay
+        , CCT.copay
+        , CCT.hospital_pay
+        , CCT.platform_pay
+        , CCT.type_self
+        , CCT.type_family
+        , CCT.type_copay
+        FROM company C
+        <choose>
+            <when test="companyCheckup != null and companyCheckup.checkupYear != null">
+                LEFT JOIN company_checkup CC
+                ON C.company_id = CC.company_id AND CC.checkup_year = #{companyCheckup.checkupYear}
+                LEFT JOIN company_checkup_type CCT
+                ON CC.company_checkup_id = CCT.company_checkup_id AND CCT.deleted_at IS NULL
+            </when>
+            <otherwise>
+                LEFT JOIN (
+                SELECT company_id
+                , checkup_year
+                FROM company_checkup
+                WHERE deleted_at IS NULL
+                ) LAST_CC
+                ON C.company_id = LAST_CC.company_id
+                LEFT JOIN company_checkup CC
+                ON LAST_CC.company_id = CC.company_id AND LAST_CC.checkup_year = CC.checkup_year
+                LEFT JOIN company_checkup_type CCT
+                ON CC.company_checkup_id = CCT.company_checkup_id AND CCT.deleted_at IS NULL
+            </otherwise>
+        </choose>
+        LEFT JOIN platform_manager PM
+        ON PM.user_id = C.admin_user_id OR PM.user_id = C.sales_user_id OR PM.user_id = C.account_user_id
+        WHERE C.deleted_at IS NULL
+        AND C.company_id = #{companyId}
+        AND LAST_CC.checkup_year = #{checkupYear}
+    </select>
+
+    <!-- Select Company for Cm-->
+    <select id="selectCompanyCm" resultMap="mapCompany" parameterType="CompanyVO">
+        # CompanyMapper.selectCompanyCm
+        SELECT C.company_id
+        , C.company_code
+        , C.company_name
+        , C.business_no
+        , C.id_placeholder
+        , C.pw_type
+        , C.no_use
+        , C.use_noti_talk
+        , C.ci_filename
+        , C.ci_filename AS org_ci_filename
+        , C.account_user_id
+        , C.sales_user_id
+        , C.admin_user_id
+        , CC.company_checkup_id
+        , CC.checkup_year
+        , CC.employee_number
+        , CC.family_number
+        , CC.checkup_date_begin
+        , CC.checkup_date_end
+        , CC.reserve_date_begin
+        , CC.reserve_date_end
+        , CC.expected_total_support_pay
+        , CC.expected_total_platform_pay
+        , CC.expected_total_etc_pay
+        , CC.sales_manager
+        , CC.assist_manager
+        , CC.notes
+        , CCT.company_checkup_type_id
+        , CCT.company_checkup_type_code
+        , CCT.company_checkup_type_name
+        , CCT.support_pay
+        , CCT.copay
+        , CCT.hospital_pay
+        , CCT.platform_pay
+        , CCT.type_self
+        , CCT.type_family
+        , CCT.type_copay
+        FROM company C
+        <choose>
+            <when test="companyCheckup != null and companyCheckup.checkupYear != null">
+                LEFT JOIN company_checkup CC
+                ON C.company_id = CC.company_id AND CC.checkup_year = #{companyCheckup.checkupYear}
+                LEFT JOIN company_checkup_type CCT
+                ON CC.company_checkup_id = CCT.company_checkup_id AND CCT.deleted_at IS NULL
+            </when>
+            <otherwise>
+                LEFT JOIN (
+                SELECT company_id
+                , MAX(checkup_year) AS checkup_year
+                FROM company_checkup
+                WHERE deleted_at IS NULL
+                GROUP BY company_id
+                ) LAST_CC
+                ON C.company_id = LAST_CC.company_id
+                LEFT JOIN company_checkup CC
+                ON LAST_CC.company_id = CC.company_id AND LAST_CC.checkup_year = CC.checkup_year
+                LEFT JOIN company_checkup_type CCT
+                ON CC.company_checkup_id = CCT.company_checkup_id AND CCT.deleted_at IS NULL
+            </otherwise>
+        </choose>
+        LEFT JOIN platform_manager PM
+        ON PM.user_id = C.admin_user_id OR PM.user_id = C.sales_user_id OR PM.user_id = C.account_user_id
+        WHERE C.deleted_at IS NULL
+        AND C.company_id = #{companyId}
+    </select>
+
+    <select id="selectPlatformManagerList" resultType="PlatformManagerVO" parameterType="PlatformManagerVO">
+        SELECT platform_manager_name
+             , platform_manager_code
+             , user_id
+        FROM platform_manager
+        WHERE deleted_at IS NULL
+    </select>
+
+    <select id="salesManagerList" resultType="CompanyCheckupVO">
+        SELECT platform_manager_name AS salesManager
+             , user_id
+        FROM platform_manager
+        WHERE deleted_at IS NULL
+          AND sales = 1
+    </select>
+
+    <select id="assistManagerList" resultType="CompanyCheckupVO">
+        SELECT platform_manager_name AS assistManager
+             , user_id
+        FROM platform_manager
+        WHERE deleted_at IS NULL
+          AND admin = 1
+    </select>
+
+    <select id="selectCompanyIndexList" resultType="CompanyIndexVO" parameterType="CompanyIndexVO">
+        SELECT company_checkup.company_checkup_id
+             , hospital_center_view.hospital_center_name
+             , hospital_center_view.center_id
+             , reservation.reservation_id
+             , reservation.reservation_state
+             , employee.myself
+             , employee.employee_name
+             , reservation.reservation_name
+             , reservation.employee_checkup_id
+             , company.company_id
+             , company.company_name
+             , employee_checkup.employee_checkup_id
+             , checkup_contract_type.checkup_contract_type_id
+             , SUM(CASE WHEN employee_checkup.support_type = 0 THEN 1 ELSE 0 END) AS total_count
+             , SUM(CASE
+                WHEN (reservation.reservation_state != 0 OR reservation.confirmed_at IS NULL)
+                        AND (reservation.reservation_state = 1 OR reservation.reservation_state = 2 OR
+                             reservation.reservation_state = 3 OR reservation.reservation_state = 5) AND
+                     employee_checkup.support_type = 0 THEN 1
+                ELSE 0 END)                                                       AS apply_count
+             , SUM(CASE
+                WHEN reservation.reservation_state = 4 AND employee_checkup.support_type = 0 THEN 1
+                ELSE 0 END)                                                       AS checkuped_count
+             , SUM(CASE
+                WHEN (reservation.reservation_state = 0 OR reservation.reservation_state = null) AND
+                     employee_checkup.support_type = 0 THEN 1
+                ELSE 0 END)                                                       AS non_count
+        FROM checkup_contract
+                     LEFT JOIN company_checkup
+                ON checkup_contract.company_checkup_id = company_checkup.company_checkup_id AND
+                   company_checkup.checkup_year = 2022 AND company_checkup.deleted_at IS NULL
+                     JOIN checkup_contract_type
+                ON checkup_contract.checkup_contract_id = checkup_contract_type.checkup_contract_id
+                     LEFT JOIN hospital_center_view
+                ON hospital_center_view.hospital_id = checkup_contract.hospital_id AND
+                   hospital_center_view.center_id = checkup_contract_type.center_id
+                     LEFT JOIN checkup_contract_sub_type ON checkup_contract_type.checkup_contract_type_id =
+                                                            checkup_contract_sub_type.checkup_contract_type_id
+                     LEFT JOIN reservation
+                ON checkup_contract_sub_type.checkup_contract_sub_type_id = reservation.checkup_contract_sub_type_id
+                        AND reservation.deleted_at IS NULL
+                     LEFT JOIN employee_checkup
+                ON reservation.employee_checkup_id = employee_checkup.employee_checkup_id AND
+                   employee_checkup.deleted_at IS NULL
+                     LEFT JOIN employee
+                ON employee_checkup.user_id = employee.user_id AND employee.myself IS NOT NULL AND
+                   employee.deleted_at IS NULL
+                     LEFT JOIN company ON company_checkup.company_id = company.company_id AND company.deleted_at IS NULL
+        WHERE company_checkup.company_id = (SELECT company_id FROM company_manager WHERE user_id = #{userId})
+          AND company_checkup.deleted_at IS NULL
+        GROUP BY checkup_contract_type.center_id
+        ORDER BY hospital_center_view.hospital_center_name
+    </select>
+
+    <select id="selectCompanyIndexSubList" resultType="CompanyIndexVO" parameterType="CompanyIndexVO">
+        SELECT hospital_center_view.center_id
+             , SUM(CASE WHEN employee_checkup.support_type = 0 THEN 1 ELSE 0 END) AS total_count
+             , SUM(CASE
+                WHEN (reservation.reservation_state != 0 OR reservation.confirmed_at IS NULL)
+                        AND (reservation.reservation_state = 1 OR reservation.reservation_state = 2 OR
+                             reservation.reservation_state = 3 OR reservation.reservation_state = 5) AND
+                     employee_checkup.support_type = 0 THEN 1
+                ELSE 0 END)                                                  AS apply_count
+             , SUM(CASE
+                WHEN reservation.reservation_state = 4 AND employee_checkup.support_type = 0 THEN 1
+                ELSE 0 END)                                                  AS checkuped_count
+             , SUM(CASE
+                WHEN (reservation.reservation_state = 0 OR reservation.reservation_state = NULL) AND
+                     employee_checkup.support_type = 0 THEN 1
+                ELSE 0 END)                                                  AS non_count
+        FROM checkup_contract
+                     LEFT JOIN company_checkup
+                ON checkup_contract.company_checkup_id = company_checkup.company_checkup_id AND
+                   company_checkup.checkup_year = 2022 AND company_checkup.deleted_at IS NULL
+                     JOIN company ON company_checkup.company_id = company.company_id
+                     JOIN employee ON company.company_id = employee.company_id
+                     JOIN employee_checkup ON company_checkup.company_checkup_id = employee_checkup.company_checkup_id AND
+                                              employee.user_id = employee_checkup.user_id
+                     LEFT JOIN reservation
+                ON employee_checkup.employee_checkup_id = reservation.employee_checkup_id
+                        AND reservation.deleted_at IS NULL
+                     LEFT JOIN checkup_contract_sub_type
+                ON reservation.checkup_contract_sub_type_id = checkup_contract_sub_type.checkup_contract_sub_type_id
+                     LEFT JOIN checkup_contract_type ON checkup_contract_sub_type.checkup_contract_type_id =
+                                                        checkup_contract_type.checkup_contract_type_id
+                     JOIN hospital_center_view
+                ON hospital_center_view.hospital_id = checkup_contract.hospital_id AND
+                   hospital_center_view.center_id = checkup_contract_type.center_id
+        WHERE company_checkup.company_id = (SELECT company_id FROM company_manager WHERE user_id = #{userId})
+          AND company_checkup.deleted_at IS NULL
+        GROUP BY checkup_contract_type.center_id
+    </select>
+
+    <select id="selectCompanyIndexCount" resultType="CompanyIndexVO" parameterType="CompanyIndexVO">
+        SELECT COUNT(DISTINCT employee.user_id) AS total_count
+             , NULL                             AS apply_count
+             , NULL                             AS checkuped_count
+        FROM employee_checkup
+                     JOIN employee ON employee_checkup.user_id = employee.user_id
+                     JOIN company_checkup ON employee_checkup.company_checkup_id = company_checkup.company_checkup_id
+                     JOIN company ON company_checkup.company_id = company.company_id AND company.deleted_at IS NULL
+        WHERE employee_checkup.deleted_at IS NULL
+          AND company_checkup.company_id = (SELECT company_id FROM company_manager WHERE user_id = #{userId})
+          AND company_checkup.checkup_year = 2022
+          AND employee.deleted_at IS NULL
+          AND employee_checkup.deleted_at IS NULL
+          AND employee_checkup.support_type = 0
+# ?꾩껜 ?몄썝
+        UNION ALL
+        SELECT NULL                             AS total_count
+             , COUNT(DISTINCT employee.user_id) AS apply_count
+             , NULL                             AS checkuped_count
+        FROM employee_checkup
+                     JOIN employee ON employee_checkup.user_id = employee.user_id
+                     JOIN company_checkup ON employee_checkup.company_checkup_id = company_checkup.company_checkup_id
+                     JOIN company ON company_checkup.company_id = company.company_id AND company.deleted_at IS NULL
+                     LEFT JOIN reservation ON employee_checkup.employee_checkup_id = reservation.employee_checkup_id
+        WHERE employee_checkup.deleted_at IS NULL
+          AND company_checkup.company_id = (SELECT company_id FROM company_manager WHERE user_id = #{userId})
+          AND company_checkup.checkup_year = 2022
+          AND employee.deleted_at IS NULL
+          AND employee_checkup.deleted_at IS NULL
+          AND (reservation.reservation_state != 0 OR reservation.confirmed_at IS NULL)
+          AND (reservation.reservation_state = 1 OR reservation.reservation_state = 2 OR
+               reservation.reservation_state = 3 OR reservation.reservation_state = 5)
+          AND employee_checkup.support_type = 0
+# ?덉빟 吏꾪뻾 ?몄썝
+        UNION ALL
+        SELECT NULL                             AS total_count
+             , NULL                             AS apply_count
+             , COUNT(DISTINCT employee.user_id) AS checkuped_count
+        FROM employee_checkup
+                     JOIN employee ON employee_checkup.user_id = employee.user_id
+                     JOIN company_checkup ON employee_checkup.company_checkup_id = company_checkup.company_checkup_id
+                     JOIN company ON company_checkup.company_id = company.company_id AND company.deleted_at IS NULL
+                     LEFT JOIN reservation ON employee_checkup.employee_checkup_id = reservation.employee_checkup_id
+        WHERE employee_checkup.deleted_at IS NULL
+          AND company_checkup.company_id = (SELECT company_id FROM company_manager WHERE user_id = #{userId})
+          AND company_checkup.checkup_year = 2022
+          AND employee.deleted_at IS NULL
+          AND employee_checkup.deleted_at IS NULL
+          AND (reservation.reservation_state != 0 OR reservation.confirmed_at IS NULL)
+          AND reservation.reservation_state = 4
+          AND employee_checkup.support_type = 0
+# ?섍? ?꾨즺 ?몄썝
+    </select>
+
+    <!-- Insert Company -->
+    <insert id="insertCompany" parameterType="CompanyVO">
+        INSERT
+        INTO company
+        ( company_code
+        , company_name
+        , business_no
+        , id_placeholder
+        , pw_type
+        , no_use
+        , use_noti_talk
+        , ci_filename
+        , account_user_id
+        , sales_user_id
+        , admin_user_id
+        , created_user_id
+        , updated_user_id)
+        VALUES ( #{companyCode}
+        , #{companyName}
+        , #{businessNo}
+        , #{idPlaceHolder}
+        , #{pwType}
+        , #{noUse}
+        , #{useNotiTalk}
+        , #{ciFilename}
+        , #{accountUserId}
+        , #{salesUserId}
+        , #{adminUserId}
+        , #{sessionUserId}
+        , #{sessionUserId})
+        <selectKey keyProperty="companyId" order="AFTER" resultType="Integer">
+            SELECT LAST_INSERT_ID()
+        </selectKey>
+    </insert>
+
+    <!-- Insert CompanyCheckup -->
+    <insert id="insertCompanyCheckup" parameterType="CompanyCheckupVO">
+        INSERT
+        INTO company_checkup
+        ( company_id
+        , checkup_year
+        , employee_number
+        , family_number
+        , checkup_date_begin
+        , checkup_date_end
+        , reserve_date_begin
+        , reserve_date_end
+        , expected_total_support_pay
+        , expected_total_platform_pay
+        , expected_total_etc_pay
+        , sales_manager
+        , assist_manager
+        , notes
+        , created_user_id
+        , updated_user_id)
+        VALUES ( #{companyId}
+        , #{checkupYear}
+        , #{employeeNumber}
+        , #{familyNumber}
+        , #{checkupDateBegin}
+        , #{checkupDateEnd}
+        , #{reserveDateBegin}
+        , #{reserveDateEnd}
+        , #{expectedTotalSupportPay}
+        , #{expectedTotalPlatformPay}
+        , #{expectedTotalEtcPay}
+        , #{salesManager}
+        , #{assistManager}
+        , #{notes}
+        , #{sessionUserId}
+        , #{sessionUserId})
+        <selectKey keyProperty="companyCheckupId" order="AFTER" resultType="Integer">
+            SELECT LAST_INSERT_ID()
+        </selectKey>
+    </insert>
+
+    <!-- Insert CompanyCheckupType -->
+    <insert id="insertCompanyCheckupType" parameterType="CompanyCheckupTypeVO">
+        INSERT
+        INTO company_checkup_type
+        ( company_checkup_id
+        , company_checkup_type_code
+        , company_checkup_type_name
+        , support_pay
+        , copay
+        , hospital_pay
+        , platform_pay
+        , type_self
+        , type_family
+        , type_copay
+        , created_user_id
+        , updated_user_id)
+        VALUES ( #{companyCheckupId}
+        , #{companyCheckupTypeCode}
+        , #{companyCheckupTypeName}
+        , #{supportPay}
+        , #{copay}
+        , #{hospitalPay}
+        , #{platformPay}
+        , #{typeSelf}
+        , #{typeFamily}
+        , #{typeCopay}
+        , #{sessionUserId}
+        , #{sessionUserId})
+        ON DUPLICATE KEY UPDATE company_checkup_type_code = VALUES(company_checkup_type_code)
+        , company_checkup_type_name = VALUES(company_checkup_type_name)
+        , support_pay = VALUES(support_pay)
+        , copay = VALUES(copay)
+        , hospital_pay = VALUES(hospital_pay)
+        , platform_pay = VALUES(platform_pay)
+        , type_self = VALUES(type_self)
+        , type_family = VALUES(type_family)
+        , type_copay = VALUES(type_copay)
+        , created_user_id = VALUES(created_user_id)
+        , updated_at = NOW()
+        , updated_user_id = VALUES(updated_user_id)
+        , deleted_at = NULL
+        , deleted_user_id = NULL
+        <selectKey keyProperty="companyCheckupTypeId" order="AFTER" resultType="Integer">
+            SELECT LAST_INSERT_ID()
+        </selectKey>
+    </insert>
+
+    <!-- Update Company -->
+    <update id="updateCompany" parameterType="CompanyVO">
+        UPDATE company
+        SET company_code    = #{companyCode}
+          , company_name    = #{companyName}
+          , business_no     = #{businessNo}
+          , id_placeholder  = #{idPlaceHolder}
+          , pw_type         = #{pwType}
+          , no_use          = #{noUse}
+          , use_noti_talk   = #{useNotiTalk}
+          , ci_filename     = #{ciFilename}
+          , updated_at      = NOW()
+          , updated_user_id = #{sessionUserId}
+          , account_user_id = #{accountUserId}
+          , admin_user_id   = #{adminUserId}
+          , sales_user_id   = #{salesUserId}
+        WHERE company_id = #{companyId}
+    </update>
+
+    <update id="deleteCompanyCi" parameterType="CompanyVO">
+        UPDATE company
+        SET ci_filename     = NULL
+          , updated_at      = NOW()
+          , updated_user_id = #{sessionUserId}
+        WHERE company_id = #{companyId}
+    </update>
+
+    <!-- Update CompanyCheckup -->
+    <update id="updateCompanyCheckup" parameterType="CompanyCheckupVO">
+        UPDATE company_checkup
+        SET employee_number             = #{employeeNumber}
+          , family_number               = #{familyNumber}
+          , checkup_date_begin          = #{checkupDateBegin}
+          , checkup_date_end            = #{checkupDateEnd}
+          , reserve_date_begin          = #{reserveDateBegin}
+          , reserve_date_end            = #{reserveDateEnd}
+          , expected_total_support_pay  = #{expectedTotalSupportPay}
+          , expected_total_platform_pay = #{expectedTotalPlatformPay}
+          , expected_total_etc_pay      = #{expectedTotalEtcPay}
+          , sales_manager               = #{salesManager}
+          , assist_manager              = #{assistManager}
+          , notes                       = #{notes}
+          , updated_at                  = NOW()
+          , updated_user_id             = #{sessionUserId}
+        WHERE company_checkup_id = #{companyCheckupId}
+    </update>
+
+    <!-- Update CompanyCheckupType -->
+    <update id="updateCompanyCheckupType" parameterType="CompanyCheckupTypeVO">
+        UPDATE company_checkup_type
+        SET company_checkup_type_code = #{companyCheckupTypeCode}
+          , company_checkup_type_name = #{companyCheckupTypeName}
+          , support_pay               = #{supportPay}
+          , copay                     = #{copay}
+          , hospital_pay              = #{hospitalPay}
+          , platform_pay              = #{platformPay}
+          , type_self                 = #{typeSelf}
+          , type_family               = #{typeFamily}
+          , type_copay                = #{typeCopay}
+          , updated_at                = NOW()
+          , updated_user_id           = #{sessionUserId}
+        WHERE company_checkup_type_id = #{companyCheckupTypeId}
+    </update>
+
+    <!-- Delete Company -->
+    <update id="deleteCompany" parameterType="CompanyVO">
+        UPDATE company
+        SET deleted_at      = NOW()
+          , deleted_user_id = #{sessionUserId}
+        WHERE company_id = #{companyId}
+    </update>
+
+    <!-- Delete CompanyCheckup -->
+    <update id="deleteCompanyCheckup" parameterType="CompanyCheckupVO">
+        UPDATE company_checkup
+        SET deleted_at      = NOW()
+          , deleted_user_id = #{sessionUserId}
+        WHERE company_checkup_id = #{companyCheckupId}
+    </update>
+
+    <!-- Delete CompanyCheckupType -->
+    <update id="deleteCompanyCheckupType" parameterType="CompanyCheckupTypeVO">
+        UPDATE company_checkup_type
+        SET deleted_at      = NOW()
+          , deleted_user_id = #{sessionUserId}
+        WHERE company_checkup_type_id = #{companyCheckupTypeId}
+    </update>
+
+    <!-- Check CompanyCode -->
+    <select id="checkCode" resultType="CompanyVO" parameterType="CompanyVO">
+        SELECT COUNT(*) AS check_code
+        FROM company
+        WHERE company_code = #{companyCode}
+    </select>
+</mapper>

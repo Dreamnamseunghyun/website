@@ -1,0 +1,37 @@
+.detailTable {position:relative; margin:30px 0; border-top:2px solid #25939a; border-bottom:2px solid #25939a; display:flex; align-items: center;}
+.detailTable .logoArea {width:30%; text-align:center; padding:0 40px}
+.detailTable .infoArea {width:calc(70% - 2px); border-left:2px solid #cfcfcf;}
+.detailTable .infoArea ul.list > li {padding:15px 0 15px 60px; background:#f6f8fa; border-top:1px solid #e2e6ea; display:flex; align-items: center;}
+.detailTable .infoArea ul.list > li:first-child {border:none;}
+.detailTable .infoArea ul.list > li .title {width:150px;}
+.detailTable .infoArea ul.list > li > div:last-of-type{width:calc(100% - 150px)}
+.detailTable .infoArea ul.list > li.date ul li {padding:0; border:none;  display:flex; letter-spacing: 1px;}
+.detailTable .infoArea ul.list > li.date ul li span {width:100px}
+.detailTable .infoArea ul.list > li.date ul li.weekday span {color:#009c4d;}
+.detailTable .infoArea ul.list > li.date ul li.sat span {color:#00469c;}
+
+.supportList {padding:40px 0 70px; border-bottom:1px solid #edf0f2; display: flex; align-items: center; justify-content: center;}
+.supportList ul { display:inline-block; }
+.supportList ul li {width:calc(1170px / 7 - 19px); text-align:center; padding-top:155px; margin:0 10px; float: left;}
+.supportList ul li.ct {background:url(../../img/us/hospital_detail_list/supportList_ct.jpg) no-repeat;}
+.supportList ul li.mri {background:url(../../img/us/hospital_detail_list/supportList_mri.jpg) no-repeat;}
+.supportList ul li.meal {background:url(../../img/us/hospital_detail_list/supportList_meal.jpg) no-repeat;}
+.supportList ul li.parking {background:url(../../img/us/hospital_detail_list/supportList_parking.jpg) no-repeat;}
+.supportList ul li.sat {background:url(../../img/us/hospital_detail_list/supportList_sat.jpg) no-repeat;}
+.supportList ul li.special {background:url(../../img/us/hospital_detail_list/supportList_special.jpg) no-repeat;}
+.supportList ul li.am {background:url(../../img/us/hospital_detail_list/supportList_am.jpg) no-repeat;}
+
+.introduce {padding:40px 0; border-bottom:1px solid #edf0f2; word-break: break-all; font-size:16px}
+
+.locationInt {border-top:2px solid #25939a; border-bottom:2px solid #25939a; margin:30px 0; display: flex; align-items: center; }
+.locationInt > div{height:500px;}
+.locationInt:after {content:''; display:block; clear:both;}
+.locationInt .int {width:calc(50% - 30px); float:left; margin:15px;}
+.locationInt .int .swiper.thumb {margin-top:20px;}
+.locationInt .map {width:calc(50% - 30px); float:left; margin:15px; background:url(../../img/us/hospital_detail_list/map_ex.jpg) no-repeat; height:50vh;}
+.mySwiper2 .swiper-slide{height:385px; display: flex; align-items: center; justify-content: center;}
+.mySwiper2 .swiper-slide img{width:100%;}
+.swiper-thumbs .swiper-slide-thumb-active{border:3px solid #25939a}
+.swiper-thumbs .swiper-slide{height:87.5px!important; display: flex; align-items: center; justify-content: center}
+
+ 

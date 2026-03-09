@@ -1,0 +1,20 @@
+
+   
+.userSelection {margin-top:60px; display:flex; justify-content: center;}
+.userSelection .selectionBox {min-width:440px; height:50vh; background:#f4f8f8; display: flex; justify-content: center; align-items: center; margin:0 15px; transition:background .5s, color 0.5s; cursor: pointer;}  
+.userSelection .selectionBox:hover {background:#fff; box-shadow: 0px 20px 30px rgba(0,0,0,.08); }
+.userSelection .selectionBox .circle {width:180px; height:180px; background:#fff; border-radius: 50%;  transition:all .5s;}
+.userSelection .selectionBox p {font-size:28px; text-align:center; margin-top: 30px;}
+.userSelection .selectionBox.male .circle {background: url(../../img/us/sexual_selection/userSelection_male.png) center -30% no-repeat #fff;}
+.userSelection .selectionBox.male:hover .circle {background: url(../../img/us/sexual_selection/userSelection_male.png) center -30% no-repeat #f4f8f8;}
+.userSelection .selectionBox.female .circle {background: url(../../img/us/sexual_selection/userSelection_female.png) center -30% no-repeat #fff;}
+.userSelection .selectionBox.female:hover .circle {background: url(../../img/us/sexual_selection/userSelection_female.png) center -30% no-repeat #f4f8f8;}      
+ 
+.userSelection .selectionBox.select{border:5px solid #33a6ac; background:#fff; box-shadow: 0px 20px 30px rgba(0,0,0,.08); }
+
+.userSelection .selectionBox.select.male .circle{background:url(../../img/us/sexual_selection/userSelection_male.png) center -30% no-repeat #f4f8f8;}
+
+.userSelection .selectionBox.select.female .circle{background: url(../../img/us/sexual_selection/userSelection_female.png) center -30% no-repeat #f4f8f8; 
+} 
+ 
+.btn_area{margin-top:30px;}
