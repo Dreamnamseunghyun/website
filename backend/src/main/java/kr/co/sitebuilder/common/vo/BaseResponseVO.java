@@ -1,4 +1,4 @@
-﻿package kr.co.sitebuilder.common.vo;
+package kr.co.sitebuilder.common.vo;
 
 import kr.co.sitebuilder.common.ResponseCode;
 import lombok.Data;

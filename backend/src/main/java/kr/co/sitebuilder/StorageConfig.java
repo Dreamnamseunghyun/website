@@ -1,4 +1,4 @@
-﻿package kr.co.sitebuilder;
+package kr.co.sitebuilder;
 
 import com.amazonaws.auth.AWSStaticCredentialsProvider;
 import com.amazonaws.auth.BasicAWSCredentials;

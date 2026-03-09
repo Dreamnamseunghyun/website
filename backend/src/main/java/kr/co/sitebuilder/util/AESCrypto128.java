@@ -1,4 +1,4 @@
-package kr.co.dsong.ggsj.util;
+package kr.co.sitebuilder.util;
 
 import org.apache.commons.codec.binary.Hex;
 

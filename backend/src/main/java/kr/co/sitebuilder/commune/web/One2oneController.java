@@ -1,4 +1,4 @@
-﻿package kr.co.sitebuilder.commune.web;
+package kr.co.sitebuilder.commune.web;
 
 import kr.co.sitebuilder.common.vo.BaseResponseVO;
 import kr.co.sitebuilder.commune.service.QnaService;

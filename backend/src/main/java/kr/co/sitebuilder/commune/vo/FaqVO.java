@@ -1,4 +1,4 @@
-﻿package kr.co.sitebuilder.commune.vo;
+package kr.co.sitebuilder.commune.vo;
 
 import kr.co.sitebuilder.common.vo.BaseVO;
 import lombok.Data;

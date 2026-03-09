@@ -1,4 +1,4 @@
-﻿package kr.co.sitebuilder.commune.service;
+package kr.co.sitebuilder.commune.service;
 
 import kr.co.sitebuilder.commune.vo.QnaVO;
 

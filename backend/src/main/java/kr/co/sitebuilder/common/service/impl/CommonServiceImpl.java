@@ -1,11 +1,10 @@
-﻿package kr.co.sitebuilder.common.service.impl;
+package kr.co.sitebuilder.common.service.impl;
 
 import egovframework.rte.fdl.cmmn.EgovAbstractServiceImpl;
 import kr.co.sitebuilder.common.ListType;
 import kr.co.sitebuilder.common.service.CommonService;
 import kr.co.sitebuilder.common.service.mapper.CommonMapper;
 import kr.co.sitebuilder.common.vo.*;
-import kr.co.sitebuilder.company.vo.CompanyVO;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -54,10 +53,5 @@ public class CommonServiceImpl extends EgovAbstractServiceImpl implements Common
     @Override
     public List<AddressVO> selectCenterAddress() throws Exception {
         return commonMapper.selectCenterAddress();
-    }
-
-    @Override
-    public CompanyVO selectCompanyLoginPlaceHolder(String companyCode) throws Exception {
-        return commonMapper.selectCompanyLoginPlaceHolder(companyCode);
     }
 }

@@ -1,4 +1,4 @@
-﻿package kr.co.sitebuilder;
+package kr.co.sitebuilder;
 
 import org.apache.commons.codec.binary.Hex;
 

@@ -1,4 +1,4 @@
-﻿package kr.co.sitebuilder.user.web;
+package kr.co.sitebuilder.user.web;
 
 import kr.co.sitebuilder.common.Property;
 import kr.co.sitebuilder.common.ResponseCode;
@@ -69,31 +69,5 @@ public class LoginController {
         }
 
         return "redirect:/" + sessionUserType.toLowerCase() + "/login";
-    }
-
-    @RequestMapping(value = "/{userType}/login", method = RequestMethod.POST, produces = "application/json")
-    @ResponseBody
-    public BaseResponseVO<UserVO> login(@PathVariable String userType, @RequestBody UserVO vo, HttpSession session) throws Exception {
-        log.info("");
-
-        BaseResponseVO<UserVO> response;
-
-        vo.setUserType(userType.toUpperCase());
-        UserVO user = loginService.login(vo);
-
-        if (user == null) {
-            response = new BaseResponseVO<>(null, ResponseCode.FAIL, "?쇱튂?섎뒗 ?뚯썝?뺣낫媛 ?놁뒿?덈떎.");
-        } else {
-            session.setAttribute("sessionUserId", user.getUserId());
-            session.setAttribute("sessionUserType", user.getUserType());
-
-            session.setAttribute("sessionLoginId", user.getLoginId());
-            session.setAttribute("sessionLoginName", user.getLoginName());
-            session.setAttribute("sessionTypeId", user.getTypeId());
-            session.setAttribute("sessionSubTypeId", user.getSubTypeId());
-            response = new BaseResponseVO<>(user);
-        }
-
-        return response;
     }
 }

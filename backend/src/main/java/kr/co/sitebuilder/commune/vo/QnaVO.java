@@ -1,4 +1,4 @@
-﻿package kr.co.sitebuilder.commune.vo;
+package kr.co.sitebuilder.commune.vo;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import kr.co.sitebuilder.common.vo.BaseVO;

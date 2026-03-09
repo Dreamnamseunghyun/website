@@ -1,4 +1,4 @@
-﻿package kr.co.sitebuilder.common.web;
+package kr.co.sitebuilder.common.web;
 
 import egovframework.rte.ptl.mvc.tags.ui.pagination.AbstractPaginationRenderer;
 

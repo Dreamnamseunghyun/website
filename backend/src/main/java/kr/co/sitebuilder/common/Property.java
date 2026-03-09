@@ -1,8 +1,13 @@
-﻿package kr.co.sitebuilder.common;
+package kr.co.sitebuilder.common;
 
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
 public class Property {
 
-    private Property() {}
+    private String version;
 
     public static final String SESSION_USER_ID = "SESSION_USER_ID";
     public static final String SESSION_PHONE_NUMBER = "SESSION_PHONE_NUMBER";

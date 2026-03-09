@@ -1,4 +1,4 @@
-﻿package kr.co.sitebuilder.commune.service.mapper;
+package kr.co.sitebuilder.commune.service.mapper;
 
 import egovframework.rte.psl.dataaccess.mapper.Mapper;
 import kr.co.sitebuilder.commune.vo.FaqVO;

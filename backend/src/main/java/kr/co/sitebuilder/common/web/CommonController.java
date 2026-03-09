@@ -1,10 +1,9 @@
-﻿package kr.co.sitebuilder.common.web;
+package kr.co.sitebuilder.common.web;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import kr.co.sitebuilder.common.ListType;
 import kr.co.sitebuilder.common.service.CommonService;
 import kr.co.sitebuilder.common.vo.*;
-import kr.co.sitebuilder.company.vo.CompanyVO;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
@@ -101,14 +100,6 @@ public class CommonController {
         log.info("");
 
         return new BaseResponseVO<>(commonService.selectCenterAddress());
-    }
-
-    @RequestMapping(value = "/common/company/login-place-holder", method = RequestMethod.GET, produces = "application/json")
-    @ResponseBody
-    public BaseResponseVO<CompanyVO> selectCompanyLoginPlaceHolder(@RequestParam String companyCode) throws Exception {
-        log.info("");
-
-        return new BaseResponseVO<>(commonService.selectCompanyLoginPlaceHolder(companyCode));
     }
 
     @RequestMapping(value = "/common/kakao/search", method = RequestMethod.GET, produces = "application/json")

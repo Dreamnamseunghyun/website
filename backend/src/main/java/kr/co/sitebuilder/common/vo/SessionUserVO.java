@@ -1,4 +1,4 @@
-﻿package kr.co.sitebuilder.common.vo;
+package kr.co.sitebuilder.common.vo;
 
 import java.io.Serializable;
 
@@ -15,7 +15,7 @@ public class SessionUserVO implements Serializable {
 
     private String phoneNumber;
 
-    private String eMail;
+    private String email;
 
     private String name;
 

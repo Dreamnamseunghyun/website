@@ -1,4 +1,4 @@
-﻿package kr.co.sitebuilder.login.vo;
+package kr.co.sitebuilder.login.vo;
 
 import java.io.Serializable;
 
@@ -16,7 +16,7 @@ public class LoginVO implements Serializable {
     private String password;
     private String name;
     private String phoneNumber;
-    private String eMail;
+    private String email;
     private String birth;
     private String admin;
 }

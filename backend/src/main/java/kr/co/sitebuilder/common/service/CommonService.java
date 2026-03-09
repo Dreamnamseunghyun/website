@@ -1,9 +1,7 @@
-﻿package kr.co.sitebuilder.common.service;
+package kr.co.sitebuilder.common.service;
 
 import kr.co.sitebuilder.common.ListType;
 import kr.co.sitebuilder.common.vo.*;
-import kr.co.sitebuilder.company.vo.CompanyVO;
-
 import java.util.List;
 
 public interface CommonService {
@@ -21,6 +19,4 @@ public interface CommonService {
     List<CommonCenterVO> checkCenterCodeList(Integer hospitalCode, Integer centerCode) throws Exception;
 
     List<AddressVO> selectCenterAddress() throws Exception;
-
-    CompanyVO selectCompanyLoginPlaceHolder(String companyCode) throws Exception;
 }

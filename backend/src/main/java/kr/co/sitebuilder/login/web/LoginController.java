@@ -1,4 +1,4 @@
-﻿package kr.co.sitebuilder.login.web;
+package kr.co.sitebuilder.login.web;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -37,13 +37,13 @@ public class LoginController {
 
         session.setAttribute(Property.SESSION_USER_ID, userInfo.getId());
         session.setAttribute(Property.SESSION_PHONE_NUMBER, userInfo.getPhoneNumber());
-        session.setAttribute(Property.SESSION_E_MAIL, userInfo.geteMail());
+        session.setAttribute(Property.SESSION_E_MAIL, userInfo.getEmail());
         session.setAttribute(Property.SESSION_USER_NAME, userInfo.getName());
 
         SessionUserVO sessionUser = new SessionUserVO();
         sessionUser.setId(userInfo.getId());
         sessionUser.setPhoneNumber(userInfo.getPhoneNumber());
-        sessionUser.seteMail(userInfo.geteMail());
+        sessionUser.setEmail(userInfo.getEmail());
         sessionUser.setName(userInfo.getName());
 
         session.setAttribute(Property.SESSION_USER, sessionUser);
@@ -52,7 +52,7 @@ public class LoginController {
         resultMap.put("message", "로그인 성공");
         resultMap.put("id", userInfo.getId());
         resultMap.put("phoneNumber", userInfo.getPhoneNumber());
-        resultMap.put("eMail", userInfo.geteMail());
+        resultMap.put("eMail", userInfo.getEmail());
         resultMap.put("name", userInfo.getName());
 
         return resultMap;

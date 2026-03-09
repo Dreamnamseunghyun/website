@@ -1,4 +1,4 @@
-﻿package kr.co.sitebuilder.user.service.impl;
+package kr.co.sitebuilder.user.service.impl;
 
 import egovframework.rte.fdl.cmmn.EgovAbstractServiceImpl;
 import kr.co.sitebuilder.user.service.LoginService;
@@ -24,7 +24,7 @@ public class LoginServiceImpl extends EgovAbstractServiceImpl implements LoginSe
     public UserVO login(UserVO vo) throws Exception {
         UserVO user = loginMapper.login(vo);
 
-        if (user != null && bCryptPasswordEncoder.matches(vo.getUserPw(), user.getUserPw())) {
+        if (bCryptPasswordEncoder.matches(vo.getPassword(), user.getPassword())) {
             return user;
         }
 

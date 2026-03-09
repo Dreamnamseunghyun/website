@@ -1,4 +1,4 @@
-﻿package kr.co.sitebuilder.user.vo;
+package kr.co.sitebuilder.user.vo;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;

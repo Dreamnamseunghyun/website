@@ -1,4 +1,4 @@
-package kr.co.dsong.ggsj.util;
+package kr.co.sitebuilder.util;
 
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;

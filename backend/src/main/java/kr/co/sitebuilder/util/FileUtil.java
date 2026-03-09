@@ -1,4 +1,4 @@
-package kr.co.dsong.ggsj.util;
+package kr.co.sitebuilder.util;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.util.StringUtils;

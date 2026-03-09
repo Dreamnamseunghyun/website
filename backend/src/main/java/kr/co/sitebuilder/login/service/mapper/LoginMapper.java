@@ -1,4 +1,4 @@
-﻿package kr.co.sitebuilder.login.service.mapper;
+package kr.co.sitebuilder.login.service.mapper;
 
 import org.apache.ibatis.annotations.Mapper;
 

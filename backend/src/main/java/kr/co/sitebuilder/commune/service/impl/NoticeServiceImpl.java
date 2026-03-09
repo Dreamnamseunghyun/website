@@ -1,4 +1,4 @@
-﻿package kr.co.sitebuilder.commune.service.impl;
+package kr.co.sitebuilder.commune.service.impl;
 
 import egovframework.rte.fdl.cmmn.EgovAbstractServiceImpl;
 import kr.co.sitebuilder.commune.service.NoticeService;

@@ -1,4 +1,4 @@
-﻿package kr.co.sitebuilder.common.vo;
+package kr.co.sitebuilder.common.vo;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import kr.co.sitebuilder.common.CrudType;

@@ -1,9 +1,8 @@
-﻿package kr.co.sitebuilder.common.service.mapper;
+package kr.co.sitebuilder.common.service.mapper;
 
 import egovframework.rte.psl.dataaccess.mapper.Mapper;
 import kr.co.sitebuilder.common.ListType;
 import kr.co.sitebuilder.common.vo.*;
-import kr.co.sitebuilder.company.vo.CompanyVO;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
@@ -26,6 +25,4 @@ public interface CommonMapper {
     List<CommonCenterVO> checkCenterCodeList(@Param("hospitalCode") Integer hospitalCode, @Param("centerCode") Integer centerCode) throws Exception;
 
     List<AddressVO> selectCenterAddress() throws Exception;
-
-    CompanyVO selectCompanyLoginPlaceHolder(@Param("companyCode") String companyCode) throws Exception;
 }

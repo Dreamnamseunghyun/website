@@ -1,4 +1,4 @@
-﻿package kr.co.sitebuilder;
+package kr.co.sitebuilder;
 
 import net.sf.log4jdbc.Properties;
 import net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator;
@@ -48,10 +48,10 @@ public class Log4JdbcCustomFormatter extends Slf4jSpyLogDelegator {
         if (sql == null) {
             return false;
         } else {
-            // 주석 ?�거 ?�규??            sql = sql.replaceAll("\r\n|\r|\n", nl)
-                    .replaceAll("/\\*(\\*[^/]|[^*]/|[^*/])*\\*/", "")
-                    .replaceAll("--.*" + nl, "")
-                    .trim();
+            String cleaned = sql
+                .replaceAll("/\\*(\\*[^/]|[^*]/|[^*/])*\\*/", "")
+                .replaceAll("--.*" + nl, "")
+                .trim();
 
             if (sql.length() < 6) {
                 return false;
