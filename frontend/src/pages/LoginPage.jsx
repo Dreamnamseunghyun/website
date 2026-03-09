@@ -1,83 +1,108 @@
 ﻿import { useState } from "react";
-import { login } from "../services/auth";
 
 export default function LoginPage() {
-    const [form, setForm] = useState({
-        userId: "",
-        userPw: ""
-    });
-
-    const [loading, setLoading] = useState(false);
-    const [message, setMessage] = useState("");
-
-    const handleChange = (e) => {
-        const { name, value } = e.target;
-        setForm((prev) => ({
-            ...prev,
-            [name]: value
-        }));
-    };
-
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-        setLoading(true);
-        setMessage("");
-
-        try {
-            const data = await login(form);
-            setMessage(data?.message || "로그인 요청이 완료되었습니다.");
-        } catch (error) {
-            setMessage(
-                error?.response?.data?.message ||
-                "로그인 중 오류가 발생했습니다."
-            );
-        } finally {
-            setLoading(false);
-        }
-    };
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
 
     return (
-        <div className="login-page">
-            <div className="login-shell">
-                <div className="login-brand">
-                    <div className="brand-badge">SITE BUILDER</div>
-                    <h1>고객 로그인</h1>
-                    <p>홈페이지 제작 진행을 위한 전용 로그인 페이지입니다.</p>
-                    <p>이메일과 비밀번호로 접속하세요.</p>
-                </div>
+        <div style={styles.page}>
+            <div style={styles.card}>
+                <div style={styles.brand}>SITE BUILDER</div>
+                <h1 style={styles.title}>고객 로그인</h1>
+                <p style={styles.desc}>
+                    홈페이지 제작 진행을 위한 전용 로그인 페이지입니다.
+                </p>
+                <p style={styles.descSub}>이메일과 비밀번호로 접속하세요.</p>
 
-                <div className="login-card">
-                    <form onSubmit={handleSubmit} className="login-form">
-                        <label htmlFor="email">이메일</label>
-                        <input
-                            id="userId"
-                            name="userId"
-                            type="text"
-                            placeholder="아이디 입력"
-                            value={form.userId}
-                            onChange={handleChange}
-                            required
-                        />
-
-                        <label htmlFor="password">비밀번호</label>
-                        <input
-                            id="userPw"
-                            name="userPw"
-                            type="password"
-                            placeholder="비밀번호 입력"
-                            value={form.userPw}
-                            onChange={handleChange}
-                            required
-                        />
-
-                        <button type="submit" disabled={loading}>
-                            {loading ? "로그인 중..." : "로그인"}
-                        </button>
-
-                        {message && <p className="login-message">{message}</p>}
-                    </form>
+                <div style={styles.form}>
+                    <input
+                        type="text"
+                        placeholder="이메일"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        style={styles.input}
+                    />
+                    <input
+                        type="password"
+                        placeholder="비밀번호"
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                        style={styles.input}
+                    />
+                    <button style={styles.button}>로그인</button>
                 </div>
             </div>
         </div>
     );
 }
+
+const styles = {
+    page: {
+        minHeight: "100vh",
+        background: "#202124",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        padding: "24px",
+        fontFamily: "Arial, sans-serif",
+    },
+    card: {
+        width: "100%",
+        maxWidth: "420px",
+        background: "#f7f7f2",
+        borderRadius: "20px",
+        padding: "40px 32px",
+        boxShadow: "0 20px 60px rgba(0,0,0,0.35)",
+    },
+    brand: {
+        fontSize: "13px",
+        fontWeight: 700,
+        letterSpacing: "0.08em",
+        color: "#5f6368",
+        marginBottom: "18px",
+    },
+    title: {
+        fontSize: "46px",
+        lineHeight: 1.08,
+        margin: "0 0 16px 0",
+        color: "#111",
+        fontWeight: 800,
+    },
+    desc: {
+        margin: "0 0 8px 0",
+        color: "#444",
+        fontSize: "15px",
+    },
+    descSub: {
+        margin: "0 0 24px 0",
+        color: "#444",
+        fontSize: "15px",
+    },
+    form: {
+        display: "flex",
+        flexDirection: "column",
+        gap: "12px",
+    },
+    input: {
+        width: "100%",
+        padding: "14px 16px",
+        borderRadius: "12px",
+        border: "1px solid #d8d8d8",
+        fontSize: "15px",
+        boxSizing: "border-box",
+        outline: "none",
+        background: "#fff",
+    },
+    button: {
+        marginTop: "6px",
+        width: "100%",
+        padding: "14px 16px",
+        borderRadius: "12px",
+        border: "none",
+        background: "#111",
+        color: "#fff",
+        fontSize: "15px",
+        fontWeight: 700,
+        cursor: "pointer",
+    },
+};

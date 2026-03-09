@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="kr.co.sitebuilder.login.service.mapper.LoginMapper">
+
+    <select id="selectUserById"
+            parameterType="string"
+            resultType="kr.co.sitebuilder.login.vo.LoginVO">
+        SELECT
+            user_seq      AS userSeq
+             , id            AS id
+             , password      AS password
+             , name          AS name
+             , phone_number  AS phoneNumber
+             , eMail         AS eMail
+             , DATE_FORMAT(birth, '%Y-%m-%d') AS birth
+             , admin         AS admin
+        FROM user
+        WHERE id = #{id}
+          AND deleted_at IS NULL
+    </select>
+
+    <insert id="insertUser"
+            parameterType="kr.co.sitebuilder.login.vo.LoginVO">
+        INSERT INTO user (
+                           id
+                         , password
+                         , name
+                         , phone_number
+                         , eMail
+                         , birth
+                         , admin
+                         , created_at
+                         , created_user
+                         , updated_at
+                         , updated_user
+        ) VALUES (
+                   #{id}
+                 , #{password}
+                 , #{name}
+                 , #{phoneNumber}
+                 , #{eMail}
+                 , #{birth}
+                 , #{admin}
+                 , NOW()
+                 , 'SYSTEM'
+                 , NOW()
+                 , 'SYSTEM'
+                 )
+    </insert>
+
+</mapper>
