@@ -9,7 +9,7 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>건강살자(사용자) 마이페이지</title>
+    <title>건강?�자(?�용?? 마이?�이지</title>
     <link href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css" rel="stylesheet" type="text/css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" rel="stylesheet"
           type="text/css">
@@ -24,7 +24,7 @@
     <link href="../css/us/sub_common.css" rel="stylesheet" type="text/css">
     <link href="../css/us/mypage.css" rel="stylesheet" type="text/css">
 
-    <link rel="stylesheet" href="<c:url value="/lib/devextreme/dx.material.ggsj.css"/>">
+    <link rel="stylesheet" href="<c:url value="/lib/devextreme/dx.material.sitebuilder.css"/>">
     <style>
         .dx-overlay-wrapper {
             z-index: 10000 !important;
@@ -88,7 +88,7 @@
                 <div class="title_area">
                     <span class="point_line point_color"></span>
                     <div class="title">
-                        <h2>마이페이지</h2>
+                        <h2>마이?�이지</h2>
                     </div>
                 </div><!--title_area-->
 
@@ -130,7 +130,7 @@
 
                                     <label class="item" for="s_v1_2">
                                         <div class="info_area">
-                                            <div class="title"><span>가족</span></div>
+                                            <div class="title"><span>가�?/span></div>
                                             <div class="img">
                                                 <img src="../img/us/mypage/familySelection_family_img.png">
                                             </div>
@@ -140,7 +140,7 @@
                                         </div>
 
                                         <div class="check_area">
-                                            <input type="checkbox" name="s_v1_2" id="s_v1_2" class="hidden" value="가족"
+                                            <input type="checkbox" name="s_v1_2" id="s_v1_2" class="hidden" value="가�?
                                                    <c:if test="${employee.myself != 1}">checked</c:if>>
 
                                             <label class="cbx" for="s_v1_2">
@@ -150,7 +150,7 @@
                                             </label>
                                         </div>
                                         <c:if test="${employee.myself != 1 && employee.employeeCheckup.supportType == 1}">
-                                            <p class="add_info">&#40;검진비 미지원 대상&#41;</p>
+                                            <p class="add_info">&#40;검진비 미�????�??#41;</p>
                                         </c:if>
                                     </label>
 
@@ -161,7 +161,7 @@
                     <div class="confirmItems">
                         <table>
                             <tr>
-                                <td class="title">기업명</td>
+                                <td class="title">기업�?/td>
                                 <td class="form">
 
                                     <div class="write">
@@ -171,10 +171,10 @@
                                     </div>
 
                                 </td>
-                            </tr><!--기업명-->
+                            </tr><!--기업�?->
 
                             <tr>
-                                <td class="title">이름</td>
+                                <td class="title">?�름</td>
                                 <td class="form">
 
                                     <div class="write">
@@ -183,28 +183,28 @@
                                                 <input type="text" name="s_v2" id="s_v2" class="ko" placeholder="&nbsp;"
                                                        maxlength="15" autocomplete="off"
                                                        value="<c:out value="${employee.employeeName}"/>">
-                                                <span class="label">이름을 입력하세요.</span>
+                                                <span class="label">?�름???�력?�세??</span>
                                             </label>
                                         </div>
                                     </div>
 
                                 </td>
-                            </tr><!--이름-->
+                            </tr><!--?�름-->
 
                             <tr>
-                                <td class="title">생년월일</td>
+                                <td class="title">?�년?�일</td>
                                 <td class="form">
                                     <div class="write">
                                         <div class="input_type1 add_info">
                                             <div id="birth" class="select_box_area"></div>
                                         </div>
-                                    </div><!--생년월일-->
+                                    </div><!--?�년?�일-->
 
                                 </td>
-                            </tr><!--생년월일-->
+                            </tr><!--?�년?�일-->
 
                             <tr>
-                                <td class="title">성별</td>
+                                <td class="title">?�별</td>
                                 <td class="form">
 
                                     <div class="write"><!--체크박스-->
@@ -216,7 +216,7 @@
                                                         <label class="item" for="s_v4_1">
                                                             <input type="checkbox" name="s_v4_1" id="s_v4_1"
                                                                    class="hidden"
-                                                                   value="남성"
+                                                                   value="?�성"
                                                                    <c:if test="${employee.sex == 'M'}">checked</c:if>>
                                                             <label class="cbx<c:if test="${employee.sex == 'M'}"> chk_true1</c:if>"
                                                                    for="s_v4_1">
@@ -225,14 +225,14 @@
                                                                 </svg>
                                                             </label>
                                                             <label class="cbx-lbl<c:if test="${employee.sex == 'M'}"> chk_true2</c:if>"
-                                                                   for="s_v4_1">남성</label>
+                                                                   for="s_v4_1">?�성</label>
                                                         </label>
                                                     </div>
                                                     <div class="chk_boxArea">
                                                         <label class="item" for="s_v4_2">
                                                             <input type="checkbox" name="s_v4_2" id="s_v4_2"
                                                                    class="hidden"
-                                                                   value="여성"
+                                                                   value="?�성"
                                                                    <c:if test="${employee.sex == 'F'}">checked</c:if>>
                                                             <label class="cbx<c:if test="${employee.sex == 'F'}"> chk_true1</c:if>"
                                                                    for="s_v4_2">
@@ -241,12 +241,12 @@
                                                                 </svg>
                                                             </label>
                                                             <label class="cbx-lbl<c:if test="${employee.sex == 'F'}"> chk_true2</c:if>"
-                                                                   for="s_v4_2">여성</label>
+                                                                   for="s_v4_2">?�성</label>
                                                         </label>
                                                     </div>
                                                 </c:when>
                                                 <c:otherwise>
-                                                    <c:out value="${employee.sex == 'M' ? '남성' : '여성'}"/>
+                                                    <c:out value="${employee.sex == 'M' ? '?�성' : '?�성'}"/>
                                                 </c:otherwise>
                                             </c:choose>
 
@@ -254,11 +254,11 @@
                                     </div>
 
                                 </td>
-                            </tr><!--성별-->
+                            </tr><!--?�별-->
 
                             <c:if test="${employee.myself == 1}">
                                 <tr>
-                                    <td class="title">비밀번호 변경</td>
+                                    <td class="title">비�?번호 변�?/td>
                                     <td class="form">
                                         <div class="input_area">
                                             <div class="write">
@@ -267,17 +267,17 @@
                                                         <input type='password' name="s_v5_1" id="s_v5_1"
                                                                class="password_input" placeholder="&nbsp;" required=""
                                                                autocomplete="off" maxlength="16">
-                                                        <span class="label">비밀번호를 입력해주세요.</span>
+                                                        <span class="label">비�?번호�??�력?�주?�요.</span>
                                                     </label>
                                                     <span class="password_icon"><i class="fa fa-eye-slash"></i></span>
                                                 </div>
-                                            </div><!--비밀번호 변경-->
+                                            </div><!--비�?번호 변�?->
                                         </div>
                                     </td>
                                 </tr>
 
                                 <tr>
-                                    <td class="title">비밀번호 확인</td>
+                                    <td class="title">비�?번호 ?�인</td>
                                     <td class="form">
                                         <div class="input_area">
                                             <div class="write">
@@ -286,18 +286,18 @@
                                                         <input type='password' name="s_v5_2" id="s_v5_2"
                                                                class="password_input" placeholder="&nbsp;" required=""
                                                                autocomplete="off" maxlength="16">
-                                                        <span class="label">비밀번호 확인</span>
+                                                        <span class="label">비�?번호 ?�인</span>
                                                     </label>
                                                     <span class="password_icon"><i class="fa fa-eye-slash"></i></span>
                                                 </div>
-                                            </div><!--새 비밀번호-->
+                                            </div><!--??비�?번호-->
                                         </div>
                                     </td>
                                 </tr>
                             </c:if>
                             <c:if test="${employee.myself != 1 && employee.employeeCheckup.supportType == 1}">
                                 <tr>
-                                    <td class="title">검진유형</td>
+                                    <td class="title">검진유??/td>
                                     <td class="form">
                                         <div class="write">
                                             <div class="input_type1 add_info">
@@ -306,11 +306,11 @@
                                         </div>
                                     </td>
                                 </tr>
-                                <!--휴대폰번호-->
+                                <!--?��??�번??->
                             </c:if>
 
                             <tr>
-                                <td class="title">휴대전화</td>
+                                <td class="title">?��??�화</td>
                                 <td class="form">
                                     <div class="write">
                                         <div class="input_type1">
@@ -318,15 +318,15 @@
                                                 <input type="text" name="s_v6" id="s_v6" class="only_num phone_num"
                                                        placeholder="&nbsp;" maxlength="13" autocomplete="off"
                                                        value="<c:out value="${employee.mobile}"/>">
-                                                <span class="label">휴대폰 번호 (숫자만입력)</span>
+                                                <span class="label">?��???번호 (?�자만입??</span>
                                             </label>
                                         </div>
                                     </div>
                                 </td>
-                            </tr><!--휴대폰번호-->
+                            </tr><!--?��??�번??->
 
                             <tr>
-                                <td class="title">이메일</td>
+                                <td class="title">?�메??/td>
                                 <td class="form">
                                     <div class="email_type">
                                         <div class="write">
@@ -335,7 +335,7 @@
                                                     <input type="text" name="s_v7_1" id="s_v7_1" class="email_input"
                                                            placeholder="&nbsp;" autocomplete="off"
                                                            value="<c:out value="${employee.email.indexOf('@') < 0 ? '' : employee.email.substring(0, employee.email.indexOf('@'))}"/>">
-                                                    <span class="label">이메일 아이디</span>
+                                                    <span class="label">?�메???�이??/span>
                                                 </label>
                                             </div>
                                         </div>
@@ -348,13 +348,13 @@
                                                     <input type="text" name="s_v7_2" id="s_v7_2" class="email_input"
                                                            placeholder="&nbsp;" autocomplete="off"
                                                            value="<c:out value="${employee.email.substring(employee.email.indexOf('@') + 1)}"/>">
-                                                    <span class="label">이메일 주소</span>
+                                                    <span class="label">?�메??주소</span>
                                                 </label>
                                             </div>
                                         </div>
                                     </div>
                                 </td>
-                            </tr><!--이메일-->
+                            </tr><!--?�메??->
 
                             <tr>
                                 <td class="title">주소</td>
@@ -367,7 +367,7 @@
                                                            class="only_num address_code_1" placeholder="&nbsp;"
                                                            maxlength="5" autocomplete="off"
                                                            value="<c:out value="${employee.zipcode}"/>" readonly>
-                                                    <span class="label">우편번호</span>
+                                                    <span class="label">?�편번호</span>
                                                 </label>
                                                 <div class="add_info">
 
@@ -376,7 +376,7 @@
                                                             <span class="button_on_circle"></span>
                                                             <a class="btn_inner point_color">
                                                                                   <span class="btn_txt_area">
-                                                                                    검색 <i class="xi-search"></i>
+                                                                                    검??<i class="xi-search"></i>
                                                                                   </span>
                                                             </a>
                                                         </div>
@@ -400,7 +400,7 @@
                                                     <input type="text" name="s_v9_3" id="s_v9_3" class="address_code_3"
                                                            placeholder="&nbsp;" autocomplete="off"
                                                            value="<c:out value="${employee.address2}"/>">
-                                                    <span class="label">상세주소</span>
+                                                    <span class="label">?�세주소</span>
                                                 </label>
                                             </div>
                                         </div><!--line2-->
@@ -416,7 +416,7 @@
                                     <span class="button_on_circle"></span>
                                     <a href="#none" class="btn_inner orange">
                                                       <span class="btn_txt_area">
-                                                        정보 확인 완료
+                                                        ?�보 ?�인 ?�료
                                                       </span>
                                     </a>
                                 </div>
@@ -429,7 +429,7 @@
                                 <span class="button_on_circle"></span>
                                 <a href="#none" class="btn_inner blue_gradient">
                                                       <span class="btn_txt_area">
-                                                        수정
+                                                        ?�정
                                                       </span>
                                 </a>
                             </div>
@@ -440,7 +440,7 @@
                                 <span class="button_on_circle"></span>
                                 <a href="javascript:history.back()" class="btn_inner grey">
                                                       <span class="btn_txt_area">
-                                                        취소하기
+                                                        취소?�기
                                                       </span>
                                 </a>
                             </div>
@@ -502,19 +502,19 @@
     $('#birth').dxDateBox({
         useMaskBehavior: true,
         displayFormat: 'yyyy.MM.dd',
-        placeholder: '생년월일을 선택해 주세요.',
+        placeholder: '?�년?�일???�택??주세??',
         value: new Date(<c:out value="${employee.birth.time}"/>),
     });
 
     $('#companyCheckupTypeId').dxSelectBox({
         valueExpr: 'companyCheckupTypeId',
         displayExpr: 'companyCheckupTypeName',
-        placeholder: '검진유형을 선택해 주세요.',
+        placeholder: '검진유?�을 ?�택??주세??',
         dataSource: [
             <c:forEach items="${copayCompanyCheckupTypeList}" var="copayCompanyCheckup">
             {
                 companyCheckupTypeId: <c:out value="${copayCompanyCheckup.companyCheckupTypeId}"/>,
-                companyCheckupTypeName: '<c:out value="${copayCompanyCheckup.companyCheckupTypeName}"/> (<fmt:formatNumber value="${copayCompanyCheckup.hospitalPay}" pattern="#,###"/> 원)',
+                companyCheckupTypeName: '<c:out value="${copayCompanyCheckup.companyCheckupTypeName}"/> (<fmt:formatNumber value="${copayCompanyCheckup.hospitalPay}" pattern="#,###"/> ??',
             },
             </c:forEach>
         ],
@@ -541,14 +541,14 @@
 
     $('.check_btn').on('click', function () {
         if (getUserInfo()) {
-            Swal.fire('수정 \n버튼을 눌러주세요.', '', 'success');
+            Swal.fire('?�정 \n버튼???�러주세??', '', 'success');
         }
     });
 
-    $('.check_edit_btn').on('click', function () {  //수정 버튼
+    $('.check_edit_btn').on('click', function () {  //?�정 버튼
         let userInfo = getUserInfo();
         if (!userInfo) {
-            Swal.fire('정보 확인을\n완료하신 후 시도해 주세요.', '', 'warning');
+            Swal.fire('?�보 ?�인??n?�료?�신 ???�도??주세??', '', 'warning');
             return;
         }
 
@@ -560,7 +560,7 @@
             data: JSON.stringify(userInfo),
         }).then(function (response) {
             if (response.code === 'SUCCESS') {
-                Swal.fire('작성하신 정보로\n수정이 완료되었습니다.', '', 'success').then(function () {
+                Swal.fire('?�성?�신 ?�보�?n?�정???�료?�었?�니??', '', 'success').then(function () {
                     location.href = "index.html";
                 });
             } else {
@@ -574,23 +574,23 @@
 
     function getUserInfo() {
         <c:if test="${reserve.reservationState != null && reserve.reservationState != 1 && reserve.reservationState != 3}">
-        Swal.fire('예약 후에는 회원정보를 수정할 수 없습니다.', '', 'warning');
+        Swal.fire('?�약 ?�에???�원?�보�??�정?????�습?�다.', '', 'warning');
         return;
         </c:if>
 
         let employeeName = $('#s_v2');
-        if (!employeeName.val()) { //이름
+        if (!employeeName.val()) { //?�름
             employeeName.parents("label").addClass("input_focus").find("input").focus();
             setTimeout(function () {
                 employeeName.parents("label").removeClass("input_focus");
             }, 1000);
 
-            Swal.fire('이름을 입력해 주세요.', '', 'warning');
+            Swal.fire('?�름???�력??주세??', '', 'warning');
             return;
         }
 
         <c:if test="${reserve.reservationState == null}">
-        if ($('#s_v4_1:checked').length <= "0" && $('#s_v4_2:checked').length <= "0") {//성별
+        if ($('#s_v4_1:checked').length <= "0" && $('#s_v4_2:checked').length <= "0") {//?�별
             $("#s_v4_1").parents("label").find(".cbx").addClass("chk_focus").focus();
             $("#s_v4_2").parents("label").find(".cbx").addClass("chk_focus").focus();
 
@@ -599,7 +599,7 @@
                 $("#s_v4_2").parents("label").find(".cbx").removeClass('chk_focus');
             }, 1000);
 
-            Swal.fire('성별을 선택해 주세요', '', 'warning');
+            Swal.fire('?�별???�택??주세??, '', 'warning');
             return;
         }
 
@@ -610,15 +610,14 @@
         </c:if>
 
         let birth = $('#birth').dxDateBox('instance');
-        if (!birth.option('value')) { //생년월일
-            Swal.fire('생년월일을 선택해 주세요.', '', 'warning');
+        if (!birth.option('value')) { //?�년?�일
+            Swal.fire('?�년?�일???�택??주세??', '', 'warning');
             return;
         }
 
         <c:if test="${employee.myself != 1 && employee.employeeCheckup.supportType == 1}">
         let companyCheckupTypeId = $('#companyCheckupTypeId').dxSelectBox('instance');
-        if (!companyCheckupTypeId.option('text')) { //검진유형
-            Swal.fire('검진유형을 선택해 주세요.', '', 'warning');
+        if (!companyCheckupTypeId.option('text')) { //검진유??            Swal.fire('검진유?�을 ?�택??주세??', '', 'warning');
             return;
         }
         </c:if>
@@ -626,35 +625,34 @@
         let userPw = $('#s_v5_1');
         let checkPw = $('#s_v5_2');
         if (userPw.val() || checkPw.val()) {
-            // 변경될 비밀번호
+            // 변경될 비�?번호
             if (!userPw.val()) {
                 userPw.parents("label").addClass("input_focus").find("input").focus();
                 setTimeout(function () {
                     userPw.parents("label").removeClass("input_focus");
                 }, 1000);
 
-                Swal.fire('변경할 비밀번호를 입력해 주세요.', '', 'warning');
+                Swal.fire('변경할 비�?번호�??�력??주세??', '', 'warning');
                 return;
             }
 
-            if (!password_check(userPw.val())) { //비밀번호 유효성체크
-                userPw.parents("label").addClass("input_focus").find("input").focus();
+            if (!password_check(userPw.val())) { //비�?번호 ?�효?�체??                userPw.parents("label").addClass("input_focus").find("input").focus();
                 setTimeout(function () {
                     userPw.parents("label").removeClass("input_focus");
                 }, 1000);
 
-                Swal.fire('8~16자 이내, 최소 1개의 숫자 혹은\n 특수문자를 사용하여 입력해주세요.', '', 'warning');
+                Swal.fire('8~16???�내, 최소 1개의 ?�자 ?��?\n ?�수문자�??�용?�여 ?�력?�주?�요.', '', 'warning');
                 return;
             }
 
-            // 새 비밀번호 확인
+            // ??비�?번호 ?�인
             if (!checkPw.val()) {
                 checkPw.parents("label").addClass("input_focus").find("input").focus();
                 setTimeout(function () {
                     checkPw.parents("label").removeClass("input_focus");
                 }, 1000);
 
-                Swal.fire('비밀번호 확인을 입력해 주세요.', '', 'warning');
+                Swal.fire('비�?번호 ?�인???�력??주세??', '', 'warning');
                 return;
             }
 
@@ -664,41 +662,39 @@
                     checkPw.parents("label").removeClass("input_focus");
                 }, 1000);
 
-                Swal.fire('비밀번호가 일치하지 않습니다.', '', 'warning');
+                Swal.fire('비�?번호가 ?�치?��? ?�습?�다.', '', 'warning');
                 return;
             }
         }
 
         let mobile = $('#s_v6');
-        if (!mobile.val()) { //휴대폰번호
-            mobile.parents("label").addClass("input_focus").find("input").focus();
+        if (!mobile.val()) { //?��??�번??            mobile.parents("label").addClass("input_focus").find("input").focus();
             setTimeout(function () {
                 mobile.parents("label").removeClass("input_focus");
             }, 1000);
 
-            Swal.fire('휴대폰번호를 입력해 주세요.', '', 'warning');
+            Swal.fire('?��??�번?��? ?�력??주세??', '', 'warning');
             return;
         }
 
         let emailId = $('#s_v7_1');
         let emailDomain = $('#s_v7_2');
-        if (!emailId.val() && emailDomain.val()) { //이메일 아이디
-            emailId.parents("label").addClass("input_focus").find("input").focus();
+        if (!emailId.val() && emailDomain.val()) { //?�메???�이??            emailId.parents("label").addClass("input_focus").find("input").focus();
             setTimeout(function () {
                 emailId.parents("label").removeClass("input_focus");
             }, 1000);
 
-            Swal.fire('이메일 아이디를 입력해 주세요.', '', 'warning');
+            Swal.fire('?�메???�이?��? ?�력??주세??', '', 'warning');
             return;
         }
 
-        if (emailId.val() && !emailDomain.val()) { //이메일 주소
+        if (emailId.val() && !emailDomain.val()) { //?�메??주소
             emailDomain.parents(".select_box").find(".custom-select-trigger").addClass("select_focus").parents(".custom-select-wrapper").find("select.custom-select").focus();
             setTimeout(function () {
                 emailDomain.parents(".select_box").find(".custom-select-trigger").removeClass("select_focus");
             }, 1000);
 
-            Swal.fire('이메일 주소를 입력해 주세요.', '', 'warning');
+            Swal.fire('?�메??주소�??�력??주세??', '', 'warning');
             return;
         }
 
@@ -713,7 +709,7 @@
                 address2.parents("label").removeClass("input_focus");
             }, 1000);
 
-            Swal.fire('우편번호를  검색해 주세요.', '', 'warning');
+            Swal.fire('?�편번호�? 검?�해 주세??', '', 'warning');
             return;
         }
 
@@ -723,7 +719,7 @@
                 address2.parents("label").removeClass("input_focus");
             }, 1000);
 
-            Swal.fire('상세주소를 입력해 주세요.', '', 'warning');
+            Swal.fire('?�세주소�??�력??주세??', '', 'warning');
             return;
         }
 

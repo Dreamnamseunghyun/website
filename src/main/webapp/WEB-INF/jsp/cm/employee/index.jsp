@@ -1,4 +1,4 @@
-<%@ page contentType="text/html; charset=utf-8" pageEncoding="utf-8" %>
+﻿<%@ page contentType="text/html; charset=utf-8" pageEncoding="utf-8" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 
@@ -21,7 +21,7 @@
                 <div class="card card-transparent board_internal">
                     <div class="card-header ">
                         <div class="card-title">
-                            <h3 class="h3">회원 목록</h3>
+                            <h3 class="h3">?뚯썝 紐⑸줉</h3>
                         </div>
                     </div>
                     <%--                    <div class="card-body">--%>
@@ -33,17 +33,17 @@
                                 <div class="row-box">
                                     <div class="row-box-inner">
                                         <div class="col-box1 row">
-                                            <div class="col-lg-4 tag-name"><span>대상년도</span></div>
+                                            <div class="col-lg-4 tag-name"><span>??곷뀈??/span></div>
                                             <div class="col-lg-8 row period">
                                                 <div class="col-lg-12" id="selectCheckupYear"
-                                                     data-ggsj="dxSelectBox"></div>
+                                                     data-sitebuilder="dxSelectBox"></div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-lg-2" style="display: none" id="employeeCheckup.companyCheckupId"
-                                         data-ggsj="dxTextBox"></div>
+                                         data-sitebuilder="dxTextBox"></div>
                                     <div class="col-lg-2" style="display: none" id="companyId"
-                                         data-ggsj="dxTextBox"></div>
+                                         data-sitebuilder="dxTextBox"></div>
                                 </div>
 
                             </div>
@@ -53,7 +53,7 @@
                                 <div class="row-box">
                                     <div class="row-box-inner">
                                         <div class="col-box1 row">
-                                            <div class="col-lg-12" id="searchGrid" data-ggsj="dxTextBox"></div>
+                                            <div class="col-lg-12" id="searchGrid" data-sitebuilder="dxTextBox"></div>
                                         </div>
                                     </div>
                                 </div>
@@ -62,14 +62,14 @@
                         </div>
                         <!-- Header -->
 
-                        <div id="dataGridEmployee" class="main_table" data-ggsj="dxDataGrid">
+                        <div id="dataGridEmployee" class="main_table" data-sitebuilder="dxDataGrid">
                         </div>
                     </div>
                     <%--</div>--%>
                 </div>
 
                 <div class="row btn_area index_btn_area footer-btn">
-                    <div id="btnCreate" data-ggsj="dxButton">
+                    <div id="btnCreate" data-sitebuilder="dxButton">
                         <div class="write_btn">
                             <div>
                                 <div class="pencil"></div>
@@ -82,10 +82,10 @@
                                     <div class="paper"></div>
                                 </div>
                             </div>
-                            <span>개별 등록</span>
+                            <span>媛쒕퀎 ?깅줉</span>
                         </div>
                     </div>
-                    <div id="btnExcel" data-ggsj="dxButton"><i class="fa fa-file-excel"></i>Excel 등록</div>
+                    <div id="btnExcel" data-sitebuilder="dxButton"><i class="fa fa-file-excel"></i>Excel ?깅줉</div>
                 </div>
             </div>
         </div>
@@ -97,10 +97,10 @@
 </body>
 <script>
     $(function () {
-        ggsj.openMenu('employee');
+        sitebuilder.openMenu('employee');
 
         /** @param dxInstances : {dataGridEmployee,btnCreate,btnExcel} */
-        let dxInstances = ggsj.createDx(false);
+        let dxInstances = sitebuilder.createDx(false);
 
         function LoadEmployeeList() {
             // Lookup CheckupTypeList
@@ -147,7 +147,7 @@
         LoadEmployeeList();
 
         dxInstances.selectCheckupYear.option({
-            dataSource: ggsj.typeDef.Year,
+            dataSource: sitebuilder.typeDef.Year,
             value: new Date().getFullYear(),
             valueExpr: 'id',
             displayExpr: 'text',
@@ -157,7 +157,7 @@
         });
 
         dxInstances.searchGrid.option({
-            placeholder: '검색',
+            placeholder: '寃??,
             valueChangeEvent: "keyup",
             mode: 'search',
             onValueChanged: function (e) {
@@ -170,55 +170,55 @@
                 mode: 'multiple',
             },
             columns: [{
-                caption: '순번',
+                caption: '?쒕쾲',
                 alignment: 'center',
                 cellTemplate: function (cellElement, cellInfo) {
                     cellElement.text(cellInfo.component.pageIndex() * cellInfo.component.pageSize() + cellInfo.row.rowIndex + 1);
                 },
             }, {
-                caption: '회원번호',
+                caption: '?뚯썝踰덊샇',
                 alignment: 'center',
                 dataField: 'userId',
             }, {
-                caption: '이름',
+                caption: '?대쫫',
                 alignment: 'center',
                 dataField: 'employeeName',
                 cellTemplate: function (cellElement, cellInfo) {
                     let employeeCheckupId = cellInfo.data.employeeCheckup.employeeCheckupId;
                     cellElement.append("<a href = " + '<c:url value="/cm/employee"/>/' + employeeCheckupId + ">" + cellInfo.text + "</a>");
                     if (cellInfo.data.employeeCheckup.vip === true) {
-                        cellElement.append('<span style="color:red; font-weight: bold;">ⓥ</span>');
+                        cellElement.append('<span style="color:red; font-weight: bold;">??/span>');
                     }
                 },
             }, {
-                caption: '생년월일',
+                caption: '?앸뀈?붿씪',
                 alignment: 'center',
                 dataField: 'birth',
                 dataType: 'date',
             }, {
-                caption: '성별',
+                caption: '?깅퀎',
                 alignment: 'center',
                 dataField: 'sex',
             }, {
-                caption: '대상자',
+                caption: '??곸옄',
                 alignment: 'center',
                 dataField: 'myself',
                 lookup: {
                     dataSource: [
-                        {id: 1, text: '본인'},
-                        {id: 2, text: '가족'},
+                        {id: 1, text: '蹂몄씤'},
+                        {id: 2, text: '媛議?},
                     ],
                     valueExpr: 'id',
                     displayExpr: 'text',
                 },
             }, {
-                caption: '검진비 청구',
+                caption: '寃吏꾨퉬 泥?뎄',
                 alignment: 'center',
                 dataField: 'employeeCheckup.supportType',
                 lookup: {
                     dataSource: [
-                        {id: '0', text: '기업부담'},
-                        {id: '1', text: '본인부담'},
+                        {id: '0', text: '湲곗뾽遺??},
+                        {id: '1', text: '蹂몄씤遺??},
                     ],
                     valueExpr: 'id',
                     displayExpr: 'text',
@@ -228,14 +228,14 @@
                 alignment: 'center',
                 dataField: 'employeeCode',
             }, {
-                caption: '휴대전화',
+                caption: '?대??꾪솕',
                 alignment: 'center',
                 dataField: 'mobile',
                 format: function (value) {
-                    return ggsj.phoneWithHyphen(value);
+                    return sitebuilder.phoneWithHyphen(value);
                 }
             }, {
-                caption: '검진유형',
+                caption: '寃吏꾩쑀??,
                 alignment: 'center',
                 dataField: 'employeeCheckup.companyCheckupTypeId',
                 cellTemplate: function (cellElement, cellInfo) {
@@ -244,7 +244,7 @@
                     cellElement.append(companyCheckupTypeCode, '.', companyCheckupTypeName);
                 },
             }, {
-                caption: '사용여부',
+                caption: '?ъ슜?щ?',
                 alignment: 'center',
                 dataField: 'noUse',
                 lookup: {
@@ -256,11 +256,11 @@
                     displayExpr: 'text',
                 },
             }, {
-                caption: '수정',
+                caption: '?섏젙',
                 type: 'buttons',
                 buttons: [{
                     name: 'detail',
-                    text: '수정',
+                    text: '?섏젙',
                     onClick: function (e) {
                         let user = e.row.data;
                         location.href = '<c:url value="/cm/employee"/>/' + user.employeeCheckup.employeeCheckupId + '/edit';
@@ -273,7 +273,7 @@
         // Create
         dxInstances.btnCreate.option({
             stylingMode: 'outlined',
-            text: '개별등록',
+            text: '媛쒕퀎?깅줉',
             type: 'success',
             icon: 'group',
             onClick: function () {
@@ -284,7 +284,7 @@
         // Excel
         dxInstances.btnExcel.option({
             stylingMode: 'outlined',
-            text: '엑셀등록',
+            text: '?묒??깅줉',
             type: 'danger',
             icon: 'xlsxfile',
             onClick: function () {

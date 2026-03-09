@@ -1,4 +1,4 @@
-/* ============================================================
+﻿/* ============================================================
  * Tree View
  * Render a tree view using jQuery Dynatree plugin
  * For DEMO purposes only. Extract what you need.

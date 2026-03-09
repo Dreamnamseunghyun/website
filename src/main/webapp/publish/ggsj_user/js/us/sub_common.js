@@ -1,4 +1,4 @@
-//팝업
+﻿//?앹뾽
 function popup_open(){
         $(".click_popup_bg").css({visibility:"visible",opacity:"1","transition":"all 1s cubic-bezier(.19,1,.22,1) 0s"});
         $(".click_popup").css({visibility:"visible",opacity:"1","transition":"all 2s cubic-bezier(.19,1,.22,1) 0.3s"});
@@ -8,7 +8,7 @@ function popup_close(){
         $(".click_popup").css({visibility:"hidden",opacity:"0","transition":"all 1s cubic-bezier(.19,1,.22,1)"});
 }
 
-/*팝업종료*/
+/*?앹뾽醫낅즺*/
 
 $(".click_popup .click_popup_close").click(function(){
     popup_close()
@@ -21,8 +21,7 @@ $(".click_popup_bg").click(function(){
 
 
 
-//input 한글만
- $(".ko").keyup(function(event){
+//input ?쒓?留? $(".ko").keyup(function(event){
   rename = /[a-z0-9]|[ \[\]{}()<>?|`~!@#$%^&*-_+=,.;:\"'\\]/g;
   kv = $(this).val();
   if( rename.test(kv) ) {
@@ -30,30 +29,29 @@ $(".click_popup_bg").click(function(){
   }
  });
 
-//input 숫자만
-var num = /^[0-9]*$/;
+//input ?レ옄留?var num = /^[0-9]*$/;
 $(".only_num").on("keyup" , function() {$(this).val( $(this).val().replace(/[^0-9]/gi,"") );})
 
 
 
 
-//한글 입력불가 (아이디 비밀번호 이메일)
+//?쒓? ?낅젰遺덇? (?꾩씠??鍮꾨?踰덊샇 ?대찓??
  $(".id_input").keyup(function(event){
-    $(this).val( $(this).val().replace( /[ㄱ-ㅎ|ㅏ-ㅣ|가-힣]/g, '' ) );
+    $(this).val( $(this).val().replace( /[????????媛-??/g, '' ) );
  })
 
  $(".password_input").keyup(function(event){
-    $(this).val( $(this).val().replace( /[ㄱ-ㅎ|ㅏ-ㅣ|가-힣]/g, '' ) );
+    $(this).val( $(this).val().replace( /[????????媛-??/g, '' ) );
  })
 
 $('.email_input').on("keyup", function() {
-	$(this).val( $(this).val().replace( /[ㄱ-ㅎ|ㅏ-ㅣ|가-힣]/g, '' ) );
+	$(this).val( $(this).val().replace( /[????????媛-??/g, '' ) );
 });
 
 
 
 
-//휴대전화번호
+//?대??꾪솕踰덊샇
     var autoHypenPhone = function(str){
       str = str.replace(/[^0-9]/g, '');
       var tmp = '';
@@ -90,10 +88,10 @@ $(".phone_num").keyup(function(event){
 
 
 
-//체크박스
+//泥댄겕諛뺤뒪
 $(".chk_boxArea .item").click(function(){
 var chk = $(this).find("input").is(":checked");
-    if (chk){ //체크가 되었을시
+    if (chk){ //泥댄겕媛 ?섏뿀?꾩떆
       $(this).find("input").prop("checked",true).parents(".chk_area").addClass("active").parents("tr").siblings("tr").find("td:last-of-type").find(".chk_area").removeClass("active").find("input").prop("checked",false)
 
     }
@@ -101,13 +99,13 @@ var chk = $(this).find("input").is(":checked");
 });
 
 
-//비밀번호 체크
+//鍮꾨?踰덊샇 泥댄겕
 function password_check(password) {
-	var regExp = /^(?=.*[a-zA-Z])((?=.*\d)|(?=.*\W).{8,16})/; //  8 ~ 16자 영문, 숫자 조합
-	return regExp.test(password); // 형식에 맞는 경우 true 리턴
+	var regExp = /^(?=.*[a-zA-Z])((?=.*\d)|(?=.*\W).{8,16})/; //  8 ~ 16???곷Ц, ?レ옄 議고빀
+	return regExp.test(password); // ?뺤떇??留욌뒗 寃쎌슦 true 由ы꽩
 }
 
-//패스워드 visible
+//?⑥뒪?뚮뱶 visible
 $(".password_icon").click(function(){
     $(this).toggleClass('visible');
 
@@ -122,35 +120,33 @@ $(".password_icon").click(function(){
 
 
 
-//이메일 체크
+//?대찓??泥댄겕
 function email_check(email) {
 	var regExp = /^[a-z0-9_+.-]+@([a-z0-9-]+\.)+[a-z0-9]{2,4}$/;
 	return regExp.test(email);
 }
 
-//chk_type2(radio 체크)
+//chk_type2(radio 泥댄겕)
 $(".chk_type2 .chk_boxArea label").click(function(){
 var chk = $(this).children("input").is(":checked");
 var chk_active = $(this).children("input").addClass("active");
-    if (chk){ //체크가 되었을시
+    if (chk){ //泥댄겕媛 ?섏뿀?꾩떆
         $(this).children("input").prop("checked",false).next().removeClass("chk_true1").next().removeClass("chk_true2");
     }
-    else{ //체크가 안되었을시
-     $(this).children("input").prop("checked",true).next().addClass("chk_true1").next().addClass("chk_true2");
+    else{ //泥댄겕媛 ?덈릺?덉쓣??     $(this).children("input").prop("checked",true).next().addClass("chk_true1").next().addClass("chk_true2");
         }
 $(this).parent("div").siblings("div").children("label").children("input").prop("checked",false).next().removeClass("chk_true1").next().removeClass("chk_true2");
 });
 
 
-//chk_type2_2_user(user radio 체크)
+//chk_type2_2_user(user radio 泥댄겕)
 $(".chk_type2_2_user .chk_boxArea label").click(function(){
 var chk = $(this).children("input").is(":checked");
 var chk_active = $(this).children("input").addClass("active");
-    if (chk){ //체크가 되었을시
+    if (chk){ //泥댄겕媛 ?섏뿀?꾩떆
         $(this).children("input").prop("checked",false).next().removeClass("chk_true1").next().removeClass("chk_true2");
     }
-    else{ //체크가 안되었을시
-     $(this).children("input").prop("checked",true).next().addClass("chk_true1").next().addClass("chk_true2");
+    else{ //泥댄겕媛 ?덈릺?덉쓣??     $(this).children("input").prop("checked",true).next().addClass("chk_true1").next().addClass("chk_true2");
         }
 $(this).parents(".chk_boxArea").siblings().find(".check_area input").prop("checked",false).next().removeClass("chk_true1").next().removeClass("chk_true2");
 });
@@ -177,7 +173,7 @@ var email_value = $(this).attr("data-value");
 
 
 
- //직접선택
+ //吏곸젒?좏깮
  $(".select_box_direct").on('blur', function(){
     var reset_option_text = $(this).parents(".select_box").find(".custom-options .custom-option:nth-of-type(1)").text();
     var direct_text = $(this).val();

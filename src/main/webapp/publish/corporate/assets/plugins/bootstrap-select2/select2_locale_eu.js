@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Select2 Basque translation.
  *
  * Author: Julen Ruiz Aizpuru <julenx at gmail dot com>
@@ -34,10 +34,10 @@
           }
         },
         formatLoadMore: function (pageNumber) {
-          return "Emaitza gehiago kargatzen…";
+          return "Emaitza gehiago kargatzen??;
         },
         formatSearching: function () {
-          return "Bilatzen…";
+          return "Bilatzen??;
         }
     };
 

@@ -1,4 +1,4 @@
-nv.models.axis = function() {
+﻿nv.models.axis = function() {
   "use strict";
   //============================================================
   // Public Variables with Default Settings

@@ -6,7 +6,7 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>건강살자(사용자) 병원 및 항목 선택</title>
+    <title>건강?�자(?�용?? 병원 �???�� ?�택</title>
     <link href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/css/swiper.min.css" rel="stylesheet"
@@ -20,7 +20,7 @@
     <link href="../css/us/sub_common.css" rel="stylesheet" type="text/css">
     <link href="../css/us/reserve_checkup.css" rel="stylesheet" type="text/css">
 
-    <link rel="stylesheet" href="<c:url value="/lib/devextreme/dx.material.ggsj.css"/>">
+    <link rel="stylesheet" href="<c:url value="/lib/devextreme/dx.material.sitebuilder.css"/>">
     <style>
         .dx-overlay-wrapper {
             z-index: 10000 !important;
@@ -75,7 +75,7 @@
                                                     <h3>STEP 1</h3>
                                                 </div>
                                                 <div class="info">
-                                                    검진 예약
+                                                    검�??�약
                                                 </div>
                                             </div>
                                             <div class="right_area">
@@ -93,7 +93,7 @@
                                                     <h3>STEP 2</h3>
                                                 </div>
                                                 <div class="info">
-                                                    검진 희망일 선택
+                                                    검�??�망???�택
                                                 </div>
                                             </div>
                                             <div class="right_area">
@@ -111,7 +111,7 @@
                                                     <h3>STEP 3</h3>
                                                 </div>
                                                 <div class="info">
-                                                    병원 및 항목 선택
+                                                    병원 �???�� ?�택
                                                 </div>
                                             </div>
                                             <div class="right_area">
@@ -130,7 +130,7 @@
                                                     <h3>STEP 4</h3>
                                                 </div>
                                                 <div class="info">
-                                                    최종 예약 정보
+                                                    최종 ?�약 ?�보
                                                 </div>
                                             </div>
                                             <div class="right_area">
@@ -165,7 +165,7 @@
                                                     <h3>STEP 1</h3>
                                                 </div>
                                                 <div class="info">
-                                                    검진 예약
+                                                    검�??�약
                                                 </div>
                                             </div>
                                             <div class="right_area">
@@ -182,7 +182,7 @@
                                                     <h3>STEP 2</h3>
                                                 </div>
                                                 <div class="info">
-                                                    검진 항목 선택
+                                                    검�???�� ?�택
                                                 </div>
                                             </div>
                                             <div class="right_area">
@@ -199,7 +199,7 @@
                                                     <h3>STEP 3</h3>
                                                 </div>
                                                 <div class="info">
-                                                    병원 및 항목 선택
+                                                    병원 �???�� ?�택
                                                 </div>
                                             </div>
                                             <div class="right_area">
@@ -216,7 +216,7 @@
                                                     <h3>STEP 4</h3>
                                                 </div>
                                                 <div class="info">
-                                                    검진 희망일 선택
+                                                    검�??�망???�택
                                                 </div>
                                             </div>
                                             <div class="right_area">
@@ -233,7 +233,7 @@
                                                     <h3>STEP 5</h3>
                                                 </div>
                                                 <div class="info">
-                                                    최종 예약 정보
+                                                    최종 ?�약 ?�보
                                                 </div>
                                             </div>
                                             <div class="right_area">
@@ -268,7 +268,7 @@
                                                     <h3>STEP 1</h3>
                                                 </div>
                                                 <div class="info">
-                                                    검진 예약
+                                                    검�??�약
                                                 </div>
                                             </div>
                                             <div class="right_area">
@@ -287,7 +287,7 @@
                                                     <h3>STEP 2</h3>
                                                 </div>
                                                 <div class="info">
-                                                    병원 및 항목 선택
+                                                    병원 �???�� ?�택
                                                 </div>
                                             </div>
                                             <div class="right_area">
@@ -306,7 +306,7 @@
                                                     <h3>STEP 3</h3>
                                                 </div>
                                                 <div class="info">
-                                                    검진 희망일 선택
+                                                    검�??�망???�택
                                                 </div>
                                             </div>
                                             <div class="right_area">
@@ -324,7 +324,7 @@
                                                     <h3>STEP 4</h3>
                                                 </div>
                                                 <div class="info">
-                                                    최종 예약 정보
+                                                    최종 ?�약 ?�보
                                                 </div>
                                             </div>
                                             <div class="right_area">
@@ -353,9 +353,9 @@
                                 <span class="point_line point_color"></span>
                                 <div class="title">
                                     <h2>
-                                        선택하신
+                                        ?�택?�신
                                         <span class="item_name point_color"><c:out value="${itemNames}"/></span>
-                                        항목을 검사하는 병원 추천드립니다.
+                                        ??��??검?�하??병원 추천?�립?�다.
                                     </h2>
                                 </div>
                             </div>
@@ -365,33 +365,33 @@
                             <div class="special_checkup">
                                 <ul>
                                     <li>
-                                        <div class="tit">특수검진</div>
+                                        <div class="tit">?�수검�?/div>
                                         <div class="check write">
                                             <div class="chk_area">
                                                 <div class="chk_boxArea">
 
                                                     <label class="item" for="s_v1" style="cursor: default;">
                                                         <input type="checkbox" name="s_v1" id="s_v1" class="hidden"
-                                                               value="특수검진기관" disabled
+                                                               value="?�수검진기관" disabled
                                                                <c:if test="${reserve.specialCheckup == 1}">checked</c:if>>
                                                         <label class="cbx" for="s_v1" style="cursor: default;">
                                                             <svg height="20px" viewBox="0 -8 16 30" width="20px">
                                                                 <polyline points="1 7.6 5 11 13 1"></polyline>
                                                             </svg>
                                                         </label>
-                                                        <label class="cbx-lbl" for="s_v1" style="cursor: default;">특수검진기관</label>
+                                                        <label class="cbx-lbl" for="s_v1" style="cursor: default;">?�수검진기관</label>
                                                     </label>
                                                 </div>
                                             </div>
                                         </div>
                                         <c:if test="${reserve.specialCheckup == 1}">
-                                            <div class="user_special_checkup active">※ 귀하는 특수검진 대상자입니다.</div>
+                                            <div class="user_special_checkup active">??귀?�는 ?�수검�??�?�자?�니??</div>
                                         </c:if>
                                     </li>
 
 
                                     <li>
-                                        <div class="tit">지역검색</div>
+                                        <div class="tit">지?????/div>
                                         <div class="select_box_area">
                                             <div id="sido"></div>
                                         </div>
@@ -402,14 +402,14 @@
 
 
                                     <li>
-                                        <div class="tit">병원명검색</div>
+                                        <div class="tit">병원명�???/div>
                                         <div class="search_box_area write">
                                             <div class="input_type1">
                                                 <label for="centerName">
                                                     <input type="text" name="search" id="centerName"
                                                            placeholder="&nbsp;"
                                                            required="" autocomplete="off">
-                                                    <span class="label">병원을 검색해 주세요.</span>
+                                                    <span class="label">병원??검?�해 주세??</span>
                                                 </label>
                                             </div>
                                         </div><!--search_box-->
@@ -422,7 +422,7 @@
                                 <span class="button_on_circle"></span>
                                 <a href="#none" class="btn_inner blue_gradient">
                                     <span class="btn_txt_area">
-                                        검색 <i class="xi-search"></i>
+                                        검??<i class="xi-search"></i>
                                     </span>
                                 </a>
                             </div>
@@ -439,10 +439,10 @@
                         <i class="fa fa-exclamation-triangle point_color"></i>
                     </p>
                     <p>
-                        선택하신 검진 항목을 검사 가능한 병원이 없습니다.<br><br>
-                        검진 항목을 다시 한번 선택하거나,<br>
-                        예약일정/병원우선 선택 가능한 화면에서<br>
-                        다시 한번 선택 부탁드립니다.
+                        ?�택?�신 검�???��??검??가?�한 병원???�습?�다.<br><br>
+                        검�???��???�시 ?�번 ?�택?�거??<br>
+                        ?�약?�정/병원?�선 ?�택 가?�한 ?�면?�서<br>
+                        ?�시 ?�번 ?�택 부?�드립니??
                     </p>
                 </div>
             </div><!--container-->
@@ -473,7 +473,7 @@
     $.ajax({
         url: '<c:url value="/common/center/address"/>',
     }).then(function (response) {
-        let dataSourceSido = [{value: '', sido: '전체'}].concat(response.data.map(function (v) {
+        let dataSourceSido = [{value: '', sido: '?�체'}].concat(response.data.map(function (v) {
             v.value = v.sido;
             return v;
         }));
@@ -482,7 +482,7 @@
             valueExpr: 'value',
             displayExpr: 'sigungu',
             value: '',
-            dataSource: [{value: '', sigungu: '전체'}],
+            dataSource: [{value: '', sigungu: '?�체'}],
         }).dxSelectBox('instance');
 
         $('#sido').dxSelectBox({
@@ -495,7 +495,7 @@
                     return v.sido === e.value;
                 });
 
-                let dataSourceSigungu = [{value: '', sigungu: '전체'}];
+                let dataSourceSigungu = [{value: '', sigungu: '?�체'}];
                 if (find) {
                     dataSourceSigungu = dataSourceSigungu.concat(response.data.find(function (v) {
                         return v.sido === e.value;
@@ -532,13 +532,13 @@
 
 
         if ($('.user_special_checkup').hasClass('active')) {
-            if (specialCheckup <= 0) {//특수검진기관
+            if (specialCheckup <= 0) {//?�수검진기관
                 $('#s_v1').parents('label').find('.cbx').addClass('chk_focus').focus();
                 setTimeout(function () {
                     $('#s_v1').parents('label').find('.cbx').removeClass('chk_focus');
                 }, 1000);
 
-                Swal.fire('귀하는 특수검진 대상자입니다.\n특수검진기관에 체크 해주세요.', '', 'warning');
+                Swal.fire('귀?�는 ?�수검�??�?�자?�니??\n?�수검진기관??체크 ?�주?�요.', '', 'warning');
                 return;
             }
         }
@@ -547,13 +547,11 @@
         sido = $('#sido').dxSelectBox('instance').option('value');
         sigungu = $('#sigungu').dxSelectBox('instance').option('value');
 
-        // if (!sido) { //지역
-        //     Swal.fire('지역을 선택해 주세요.', '', 'warning');
+        // if (!sido) { //지??        //     Swal.fire('지??�� ?�택??주세??', '', 'warning');
         //     return;
         // }
         //
-        // if (!sigungu) { //세부지역
-        //     Swal.fire('세부지역을 선택해 주세요.', '', 'warning');
+        // if (!sigungu) { //?��?지??        //     Swal.fire('?��?지??�� ?�택??주세??', '', 'warning');
         //     return;
         // }
 
@@ -586,7 +584,7 @@
                 $(".empty_info").removeClass("active");
 
             } else {
-                // Swal.fire('선택하신 지역에는 원하시는 검진항목을\n검사 가능한 병원이 없습니다.\n\n검진항목/예약일정/병원우선\n선택 가능한 화면에서 다시 한번 선택\n부탁드립니다.', '', 'warning');
+                // Swal.fire('?�택?�신 지??��???�하?�는 검진항목을\n검??가?�한 병원???�습?�다.\n\n검진항�??�약?�정/병원?�선\n?�택 가?�한 ?�면?�서 ?�시 ?�번 ?�택\n부?�드립니??', '', 'warning');
                 $('.hospital_select_area').empty();
                 $(".empty_info").addClass("active");
                 $(".hospital_select_area").addClass("empty");
@@ -602,11 +600,11 @@
         let checkupContractSubTypeId = $(this).parents('.list').find('.dx-select-box').dxSelectBox('instance').option('value');
 
         if (!checkupContractSubTypeId) {
-            Swal.fire('검진 유형을 선택해 주세요.', '', 'warning');
+            Swal.fire('검�??�형???�택??주세??', '', 'warning');
             return;
         }
 
-        //통과
+        //?�과
         location.href = 'ex_item_selection_package_option.html?' + $.param({
             reserveType: '<c:out value="${reserveType}"/>',
             userId: <c:out value="${userId}"/>,
@@ -663,7 +661,7 @@
                         <div id="hsubcontracts_' + i + '" class="dx-select-box"></div>\n\
                     </div>\n\
                     <div class="reserve_btn" data-center-id="' + v.centerId + '">\n\
-                        <a>검진예약</a>\n\
+                        <a>검진예??/a>\n\
                     </div>\n\
                 </div>\n'
             );

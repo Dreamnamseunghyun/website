@@ -1,4 +1,4 @@
-<%@ page contentType="text/html; charset=utf-8" pageEncoding="utf-8" %>
+﻿<%@ page contentType="text/html; charset=utf-8" pageEncoding="utf-8" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <!-- BEGIN SIDEBAR MENU ITEMS-->
@@ -10,55 +10,55 @@
     </li>
 
     <li>
-        <a href="javascript:"><span class="title">병원관리</span> <span class=" arrow"></span></a>
+        <a href="javascript:"><span class="title">蹂묒썝愿由?/span> <span class=" arrow"></span></a>
         <ul class="sub-menu">
             <li>
-                <a id="hospital" href="<c:url value="/hm/hospital"/>">병원목록</a>
+                <a id="hospital" href="<c:url value="/hm/hospital"/>">蹂묒썝紐⑸줉</a>
             </li>
             <li>
-                <a id="contract-checkup" href="<c:url value="/hm/contract-checkup"/>">검진유형목록</a>
+                <a id="contract-checkup" href="<c:url value="/hm/contract-checkup"/>">寃吏꾩쑀?뺣ぉ濡?/a>
             </li>
             <li>
-                <a id="hospital-checkup" href="<c:url value="/hm/hospital/0/checkup/2022"/>">연도별기준수가</a>
+                <a id="hospital-checkup" href="<c:url value="/hm/hospital/0/checkup/2022"/>">?곕룄蹂꾧린以?섍?</a>
             </li>
             <li>
-                <a id="companyarchive" href="<c:url value="/hm/companyarchive"/>">회사보관용 자료</a>
+                <a id="companyarchive" href="<c:url value="/hm/companyarchive"/>">?뚯궗蹂닿????먮즺</a>
             </li>
         </ul>
     </li>
 
     <li>
-        <a href="javascript:"><span class="title">예약관리</span> <span class=" arrow"></span></a>
+        <a href="javascript:"><span class="title">?덉빟愿由?/span> <span class=" arrow"></span></a>
         <ul class="sub-menu">
             <li>
-                <a id="reserve" href="<c:url value="/hm/reserve"/>">예약현황</a>
+                <a id="reserve" href="<c:url value="/hm/reserve"/>">?덉빟?꾪솴</a>
             </li>
             <li>
-                <a id="cancel-reserve" href="<c:url value="/hm/cancel-reserve"/>">예약취소</a>
+                <a id="cancel-reserve" href="<c:url value="/hm/cancel-reserve"/>">?덉빟痍⑥냼</a>
             </li>
             <li>
-                <a id="day-off" href="<c:url value="/hm/day-off"/>">예약불가</a>
+                <a id="day-off" href="<c:url value="/hm/day-off"/>">?덉빟遺덇?</a>
             </li>
         </ul>
     </li>
 
     <li>
-        <a href="javascript:"><span class="title">결과관리</span> <span class=" arrow"></span></a>
+        <a href="javascript:"><span class="title">寃곌낵愿由?/span> <span class=" arrow"></span></a>
         <ul class="sub-menu">
             <li>
-                <a id="result" href="<c:url value="/hm/result"/>">결과등록 현황</a>
+                <a id="result" href="<c:url value="/hm/result"/>">寃곌낵?깅줉 ?꾪솴</a>
             </li>
             <li>
-                <a id="result-lookup" href="<c:url value="/hm/result-lookup"/>">결과조회</a>
+                <a id="result-lookup" href="<c:url value="/hm/result-lookup"/>">寃곌낵議고쉶</a>
             </li>
         </ul>
     </li>
 
     <li>
-        <a href="javascript:"><span class="title">공지사항</span> <span class=" arrow"></span></a>
+        <a href="javascript:"><span class="title">怨듭??ы빆</span> <span class=" arrow"></span></a>
         <ul class="sub-menu">
             <li>
-                <a id="notice" href="<c:url value="/hm/commune/notice"/>">공지사항</a>
+                <a id="notice" href="<c:url value="/hm/commune/notice"/>">怨듭??ы빆</a>
             </li>
         </ul>
     </li>

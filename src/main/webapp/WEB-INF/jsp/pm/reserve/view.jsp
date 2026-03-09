@@ -21,22 +21,22 @@
                 <div class="card card-transparent board_internal">
                     <div class="card-header ">
                         <div class="card-title">
-                            <h3 class="h3">예약상세현황</h3>
+                            <h3 class="h3">?�약?�세?�황</h3>
                         </div>
                     </div>
                     <%--                    <div class="card-body">--%>
                     <div class="dx-viewport">
 
-                        <!-- 소속 기업 -->
+                        <!-- ?�속 기업 -->
                         <div class="row-wrap row-wrap-box">
                             <div class="row-wrap row-wrap1">
                                 <div class="row-box2">
                                     <div class="row-box-inner1">
                                         <div class="col-box1 row">
-                                            <div class="col-lg-2 tag-name"><span>소속 기업</span></div>
+                                            <div class="col-lg-2 tag-name"><span>?�속 기업</span></div>
                                             <div class="col-lg-10">
                                                 <div class="col-lg-12" id="companyState"
-                                                     data-ggsj="dxTextBox"></div>
+                                                     data-sitebuilder="dxTextBox"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -45,10 +45,10 @@
                                 <div class="row-box2">
                                     <div class="row-box-inner1">
                                         <div class="col-box1 row">
-                                            <div class="col-lg-2 tag-name"><span>병원계약매니저</span></div>
+                                            <div class="col-lg-2 tag-name"><span>병원계약매니?�</span></div>
                                             <div class="col-lg-10">
                                                 <div class="col-lg-12" id="employeeCheckup.companyCheckupId"
-                                                     data-ggsj="dxSelectBox"></div>
+                                                     data-sitebuilder="dxSelectBox"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -56,19 +56,19 @@
                             </div>
 
                         </div>
-                        <!-- 소속 기업 -->
+                        <!-- ?�속 기업 -->
 
                         <div class="row-wrap row-wrap-box">
-                            <!-- 예약 정보 -->
+                            <!-- ?�약 ?�보 -->
                             <div class="row-wrap row-wrap2">
-                                <div class="row-box-title"><i class="xi-play-circle"></i>예약 정보</div>
+                                <div class="row-box-title"><i class="xi-play-circle"></i>?�약 ?�보</div>
                                 <div class="row-box1">
                                     <div class="row-box-inner width-box">
                                         <div class="col-box1 row">
-                                            <div class="col-lg-2 tag-name"><span>신청 병원명</span></div>
+                                            <div class="col-lg-2 tag-name"><span>?�청 병원�?/span></div>
                                             <div class="col-lg-10 row period">
                                                 <div class="col-lg-12" id="hospitalCenterName"
-                                                     data-ggsj="dxTextBox"></div>
+                                                     data-sitebuilder="dxTextBox"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -77,94 +77,94 @@
                                             <div class="col-lg-2 tag-name"><span>검진희망일</span></div>
                                             <div class="col-lg-10 row period">
                                                 <div class="col-lg-12" id="desiredAt"
-                                                     data-ggsj="dxDateBox"></div>
+                                                     data-sitebuilder="dxDateBox"></div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="row-box-inner width-box">
                                         <div class="col-box1 row">
-                                            <div class="col-lg-2 tag-name"><span>예약등록일시</span></div>
+                                            <div class="col-lg-2 tag-name"><span>?�약?�록?�시</span></div>
                                             <div class="col-lg-10 row period">
                                                 <div class="col-lg-12" id="registeredAt"
-                                                     data-ggsj="dxDateBox"></div>
+                                                     data-sitebuilder="dxDateBox"></div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="row-box-inner width-box">
                                         <div class="col-box1 row">
-                                            <div class="col-lg-2 tag-name"><span>예약확정일</span></div>
+                                            <div class="col-lg-2 tag-name"><span>?�약?�정??/span></div>
                                             <div class="col-lg-10 row period">
                                                 <div class="col-lg-12" id="confirmedAt"
-                                                     data-ggsj="dxDateBox"></div>
+                                                     data-sitebuilder="dxDateBox"></div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="row-box-inner width-box">
                                         <div class="col-box1 row">
-                                            <div class="col-lg-2 tag-name"><span>수검완료일</span></div>
+                                            <div class="col-lg-2 tag-name"><span>?��??�료??/span></div>
                                             <div class="col-lg-10 row period">
                                                 <div id="checkupedAt"
-                                                     data-ggsj="dxDateBox"></div>
+                                                     data-sitebuilder="dxDateBox"></div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="row-box-inner width-box">
                                         <div class="col-box1 row">
-                                            <div class="col-lg-2 tag-name"><span>예약상태</span></div>
+                                            <div class="col-lg-2 tag-name"><span>?�약?�태</span></div>
                                             <div class="col-lg-10 row period">
                                                 <div id="reservationState"
-                                                     data-ggsj="dxSelectBox"></div>
+                                                     data-sitebuilder="dxSelectBox"></div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <!-- 예약 정보 -->
+                            <!-- ?�약 ?�보 -->
 
-                            <!-- 검진자 정보 -->
+                            <!-- 검진자 ?�보 -->
                             <div class="row-wrap row-wrap2">
-                                <div class="row-box-title"><i class="xi-play-circle"></i>검진자 정보</div>
+                                <div class="row-box-title"><i class="xi-play-circle"></i>검진자 ?�보</div>
                                 <div class="row-box1">
                                     <div class="row-box-inner width-box">
                                         <div class="col-box1 row">
-                                            <div class="col-lg-2 tag-name"><span>검진자명</span></div>
+                                            <div class="col-lg-2 tag-name"><span>검진자�?/span></div>
                                             <div class="col-lg-10 row period">
                                                 <div class="col-lg-12" id="employeeName"
-                                                     data-ggsj="dxTextBox"></div>
+                                                     data-sitebuilder="dxTextBox"></div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="row-box-inner width-box">
                                         <div class="col-box1 row">
-                                            <div class="col-lg-2 tag-name"><span>생년월일 / 성별</span></div>
+                                            <div class="col-lg-2 tag-name"><span>?�년?�일 / ?�별</span></div>
                                             <div class="col-lg-10 row period">
-                                                <div class="col-lg-12" id="birthSex" data-ggsj="dxTextBox"></div>
+                                                <div class="col-lg-12" id="birthSex" data-sitebuilder="dxTextBox"></div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="row-box-inner width-box">
                                         <div class="col-box1 row">
-                                            <div class="col-lg-2 tag-name"><span>관계</span></div>
+                                            <div class="col-lg-2 tag-name"><span>관�?/span></div>
                                             <div class="col-lg-10 row period">
-                                                <div class="col-lg-12" id="myselfFamily" data-ggsj="dxTextBox"></div>
+                                                <div class="col-lg-12" id="myselfFamily" data-sitebuilder="dxTextBox"></div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="row-box-inner width-box">
                                         <div class="col-box1 row">
-                                            <div class="col-lg-2 tag-name"><span>휴대전화번호</span></div>
+                                            <div class="col-lg-2 tag-name"><span>?��??�화번호</span></div>
                                             <div class="col-lg-10 row period">
                                                 <div class="col-lg-12" id="mobile"
-                                                     data-ggsj="dxTextBox" data-ggsj-format="tel"></div>
+                                                     data-sitebuilder="dxTextBox" data-sitebuilder-format="tel"></div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="row-box-inner width-box">
                                         <div class="col-box1 row">
-                                            <div class="col-lg-2 tag-name"><span>이메일</span></div>
+                                            <div class="col-lg-2 tag-name"><span>?�메??/span></div>
                                             <div class="col-lg-10 row period">
                                                 <div class="col-lg-12" id="email"
-                                                     data-ggsj="dxTextBox"></div>
+                                                     data-sitebuilder="dxTextBox"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -172,139 +172,139 @@
                                         <div class="col-box1 row">
                                             <div class="col-lg-2 tag-name"><span>주소</span></div>
                                             <div class="col-lg-10 row period">
-                                                <div class="col-lg-12" id="address" data-ggsj="dxTextBox"></div>
+                                                <div class="col-lg-12" id="address" data-sitebuilder="dxTextBox"></div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <!-- 검진자 정보 -->
+                            <!-- 검진자 ?�보 -->
                         </div>
 
-                        <!-- 기업 및 검진 정보 -->
+                        <!-- 기업 �?검�??�보 -->
                         <div class="row-wrap">
-                            <div class="row-box-title"><i class="xi-play-circle"></i>기업 및 검진 정보</div>
+                            <div class="row-box-title"><i class="xi-play-circle"></i>기업 �?검�??�보</div>
                             <div class="row-box1">
                                 <div class="row-box-inner width-box">
                                     <div class="col-box1 row center-input">
                                         <div class="col-lg-box3 row">
                                             <div class="col-lg-3 tag-name"><span>기업체명</span></div>
-                                            <div class="col-lg-9" id="companyName" data-ggsj="dxTextBox"></div>
+                                            <div class="col-lg-9" id="companyName" data-sitebuilder="dxTextBox"></div>
                                         </div>
                                         <div class="col-lg-box3 row">
-                                            <div class="col-lg-3 tag-name"><span>부서명/직책</span></div>
-                                            <div class="col-lg-4" id="departTitle" data-ggsj="dxTextBox"></div>
+                                            <div class="col-lg-3 tag-name"><span>부?�명/직책</span></div>
+                                            <div class="col-lg-4" id="departTitle" data-sitebuilder="dxTextBox"></div>
                                         </div>
                                         <div class="col-lg-box3 row">
-                                            <div class="col-lg-3 tag-name"><span>사원번호</span></div>
+                                            <div class="col-lg-3 tag-name"><span>?�원번호</span></div>
                                             <div class="col-lg-9" id="employeeNo"
-                                                 data-ggsj="dxTextBox"></div>
+                                                 data-sitebuilder="dxTextBox"></div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
 
                             <div class="col-box1 row">
-                                <div class="col-lg-1 tag-name"><span>검진유형</span></div>
-                                <div class="col-lg-11" id="checkupCodeName" data-ggsj="dxTextBox"></div>
+                                <div class="col-lg-1 tag-name"><span>검진유??/span></div>
+                                <div class="col-lg-11" id="checkupCodeName" data-sitebuilder="dxTextBox"></div>
                             </div>
 
                             <div class="col-box3 row">
                                 <div class="col-box1 col-box-vertical3 row">
-                                    <div class="col-lg-3 tag-name"><span>선택검사</span></div>
-                                    <div class="col-lg-9" id="register" data-ggsj="dxTextArea"></div>
+                                    <div class="col-lg-3 tag-name"><span>?�택검??/span></div>
+                                    <div class="col-lg-9" id="register" data-sitebuilder="dxTextArea"></div>
                                 </div>
                             </div>
                             <div class="col-box3 row">
                                 <div class="col-box1 col-box-vertical3 row">
-                                    <div class="col-lg-3 tag-name"><span>추가검사</span></div>
-                                    <div class="col-lg-9" id="moreCheck" data-ggsj="dxTextArea"></div>
+                                    <div class="col-lg-3 tag-name"><span>추�?검??/span></div>
+                                    <div class="col-lg-9" id="moreCheck" data-sitebuilder="dxTextArea"></div>
                                 </div>
                             </div>
                             <div class="col-box3 row">
                                 <div class="col-box1 col-box-vertical3 row">
-                                    <div class="col-lg-3 tag-name"><span>특검 대상/물질</span></div>
-                                    <div class="col-lg-9" id="specialCheckupText" data-ggsj="dxTextArea"></div>
+                                    <div class="col-lg-3 tag-name"><span>?��? ?�??물질</span></div>
+                                    <div class="col-lg-9" id="specialCheckupText" data-sitebuilder="dxTextArea"></div>
                                 </div>
                             </div>
 
                             <div class="col-box1 row">
-                                <div class="col-lg-1 tag-name"><span>검진비 청구</span></div>
-                                <div class="col-lg-2" id="supportTypeMyself" data-ggsj="dxTextBox"></div>
+                                <div class="col-lg-1 tag-name"><span>검진비 �?��</span></div>
+                                <div class="col-lg-2" id="supportTypeMyself" data-sitebuilder="dxTextBox"></div>
                                 <div class="col-lg-2" style="display: none;" id="supportType"
-                                     data-ggsj="dxSelectBox"></div>
-                                <div class="col-lg-2" style="display: none;" id="myself" data-ggsj="dxSelectBox"></div>
+                                     data-sitebuilder="dxSelectBox"></div>
+                                <div class="col-lg-2" style="display: none;" id="myself" data-sitebuilder="dxSelectBox"></div>
                             </div>
 
 
                             <div class="col-box1 row center-input">
-                                <div class="col-lg-1 tag-name"><span>본인부담 비용</span></div>
+                                <div class="col-lg-1 tag-name"><span>본인부??비용</span></div>
                                 <div class="col-lg-11">
                                     <div class="col-lg-box4 row">
-                                        <div class="col-lg-4 tag-name"><span>총 합산</span></div>
-                                        <div class="col-lg-8" id="total" data-ggsj="dxTextBox"></div>
+                                        <div class="col-lg-4 tag-name"><span>�??�산</span></div>
+                                        <div class="col-lg-8" id="total" data-sitebuilder="dxTextBox"></div>
                                     </div>
                                     <div class="col-lg-box4 row">
                                         <div class="col-lg-4 tag-name"><span>검진비</span></div>
                                         <div class="col-lg-8" id="hospitalPayComma"
-                                             data-ggsj="dxTextBox"></div>
+                                             data-sitebuilder="dxTextBox"></div>
                                     </div>
                                     <div class="col-lg-box4 row">
-                                        <div class="col-lg-4 tag-name"><span>유형 변경 차액</span></div>
+                                        <div class="col-lg-4 tag-name"><span>?�형 변�?차액</span></div>
                                         <div class="col-lg-8" id="upgradePayComma"
-                                             data-ggsj="dxTextBox"></div>
+                                             data-sitebuilder="dxTextBox"></div>
                                     </div>
                                     <div class="col-lg-box4 row">
-                                        <div class="col-lg-4 tag-name"><span>추가검사비</span></div>
-                                        <div class="col-lg-8" id="sumItemCopayComma" data-ggsj="dxTextBox"></div>
+                                        <div class="col-lg-4 tag-name"><span>추�?검?�비</span></div>
+                                        <div class="col-lg-8" id="sumItemCopayComma" data-sitebuilder="dxTextBox"></div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <!-- 기업 및 검진 정보 -->
+                        <!-- 기업 �?검�??�보 -->
 
-                        <!-- 기타 사항 -->
+                        <!-- 기�? ?�항 -->
                         <div class="row-wrap">
-                            <div class="row-box-title"><i class="xi-play-circle"></i>기타 사항</div>
+                            <div class="row-box-title"><i class="xi-play-circle"></i>기�? ?�항</div>
                             <div class="row-box2">
                                 <div class="row-box-inner1">
                                     <div class="col-box1 row">
-                                        <div class="col-lg-2 tag-name"><span>특이사항</span></div>
-                                        <div class="col-lg-10" id="notes" data-ggsj="dxTextBox"></div>
+                                        <div class="col-lg-2 tag-name"><span>?�이?�항</span></div>
+                                        <div class="col-lg-10" id="notes" data-sitebuilder="dxTextBox"></div>
                                     </div>
                                     <div class="col-box1 row">
-                                        <div class="col-lg-2 tag-name"><span>건강살자 메모</span></div>
-                                        <div class="col-lg-10" id="platformNotes" data-ggsj="dxTextBox"></div>
+                                        <div class="col-lg-2 tag-name"><span>건강?�자 메모</span></div>
+                                        <div class="col-lg-10" id="platformNotes" data-sitebuilder="dxTextBox"></div>
                                     </div>
                                     <div class="col-box1 row">
                                         <div class="col-lg-2 tag-name"><span>병원 메모</span></div>
-                                        <div class="col-lg-10" id="hospitalNotes" data-ggsj="dxTextBox"></div>
+                                        <div class="col-lg-10" id="hospitalNotes" data-sitebuilder="dxTextBox"></div>
                                     </div>
                                 </div>
                             </div>
                             <div class="row-box2">
                                 <div class="row-box-inner1">
                                     <div class="col-box1 row">
-                                        <div class="col-lg-2 tag-name"><span>고객 문의사항</span></div>
+                                        <div class="col-lg-2 tag-name"><span>고객 문의?�항</span></div>
                                         <div class="col-lg-10 row period">
-                                            <div class="col-lg-12" id="employeeNotes" data-ggsj="dxTextBox"></div>
+                                            <div class="col-lg-12" id="employeeNotes" data-sitebuilder="dxTextBox"></div>
                                         </div>
                                     </div>
                                     <div class="col-box1 col-box-vertical2 row">
-                                        <div class="col-lg-2 tag-name"><span>예약 보류,<br>취소 사유</span></div>
-                                        <div class="col-lg-10" id="stateNotes" data-ggsj="dxTextArea"></div>
+                                        <div class="col-lg-2 tag-name"><span>?�약 보류,<br>취소 ?�유</span></div>
+                                        <div class="col-lg-10" id="stateNotes" data-sitebuilder="dxTextArea"></div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <!-- 기타 사항 -->
+                        <!-- 기�? ?�항 -->
 
                     </div><!-- viewport -->
                 </div>
 
                 <div class="row btn_area footer-btn">
-                    <div class="col-lg-1" id="btnEdit" data-ggsj="dxButton"><i class="xi-file-check"></i>수정</div>
-                    <div class="col-lg-1" id="btnList" data-ggsj="dxButton">목록</div>
+                    <div class="col-lg-1" id="btnEdit" data-sitebuilder="dxButton"><i class="xi-file-check"></i>?�정</div>
+                    <div class="col-lg-1" id="btnList" data-sitebuilder="dxButton">목록</div>
                 </div>
 
             </div>
@@ -315,19 +315,19 @@
 </body>
 <script>
     $(function () {
-        ggsj.openMenu('reserve');
+        sitebuilder.openMenu('reserve');
 
-        let dxInstances = ggsj.createDx(true);
+        let dxInstances = sitebuilder.createDx(true);
         // dataType: 'date',
 
         dxInstances.reservationState.option({
             items: [
-                {'id': 0, 'text': '예약취소'},
-                {'id': 1, 'text': '예약신청'},
-                {'id': 2, 'text': '예약확정'},
-                {'id': 3, 'text': '예약변경'},
-                {'id': 4, 'text': '수검완료'},
-                {'id': 5, 'text': '예약보류'},
+                {'id': 0, 'text': '?�약취소'},
+                {'id': 1, 'text': '?�약?�청'},
+                {'id': 2, 'text': '?�약?�정'},
+                {'id': 3, 'text': '?�약변�?},
+                {'id': 4, 'text': '?��??�료'},
+                {'id': 5, 'text': '?�약보류'},
             ],
             valueExpr: 'id',
             displayExpr: 'text',
@@ -358,8 +358,8 @@
 
         dxInstances.supportType.option({
             items: [
-                {'id': false, 'text': '기업부담'},
-                {'id': true, 'text': '본인부담'},
+                {'id': false, 'text': '기업부??},
+                {'id': true, 'text': '본인부??},
             ],
             valueExpr: 'id',
             displayExpr: 'text',
@@ -367,7 +367,7 @@
 
         dxInstances.myself.option({
             items: [
-                {'id': null, 'text': '가족'},
+                {'id': null, 'text': '가�?},
                 {'id': 1, 'text': '본인'},
             ],
             valueExpr: 'id',
@@ -403,7 +403,7 @@
             url: '<c:url value="/pm/reserve/${reservationId}"/>',
             method: 'GET',
         }).then(function (response) {
-            ggsj.valuesToDx(response.data);
+            sitebuilder.valuesToDx(response.data);
 
             companyId = response.data.companyId;
             hospitalId = response.data.hospitalId;
@@ -463,9 +463,9 @@
 
             dxInstances.companyState.option({
                 value: function () {
-                    return dxInstances.companyName.option('value') + " | " + " (검진기간) "
+                    return dxInstances.companyName.option('value') + " | " + " (검진기�? "
                         + new Date(dxInstances.checkupDateBegin).toISOString().substring(0, 10) + " ~ "
-                        + new Date(dxInstances.checkupDateEnd).toISOString().substring(0, 10) + " | " + " (예약기간) "
+                        + new Date(dxInstances.checkupDateEnd).toISOString().substring(0, 10) + " | " + " (?�약기간) "
                         + new Date(dxInstances.reserveDateBegin).toISOString().substring(0, 10) + " ~ "
                         + new Date(dxInstances.reserveDateEnd).toISOString().substring(0, 10);
                 }
@@ -474,7 +474,7 @@
             dxInstances.birthSex.option({
                 value: function () {
                     return new Date(dxInstances.birth).toISOString().substring(0, 10)
-                        + " / " + (dxInstances.sex === 'M' ? '남' : '여');
+                        + " / " + (dxInstances.sex === 'M' ? '?? : '??);
                 }
             });
 
@@ -483,7 +483,7 @@
                     if (dxInstances.myself.option('value') === 1) {
                         return '본인';
                     } else {
-                        return '(' + dxInstances.familyName + ') 님의 가족';
+                        return '(' + dxInstances.familyName + ') ?�의 가�?;
                     }
                 }
             });
@@ -520,41 +520,41 @@
 
             dxInstances.specialCheckupText.option({
                 value: function () {
-                    return (dxInstances.specialCheckup === 0 ? '해당없음' : '특검대상') + '\n' + dxInstances.specialCheckupMemo;
+                    return (dxInstances.specialCheckup === 0 ? '?�당?�음' : '?��??�??) + '\n' + dxInstances.specialCheckupMemo;
                 }
             });
 
             dxInstances.supportTypeMyself.option({
                 value: function () {
-                    return (dxInstances.supportType.option('value') === true ? '본인부담' : '기업부담' + ' / ' + ggsj.numberWithCommas(dxInstances.hospitalPay) + " 원");
+                    return (dxInstances.supportType.option('value') === true ? '본인부?? : '기업부?? + ' / ' + sitebuilder.numberWithCommas(dxInstances.hospitalPay) + " ??);
                 }
             });
 
             dxInstances.total.option({
                 value: function () {
                     if (dxInstances.supportType.option('value') === true) {
-                        return ggsj.numberWithCommas(dxInstances.hospitalPay + dxInstances.upgradePay + dxInstances.sumItemCopay + dxInstances.sumItemDiscountBill) + " 원";
+                        return sitebuilder.numberWithCommas(dxInstances.hospitalPay + dxInstances.upgradePay + dxInstances.sumItemCopay + dxInstances.sumItemDiscountBill) + " ??;
                     } else {
-                        return ggsj.numberWithCommas(dxInstances.upgradePay + dxInstances.sumItemCopay + dxInstances.sumItemDiscountBill) + " 원";
+                        return sitebuilder.numberWithCommas(dxInstances.upgradePay + dxInstances.sumItemCopay + dxInstances.sumItemDiscountBill) + " ??;
                     }
                 }
             });
 
             dxInstances.hospitalPayComma.option({
                 value: function () {
-                    return (dxInstances.supportType.option('value') === true ? ggsj.numberWithCommas(dxInstances.hospitalPay) + " 원" : '0 원');
+                    return (dxInstances.supportType.option('value') === true ? sitebuilder.numberWithCommas(dxInstances.hospitalPay) + " ?? : '0 ??);
                 }
             });
 
             dxInstances.upgradePayComma.option({
                 value: function () {
-                    return ggsj.numberWithCommas(dxInstances.upgradePay) + " 원";
+                    return sitebuilder.numberWithCommas(dxInstances.upgradePay) + " ??;
                 }
             });
 
             dxInstances.sumItemCopayComma.option({
                 value: function () {
-                    return ggsj.numberWithCommas(dxInstances.sumItemCopay + dxInstances.sumItemDiscountBill) + " 원";
+                    return sitebuilder.numberWithCommas(dxInstances.sumItemCopay + dxInstances.sumItemDiscountBill) + " ??;
                 }
             });
 

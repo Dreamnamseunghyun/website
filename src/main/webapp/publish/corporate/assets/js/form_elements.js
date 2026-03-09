@@ -1,4 +1,4 @@
-/* ============================================================
+﻿/* ============================================================
  * Form Elements
  * This file applies various jQuery plugins to form elements
  * For DEMO purposes only. Extract what you need.
@@ -66,7 +66,7 @@
                     'unable to find any Best Picture winners that match the current query',
                     '</div>'
                 ].join('\n'),
-                suggestion: Handlebars.compile('<div>{{value}}– {{year}}</div>')
+                suggestion: Handlebars.compile('<div>{{value}}??{{year}}</div>')
             }
         });
 

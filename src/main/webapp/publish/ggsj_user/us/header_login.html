@@ -1,44 +1,44 @@
-<div class="container">
+﻿<div class="container">
      <h1 class="logo"><a href="index.html"></a></h1>
      <nav>
          <ul class="h_nav">
              <li>
-             <a><span class="h_title">건강검진 예약</span></a>
+             <a><span class="h_title">嫄닿컯寃吏??덉빟</span></a>
                  <div class="sub_menu">
                                 <ul class="sub_menu_list">
-                                   <li><a href="target_information.html"><span>예약하기</span><i class="xi-angle-right-min"></i></a></li>
-                                   <li><a href="check_result.html"><span>예약 조회</span><i class="xi-angle-right-min"></i></a></li>
-                                   <li><a href="target_information.html"><span>변경 및 취소</span><i class="xi-angle-right-min"></i></a></li>
+                                   <li><a href="target_information.html"><span>?덉빟?섍린</span><i class="xi-angle-right-min"></i></a></li>
+                                   <li><a href="check_result.html"><span>?덉빟 議고쉶</span><i class="xi-angle-right-min"></i></a></li>
+                                   <li><a href="target_information.html"><span>蹂寃?諛?痍⑥냼</span><i class="xi-angle-right-min"></i></a></li>
                                 </ul>
                  </div>
              </li>
 
-             <li><a><span class="h_title">결과 조회</span></a>
+             <li><a><span class="h_title">寃곌낵 議고쉶</span></a>
                  <div class="sub_menu">
                                 <ul class="sub_menu_list">
-                                   <li><a href="check_result.html"><span class="h_title">건강검진 결과조회</span><i class="xi-angle-right-min"></i></a></li>
+                                   <li><a href="check_result.html"><span class="h_title">嫄닿컯寃吏?寃곌낵議고쉶</span><i class="xi-angle-right-min"></i></a></li>
                                 </ul>
                  </div>
              </li>
-             <li><a href="common_sense.html"><span class="h_title">건강 상식</span></a></li>
-             <li><a><span class="h_title">고객센터</span></a>
+             <li><a href="common_sense.html"><span class="h_title">嫄닿컯 ?곸떇</span></a></li>
+             <li><a><span class="h_title">怨좉컼?쇳꽣</span></a>
                  <div class="sub_menu">
                                 <ul class="sub_menu_list">
-                                   <li><a href="notice.html"><span class="h_title">공지사항</span><i class="xi-angle-right-min"></i></a></li>
-                                   <li><a href="fnq.html"><span class="h_title">자주 묻는 질문</span><i class="xi-angle-right-min"></i></a></li>
-                                   <li><a href="qna.html"><span class="h_title">1:1 문의하기</span><i class="xi-angle-right-min"></i></a></li>
+                                   <li><a href="notice.html"><span class="h_title">怨듭??ы빆</span><i class="xi-angle-right-min"></i></a></li>
+                                   <li><a href="fnq.html"><span class="h_title">?먯＜ 臾삳뒗 吏덈Ц</span><i class="xi-angle-right-min"></i></a></li>
+                                   <li><a href="qna.html"><span class="h_title">1:1 臾몄쓽?섍린</span><i class="xi-angle-right-min"></i></a></li>
                                 </ul>
                  </div>
              </li>
 
              <li class="mypage_login">
                  <a href="mypage.html">
-                     <span class="h_title">김건강</span>
-                      <span class="status_btn cost">본인부담</span>
-                      <span class="status_btn reserve">미예약</span>
+                     <span class="h_title">源嫄닿컯</span>
+                      <span class="status_btn cost">蹂몄씤遺??/span>
+                      <span class="status_btn reserve">誘몄삁??/span>
                  </a>
              </li>
-             <li class="logout"><a>로그아웃</a></li>
+             <li class="logout"><a>濡쒓렇?꾩썐</a></li>
 
 
 
@@ -51,8 +51,7 @@
 $("header .logo > a").load("logo.html");
 
 
-//헤더 스크롤다운
-    $(function () {
+//?ㅻ뜑 ?ㅽ겕濡ㅻ떎??    $(function () {
 
         var header_height = $("header").height() - 40;
 
@@ -66,8 +65,7 @@ $("header .logo > a").load("logo.html");
         });
 
 
-        //렌더시 스크롤 내려가있으면
-        $("document").ready(function () {
+        //?뚮뜑???ㅽ겕濡??대젮媛?덉쑝硫?        $("document").ready(function () {
             var render_scroll = $(document).scrollTop();
             if (render_scroll >= 10) {
                 $('header').addClass('scroll_down');
@@ -117,7 +115,7 @@ $("header .logo > a").load("logo.html");
     })
 
     function delay_alert(){
-        Swal.fire('현재 페이지 준비 중에 있습니다.\n 빠른 시일 내에 오픈하도록\n하겠습니다 :D', '', 'error' );
+        Swal.fire('?꾩옱 ?섏씠吏 以鍮?以묒뿉 ?덉뒿?덈떎.\n 鍮좊Ⅸ ?쒖씪 ?댁뿉 ?ㅽ뵂?섎룄濡?n?섍쿋?듬땲??:D', '', 'error' );
     }
 
 

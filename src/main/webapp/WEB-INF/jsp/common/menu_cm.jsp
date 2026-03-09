@@ -1,4 +1,4 @@
-<%@ page contentType="text/html; charset=utf-8" pageEncoding="utf-8" %>
+﻿<%@ page contentType="text/html; charset=utf-8" pageEncoding="utf-8" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <!-- BEGIN SIDEBAR MENU ITEMS-->
@@ -10,55 +10,55 @@
     </li>
 
     <li>
-        <a href="javascript:"><span class="title">기업관리</span> <span class=" arrow"></span></a>
+        <a href="javascript:"><span class="title">湲곗뾽愿由?/span> <span class=" arrow"></span></a>
         <ul class="sub-menu">
             <li>
-                <a id="company" href="<c:url value="/cm/company/0"/>">상세정보</a>
+                <a id="company" href="<c:url value="/cm/company/0"/>">?곸꽭?뺣낫</a>
             </li>
             <li>
-                <a id="contract" href="<c:url value="/cm/contract"/>">진행병원</a>
+                <a id="contract" href="<c:url value="/cm/contract"/>">吏꾪뻾蹂묒썝</a>
             </li>
             <li>
-                <a href="#">검진비 정산</a>
+                <a href="#">寃吏꾨퉬 ?뺤궛</a>
             </li>
             <li>
-                <a id="companyarchive" href="<c:url value="/cm/companyarchive"/>">회사보관용 자료</a>
+                <a id="companyarchive" href="<c:url value="/cm/companyarchive"/>">?뚯궗蹂닿????먮즺</a>
             </li>
         </ul>
     </li>
 
     <li>
-        <a href="javascript:"><span class="title">회원관리</span> <span class=" arrow"></span></a>
+        <a href="javascript:"><span class="title">?뚯썝愿由?/span> <span class=" arrow"></span></a>
         <ul class="sub-menu">
             <li>
-                <a id="employee" href="<c:url value="/cm/employee"/>">회원목록</a>
+                <a id="employee" href="<c:url value="/cm/employee"/>">?뚯썝紐⑸줉</a>
             </li>
             <li>
-                <a id="employee-batch" href="<c:url value="/cm/employee/batch"/>">엑셀등록</a>
+                <a id="employee-batch" href="<c:url value="/cm/employee/batch"/>">?묒??깅줉</a>
             </li>
         </ul>
     </li>
 
     <li>
-        <a href="javascript:"><span class="title">예약관리</span> <span class=" arrow"></span></a>
+        <a href="javascript:"><span class="title">?덉빟愿由?/span> <span class=" arrow"></span></a>
         <ul class="sub-menu">
             <li>
-                <a id="reserve" href="<c:url value="/cm/reserve"/>">예약목록</a>
+                <a id="reserve" href="<c:url value="/cm/reserve"/>">?덉빟紐⑸줉</a>
             </li>
             <%--            <li>--%>
-            <%--                <a id="cancel-reserve" href="<c:url value="/cm/cancel-reserve"/>">예약취소</a>--%>
+            <%--                <a id="cancel-reserve" href="<c:url value="/cm/cancel-reserve"/>">?덉빟痍⑥냼</a>--%>
             <%--            </li>--%>
             <%--            <li>--%>
-            <%--                <a id="non-reserve" href="<c:url value="/cm/non-reserve"/>">미예약자 관리</a>--%>
+            <%--                <a id="non-reserve" href="<c:url value="/cm/non-reserve"/>">誘몄삁?쎌옄 愿由?/a>--%>
             <%--            </li>--%>
         </ul>
     </li>
 
     <li>
-        <a href="javascript:"><span class="title">고객센터</span> <span class=" arrow"></span></a>
+        <a href="javascript:"><span class="title">怨좉컼?쇳꽣</span> <span class=" arrow"></span></a>
         <ul class="sub-menu">
             <li>
-                <a id="notice" href="<c:url value="/cm/commune/notice"/>">공지사항</a>
+                <a id="notice" href="<c:url value="/cm/commune/notice"/>">怨듭??ы빆</a>
             </li>
         </ul>
     </li>

@@ -1,4 +1,4 @@
-(function (window, dxUi) {
+﻿(function (window, dxUi) {
     'use strict';
 
     $(function () {
@@ -158,7 +158,7 @@
                 allowedPageSizes: [],
                 showPageSizeSelector: true,
                 showInfo: true,
-                infoText: '전체 {2} 항목',
+                infoText: '?꾩껜 {2} ??ぉ',
                 showNavigationButtons: true,
             },
             rowAlternationEnabled: false,
@@ -306,9 +306,9 @@
         },
     });
 
-    let ggsj = window.ggsj || {};
+    let sitebuilder = window.sitebuilder || {};
 
-    ggsj.notify = function (message, type, displayTime) {
+    sitebuilder.notify = function (message, type, displayTime) {
         if (type === undefined) {
             type = 'info';
         }
@@ -320,7 +320,7 @@
         dxUi.notify(message, type, displayTime);
     };
 
-    ggsj.openMenu = function (menuId) {
+    sitebuilder.openMenu = function (menuId) {
         let menu = $('#' + menuId);
         menu.css({color: 'black'});
         menu.parent().addClass('open active').css({backgroundColor: 'white'});
@@ -329,16 +329,16 @@
         menu.parent().parent().parent().addClass('open active');
     };
 
-    ggsj.numberWithCommas = function (number) {
+    sitebuilder.numberWithCommas = function (number) {
         return Number(number).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     };
 
-    ggsj.phoneWithHyphen = function (phone) {
+    sitebuilder.phoneWithHyphen = function (phone) {
         if (!phone) {
             return '';
         }
         return phone.replace(/\D/g, '').replace(/(^02|^050\d|^0\d{2}|\d*)(\d*)(\d{4})/, '$1-$2-$3').replace('--', '-');
     };
 
-    window.ggsj = ggsj;
+    window.sitebuilder = sitebuilder;
 })(window, DevExpress.ui);

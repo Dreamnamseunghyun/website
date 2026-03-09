@@ -1,4 +1,4 @@
-nv.models.multiBarTimeSeries = function() {
+﻿nv.models.multiBarTimeSeries = function() {
   "use strict";
   //============================================================
   // Public Variables with Default Settings

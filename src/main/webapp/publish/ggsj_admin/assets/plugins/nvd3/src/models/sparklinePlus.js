@@ -1,4 +1,4 @@
-
+﻿
 nv.models.sparklinePlus = function() {
   "use strict";
   //============================================================

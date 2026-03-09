@@ -1,4 +1,4 @@
-
+﻿
 nv.models.stackedAreaChart = function() {
   "use strict";
   //============================================================

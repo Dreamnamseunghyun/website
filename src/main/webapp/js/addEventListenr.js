@@ -1,10 +1,9 @@
-// 뒤로가기시 경고
+﻿// ?ㅻ줈媛湲곗떆 寃쎄퀬
 
 window.addEventListener('beforeunload', function (event) {
-    // 표준에 따라 기본 동작 방지
+    // ?쒖????곕씪 湲곕낯 ?숈옉 諛⑹?
     event.preventDefault();
-    // Chrome에서는 returnValue 설정이 필요함
-    event.returnValue = '';
+    // Chrome?먯꽌??returnValue ?ㅼ젙???꾩슂??    event.returnValue = '';
 });
 
 window.onbeforeunload = function (e) {

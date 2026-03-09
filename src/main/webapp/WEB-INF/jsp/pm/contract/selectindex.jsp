@@ -35,8 +35,8 @@
                                 <div class="row-box">
                                     <div class="row-box-inner">
                                         <div class="col-box1 row">
-                                            <div class="col-lg-5 tag-name"><span>대상 년도</span></div>
-                                            <div class="col-lg-7" id="checkupYear" data-ggsj="dxSelectBox"></div>
+                                            <div class="col-lg-5 tag-name"><span>?�???�도</span></div>
+                                            <div class="col-lg-7" id="checkupYear" data-sitebuilder="dxSelectBox"></div>
                                         </div>
                                     </div>
                                 </div>
@@ -47,7 +47,7 @@
                                 <div class="row-box">
                                     <div class="row-box-inner">
                                         <div class="col-box1 row">
-                                            <div class="col-lg-12" id="searchGrid" data-ggsj="dxTextBox"></div>
+                                            <div class="col-lg-12" id="searchGrid" data-sitebuilder="dxTextBox"></div>
                                         </div>
                                     </div>
                                 </div>
@@ -56,12 +56,12 @@
                         </div>
                         <!-- Header -->
 
-                        <div id="popupHospital" data-ggsj="dxPopup"></div>
-                        <div id="dataGridContractSelectList" class="main_table" data-ggsj="dxDataGrid">
+                        <div id="popupHospital" data-sitebuilder="dxPopup"></div>
+                        <div id="dataGridContractSelectList" class="main_table" data-sitebuilder="dxDataGrid">
                         </div>
 
                         <div class="row btn_area index_btn_area footer-btn">
-                            <div class="col-lg-1" id="btnSave" data-ggsj="dxButton"><i class="xi-save"></i>저장</div>
+                            <div class="col-lg-1" id="btnSave" data-sitebuilder="dxButton"><i class="xi-save"></i>?�??/div>
                         </div>
 
                     </div>
@@ -74,20 +74,20 @@
 </body>
 <script>
     $(function () {
-        ggsj.openMenu('contract');
+        sitebuilder.openMenu('contract');
 
         /** @param dxInstances : {dataGridContractSelectList} */
-        let dxInstances = ggsj.createDx(false);
+        let dxInstances = sitebuilder.createDx(false);
         let dsHospital = [];
 
         dxInstances.checkupYear.option({
-            dataSource: ggsj.typeDef.Year,
+            dataSource: sitebuilder.typeDef.Year,
             value: new Date().getFullYear(),
             onValueChanged: LoadContractList,
         });
 
         dxInstances.searchGrid.option({
-            placeholder: '검색',
+            placeholder: '검??,
             valueChangeEvent: "keyup",
             onValueChanged: function (e) {
                 dxInstances.dataGridContractSelectList.searchByText(e.value);
@@ -135,7 +135,7 @@
                     $("<div class='blue'>")
                         .css({'float': 'right'})
                         .dxButton({
-                            text: "병원(센터)등록",
+                            text: "병원(?�터)?�록",
                             onClick: function () {
                                 dxInstances.popupHospital.userData = $.extend(true, {}, cellInfo.data.items[0]);
                                 dxInstances.popupHospital.show();
@@ -143,11 +143,11 @@
                         }).appendTo(cellElement);
                 },
             }, {
-                caption: '진행병원 (센터)',
+                caption: '진행병원 (?�터)',
                 dataField: 'centerId',
                 allowEditing: false,
             }, {
-                caption: '검진 유형',
+                caption: '검�??�형',
                 dataField: 'contractTypes',
                 allowEditing: false,
                 cellTemplate: function (container, options) {
@@ -169,7 +169,7 @@
         });
 
         dxInstances.popupHospital.option({
-            title: "병원(센터) 검색",
+            title: "병원(?�터) 검??,
             width: 600,
             height: 580,
             contentTemplate: function (contentElement) {
@@ -212,7 +212,7 @@
 
         dxInstances.btnSave.option({
             stylingMode: "contained",
-            text: "저장",
+            text: "?�??,
             type: "success",
             onClick: function () {
                 let changes = dxInstances.dataGridContractSelectList.option('editing.changes');
@@ -222,7 +222,7 @@
                 //console.log(gridData);
 
                 if (gridData.length === 0) {
-                    ggsj.notify("변경 사항이 없습니다.");
+                    sitebuilder.notify("변�??�항???�습?�다.");
                     return;
                 }
 
@@ -231,7 +231,7 @@
                     method: 'POST',
                     data: JSON.stringify(gridData),
                 }).then(function () {
-                    ggsj.notify("저장되었습니다.");
+                    sitebuilder.notify("?�?�되?�습?�다.");
 
                     LoadContractList();
                 });

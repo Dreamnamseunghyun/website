@@ -1,4 +1,4 @@
-<%@ page contentType="text/html; charset=utf-8" pageEncoding="utf-8" %>
+﻿<%@ page contentType="text/html; charset=utf-8" pageEncoding="utf-8" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 
@@ -20,33 +20,33 @@
                 <div class="card card-transparent board_internal">
                      <div class="card-header ">
                         <div class="card-title">
-                            <h3 class="h3">건강한 건강상식</h3>
+                            <h3 class="h3">嫄닿컯??嫄닿컯?곸떇</h3>
                         </div>
                     </div>
                     <%--                    <div class="card-body">--%>
                     <div class="dx-viewport">
 
                         <div class="row-wrap">
-                            <div class="row-box-title"><i class="xi-play-circle"></i>건강한 건강상식</div>
+                            <div class="row-box-title"><i class="xi-play-circle"></i>嫄닿컯??嫄닿컯?곸떇</div>
                             <div class="row-box1" style="border-bottom:0;">
                                 <div class="row-box-inner col-box-margin-right">
 
                                     <div class="col-box1 col-box-border">
                                         <div class="col-lg-12 row">
                                             <div class="col-lg-box1 col-lg-box-vertical row">
-                                                <div class="col-lg-1 tag-name">제목</div>
-                                                <div class="col-lg-11"><div id="title" data-ggsj="dxTextBox"></div></div>
+                                                <div class="col-lg-1 tag-name">?쒕ぉ</div>
+                                                <div class="col-lg-11"><div id="title" data-sitebuilder="dxTextBox"></div></div>
                                             </div>
 
                                             <div class="col-lg-box1 col-lg-box-vertical row">
-                                                <div class="col-lg-1 tag-name">경로지정</div>
-                                                <div class="col-lg-11"><div id="linkUrl" data-ggsj="dxTextBox"></div></div>
+                                                <div class="col-lg-1 tag-name">寃쎈줈吏??/div>
+                                                <div class="col-lg-11"><div id="linkUrl" data-sitebuilder="dxTextBox"></div></div>
                                             </div>
 
                                             <div class="col-lg-box1 col-lg-box-vertical row">
-                                                <div class="col-lg-1 tag-name">썸네일</div>
-                                                <div class="col-lg-9"><div id="attachFilename" data-ggsj="dxTextBox"></div></div>
-                                                <div class="col-lg-2 btn-margin2" style="padding:0 16px!important; justify-content:flex-end"><div id="btnAttach" data-ggsj="dxButton"></div></div>
+                                                <div class="col-lg-1 tag-name">?몃꽕??/div>
+                                                <div class="col-lg-9"><div id="attachFilename" data-sitebuilder="dxTextBox"></div></div>
+                                                <div class="col-lg-2 btn-margin2" style="padding:0 16px!important; justify-content:flex-end"><div id="btnAttach" data-sitebuilder="dxButton"></div></div>
                                             </div>
 
 
@@ -83,19 +83,19 @@
 
 
 <%--                        <div class="row">--%>
-<%--                            <div class="col-lg-1 tag-area">제목</div>--%>
-<%--                            <div class="col-lg-10" id="title" data-ggsj="dxTextBox"></div>--%>
+<%--                            <div class="col-lg-1 tag-area">?쒕ぉ</div>--%>
+<%--                            <div class="col-lg-10" id="title" data-sitebuilder="dxTextBox"></div>--%>
 <%--                        </div>--%>
 
 <%--                        <div class="row">--%>
-<%--                            <div class="col-lg-1">경로지정</div>--%>
-<%--                            <div class="col-lg-10" id="linkUrl" data-ggsj="dxTextBox"></div>--%>
+<%--                            <div class="col-lg-1">寃쎈줈吏??/div>--%>
+<%--                            <div class="col-lg-10" id="linkUrl" data-sitebuilder="dxTextBox"></div>--%>
 <%--                        </div>--%>
 
 <%--                        <div class="row">--%>
-<%--                            <div class="col-lg-1">썸네일</div>--%>
-<%--                            <div class="col-lg-8" id="attachFilename" data-ggsj="dxTextBox"></div>--%>
-<%--                            <div class="col-lg-2" id="btnAttach" data-ggsj="dxButton"></div>--%>
+<%--                            <div class="col-lg-1">?몃꽕??/div>--%>
+<%--                            <div class="col-lg-8" id="attachFilename" data-sitebuilder="dxTextBox"></div>--%>
+<%--                            <div class="col-lg-2" id="btnAttach" data-sitebuilder="dxButton"></div>--%>
 <%--                            <form id="formAttach">--%>
 <%--                                <input type="file" id="attach" name="attach" accept="image/*" style="display: none;"/>--%>
 <%--                            </form>--%>
@@ -107,7 +107,7 @@
 
 <%--                                                <div class="row">--%>
 <%--                                                    <div class="col-lg-9 logo_img"><img id="healthSenseUrl" src=""--%>
-<%--                                                                                        alt="건강상식첨부파일"/></div>--%>
+<%--                                                                                        alt="嫄닿컯?곸떇泥⑤??뚯씪"/></div>--%>
 <%--                                                </div>--%>
 
 
@@ -117,9 +117,9 @@
                 </div>
 
                 <div class="row btn_area footer-btn">
-                    <div class="col-lg-1" id="btnSave" data-ggsj="dxButton"><i class="xi-save"></i>저장</div>
-                    <div class="col-lg-1" id="btnList" data-ggsj="dxButton">목록</div>
-                    <div class="col-lg-1" id="btnDelete" data-ggsj="dxButton">삭제</div>
+                    <div class="col-lg-1" id="btnSave" data-sitebuilder="dxButton"><i class="xi-save"></i>???/div>
+                    <div class="col-lg-1" id="btnList" data-sitebuilder="dxButton">紐⑸줉</div>
+                    <div class="col-lg-1" id="btnDelete" data-sitebuilder="dxButton">??젣</div>
                 </div>
 
             </div>
@@ -133,9 +133,9 @@
 <script>
     /** @param _dxInstances : {thumbnail} */
     $(function () {
-        ggsj.openMenu('healthcare');
+        sitebuilder.openMenu('healthcare');
 
-        let dxInstances = ggsj.createDx(false);
+        let dxInstances = sitebuilder.createDx(false);
 
         function previewImage(input, target) {
             if (input.files && input.files[0]) {
@@ -148,7 +148,7 @@
         }
 
         dxInstances.btnAttach.option({
-            text: '파일첨부',
+            text: '?뚯씪泥⑤?',
             onClick: function () {
                 $('#attach').trigger('click');
             },
@@ -168,10 +168,10 @@
 
         dxInstances.btnSave.option({
             stylingMode: 'contained',
-            text: '저장',
+            text: '???,
             type: 'success',
             onClick: function () {
-                let data = ggsj.dxToValues();
+                let data = sitebuilder.dxToValues();
 
                 let formData = new FormData($('#formAttach')[0]);
                 formData.append('healthsense', new Blob([JSON.stringify(data)], {
@@ -185,7 +185,7 @@
                     contentType: false,
                     data: formData,
                 }).then(function () {
-                    ggsj.notify("저장되었습니다.");
+                    sitebuilder.notify("??λ릺?덉뒿?덈떎.");
                     location.href = '<c:url value="/pm/healthsense"/>';
                 });
             }
@@ -193,7 +193,7 @@
 
         dxInstances.btnList.option({
             stylingMode: 'contained',
-            text: '목록',
+            text: '紐⑸줉',
             onClick: function () {
                 location.href = '<c:url value="/pm/commune/healthcare"/>';
             }
@@ -201,7 +201,7 @@
 
         dxInstances.btnDelete.option({
             stylingMode: 'contained',
-            text: '삭제',
+            text: '??젣',
             type: 'danger',
         });
 
@@ -210,7 +210,7 @@
             url: '<c:url value="/pm/healthsense/${healthSenseId}"/>',
             method: 'GET',
         }).then(function (response) {
-            ggsj.valuesToDx(response.data);
+            sitebuilder.valuesToDx(response.data);
         });
     });
 </script>

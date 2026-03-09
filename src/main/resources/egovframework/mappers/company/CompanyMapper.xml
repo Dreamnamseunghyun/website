@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="kr.co.dsong.ggsj.company.service.mapper.CompanyMapper">
+<mapper namespace="kr.co.sitebuilder.company.service.mapper.CompanyMapper">
     <!-- Map of company_checkup_type -->
     <resultMap id="mapCompanyCheckupType" type="CompanyCheckupTypeVO" autoMapping="true">
         <id property="companyCheckupTypeId" column="company_checkup_type_id"/>
@@ -402,7 +402,7 @@
           AND employee.deleted_at IS NULL
           AND employee_checkup.deleted_at IS NULL
           AND employee_checkup.support_type = 0
-# 전체 인원
+# ?꾩껜 ?몄썝
         UNION ALL
         SELECT NULL                             AS total_count
              , COUNT(DISTINCT employee.user_id) AS apply_count
@@ -421,7 +421,7 @@
           AND (reservation.reservation_state = 1 OR reservation.reservation_state = 2 OR
                reservation.reservation_state = 3 OR reservation.reservation_state = 5)
           AND employee_checkup.support_type = 0
-# 예약 진행 인원
+# ?덉빟 吏꾪뻾 ?몄썝
         UNION ALL
         SELECT NULL                             AS total_count
              , NULL                             AS apply_count
@@ -439,7 +439,7 @@
           AND (reservation.reservation_state != 0 OR reservation.confirmed_at IS NULL)
           AND reservation.reservation_state = 4
           AND employee_checkup.support_type = 0
-# 수검 완료 인원
+# ?섍? ?꾨즺 ?몄썝
     </select>
 
     <!-- Insert Company -->

@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Select2 Finnish translation
  */
 (function ($) {
@@ -9,20 +9,20 @@
         },
         formatInputTooShort: function (input, min) {
             var n = min - input.length;
-            return "Ole hyvä ja anna " + n + " merkkiä lisää";
+            return "Ole hyv채 ja anna " + n + " merkki채 lis채채";
         },
         formatInputTooLong: function (input, max) {
             var n = input.length - max;
-            return "Ole hyvä ja anna " + n + " merkkiä vähemmän";
+            return "Ole hyv채 ja anna " + n + " merkki채 v채hemm채n";
         },
         formatSelectionTooBig: function (limit) {
             return "Voit valita ainoastaan " + limit + " kpl";
         },
         formatLoadMore: function (pageNumber) {
-            return "Ladataan lisää tuloksia…";
+            return "Ladataan lis채채 tuloksia??;
         },
         formatSearching: function () {
-            return "Etsitään…";
+            return "Etsit채채n??;
         }
     };
 

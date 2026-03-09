@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="kr.co.dsong.ggsj.hospital.service.mapper.HcontractMapper">
+<mapper namespace="kr.co.sitebuilder.hospital.service.mapper.HcontractMapper">
     <resultMap id="mapHcontracts" type="HcontractVO" autoMapping="true">
         <id property="companyId" column="company_id"/>
         <id property="centerId" column="center_id"/>

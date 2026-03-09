@@ -1,4 +1,4 @@
-<%@ page contentType="text/html; charset=utf-8" pageEncoding="utf-8" %>
+﻿<%@ page contentType="text/html; charset=utf-8" pageEncoding="utf-8" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 
@@ -20,7 +20,7 @@
                 <div class="card card-transparent board_internal">
                     <div class="card-header ">
                         <div class="card-title">
-                            <h3 class="h3">FAQ 상세정보</h3>
+                            <h3 class="h3">FAQ ?곸꽭?뺣낫</h3>
                         </div>
                     </div>
                     <%--                    <div class="card-body">--%>
@@ -32,18 +32,18 @@
 
                                 <div class="row-box-inner width-box">
                                     <div class="col-box1 row">
-                                        <div class="col-lg-1 tag-name"><span>주제</span></div>
-                                        <div class="col-lg-5" id="category" data-ggsj="dxSelectBox"></div>
-                                        <div class="col-lg-1 tag-name"><span>작성일시</span></div>
-                                        <div class="col-lg-5" id="writedAt" data-ggsj="dxDateBox"></div>
+                                        <div class="col-lg-1 tag-name"><span>二쇱젣</span></div>
+                                        <div class="col-lg-5" id="category" data-sitebuilder="dxSelectBox"></div>
+                                        <div class="col-lg-1 tag-name"><span>?묒꽦?쇱떆</span></div>
+                                        <div class="col-lg-5" id="writedAt" data-sitebuilder="dxDateBox"></div>
                                     </div>
                                 </div>
 
                                 <div class="row-box-inner width-box">
                                     <div class="col-box1 row center-input">
-                                        <div class="col-lg-1 tag-name"><span>제목</span></div>
+                                        <div class="col-lg-1 tag-name"><span>?쒕ぉ</span></div>
                                         <div class="col-lg-11 row period">
-                                            <div class="col-lg-12" id="title" data-ggsj="dxTextBox"></div>
+                                            <div class="col-lg-12" id="title" data-sitebuilder="dxTextBox"></div>
                                         </div>
                                     </div>
                                 </div>
@@ -51,21 +51,21 @@
                             </div>
                         </div>
                         <div class="row-wrap">
-                            <div class="row-box-title"><i class="xi-play-circle"></i>내용</div>
+                            <div class="row-box-title"><i class="xi-play-circle"></i>?댁슜</div>
 
 
 
                             <div class="text-container">
-                                <div class="html-editor" id="contents" data-ggsj="dxHtmlEditor" style="height: 50vh">
+                                <div class="html-editor" id="contents" data-sitebuilder="dxHtmlEditor" style="height: 50vh">
                                 </div>
                             </div>
                         </div>
 
                         <div class="row btn_area footer-btn">
-                            <div class="col-lg-1" id="btnEdit" data-ggsj="dxButton"><i class="xi-file-check"></i>수정
+                            <div class="col-lg-1" id="btnEdit" data-sitebuilder="dxButton"><i class="xi-file-check"></i>?섏젙
                             </div>
-                            <div class="col-lg-1" id="btnList" data-ggsj="dxButton">목록</div>
-                            <div class="col-lg-1" id="btnDelete" data-ggsj="dxButton">삭제</div>
+                            <div class="col-lg-1" id="btnList" data-sitebuilder="dxButton">紐⑸줉</div>
+                            <div class="col-lg-1" id="btnDelete" data-sitebuilder="dxButton">??젣</div>
                         </div>
 
                     </div>
@@ -81,12 +81,12 @@
 </body>
 <script>
     $(function () {
-        ggsj.openMenu('faq');
+        sitebuilder.openMenu('faq');
 
-        let dxInstances = ggsj.createDx(false);
+        let dxInstances = sitebuilder.createDx(false);
 
         dxInstances.category.option({
-            dataSource: ggsj.typeDef.faqCategory,
+            dataSource: sitebuilder.typeDef.faqCategory,
             readOnly: true
         });
 
@@ -105,7 +105,7 @@
 
         dxInstances.btnEdit.option({
             stylingMode: 'contained',
-            text: '수정',
+            text: '?섏젙',
             type: 'success',
             onClick: function () {
                 location.href = '<c:url value="/pm/commune/faq/${faqId}"/>/edit';
@@ -114,7 +114,7 @@
 
         dxInstances.btnList.option({
             stylingMode: 'contained',
-            text: '목록',
+            text: '紐⑸줉',
             type: 'normal',
             onClick: function () {
                 location.href = '<c:url value="/pm/commune/faq"/>';
@@ -123,10 +123,10 @@
 
         dxInstances.btnDelete.option({
             stylingMode: 'contained',
-            text: '삭제',
+            text: '??젣',
             type: 'danger',
             onClick: function () {
-                if (confirm('정말로 삭제하시겠습니까?')) {
+                if (confirm('?뺣쭚濡???젣?섏떆寃좎뒿?덇퉴?')) {
                     $.ajax({
                         url: '<c:url value="/pm/commune/faq/${faqId}"/>',
                         method: 'DELETE',
@@ -142,7 +142,7 @@
             url: '<c:url value="/pm/commune/faq/${faqId}"/>',
             method: 'GET',
         }).then(function (response) {
-            ggsj.valuesToDx(response.data);
+            sitebuilder.valuesToDx(response.data);
         });
     });
 </script>

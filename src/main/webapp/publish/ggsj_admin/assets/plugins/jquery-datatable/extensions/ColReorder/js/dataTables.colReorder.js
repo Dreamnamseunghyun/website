@@ -1,5 +1,5 @@
-/*! ColReorder 1.1.3
- * ©2010-2014 SpryMedia Ltd - datatables.net/license
+﻿/*! ColReorder 1.1.3
+ * 짤2010-2014 SpryMedia Ltd - datatables.net/license
  */
 
 /**

@@ -1,4 +1,4 @@
-(function( factory ) {
+﻿(function( factory ) {
 	if ( typeof define === "function" && define.amd ) {
 		define( ["jquery", "../jquery.validate"], factory );
 	} else {
@@ -8,7 +8,7 @@
 
 /*
  * Translated default messages for the jQuery validation plugin.
- * Locale: PT (Portuguese; português)
+ * Locale: PT (Portuguese; portugu챗s)
  * Region: BR (Brazil)
  */
 $.extend($.validator.messages, {

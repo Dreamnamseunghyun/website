@@ -20,29 +20,29 @@
                 <div class="card card-transparent board_internal">
                     <div class="card-header ">
                         <div class="card-title">
-                            <h3 class="h3">기업매니저 수정</h3>
+                            <h3 class="h3">기업매니?� ?�정</h3>
                         </div>
                     </div>
                     <%--                    <div class="card-body">--%>
                     <div class="dx-viewport">
 
-                        <!-- 기업체 매니저 -->
+                        <!-- 기업�?매니?� -->
                         <div class="row-wrap">
-                            <div class="row-box-title"><i class="xi-play-circle"></i>기업체 매니저</div>
+                            <div class="row-box-title"><i class="xi-play-circle"></i>기업�?매니?�</div>
                             <div class="row-box1">
                                 <div class="row-box-inner width-box">
                                     <div class="col-box2 row">
                                         <div class="col-lg-2 tag-name"><span>ID</span></div>
                                         <div class="col-lg-10 row period">
-                                            <div class="col-lg-9" id="companyManagerCode" data-ggsj="dxTextBox"></div>
-                                            <div class="col-lg-3" id="noUse" data-ggsj="dxCheckBox"></div>
+                                            <div class="col-lg-9" id="companyManagerCode" data-sitebuilder="dxTextBox"></div>
+                                            <div class="col-lg-3" id="noUse" data-sitebuilder="dxCheckBox"></div>
                                         </div>
                                     </div>
                                     <div class="col-box2 row">
-                                        <div class="col-lg-2 tag-name"><span>소속</span></div>
+                                        <div class="col-lg-2 tag-name"><span>?�속</span></div>
                                         <div class="col-lg-10 row period">
                                             <div class="col-lg-12" id="companyId"
-                                                 data-ggsj="dxLookup"></div>
+                                                 data-sitebuilder="dxLookup"></div>
                                         </div>
                                     </div>
                                 </div>
@@ -52,49 +52,49 @@
                                         <div class="col-lg-2 tag-name"><span>PW</span></div>
                                         <div class="col-lg-10 row period center-box">
                                             <div class="col-lg-9 btnGray" id="btnResetPW"
-                                                 data-ggsj="dxButton"></div>
+                                                 data-sitebuilder="dxButton"></div>
                                         </div>
                                     </div>
                                     <div class="col-box2 row">
-                                        <div class="col-lg-2 tag-name"><span>세부업무</span></div>
+                                        <div class="col-lg-2 tag-name"><span>?��??�무</span></div>
                                         <div class="col-lg-4 row">
-                                            <div class="col-lg-4" id="contract" data-ggsj="dxCheckBox"></div>
-                                            <div class="col-lg-4" id="result" data-ggsj="dxCheckBox"></div>
-                                            <div class="col-lg-4" id="account" data-ggsj="dxCheckBox"></div>
+                                            <div class="col-lg-4" id="contract" data-sitebuilder="dxCheckBox"></div>
+                                            <div class="col-lg-4" id="result" data-sitebuilder="dxCheckBox"></div>
+                                            <div class="col-lg-4" id="account" data-sitebuilder="dxCheckBox"></div>
                                         </div>
                                     </div>
                                 </div>
 
                                 <div class="row-box-inner width-box">
                                     <div class="col-box2 row">
-                                        <div class="col-lg-2 tag-name"><span>매니저명</span></div>
+                                        <div class="col-lg-2 tag-name"><span>매니?��?/span></div>
                                         <div class="col-lg-10 row period">
                                             <div class="col-lg-12" id="companyManagerName"
-                                                 data-ggsj="dxTextBox"></div>
+                                                 data-sitebuilder="dxTextBox"></div>
                                         </div>
                                     </div>
                                     <div class="col-box2 row">
-                                        <div class="col-lg-2 tag-name"><span>유선</span></div>
+                                        <div class="col-lg-2 tag-name"><span>?�선</span></div>
                                         <div class="col-lg-10 row">
                                             <div class="col-lg-12" id="telephone"
-                                                 data-ggsj="dxTextBox" data-ggsj-format="tel"></div>
+                                                 data-sitebuilder="dxTextBox" data-sitebuilder-format="tel"></div>
                                         </div>
                                     </div>
                                 </div>
 
                                 <div class="row-box-inner width-box">
                                     <div class="col-box2 row">
-                                        <div class="col-lg-2 tag-name"><span>이메일</span></div>
+                                        <div class="col-lg-2 tag-name"><span>?�메??/span></div>
                                         <div class="col-lg-10 row period">
                                             <div class="col-lg-12" id="email"
-                                                 data-ggsj="dxTextBox"></div>
+                                                 data-sitebuilder="dxTextBox"></div>
                                         </div>
                                     </div>
                                     <div class="col-box2 row">
-                                        <div class="col-lg-2 tag-name"><span>휴대전화</span></div>
+                                        <div class="col-lg-2 tag-name"><span>?��??�화</span></div>
                                         <div class="col-lg-10 row">
                                             <div class="col-lg-12" id="mobile"
-                                                 data-ggsj="dxTextBox" data-ggsj-format="tel"></div>
+                                                 data-sitebuilder="dxTextBox" data-sitebuilder-format="tel"></div>
                                         </div>
                                     </div>
                                 </div>
@@ -104,18 +104,18 @@
                                         <div class="col-lg-1 tag-name"><span>메모</span></div>
                                         <div class="col-lg-11 row period">
                                             <div class="col-lg-12" id="notes"
-                                                 data-ggsj="dxTextArea"></div>
+                                                 data-sitebuilder="dxTextArea"></div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <!-- 기업체 매니저 -->
+                        <!-- 기업�?매니?� -->
 
                         <div class="row btn_area footer-btn">
-                            <div class="col-lg-1" id="btnSave" data-ggsj="dxButton"><i class="xi-save"></i>저장</div>
-                            <div class="col-lg-1" id="btnList" data-ggsj="dxButton">목록</div>
-                            <div class="col-lg-1" id="btnDelete" data-ggsj="dxButton">삭제</div>
+                            <div class="col-lg-1" id="btnSave" data-sitebuilder="dxButton"><i class="xi-save"></i>?�??/div>
+                            <div class="col-lg-1" id="btnList" data-sitebuilder="dxButton">목록</div>
+                            <div class="col-lg-1" id="btnDelete" data-sitebuilder="dxButton">??��</div>
                         </div>
 
                     </div>
@@ -131,12 +131,12 @@
 </body>
 <script>
     $(function () {
-        ggsj.openMenu('manager');
+        sitebuilder.openMenu('manager');
 
-        let dxInstances = ggsj.createDx(false);
+        let dxInstances = sitebuilder.createDx(false);
 
         dxInstances.companyId.option({
-            placeholder: "기업체 검색",
+            placeholder: "기업�?검??,
             valueExpr: 'companyId',
             displayExpr: 'companyName',
             searchEnabled: true,
@@ -144,14 +144,14 @@
         });
 
         dxInstances.btnResetPW.option({
-            text: '비번초기화',
+            text: '비번초기??,
             onClick: function () {
                 $.ajax({
                     url: '<c:url value="/pm/manager/reset"/>',
                     method: 'PUT',
-                    data: JSON.stringify(ggsj.dxToValues()),
+                    data: JSON.stringify(sitebuilder.dxToValues()),
                 }).then(function () {
-                    ggsj.notify('초기화되었습니다.');
+                    sitebuilder.notify('초기?�되?�습?�다.');
                 });
             }
         });
@@ -169,20 +169,20 @@
         });
 
         dxInstances.account.option({
-            text: '정산',
+            text: '?�산',
             hoverStateEnabled: false,
             focusStateEnabled: false,
         });
 
         dxInstances.noUse.option({
-            text: '로그인중지'
+            text: '로그?�중지'
         });
 
         // dxInstances.mobile.option({
         //     mask: '000-0000-0000',
         //     validationRules: [{type: "required"}, {
         //         type: "pattern",
-        //         message: '핸드폰 번호를 입력하세요.',
+        //         message: '?�드??번호�??�력?�세??',
         //         pattern: /^\(\d{3}\) \d{4}-\d{4}$/i
         //     }]
         // });
@@ -191,29 +191,29 @@
             stylingMode: 'contained',
             type: 'success',
             onClick: function () {
-                let data = ggsj.dxToValues();
+                let data = sitebuilder.dxToValues();
 
                 if (!data.companyManagerCode) {
-                    alert('ID를 입력하세요');
+                    alert('ID�??�력?�세??);
                     return;
                 }
 
                 if (!data.companyManagerName) {
-                    alert('이름을 입력하세요');
+                    alert('?�름???�력?�세??);
                     return;
                 }
 
                 if (!data.mobile) {
-                    alert('휴대전화 번호를 입력하세요');
+                    alert('?��??�화 번호�??�력?�세??);
                     return;
                 }
 
                 $.ajax({
                     url: '<c:url value="/pm/manager/${userId}/companyedit"/>',
                     method: 'PUT',
-                    data: JSON.stringify(ggsj.dxToValues()),
+                    data: JSON.stringify(sitebuilder.dxToValues()),
                 }).then(function () {
-                    ggsj.notify("저장되었습니다.");
+                    sitebuilder.notify("?�?�되?�습?�다.");
                     location.href = '<c:url value="/pm/manager"/>';
                 });
             },
@@ -230,7 +230,7 @@
             stylingMode: 'contained',
             type: 'danger',
             onClick: function () {
-                if (confirm('정말로 삭제하시겠습니까?')) {
+                if (confirm('?�말�???��?�시겠습?�까?')) {
                     $.ajax({
                         url: '<c:url value="/pm/manager/${userId}/company"/>',
                         method: 'DELETE',
@@ -257,7 +257,7 @@
                 method: 'GET',
             }).then(function (response) {
                 //console.log(response);
-                ggsj.valuesToDx(response.data);
+                sitebuilder.valuesToDx(response.data);
             });
         });
     });

@@ -1,4 +1,4 @@
-(function( factory ) {
+﻿(function( factory ) {
 	if ( typeof define === "function" && define.amd ) {
 		define( ["jquery", "../jquery.validate"], factory );
 	} else {
@@ -8,26 +8,26 @@
 
 /*
  * Translated default messages for the jQuery validation plugin.
- * Locale: AR (Arabic; العربية)
+ * Locale: AR (Arabic; 碼?晩邈磨?馬)
  */
 $.extend($.validator.messages, {
-	required: "هذا الحقل إلزامي",
-	remote: "يرجى تصحيح هذا الحقل للمتابعة",
-	email: "رجاء إدخال عنوان بريد إلكتروني صحيح",
-	url: "رجاء إدخال عنوان موقع إلكتروني صحيح",
-	date: "رجاء إدخال تاريخ صحيح",
-	dateISO: "رجاء إدخال تاريخ صحيح (ISO)",
-	number: "رجاء إدخال عدد بطريقة صحيحة",
-	digits: "رجاء إدخال أرقام فقط",
-	creditcard: "رجاء إدخال رقم بطاقة ائتمان صحيح",
-	equalTo: "رجاء إدخال نفس القيمة",
-	extension: "رجاء إدخال ملف بامتداد موافق عليه",
-	maxlength: $.validator.format("الحد الأقصى لعدد الحروف هو {0}"),
-	minlength: $.validator.format("الحد الأدنى لعدد الحروف هو {0}"),
-	rangelength: $.validator.format("عدد الحروف يجب أن يكون بين {0} و {1}"),
-	range: $.validator.format("رجاء إدخال عدد قيمته بين {0} و {1}"),
-	max: $.validator.format("رجاء إدخال عدد أقل من أو يساوي (0}"),
-	min: $.validator.format("رجاء إدخال عدد أكبر من أو يساوي (0}")
+	required: "?莫碼 碼?幕?? 瑪?万碼??",
+	remote: "?邈寞? 魔巒幕?幕 ?莫碼 碼?幕?? ???魔碼磨晩馬",
+	email: "邈寞碼立 瑪膜漠碼? 晩??碼? 磨邈?膜 瑪??魔邈??? 巒幕?幕",
+	url: "邈寞碼立 瑪膜漠碼? 晩??碼? ???晩 瑪??魔邈??? 巒幕?幕",
+	date: "邈寞碼立 瑪膜漠碼? 魔碼邈?漠 巒幕?幕",
+	dateISO: "邈寞碼立 瑪膜漠碼? 魔碼邈?漠 巒幕?幕 (ISO)",
+	number: "邈寞碼立 瑪膜漠碼? 晩膜膜 磨慢邈??馬 巒幕?幕馬",
+	digits: "邈寞碼立 瑪膜漠碼? 粒邈?碼? ??慢",
+	creditcard: "邈寞碼立 瑪膜漠碼? 邈?? 磨慢碼?馬 碼痲魔?碼? 巒幕?幕",
+	equalTo: "邈寞碼立 瑪膜漠碼? ??卍 碼????馬",
+	extension: "邈寞碼立 瑪膜漠碼? ??? 磨碼?魔膜碼膜 ??碼?? 晩???",
+	maxlength: $.validator.format("碼?幕膜 碼?粒?巒? ?晩膜膜 碼?幕邈?? ?? {0}"),
+	minlength: $.validator.format("碼?幕膜 碼?粒膜?? ?晩膜膜 碼?幕邈?? ?? {0}"),
+	rangelength: $.validator.format("晩膜膜 碼?幕邈?? ?寞磨 粒? ???? 磨?? {0} ? {1}"),
+	range: $.validator.format("邈寞碼立 瑪膜漠碼? 晩膜膜 ???魔? 磨?? {0} ? {1}"),
+	max: $.validator.format("邈寞碼立 瑪膜漠碼? 晩膜膜 粒?? ?? 粒? ?卍碼?? (0}"),
+	min: $.validator.format("邈寞碼立 瑪膜漠碼? 晩膜膜 粒?磨邈 ?? 粒? ?卍碼?? (0}")
 });
 
 }));

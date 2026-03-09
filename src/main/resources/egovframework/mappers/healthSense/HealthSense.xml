@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="kr.co.dsong.ggsj.commune.service.mapper.HealthSenseMapper">
+<mapper namespace="kr.co.sitebuilder.commune.service.mapper.HealthSenseMapper">
     <select id="totalHealthSenseCount" resultType="Integer">
         SELECT COUNT(health_sense_id)
-        FROM ggsj.health_sense
+        FROM sitebuilder.health_sense
     </select>
 
     <select id="selectHealthSenseList" resultType="HealthSenseVO" parameterType="HealthSenseVO">

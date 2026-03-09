@@ -1,4 +1,4 @@
-(function(d3) {
+﻿(function(d3) {
   var cie = d3.cie = {};
 
   cie.lab = function(l, a, b) {

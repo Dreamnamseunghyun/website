@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Welsh translation for bootstrap-datepicker
  * S. Morris <s.morris@bangor.ac.uk>
  */

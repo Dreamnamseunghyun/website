@@ -6,7 +6,7 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>건강살자(사용자) 결과조회</title>
+    <title>건강?�자(?�용?? 결과조회</title>
     <link href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css" rel="stylesheet" type="text/css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/css/swiper.min.css" rel="stylesheet"
           type="text/css">
@@ -36,25 +36,25 @@
                     <span class="point_line point_color"></span>
                     <div class="row">
                         <div class="title col-md-12">
-                            <h2>검진 예약 취소</h2>
+                            <h2>검�??�약 취소</h2>
                         </div>
                     </div>
                 </div><!--title_area-->
                 <div class="infoChange">
                     <table class="infoList">
                         <thead>
-                        <th>검진대상</th>
+                        <th>검진�???/th>
                         <th>검진일</th>
-                        <th>진행현황</th>
-                        <th>검진병원</th>
-                        <th>검진항목</th>
-                        <th>선택항목</th>
-                        <th>추가항목</th>
-                        <th>예정금액</th>
+                        <th>진행?�황</th>
+                        <th>검진병??/th>
+                        <th>검진항�?/th>
+                        <th>?�택??��</th>
+                        <th>추�???��</th>
+                        <th>?�정금액</th>
                         </thead>
                         <tbody>
                         <tr>
-                            <td><c:out value="${reserve.myself == 1 ? '본인' : '가족'}"/></td>
+                            <td><c:out value="${reserve.myself == 1 ? '본인' : '가�?}"/></td>
                             <td>
                                 <fmt:formatDate
                                         value="${reserve.checkupedAt != null ? reserve.checkupedAt : (reserve.confirmedAt != null ? reserve.confirmedAt : reserve.desiredAt)}"
@@ -62,13 +62,13 @@
                             </td>
                             <td>
                                 <c:choose>
-                                    <c:when test="${reserve.reservationState == null}">미예약 </c:when>
-                                    <c:when test="${reserve.reservationState == 0}">예약취소 </c:when>
-                                    <c:when test="${reserve.reservationState == 1}">예약신청 </c:when>
-                                    <c:when test="${reserve.reservationState == 2}">예약확정 </c:when>
-                                    <c:when test="${reserve.reservationState == 3}">예약변경 </c:when>
-                                    <c:when test="${reserve.reservationState == 4}">수검완료 </c:when>
-                                    <c:when test="${reserve.reservationState == 5}">예약보류 </c:when>
+                                    <c:when test="${reserve.reservationState == null}">미예??</c:when>
+                                    <c:when test="${reserve.reservationState == 0}">?�약취소 </c:when>
+                                    <c:when test="${reserve.reservationState == 1}">?�약?�청 </c:when>
+                                    <c:when test="${reserve.reservationState == 2}">?�약?�정 </c:when>
+                                    <c:when test="${reserve.reservationState == 3}">?�약변�?</c:when>
+                                    <c:when test="${reserve.reservationState == 4}">?��??�료 </c:when>
+                                    <c:when test="${reserve.reservationState == 5}">?�약보류 </c:when>
                                 </c:choose>
                             </td>
                             <td><c:out value="${reserve.hospitalCenterName}"/></td>
@@ -81,7 +81,7 @@
                                     <c:forEach items="${reserve.checkupItems}" var="checkupItem">
                                         <c:if test="${checkupItem.register != '1' && checkupItem.register != '2'}">
                                             <li>
-                                                선택<c:out value="${checkupItem.register}"/> :
+                                                ?�택<c:out value="${checkupItem.register}"/> :
                                                 <c:out value="${checkupItem.itemName}"/>
                                             </li>
                                         </c:if>
@@ -97,8 +97,7 @@
                                     </c:if>
                                 </c:forEach>
                             </td>
-                            <td>본인부담금액
-                                <span class="chargePoint">
+                            <td>본인부?�금??                                <span class="chargePoint">
                                     <fmt:formatNumber
                                             value="${(reserve.supportType ? reserve.hospitalPay: 0) + reserve.upgradePay + reserve.sumItemCopay + reserve.sumItemDiscountBill}"
                                             pattern="#,###"/>
@@ -112,10 +111,10 @@
                 </div>
                 <div class="notiArea">
                     <div class="title">
-                        <p>병원에 남기고 싶은 정보</p>
+                        <p>병원???�기�??��? ?�보</p>
                     </div>
                     <div class="txtArea">
-                        <textarea class="area" placeholder="병원에 남기고 싶은 말을 적어주세요." id="employeeNotes"><c:out
+                        <textarea class="area" placeholder="병원???�기�??��? 말을 ?�어주세??" id="employeeNotes"><c:out
                                 value="${reserve.employeeNotes}"/></textarea>
                     </div>
                 </div>
@@ -125,8 +124,7 @@
                             <span class="button_on_circle"></span>
                             <a href="target_information.html" class="btn_inner grey">
                                                           <span class="btn_txt_area">
-                                                            이전 페이지로
-                                                          </span>
+                                                            ?�전 ?�이지�?                                                          </span>
                             </a>
                         </div>
                     </div>
@@ -136,7 +134,7 @@
                             <span class="button_on_circle"></span>
                             <a href="#none" class="btn_inner grey">
                                                           <span class="btn_txt_area">
-                                                            예약 취소하기
+                                                            ?�약 취소?�기
                                                           </span>
                             </a>
                         </div>
@@ -169,10 +167,10 @@
     $('.cancle_btn').on('click', function () {
         Swal.fire({
             icon: 'info',
-            title: '고객님의 예약이 취소됩니다.<br><br>예약취소가 확정되기까지<br><span class="point_color">최대 24시간</span>이 소요 됩니다.<br><br>취소하려면 확인 버튼을 눌러주세요.',
+            title: '고객?�의 ?�약??취소?�니??<br><br>?�약취소가 ?�정?�기까�?<br><span class="point_color">최�? 24?�간</span>???�요 ?�니??<br><br>취소?�려�??�인 버튼???�러주세??',
             showCancelButton: true,
-            confirmButtonText: '네, 취소하겠습니다.',
-            cancelButtonText: '닫기',
+            confirmButtonText: '?? 취소?�겠?�니??',
+            cancelButtonText: '?�기',
             cancelButtonColor: '#5d5d5d',
         }).then((result) => {
             if (result.isConfirmed) {

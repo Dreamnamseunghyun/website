@@ -9,7 +9,7 @@
 <br>
 
 ## 접속방법
-- 정식 URL : http://ggsj.co.kr/ (오픈 예정)
+- 정식 URL : http://sitebuilder.co.kr/ (오픈 예정)
 - 개발 URL : http://110.165.17.99/pm/login
 
 ```

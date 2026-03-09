@@ -26,65 +26,65 @@
                     <%--                    <div class="card-body">--%>
                     <div class="dx-viewport">
                         <div class="row-wrap">
-                            <div class="row-box-title"><i class="xi-play-circle"></i>문의내용</div>
+                            <div class="row-box-title"><i class="xi-play-circle"></i>문의?�용</div>
                             <div class="row-box1">
 
                                 <div class="row-box-inner width-box">
                                     <div class="col-box2 row">
-                                        <div class="col-lg-2 tag-name"><span>기업체</span></div>
-                                        <div class="col-lg-10" id="companyName" data-ggsj="dxTextBox"></div>
+                                        <div class="col-lg-2 tag-name"><span>기업�?/span></div>
+                                        <div class="col-lg-10" id="companyName" data-sitebuilder="dxTextBox"></div>
                                     </div>
                                     <div class="col-box2 row">
-                                        <div class="col-lg-2 tag-name"><span>답글완료</span></div>
-                                        <div class="col-lg-10" id="answerCheck" data-ggsj="dxCheckBox"></div>
+                                        <div class="col-lg-2 tag-name"><span>?��??�료</span></div>
+                                        <div class="col-lg-10" id="answerCheck" data-sitebuilder="dxCheckBox"></div>
                                     </div>
                                 </div>
 
                                 <div class="row-box-inner width-box">
                                     <div class="col-box2 row">
-                                        <div class="col-lg-2 tag-name"><span>작성자</span></div>
-                                        <div class="col-lg-10" id="employeeName" data-ggsj="dxTextBox"></div>
+                                        <div class="col-lg-2 tag-name"><span>?�성??/span></div>
+                                        <div class="col-lg-10" id="employeeName" data-sitebuilder="dxTextBox"></div>
                                     </div>
                                     <div class="col-box2 row">
-                                        <div class="col-lg-2 tag-name"><span>질문일시</span></div>
-                                        <div class="col-lg-10" id="questionAt" data-ggsj="dxDateBox"></div>
+                                        <div class="col-lg-2 tag-name"><span>질문?�시</span></div>
+                                        <div class="col-lg-10" id="questionAt" data-sitebuilder="dxDateBox"></div>
                                     </div>
                                 </div>
 
                                 <div class="row-box-inner width-box">
                                     <div class="col-box2 row">
                                         <div class="col-lg-2 tag-name"><span>구분</span></div>
-                                        <div class="col-lg-10" id="category" data-ggsj="dxSelectBox"></div>
+                                        <div class="col-lg-10" id="category" data-sitebuilder="dxSelectBox"></div>
                                     </div>
                                     <div class="col-box2 row">
-                                        <div class="col-lg-2 tag-name"><span>답변일시</span></div>
-                                        <div class="col-lg-10" id="answerAt" data-ggsj="dxDateBox"></div>
+                                        <div class="col-lg-2 tag-name"><span>?��??�시</span></div>
+                                        <div class="col-lg-10" id="answerAt" data-sitebuilder="dxDateBox"></div>
                                     </div>
                                 </div>
 
                                 <div class="row-box-inner width-box">
                                     <div class="col-box1 row center-input">
-                                        <div class="col-lg-1 tag-name"><span>제목</span></div>
+                                        <div class="col-lg-1 tag-name"><span>?�목</span></div>
                                         <div class="col-lg-11 row period">
-                                            <div class="col-lg-12" id="title" data-ggsj="dxTextBox"></div>
+                                            <div class="col-lg-12" id="title" data-sitebuilder="dxTextBox"></div>
                                         </div>
                                     </div>
                                 </div>
 
                                 <div class="row-box-inner width-box">
                                     <div class="col-box1 col-box-vertical6 row">
-                                        <div class="col-lg-1 tag-name"><span>내용</span></div>
+                                        <div class="col-lg-1 tag-name"><span>?�용</span></div>
                                         <div class="col-lg-11 row period">
-                                            <div class="col-lg-12" id="question" data-ggsj="dxTextArea"></div>
+                                            <div class="col-lg-12" id="question" data-sitebuilder="dxTextArea"></div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="row-box-inner width-box">
 
                                     <div class="col-box1 col-box-vertical6 row">
-                                        <div class="col-lg-1 tag-name"><span>답글작성</span></div>
+                                        <div class="col-lg-1 tag-name"><span>?��??�성</span></div>
                                         <div class="col-lg-11 row period">
-                                            <div class="col-lg-12" id="answer" data-ggsj="dxTextArea"></div>
+                                            <div class="col-lg-12" id="answer" data-sitebuilder="dxTextArea"></div>
                                         </div>
                                     </div>
                                 </div>
@@ -92,9 +92,9 @@
                         </div>
 
                         <div class="row btn_area footer-btn">
-                            <div class="col-lg-1" id="btnSave" data-ggsj="dxButton"></div>
-                            <div class="col-lg-1" id="btnList" data-ggsj="dxButton"></div>
-                            <div class="col-lg-1" id="btnDelete" data-ggsj="dxButton"></div>
+                            <div class="col-lg-1" id="btnSave" data-sitebuilder="dxButton"></div>
+                            <div class="col-lg-1" id="btnList" data-sitebuilder="dxButton"></div>
+                            <div class="col-lg-1" id="btnDelete" data-sitebuilder="dxButton"></div>
                         </div>
 
                     </div>
@@ -111,13 +111,13 @@
 <script>
     /** @param _dxInstances : {answer} */
     $(function () {
-        ggsj.openMenu('one2one');
+        sitebuilder.openMenu('one2one');
 
-        let dxInstances = ggsj.createDx(false);
+        let dxInstances = sitebuilder.createDx(false);
 
         dxInstances.answerCheck.option({
             value: false,
-            text: '답글완료체크'
+            text: '?��??�료체크'
         });
 
         dxInstances.questionAt.option({
@@ -145,11 +145,11 @@
 
         dxInstances.category.option({
             items: [
-                {'id': 0, 'text': '예약문의'},
-                {'id': 1, 'text': '결과상담'},
-                {'id': 2, 'text': '불만사항'},
-                {'id': 3, 'text': '홈페이지'},
-                {'id': 4, 'text': '기타문의'},
+                {'id': 0, 'text': '?�약문의'},
+                {'id': 1, 'text': '결과?�담'},
+                {'id': 2, 'text': '불만?�항'},
+                {'id': 3, 'text': '?�페?��?'},
+                {'id': 4, 'text': '기�?문의'},
             ],
             valueExpr: 'id',
             displayExpr: 'text',
@@ -166,29 +166,29 @@
 
         dxInstances.btnSave.option({
             stylingMode: 'contained',
-            text: '저장',
+            text: '?�??,
             type: 'success',
             onClick: function (e) {
-                let data = ggsj.dxToValues();
+                let data = sitebuilder.dxToValues();
 
                 if (!data.answer) {
-                    alert('내용을 입력하세요');
+                    alert('?�용???�력?�세??);
                     return;
                 }
                 if (!data.title) {
-                    alert('제목을 입력하세요');
+                    alert('?�목???�력?�세??);
                     return;
                 }
                 if (!!data.answer && !data.answerCheck) {
-                    alert('답글완료를 체크하세요');
+                    alert('?��??�료�?체크?�세??);
                     return;
                 }
                 $.ajax({
                     url: '<c:url value="/pm/commune/one2one/${qnaId}/edit"/>',
                     method: 'PUT',
-                    data: JSON.stringify(ggsj.dxToValues()),
+                    data: JSON.stringify(sitebuilder.dxToValues()),
                 }).then(function () {
-                    ggsj.notify("저장되었습니다.");
+                    sitebuilder.notify("?�?�되?�습?�다.");
                     location.href = '<c:url value="/pm/commune/one2one"/>';
                 });
             },
@@ -204,10 +204,10 @@
 
         dxInstances.btnDelete.option({
             stylingMode: 'contained',
-            text: '삭제',
+            text: '??��',
             type: 'danger',
             onClick: function (e) {
-                if (confirm('정말로 삭제하시겠습니까?')) {
+                if (confirm('?�말�???��?�시겠습?�까?')) {
                     $.ajax({
                         url: '<c:url value="/pm/commune/one2one/${qnaId}"/>',
                         method: 'DELETE',
@@ -222,7 +222,7 @@
             url: '<c:url value="/pm/commune/one2one/${qnaId}"/>',
             method: 'GET',
         }).then(function (response) {
-            ggsj.valuesToDx(response.data);
+            sitebuilder.valuesToDx(response.data);
             console.log(response);
         });
     });

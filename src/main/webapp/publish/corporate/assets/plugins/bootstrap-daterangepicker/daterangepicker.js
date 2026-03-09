@@ -1,4 +1,4 @@
-/**
+﻿/**
 * @version: 1.3.17
 * @author: Dan Grossman http://www.dangrossman.info/
 * @date: 2014-11-25

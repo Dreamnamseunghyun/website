@@ -1,4 +1,4 @@
-/* ============================================================
+﻿/* ============================================================
  * Dashboard
  * Generates widgets in the dashboard
  * For DEMO purposes only. Extract what you need.

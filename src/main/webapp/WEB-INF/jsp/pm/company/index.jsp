@@ -32,8 +32,8 @@
                                 <div class="row-box">
                                     <div class="row-box-inner">
                                         <div class="col-box1 row">
-                                            <div class="col-lg-5 tag-name"><span>대상년도</span></div>
-                                            <div class="col-lg-7" id="checkupYear" data-ggsj="dxSelectBox"></div>
+                                            <div class="col-lg-5 tag-name"><span>?�?�년??/span></div>
+                                            <div class="col-lg-7" id="checkupYear" data-sitebuilder="dxSelectBox"></div>
                                         </div>
                                     </div>
                                 </div>
@@ -44,7 +44,7 @@
                                 <div class="row-box">
                                     <div class="row-box-inner">
                                         <div class="col-box1 row">
-                                            <div class="col-lg-12" id="searchGrid" data-ggsj="dxTextBox"></div>
+                                            <div class="col-lg-12" id="searchGrid" data-sitebuilder="dxTextBox"></div>
                                         </div>
                                     </div>
                                 </div>
@@ -53,7 +53,7 @@
                         </div>
                         <!-- Header -->
 
-                        <div id="dataGridCompany" class="main_table" data-ggsj="dxDataGrid">
+                        <div id="dataGridCompany" class="main_table" data-sitebuilder="dxDataGrid">
                         </div>
                     </div>
 
@@ -61,7 +61,7 @@
                     <%--                    </div>--%>
                 </div>
                 <div class="row btn_area index_btn_area footer-btn">
-                    <div id="btnCreate" data-ggsj="dxButton">
+                    <div id="btnCreate" data-sitebuilder="dxButton">
                         <div class="write_btn">
                             <div>
                                 <div class="pencil"></div>
@@ -74,7 +74,7 @@
                                     <div class="paper"></div>
                                 </div>
                             </div>
-                            <span>기업 등록</span>
+                            <span>기업 ?�록</span>
                         </div>
                     </div>
                 </div>
@@ -90,11 +90,11 @@
 
 <script>
     $(function () {
-        ggsj.openMenu('company');
+        sitebuilder.openMenu('company');
 
         /** @param dxInstances : {dataGridCompany} */
 
-        let dxInstances = ggsj.createDx(false);
+        let dxInstances = sitebuilder.createDx(false);
 
         dxInstances.checkupYear.option({
             dataSource: [
@@ -120,7 +120,7 @@
         });
 
         dxInstances.searchGrid.option({
-            placeholder: '검색',
+            placeholder: '검??,
             valueChangeEvent: "keyup",
             onValueChanged: function (e) {
                 dxInstances.dataGridCompany.searchByText(e.value);
@@ -140,7 +140,7 @@
                 showNavigationButtons: false
             },
             columns: [{
-                caption: '순번',
+                caption: '?�번',
                 alignment: 'center',
                 cellTemplate: function (cellElement, cellInfo) {
                     cellElement.text(cellInfo.component.pageIndex() * cellInfo.component.pageSize() + cellInfo.row.rowIndex + 1);
@@ -156,12 +156,12 @@
                 },
             }, {
                 dataField: 'companyCheckup.checkupYear',
-                caption: '대상년도',
+                caption: '?�?�년??,
                 alignment: 'center',
                 dataType: 'decimal',
             }, {
                 dataField: 'companyCheckup.checkupDateBegin',
-                caption: '검진시작일',
+                caption: '검진시?�일',
                 alignment: 'center',
                 dataType: 'date',
             }, {
@@ -171,17 +171,17 @@
                 dataType: 'date',
             }, {
                 dataField: 'companyCheckup.reserveDateBegin',
-                caption: '예약시작일',
+                caption: '?�약?�작??,
                 alignment: 'center',
                 dataType: 'date',
             }, {
                 dataField: 'companyCheckup.reserveDateEnd',
-                caption: '예약종료일',
+                caption: '?�약종료??,
                 alignment: 'center',
                 dataType: 'date',
             }, {
                 dataField: 'name',
-                caption: '기업 매니저',
+                caption: '기업 매니?�',
                 cellTemplate: function (cellElement, cellInfo) {
 
                     let dsContractManager = cellInfo.row.data.contractManager;
@@ -191,15 +191,15 @@
                     for (let i = 0; i < dsContractManager.length; i++) {
                         if (dsContractManager[i].companyManagerName !== null) {
                             cellElement.append('계약 : ', dsContractManager[i].companyManagerName, ' / ');
-                            cellElement.append(ggsj.phoneWithHyphen(dsContractManager[i].mobile), ' / ');
+                            cellElement.append(sitebuilder.phoneWithHyphen(dsContractManager[i].mobile), ' / ');
                             cellElement.append(dsContractManager[i].email, '<br/>');
                         }
                     }
 
                     for (let i = 0; i < dsAccountManager.length; i++) {
                         if (dsAccountManager[i].companyManagerName !== null) {
-                            cellElement.append('정산 : ', dsAccountManager[i].companyManagerName, ' / ');
-                            cellElement.append(ggsj.phoneWithHyphen(dsAccountManager[i].mobile), ' / ');
+                            cellElement.append('?�산 : ', dsAccountManager[i].companyManagerName, ' / ');
+                            cellElement.append(sitebuilder.phoneWithHyphen(dsAccountManager[i].mobile), ' / ');
                             cellElement.append(dsAccountManager[i].email, '<br/>');
                         }
                     }
@@ -207,7 +207,7 @@
                     for (let i = 0; i < dsResultManager.length; i++) {
                         if (dsResultManager[i].companyManagerName !== null) {
                             cellElement.append('결과 : ', dsResultManager[i].companyManagerName, ' / ');
-                            cellElement.append(ggsj.phoneWithHyphen(dsResultManager[i].mobile), ' / ');
+                            cellElement.append(sitebuilder.phoneWithHyphen(dsResultManager[i].mobile), ' / ');
                             cellElement.append(dsResultManager[i].email, '<br/>');
                         }
                     }
@@ -226,10 +226,10 @@
                 }]
             }, {
                 type: 'buttons',
-                caption: '신규연도등록',
+                caption: '?�규?�도?�록',
                 buttons: [{
                     name: '',
-                    text: '신규연도등록',
+                    text: '?�규?�도?�록',
                     onClick: function (e) {
                         let company = e.row.data;
                         console.log(company);
@@ -238,9 +238,9 @@
                 }]
             }, {
                 type: 'buttons',
-                caption: '수정',
+                caption: '?�정',
                 buttons: [{
-                    text: '수정',
+                    text: '?�정',
                     onClick: function (e) {
                         let company = e.row.data;
                         location.href = '<c:url value="/pm/company"/>/' + company.checkupYear + '/' + company.companyId + '/edit';
@@ -248,12 +248,12 @@
                 }]
             }, {
                 type: 'buttons',
-                caption: '삭제',
+                caption: '??��',
                 buttons: [{
-                    text: '삭제',
+                    text: '??��',
 
                     onClick: function (e) {
-                        if (confirm('정말로 삭제하시겠습니까?')) {
+                        if (confirm('?�말�???��?�시겠습?�까?')) {
                             let company = e.row.data;
                             $.ajax({
                                 url: '<c:url value="/pm/company"/>/' + company.companyId,
@@ -271,7 +271,7 @@
         dxInstances.btnCreate.option({
             type: "success",
             stylingMode: "outlined",
-            text: "등록",
+            text: "?�록",
             icon: "comment",
             onClick: function () {
                 location.href = '<c:url value="/pm/company/create"/>';

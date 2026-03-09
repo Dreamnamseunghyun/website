@@ -1,5 +1,5 @@
-/*! FixedColumns 3.0.4
- * ©2010-2014 SpryMedia Ltd - datatables.net/license
+﻿/*! FixedColumns 3.0.4
+ * 짤2010-2014 SpryMedia Ltd - datatables.net/license
  */
 
 /**

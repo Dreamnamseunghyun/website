@@ -1,4 +1,4 @@
-/**
+﻿/**
  * French translation for bootstrap-datepicker
  * Nico Mollet <nico.mollet@gmail.com>
  */
@@ -7,8 +7,8 @@
 		days: ["Dimanche", "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi", "Dimanche"],
 		daysShort: ["Dim", "Lun", "Mar", "Mer", "Jeu", "Ven", "Sam", "Dim"],
 		daysMin: ["D", "L", "Ma", "Me", "J", "V", "S", "D"],
-		months: ["Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre"],
-		monthsShort: ["Jan", "Fév", "Mar", "Avr", "Mai", "Jui", "Jul", "Aou", "Sep", "Oct", "Nov", "Déc"],
+		months: ["Janvier", "F챕vrier", "Mars", "Avril", "Mai", "Juin", "Juillet", "Ao청t", "Septembre", "Octobre", "Novembre", "D챕cembre"],
+		monthsShort: ["Jan", "F챕v", "Mar", "Avr", "Mai", "Jui", "Jul", "Aou", "Sep", "Oct", "Nov", "D챕c"],
 		today: "Aujourd'hui",
 		clear: "Effacer",
 		weekStart: 1,

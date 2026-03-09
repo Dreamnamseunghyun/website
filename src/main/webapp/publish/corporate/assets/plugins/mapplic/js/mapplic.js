@@ -1,4 +1,4 @@
-/*
+﻿/*
  * Mapplic - Custom Interactive Map Plugin by @sekler
  * Version 4.2
  * http://www.mapplic.com/

@@ -1,4 +1,4 @@
-<%@ page contentType="text/html; charset=utf-8" pageEncoding="utf-8" %>
+﻿<%@ page contentType="text/html; charset=utf-8" pageEncoding="utf-8" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 
@@ -21,7 +21,7 @@
                 <div class="card card-transparent board_internal">
                     <div class="card-header ">
                         <div class="card-title">
-                            <h3 class="h3">예약취소</h3>
+                            <h3 class="h3">?덉빟痍⑥냼</h3>
                         </div>
                     </div>
                     <%--                    <div class="card-body">--%>
@@ -29,32 +29,32 @@
                         <!-- Header -->
                         <div class="row-wrap row-wrap-box">
                             <div class="row-wrap logo-area-left btn-area-left">
-                                <div class="row-box-title"><i class="xi-play-circle"></i>예약 취소 검색</div>
+                                <div class="row-box-title"><i class="xi-play-circle"></i>?덉빟 痍⑥냼 寃??/div>
                                 <div class="row-box">
                                     <div class="row-box-inner1">
                                         <div class="col-box1 row">
                                             <div class="col-lg-12 row">
                                                 <div class="col-lg-box1 col-lg-box-vertical row">
-                                                    <div class="col-lg-2 tag-name"><span>기업체명</span></div>
+                                                    <div class="col-lg-2 tag-name"><span>湲곗뾽泥대챸</span></div>
                                                     <div class="col-lg-2" id="companyName"
-                                                         data-ggsj="dxTextBox"></div>
-                                                    <div class="col-lg-2 tag-name"><span>병원명</span></div>
+                                                         data-sitebuilder="dxTextBox"></div>
+                                                    <div class="col-lg-2 tag-name"><span>蹂묒썝紐?/span></div>
                                                     <div class="col-lg-3" id="hospitalSearch"
-                                                         data-ggsj="dxSelectBox"></div>
-                                                    <div class="col-lg-1 tag-name"><span>구분</span></div>
-                                                    <div class="col-lg-1" id="vipSearch" data-ggsj="dxCheckBox"></div>
-                                                    <div class="col-lg-1" id="selectAll" data-ggsj="dxCheckBox"></div>
+                                                         data-sitebuilder="dxSelectBox"></div>
+                                                    <div class="col-lg-1 tag-name"><span>援щ텇</span></div>
+                                                    <div class="col-lg-1" id="vipSearch" data-sitebuilder="dxCheckBox"></div>
+                                                    <div class="col-lg-1" id="selectAll" data-sitebuilder="dxCheckBox"></div>
                                                 </div>
 
                                                 <div class="col-lg-box1 col-lg-box-vertical row">
-                                                    <div class="col-lg-2 tag-name"><span>날짜검색</span></div>
+                                                    <div class="col-lg-2 tag-name"><span>?좎쭨寃??/span></div>
                                                     <div class="col-lg-2" id="selectStatusDate"
-                                                         data-ggsj="dxSelectBox"></div>
-                                                    <div class="col-lg-2 tag-name"><span>날짜선택</span></div>
+                                                         data-sitebuilder="dxSelectBox"></div>
+                                                    <div class="col-lg-2 tag-name"><span>?좎쭨?좏깮</span></div>
                                                     <div class="col-lg-3" id="companyCheckup.reserveDateBegin"
-                                                         data-ggsj="dxDateBox"></div>
+                                                         data-sitebuilder="dxDateBox"></div>
                                                     <div class="col-lg-3" id="companyCheckup.reserveDateEnd"
-                                                         data-ggsj="dxDateBox"></div>
+                                                         data-sitebuilder="dxDateBox"></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -73,7 +73,7 @@
                                         <div class="row-wrap-box right">
                                             <div class="row-wrap row-wrap1">
                                                 <div class="col-box1 row text-box-area">
-                                                    <div class="col-lg-12" id="searchGrid" data-ggsj="dxTextBox"></div>
+                                                    <div class="col-lg-12" id="searchGrid" data-sitebuilder="dxTextBox"></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -83,11 +83,11 @@
                         </div>
                         <!-- Header -->
 
-                        <div id="dataGridReserve" class="main_table" data-ggsj="dxDataGrid">
+                        <div id="dataGridReserve" class="main_table" data-sitebuilder="dxDataGrid">
                         </div>
 
                         <div class="row btn_area footer-btn">
-                            <div class="col-lg-1" id="btnSave" data-ggsj="dxButton"><i class="xi-save"></i>취소확정</div>
+                            <div class="col-lg-1" id="btnSave" data-sitebuilder="dxButton"><i class="xi-save"></i>痍⑥냼?뺤젙</div>
                         </div>
                     </div>
                     <%--                    </div>--%>
@@ -102,12 +102,12 @@
 </body>
 <script>
     $(function () {
-        ggsj.openMenu('cancel-reserve');
+        sitebuilder.openMenu('cancel-reserve');
 
-        let dxInstances = ggsj.createDx(false);
+        let dxInstances = sitebuilder.createDx(false);
 
         dxInstances.hospitalSearch.option({
-            text: '병원 검색',
+            text: '蹂묒썝 寃??,
         });
 
         function LoadCancelNameList() {
@@ -175,7 +175,7 @@
         }
 
         dxInstances.selectAll.option({
-            text: '이전취소자 전체보기',
+            text: '?댁쟾痍⑥냼???꾩껜蹂닿린',
             onValueChanged: function (e) {
                 search();
                 if (e.value === true) {
@@ -199,8 +199,8 @@
 
         dxInstances.selectStatusDate.option({
             dataSource: [
-                {'id': 0, 'text': '예약등록일'},
-                {'id': 1, 'text': '검진희망일'}
+                {'id': 0, 'text': '?덉빟?깅줉??},
+                {'id': 1, 'text': '寃吏꾪씗留앹씪'}
             ],
             value: 0,
             valueExpr: 'id',
@@ -221,7 +221,7 @@
         })
 
         dxInstances.vipSearch.option({
-            text: 'VIP조회',
+            text: 'VIP議고쉶',
             value: false,
             onValueChanged: function () {
                 search();
@@ -229,7 +229,7 @@
         });
 
         dxInstances.searchGrid.option({
-            placeholder: '검색',
+            placeholder: '寃??,
             valueChangeEvent: "keyup",
             onValueChanged: function (e) {
                 dxInstances.dataGridReserve.searchByText(e.value);
@@ -260,15 +260,15 @@
                 },
             }, {
                 dataField: "reservationState",
-                caption: "예약상태",
+                caption: "?덉빟?곹깭",
                 lookup: {
                     dataSource: [
-                        {'id': 0, 'text': '예약취소'},
-                        {'id': 1, 'text': '예약신청'},
-                        {'id': 2, 'text': '예약확정'},
-                        {'id': 3, 'text': '예약변경'},
-                        {'id': 4, 'text': '수검완료'},
-                        {'id': 5, 'text': '예약보류'},
+                        {'id': 0, 'text': '?덉빟痍⑥냼'},
+                        {'id': 1, 'text': '?덉빟?좎껌'},
+                        {'id': 2, 'text': '?덉빟?뺤젙'},
+                        {'id': 3, 'text': '?덉빟蹂寃?},
+                        {'id': 4, 'text': '?섍??꾨즺'},
+                        {'id': 5, 'text': '?덉빟蹂대쪟'},
                     ],
                     valueExpr: 'id',
                     displayExpr: 'text',
@@ -276,18 +276,18 @@
                 allowEditing: false,
             }, {
                 dataField: "hospitalCenterName",
-                caption: "검진병원",
+                caption: "寃吏꾨퀝??,
                 alignment: 'center',
                 allowEditing: false,
             }, {
                 dataField: "desiredAt",
-                caption: "검진일",
+                caption: "寃吏꾩씪",
                 alignment: 'center',
                 dataType: "date",
                 allowEditing: false,
             }, {
                 dataField: "ampm",
-                caption: "시간",
+                caption: "?쒓컙",
                 alignment: 'center',
                 allowEditing: false,
                 lookup: {
@@ -307,46 +307,46 @@
                 }
             }, {
                 dataField: "canceledAt",
-                caption: "취소일시",
+                caption: "痍⑥냼?쇱떆",
                 alignment: 'center',
                 dataType: "datetime",
                 allowEditing: false,
             }, {
                 dataField: "canceledUserId",
-                caption: "취소자",
+                caption: "痍⑥냼??,
                 alignment: 'center',
                 allowEditing: false,
             }, {
                 dataField: "confirmedAt",
-                caption: "취소확정일시",
+                caption: "痍⑥냼?뺤젙?쇱떆",
                 alignment: 'center',
                 dataType: "datetime",
                 allowEditing: false,
             }, {
                 dataField: "companyName",
                 alignment: 'center',
-                caption: "소속기업",
+                caption: "?뚯냽湲곗뾽",
                 allowEditing: false,
             }, {
                 dataField: "employeeName",
-                caption: "검진자명",
+                caption: "寃吏꾩옄紐?,
                 alignment: 'center',
                 cellTemplate: function (cellElement, cellInfo) {
                     cellElement.append("<a href = " + '<c:url value="/cm/reserve"/>/view' + '/' + cellInfo.data.reservationId + ">" + cellInfo.text + "</a>");
                     cellElement.append(' - ');
                     if (cellInfo.data.myself === 1) {
-                        cellElement.append('본인');
+                        cellElement.append('蹂몄씤');
                     } else {
-                        cellElement.append(cellInfo.data.familyName + '가족');
+                        cellElement.append(cellInfo.data.familyName + '媛議?);
                     }
                     if (cellInfo.data.vip === true) {
-                        cellElement.append('<span style="color:red; font-weight: bold;">ⓥ</span>');
+                        cellElement.append('<span style="color:red; font-weight: bold;">??/span>');
                     }
                 },
                 allowEditing: false,
             }, {
                 dataField: "birth",
-                caption: "생년월일",
+                caption: "?앸뀈?붿씪",
                 alignment: 'center',
                 dataType: "date",
                 allowEditing: false,
@@ -355,15 +355,15 @@
                 },
             }, {
                 dataField: "mobile",
-                caption: "휴대전화",
+                caption: "?대??꾪솕",
                 alignment: 'center',
                 format: function (value) {
-                    return ggsj.phoneWithHyphen(value);
+                    return sitebuilder.phoneWithHyphen(value);
                 },
                 allowEditing: false,
             }, {
                 dataField: "checkupTypeName",
-                caption: "예약내용",
+                caption: "?덉빟?댁슜",
                 alignment: 'center',
                 cellTemplate: function (cellElement, cellInfo) {
                     let companyCheckupTypeName = cellInfo.data.companyCheckupTypeName;
@@ -373,12 +373,12 @@
                 allowEditing: false,
             }, {
                 dataField: "supportType",
-                caption: "검진비 결제",
+                caption: "寃吏꾨퉬 寃곗젣",
                 alignment: 'center',
                 lookup: {
                     dataSource: [
-                        {'id': false, 'text': '기업부담'},
-                        {'id': true, 'text': '본인부담'},
+                        {'id': false, 'text': '湲곗뾽遺??},
+                        {'id': true, 'text': '蹂몄씤遺??},
                     ],
                     valueExpr: 'id',
                     displayExpr: 'text',
@@ -386,7 +386,7 @@
                 allowEditing: false,
             }, {
                 dataField: "registeredAt",
-                caption: "예약등록일",
+                caption: "?덉빟?깅줉??,
                 alignment: 'center',
                 dataType: "date",
                 allowEditing: false,
@@ -468,7 +468,7 @@
             url: '<c:url value="/cm/cancel-reserve"/>',
             method: 'GET',
         }).then(function (response) {
-            ggsj.valuesToDx(response.data);
+            sitebuilder.valuesToDx(response.data);
             dxInstances.dataGridReserve.option({
                 dataSource: response.data
             });
@@ -499,12 +499,12 @@
             method: 'GET',
         }).then(function (response) {
             let dsHospital = response.data;
-            dsHospital.unshift({hospitalId: null, hospitalName: '전체'});
+            dsHospital.unshift({hospitalId: null, hospitalName: '?꾩껜'});
             dxInstances.hospitalSearch.option({
                 dataSource: dsHospital,
                 valueExpr: 'hospitalId',
                 displayExpr: 'hospitalName',
-                placeholder: '병원 검색',
+                placeholder: '蹂묒썝 寃??,
                 searchEnabled: true,
                 searchExpr: 'centerName',
                 searchMode: 'contains',
@@ -529,10 +529,10 @@
                 });
 
                 if (gridData.length === 0) {
-                    alert('변경된 사항이 없습니다.');
+                    alert('蹂寃쎈맂 ?ы빆???놁뒿?덈떎.');
                     return;
                 } else {
-                    alert('저장하시겠습니까?');
+                    alert('??ν븯?쒓쿋?듬땲源?');
                 }
 
                 $.ajax({
@@ -540,7 +540,7 @@
                     method: 'POST',
                     data: JSON.stringify(getSelectedRows),
                 }).then(function () {
-                    ggsj.notify("저장되었습니다.");
+                    sitebuilder.notify("??λ릺?덉뒿?덈떎.");
                     LoadReserveList();
                 });
             }

@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="kr.co.dsong.ggsj.contract.service.mapper.ContractMapper">
+<mapper namespace="kr.co.sitebuilder.contract.service.mapper.ContractMapper">
     <!-- Map of company_checkup -->
     <resultMap id="mapContract" type="ContractVO" autoMapping="true">
         <id property="companyCheckupId" column="company_checkup_id"/>

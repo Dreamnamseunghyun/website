@@ -1,4 +1,4 @@
-<%@ page contentType="text/html; charset=utf-8" pageEncoding="utf-8" %>
+﻿<%@ page contentType="text/html; charset=utf-8" pageEncoding="utf-8" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 
@@ -21,34 +21,34 @@
                 <div class="card card-transparent board_internal">
                     <div class="card-header ">
                         <div class="card-title">
-                            <h3 class="h3">공지사항 등록</h3>
+                            <h3 class="h3">怨듭??ы빆 ?깅줉</h3>
                         </div>
                     </div>
                     <%--                    <div class="card-body">--%>
                     <div class="dx-viewport">
 
                         <div class="row-wrap">
-                            <div class="row-box-title"><i class="xi-play-circle"></i>공지사항</div>
+                            <div class="row-box-title"><i class="xi-play-circle"></i>怨듭??ы빆</div>
                             <div class="row-box1">
 
                                 <div class="row-box-inner width-box">
                                     <div class="col-box2 row">
-                                        <div class="col-lg-2 tag-name"><span>구분</span></div>
-                                        <div class="col-lg-8" id="group" data-ggsj="dxSelectBox"></div>
-                                        <div class="col-lg-2" id="topList" data-ggsj="dxCheckBox"></div>
+                                        <div class="col-lg-2 tag-name"><span>援щ텇</span></div>
+                                        <div class="col-lg-8" id="group" data-sitebuilder="dxSelectBox"></div>
+                                        <div class="col-lg-2" id="topList" data-sitebuilder="dxCheckBox"></div>
                                     </div>
                                     <div class="col-box2 row">
                                         <div class="col-lg-2 tag-name only-text" id="searchName"
-                                             data-ggsj="dxTextBox"></div>
-                                        <div class="col-lg-10" id="targetId" data-ggsj="dxLookup"></div>
+                                             data-sitebuilder="dxTextBox"></div>
+                                        <div class="col-lg-10" id="targetId" data-sitebuilder="dxLookup"></div>
                                     </div>
                                 </div>
 
                                 <div class="row-box-inner width-box">
                                     <div class="col-box1 row center-input">
-                                        <div class="col-lg-1 tag-name"><span>제목</span></div>
+                                        <div class="col-lg-1 tag-name"><span>?쒕ぉ</span></div>
                                         <div class="col-lg-11 row period">
-                                            <div class="col-lg-12" id="title" data-ggsj="dxTextBox"></div>
+                                            <div class="col-lg-12" id="title" data-sitebuilder="dxTextBox"></div>
                                         </div>
                                     </div>
                                 </div>
@@ -56,18 +56,18 @@
                             </div>
                         </div>
                         <div class="row-wrap">
-                            <div class="row-box-title"><i class="xi-play-circle"></i>내용</div>
+                            <div class="row-box-title"><i class="xi-play-circle"></i>?댁슜</div>
 
                             <div class="text-container">
-                                <div class="html-editor" id="contents" data-ggsj="dxHtmlEditor" style="height: 50vh">
+                                <div class="html-editor" id="contents" data-sitebuilder="dxHtmlEditor" style="height: 50vh">
                                 </div>
                             </div>
                         </div>
 
 <%--                        <div class="row">--%>
 <%--                            <div class="col-lg-9"></div>--%>
-<%--                            <div class="col-lg-2" id="attachFilename" data-ggsj="dxTextBox"></div>--%>
-<%--                            <div class="col-lg-1 btnGray" id="btnAttach" data-ggsj="dxButton"></div>--%>
+<%--                            <div class="col-lg-2" id="attachFilename" data-sitebuilder="dxTextBox"></div>--%>
+<%--                            <div class="col-lg-1 btnGray" id="btnAttach" data-sitebuilder="dxButton"></div>--%>
 
 <%--                            <form id="formAttach">--%>
 <%--                                <input type="file" id="attach" name="attach" style="display: none;"/>--%>
@@ -84,7 +84,7 @@
                                             <form id="formAttach" style="display: none;">
                                                 <input type="file" id="attach" name="attach">
                                             </form>
-                                            <div class="col-lg-12" id="attachFilename" data-ggsj="dxTextBox"></div>
+                                            <div class="col-lg-12" id="attachFilename" data-sitebuilder="dxTextBox"></div>
                                         </div>
 
                                     </div>
@@ -94,7 +94,7 @@
                                 <div class="row-box right-btn">
                                     <div class="row-box-inner">
                                         <div class="col-box1 row">
-                                            <div class="col-lg-12"><div id="btnAttach" data-ggsj="dxButton"></div></div>
+                                            <div class="col-lg-12"><div id="btnAttach" data-sitebuilder="dxButton"></div></div>
                                         </div>
                                     </div>
                                 </div>
@@ -106,8 +106,8 @@
 
 
                     <div class="row btn_area footer-btn">
-                        <div class="col-lg-1" id="btnSave" data-ggsj="dxButton"></div>
-                        <div class="col-lg-1" id="btnList" data-ggsj="dxButton"></div>
+                        <div class="col-lg-1" id="btnSave" data-sitebuilder="dxButton"></div>
+                        <div class="col-lg-1" id="btnList" data-sitebuilder="dxButton"></div>
                     </div>
 
                 </div>
@@ -123,9 +123,9 @@
 </body>
 <script>
     $(function () {
-        ggsj.openMenu('notice');
+        sitebuilder.openMenu('notice');
 
-        let dxInstances = ggsj.createDx(false);
+        let dxInstances = sitebuilder.createDx(false);
 
         dxInstances.targetId.option({
             searchEnabled: true,
@@ -134,21 +134,21 @@
         });
 
         dxInstances.group.option({
-            dataSource: ggsj.typeDef.userType,
+            dataSource: sitebuilder.typeDef.userType,
             onValueChanged: function (e) {
                 if (e.value === 'CM') {
                     dxInstances.searchName.option({
-                        value: '기업체 검색',
+                        value: '湲곗뾽泥?寃??,
                     });
                     LoadCompanyList();
                 } else if (e.value === 'HM') {
                     dxInstances.searchName.option({
-                        value: '병원 검색',
+                        value: '蹂묒썝 寃??,
                     });
                     LoadHospitalList();
                 } else if (e.value === 'PM') {
                     dxInstances.searchName.option({
-                        value: '내부',
+                        value: '?대?',
                     });
                     dxInstances.targetId.option({
                         value: 0,
@@ -156,7 +156,7 @@
                     });
                 } else {
                     dxInstances.searchName.option({
-                        value: '기업체 검색',
+                        value: '湲곗뾽泥?寃??,
                     });
                     LoadCompanyList();
                 }
@@ -165,16 +165,16 @@
 
         dxInstances.searchName.option({
             readOnly: true,
-            value: '- 구분 선택 -'
+            value: '- 援щ텇 ?좏깮 -'
         });
 
         dxInstances.topList.option({
-            text: 'Top 공지',
+            text: 'Top 怨듭?',
             value: false,
         });
 
         dxInstances.btnAttach.option({
-            text: '파일첨부',
+            text: '?뚯씪泥⑤?',
             onClick: function () {
                 $('#attach').trigger('click');
             },
@@ -195,21 +195,20 @@
         // Save
         dxInstances.btnSave.option({
             stylingMode: 'contained',
-            text: '저장',
+            text: '???,
             type: 'success',
             onClick: function () {
-                let data = ggsj.dxToValues();
-                // 공백 및 <p> 태그 제거 해야함
-                // console.log('html   :   ' + data.contents.replace(/\s+/g, ''));
+                let data = sitebuilder.dxToValues();
+                // 怨듬갚 諛?<p> ?쒓렇 ?쒓굅 ?댁빞??                // console.log('html   :   ' + data.contents.replace(/\s+/g, ''));
 
                 if (!data.group) {
-                    alert('구분을 선택해주세요.');
+                    alert('援щ텇???좏깮?댁＜?몄슂.');
                     return;
                 } else if (!data.title) {
-                    alert('제목을 입력해주세요.');
+                    alert('?쒕ぉ???낅젰?댁＜?몄슂.');
                     return;
                 } else if (!data.contents) {
-                    alert('내용을 입력해주세요.');
+                    alert('?댁슜???낅젰?댁＜?몄슂.');
                     return;
                 }
 
@@ -225,7 +224,7 @@
                     contentType: false,
                     data: formData,
                 }).then(function () {
-                    ggsj.notify("저장되었습니다.");
+                    sitebuilder.notify("??λ릺?덉뒿?덈떎.");
                     location.href = '<c:url value="/pm/commune/notice"/>';
                 });
             },
@@ -234,7 +233,7 @@
         // List
         dxInstances.btnList.option({
             stylingMode: 'contained',
-            text: '목록',
+            text: '紐⑸줉',
             type: 'normal',
             onClick: function () {
                 location.href = '<c:url value="/pm/commune/notice"/>';
@@ -249,7 +248,7 @@
 
             $.when($.ajax(ajaxCompany)).then(function (response) {
                 let allCompany = response.data;
-                allCompany.unshift({companyId: 0, companyName: '전체'});
+                allCompany.unshift({companyId: 0, companyName: '?꾩껜'});
 
                 dxInstances.targetId.option({
                     readOnly: false,
@@ -269,7 +268,7 @@
 
             $.when($.ajax(ajaxHospital)).then(function (response) {
                 let allHospital = response.data;
-                allHospital.unshift({hospitalId: 0, hospitalName: '전체'});
+                allHospital.unshift({hospitalId: 0, hospitalName: '?꾩껜'});
 
                 dxInstances.targetId.option({
                     readOnly: false,

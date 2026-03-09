@@ -1,4 +1,4 @@
-/*
+﻿/*
  *  jQuery Menu Clipper - v0.0.1
  *  Clips overflowing items from a navigation bar and adds them into a dropdown
  *  https://github.com/praveenaj/jquery-menuclipper

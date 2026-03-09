@@ -1,4 +1,4 @@
-/* ============================================================
+﻿/* ============================================================
  * Google Map
  * Render maps using Google Maps JS API
  * For DEMO purposes only. Extract what you need.

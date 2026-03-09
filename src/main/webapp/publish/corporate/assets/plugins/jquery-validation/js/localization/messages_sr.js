@@ -1,4 +1,4 @@
-(function( factory ) {
+﻿(function( factory ) {
 	if ( typeof define === "function" && define.amd ) {
 		define( ["jquery", "../jquery.validate"], factory );
 	} else {
@@ -8,26 +8,26 @@
 
 /*
  * Translated default messages for the jQuery validation plugin.
- * Locale: SR (Serbian; српски језик)
+ * Locale: SR (Serbian; ??極?克龜 ?筠鈞龜克)
  */
 $.extend($.validator.messages, {
-	required: "Поље је обавезно.",
-	remote: "Средите ово поље.",
-	email: "Унесите исправну и-мејл адресу.",
-	url: "Унесите исправан URL.",
-	date: "Унесите исправан датум.",
-	dateISO: "Унесите исправан датум (ISO).",
-	number: "Унесите исправан број.",
-	digits: "Унесите само цифе.",
-	creditcard: "Унесите исправан број кредитне картице.",
-	equalTo: "Унесите исту вредност поново.",
-	extension: "Унесите вредност са одговарајућом екстензијом.",
-	maxlength: $.validator.format("Унесите мање од {0} карактера."),
-	minlength: $.validator.format("Унесите барем {0} карактера."),
-	rangelength: $.validator.format("Унесите вредност дугачку између {0} и {1} карактера."),
-	range: $.validator.format("Унесите вредност између {0} и {1}."),
-	max: $.validator.format("Унесите вредност мању или једнаку {0}."),
-	min: $.validator.format("Унесите вредност већу или једнаку {0}.")
+	required: "?棘?筠 ?筠 棘閨逵勻筠鈞戟棘.",
+	remote: "鬼?筠畇龜?筠 棘勻棘 極棘?筠.",
+	email: "叫戟筠?龜?筠 龜?極?逵勻戟? 龜-劇筠?剋 逵畇?筠??.",
+	url: "叫戟筠?龜?筠 龜?極?逵勻逵戟 URL.",
+	date: "叫戟筠?龜?筠 龜?極?逵勻逵戟 畇逵??劇.",
+	dateISO: "叫戟筠?龜?筠 龜?極?逵勻逵戟 畇逵??劇 (ISO).",
+	number: "叫戟筠?龜?筠 龜?極?逵勻逵戟 閨?棘?.",
+	digits: "叫戟筠?龜?筠 ?逵劇棘 ?龜?筠.",
+	creditcard: "叫戟筠?龜?筠 龜?極?逵勻逵戟 閨?棘? 克?筠畇龜?戟筠 克逵??龜?筠.",
+	equalTo: "叫戟筠?龜?筠 龜??? 勻?筠畇戟棘?? 極棘戟棘勻棘.",
+	extension: "叫戟筠?龜?筠 勻?筠畇戟棘?? ?逵 棘畇均棘勻逵?逵???棘劇 筠克??筠戟鈞龜?棘劇.",
+	maxlength: $.validator.format("叫戟筠?龜?筠 劇逵?筠 棘畇 {0} 克逵?逵克?筠?逵."),
+	minlength: $.validator.format("叫戟筠?龜?筠 閨逵?筠劇 {0} 克逵?逵克?筠?逵."),
+	rangelength: $.validator.format("叫戟筠?龜?筠 勻?筠畇戟棘?? 畇?均逵?克? 龜鈞劇筠?? {0} 龜 {1} 克逵?逵克?筠?逵."),
+	range: $.validator.format("叫戟筠?龜?筠 勻?筠畇戟棘?? 龜鈞劇筠?? {0} 龜 {1}."),
+	max: $.validator.format("叫戟筠?龜?筠 勻?筠畇戟棘?? 劇逵?? 龜剋龜 ?筠畇戟逵克? {0}."),
+	min: $.validator.format("叫戟筠?龜?筠 勻?筠畇戟棘?? 勻筠?? 龜剋龜 ?筠畇戟逵克? {0}.")
 });
 
 }));

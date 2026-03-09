@@ -1,4 +1,4 @@
-(function ($) {
+﻿(function ($) {
 	'use strict';
 
 	/**
@@ -965,7 +965,7 @@
             });
         });
 
-        // close the select element if the target it´s not the select element or one of its descendants..
+        // close the select element if the target it쨈s not the select element or one of its descendants..
         document.addEventListener('click', function(ev) {
             var target = ev.target;
             if (self._isOpen() && target !== self.selEl && !hasParent(target, self.selEl)) {
@@ -1164,7 +1164,7 @@
         // update current selected value
         this.selPlaceholder.textContent = opt.textContent;
 
-        // change native select element´s value
+        // change native select element쨈s value
         this.el.value = opt.getAttribute('data-value');
 
         // remove class cs-selected from old selected option and add it to current selected option
@@ -1174,7 +1174,7 @@
         }
         classie.add(opt, 'cs-selected');
 
-        // if there´s a link defined
+        // if there쨈s a link defined
         if (opt.getAttribute('data-link')) {
             // open in new tab?
             if (this.options.newTab) {
@@ -2702,7 +2702,7 @@ function init() {
    */
   function onInitialPointerMove(e) {
     // Work around a Safari quirk that fires a mousemove on <html> whenever the
-    // window blurs, even if you're tabbing out of the page. ¯\_(ツ)_/¯
+    // window blurs, even if you're tabbing out of the page. 짱\_(??_/짱
     if (e.target.nodeName.toLowerCase() === 'html') {
       return;
     }

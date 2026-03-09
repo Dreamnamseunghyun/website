@@ -21,9 +21,9 @@
                 <div class="card card-transparent board_internal">
                     <div class="card-header ">
                         <div class="card-title">
-                            <h3 class="h3">병원홍보</h3>
+                            <h3 class="h3">병원?�보</h3>
                         </div>
-                        <div class="tabs-container" id="tabs" data-ggsj="dxTabs"></div>
+                        <div class="tabs-container" id="tabs" data-sitebuilder="dxTabs"></div>
                     </div>
                     <%--                    <div class="card-body">--%>
                     <div class="dx-viewport">
@@ -33,8 +33,8 @@
                                 <div class="row-box-inner">
                                     <div class="col-box1 row">
                                         <div class="col-lg-box1 col-box-border">
-                                            <div class="col-lg-4 tag-name"><span>병원명</span></div>
-                                            <div class="col-lg-8" id="hospitalCenterName" data-ggsj="dxTextBox">
+                                            <div class="col-lg-4 tag-name"><span>병원�?/span></div>
+                                            <div class="col-lg-8" id="hospitalCenterName" data-sitebuilder="dxTextBox">
                                             </div>
                                         </div>
                                     </div>
@@ -44,7 +44,7 @@
 
 
                         <div class="row-wrap">
-                            <div class="row-box-title margin-title"><i class="xi-play-circle"></i>홍보 이미지</div>
+                            <div class="row-box-title margin-title"><i class="xi-play-circle"></i>?�보 ?��?지</div>
 
                             <div class="row-box1 row-box-margin-bottom">
                                 <div class="row-box-inner col-box-margin-right">
@@ -52,16 +52,16 @@
                                     <div class="col-box3 col-box-border">
                                         <div class="col-lg-12 row">
                                             <div class="col-lg-box1 col-lg-box-vertical row">
-                                                <div class="col-lg-3 tag-name">전경</div>
-                                                <div class="col-lg-5"><div id="centerAdvFilename1" data-ggsj="dxTextBox"></div></div>
+                                                <div class="col-lg-3 tag-name">?�경</div>
+                                                <div class="col-lg-5"><div id="centerAdvFilename1" data-sitebuilder="dxTextBox"></div></div>
                                                 <div class="col-lg-4 center-box btn-margin">
-                                                        <div id="btnAttach1" data-ggsj="dxButton"></div>
-                                                        <div id="btnDelete1" data-ggsj="dxButton"></div>
+                                                        <div id="btnAttach1" data-sitebuilder="dxButton"></div>
+                                                        <div id="btnDelete1" data-sitebuilder="dxButton"></div>
                                                 </div>
 
                                             </div>
                                             <div class="col-lg-box1 col-lg-box-vertical row">
-                                                <img id="centerAdvUrl1" src="" style="display: none;" alt="홍보이미지1"/>
+                                                <img id="centerAdvUrl1" src="" style="display: none;" alt="?�보?��?지1"/>
                                             </div>
                                         </div>
                                     </div>
@@ -71,15 +71,15 @@
                                         <div class="col-lg-12 row">
                                             <div class="col-lg-box1 col-lg-box-vertical row">
                                                 <div class="col-lg-3 tag-name">로비</div>
-                                                <div class="col-lg-5"><div id="centerAdvFilename2" data-ggsj="dxTextBox"></div></div>
+                                                <div class="col-lg-5"><div id="centerAdvFilename2" data-sitebuilder="dxTextBox"></div></div>
                                                 <div class="col-lg-4 center-box btn-margin">
-                                                    <div id="btnAttach2" data-ggsj="dxButton"></div>
-                                                    <div id="btnDelete2" data-ggsj="dxButton"></div>
+                                                    <div id="btnAttach2" data-sitebuilder="dxButton"></div>
+                                                    <div id="btnDelete2" data-sitebuilder="dxButton"></div>
                                                 </div>
 
                                             </div>
                                             <div class="col-lg-box1 col-lg-box-vertical row">
-                                                <img id="centerAdvUrl2" src="" style="display: none;" alt="홍보이미지1"/>
+                                                <img id="centerAdvUrl2" src="" style="display: none;" alt="?�보?��?지1"/>
                                             </div>
                                         </div>
                                     </div>
@@ -88,16 +88,16 @@
                                     <div class="col-box3 col-box-border">
                                         <div class="col-lg-12 row">
                                             <div class="col-lg-box1 col-lg-box-vertical row">
-                                                <div class="col-lg-3 tag-name">내시경실</div>
-                                                <div class="col-lg-5"><div id="centerAdvFilename3" data-ggsj="dxTextBox"></div></div>
+                                                <div class="col-lg-3 tag-name">?�시경실</div>
+                                                <div class="col-lg-5"><div id="centerAdvFilename3" data-sitebuilder="dxTextBox"></div></div>
                                                 <div class="col-lg-4 center-box btn-margin">
-                                                    <div id="btnAttach3" data-ggsj="dxButton"></div>
-                                                    <div id="btnDelete3" data-ggsj="dxButton"></div>
+                                                    <div id="btnAttach3" data-sitebuilder="dxButton"></div>
+                                                    <div id="btnDelete3" data-sitebuilder="dxButton"></div>
                                                 </div>
 
                                             </div>
                                             <div class="col-lg-box1 col-lg-box-vertical row">
-                                                <img id="centerAdvUrl3" src="" style="display: none;" alt="홍보이미지1"/>
+                                                <img id="centerAdvUrl3" src="" style="display: none;" alt="?�보?��?지1"/>
                                             </div>
                                         </div>
                                     </div>
@@ -111,16 +111,16 @@
                                     <div class="col-box3 col-box-border">
                                         <div class="col-lg-12 row">
                                             <div class="col-lg-box1 col-lg-box-vertical row">
-                                                <div class="col-lg-3 tag-name">특별한 장비</div>
-                                                <div class="col-lg-5" id="centerAdvFilename4" data-ggsj="dxTextBox"></div>
+                                                <div class="col-lg-3 tag-name">?�별???�비</div>
+                                                <div class="col-lg-5" id="centerAdvFilename4" data-sitebuilder="dxTextBox"></div>
                                                 <div class="col-lg-4 center-box btn-margin">
-                                                    <div id="btnAttach4" data-ggsj="dxButton"></div>
-                                                    <div id="btnDelete4" data-ggsj="dxButton"></div>
+                                                    <div id="btnAttach4" data-sitebuilder="dxButton"></div>
+                                                    <div id="btnDelete4" data-sitebuilder="dxButton"></div>
                                                 </div>
 
                                             </div>
                                             <div class="col-lg-box1 col-lg-box-vertical row">
-                                                <img id="centerAdvUrl4" src="" style="display: none;" alt="홍보이미지1"/>
+                                                <img id="centerAdvUrl4" src="" style="display: none;" alt="?�보?��?지1"/>
                                             </div>
                                         </div>
                                     </div>
@@ -129,16 +129,16 @@
                                     <div class="col-box3 col-box-border">
                                         <div class="col-lg-12 row">
                                             <div class="col-lg-box1 col-lg-box-vertical row">
-                                                <div class="col-lg-3 tag-name">특별한 공간</div>
-                                                <div class="col-lg-5"><div id="centerAdvFilename5" data-ggsj="dxTextBox"></div></div>
+                                                <div class="col-lg-3 tag-name">?�별??공간</div>
+                                                <div class="col-lg-5"><div id="centerAdvFilename5" data-sitebuilder="dxTextBox"></div></div>
                                                 <div class="col-lg-4 center-box btn-margin">
-                                                    <div id="btnAttach5" data-ggsj="dxButton"></div>
-                                                    <div id="btnDelete5" data-ggsj="dxButton"></div>
+                                                    <div id="btnAttach5" data-sitebuilder="dxButton"></div>
+                                                    <div id="btnDelete5" data-sitebuilder="dxButton"></div>
                                                 </div>
 
                                             </div>
                                             <div class="col-lg-box1 col-lg-box-vertical row">
-                                                <img id="centerAdvUrl5" src="" style="display: none;" alt="홍보이미지1"/>
+                                                <img id="centerAdvUrl5" src="" style="display: none;" alt="?�보?��?지1"/>
                                             </div>
                                         </div>
                                     </div>
@@ -147,16 +147,16 @@
                                     <div class="col-box3 col-box-border">
                                         <div class="col-lg-12 row">
                                             <div class="col-lg-box1 col-lg-box-vertical row">
-                                                <div class="col-lg-3 tag-name">특별한 공간</div>
-                                                <div class="col-lg-5"><div id="centerAdvFilename6" data-ggsj="dxTextBox"></div></div>
+                                                <div class="col-lg-3 tag-name">?�별??공간</div>
+                                                <div class="col-lg-5"><div id="centerAdvFilename6" data-sitebuilder="dxTextBox"></div></div>
                                                 <div class="col-lg-4 center-box btn-margin">
-                                                    <div id="btnAttach6" data-ggsj="dxButton"></div>
-                                                    <div id="btnDelete6" data-ggsj="dxButton"></div>
+                                                    <div id="btnAttach6" data-sitebuilder="dxButton"></div>
+                                                    <div id="btnDelete6" data-sitebuilder="dxButton"></div>
                                                 </div>
 
                                             </div>
                                             <div class="col-lg-box1 col-lg-box-vertical row">
-                                                <img id="centerAdvUrl6" src="" style="display: none;" alt="홍보이미지1"/>
+                                                <img id="centerAdvUrl6" src="" style="display: none;" alt="?�보?��?지1"/>
                                             </div>
                                         </div>
                                     </div>
@@ -189,8 +189,8 @@
                                style="display: none; width: 372px;"/>
                     </form>
                     <div class="row btn_area footer-btn">
-                        <div class="col-lg-1" id="btnSave" data-ggsj="dxButton" style="margin-right:5px"></div>
-                        <div class="col-lg-1" id="btnList" data-ggsj="dxButton" style="margin-left:5px"></div>
+                        <div class="col-lg-1" id="btnSave" data-sitebuilder="dxButton" style="margin-right:5px"></div>
+                        <div class="col-lg-1" id="btnList" data-sitebuilder="dxButton" style="margin-left:5px"></div>
                     </div>
                 </div>
                 <%--                    </div>--%>
@@ -204,9 +204,9 @@
     /** @param _dxInstances : {panorama,btnPAttach,lobby,btnLAttach,endoscopy,btnEAttach,equipment,btnEQAttach,btnSAttach,space2,btnSAttach2,review,itemData} */
 
     $(function () {
-        ggsj.openMenu('hospital');
+        sitebuilder.openMenu('hospital');
 
-        let dxInstances = ggsj.createDx(false);
+        let dxInstances = sitebuilder.createDx(false);
 
         dxInstances.tabs.option({
             hoverStateEnabled: true,
@@ -225,18 +225,18 @@
         for (let i = 1; i <= 6; i++) {
             dxInstances['centerAdvFilename' + i].option({
                 readOnly: true,
-                placeholder: '600px X 400px 이미지가 적합합니다.'
+                placeholder: '600px X 400px ?��?지가 ?�합?�니??'
             });
 
             dxInstances['btnAttach' + i].option({
-                text: '파일첨부',
+                text: '?�일첨�?',
                 onClick: function () {
                     $('#centerAdv' + i).trigger('click');
                 },
             });
 
             dxInstances['btnDelete' + i].option({
-                text: '파일삭제',
+                text: '?�일??��',
                 onClick: function () {
                     dxInstances['centerAdvFilename' + i].option('value', null);
                     $('#centerAdvUrl' + i).hide();
@@ -255,10 +255,10 @@
         // Save
         dxInstances.btnSave.option({
             stylingMode: 'contained',
-            text: '저장',
+            text: '?�??,
             type: 'success',
             onClick: function () {
-                let data = ggsj.dxToValues();
+                let data = sitebuilder.dxToValues();
 
                 let formData = new FormData($('#formCenterAdv')[0]);
                 formData.append('center', new Blob([JSON.stringify(data)], {
@@ -272,7 +272,7 @@
                     contentType: false,
                     data: formData,
                 }).then(function () {
-                    ggsj.notify("저장되었습니다.");
+                    sitebuilder.notify("?�?�되?�습?�다.");
                     location.reload();
                 });
             }
@@ -294,7 +294,7 @@
             method: 'GET',
         }).then(function (response) {
             console.log(response)
-            ggsj.valuesToDx(response.data);
+            sitebuilder.valuesToDx(response.data);
 
             $.ajax({
                 url: '<c:url value="/pm/tabs"/>',

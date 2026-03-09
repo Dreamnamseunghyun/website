@@ -1,7 +1,7 @@
 SELECT user_id
      , company_id
      , employee_code
-     , AES_DECRYPT(UNHEX(employee_name), 'volk_ggsj.co.kr!') AS employee_name
+     , AES_DECRYPT(UNHEX(employee_name), 'volk_sitebuilder.co.kr!') AS employee_name
      , no_use
      , employee_no
      , myself
@@ -21,6 +21,6 @@ SELECT user_id
      , deleted_at
      , deleted_user_id
 FROM employee
-WHERE employee_name = HEX(AES_ENCRYPT('강호동', 'volk_ggsj.co.kr!'))
+WHERE employee_name = HEX(AES_ENCRYPT('강호동', 'volk_sitebuilder.co.kr!'))
 -- recommended
--- WHERE AES_DECRYPT(UNHEX(employee_name), 'volk_ggsj.co.kr!') = '강호동'
+-- WHERE AES_DECRYPT(UNHEX(employee_name), 'volk_sitebuilder.co.kr!') = '강호동'

@@ -1,5 +1,5 @@
-/*! FixedHeader 2.1.2
- * ©2010-2014 SpryMedia Ltd - datatables.net/license
+﻿/*! FixedHeader 2.1.2
+ * 짤2010-2014 SpryMedia Ltd - datatables.net/license
  */
 
 /**

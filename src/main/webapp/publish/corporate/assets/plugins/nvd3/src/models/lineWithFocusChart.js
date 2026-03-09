@@ -1,4 +1,4 @@
-nv.models.lineWithFocusChart = function() {
+﻿nv.models.lineWithFocusChart = function() {
   "use strict";
   //============================================================
   // Public Variables with Default Settings

@@ -21,7 +21,7 @@
                 <div class="card card-transparent board_internal">
                     <div class="card-header ">
                         <div class="card-title">
-                            <h3 class="h3">매니저 관리</h3>
+                            <h3 class="h3">매니?� 관�?/h3>
                         </div>
                     </div>
                     <%--                    <div class="card-body">--%>
@@ -33,24 +33,24 @@
                                 <div class="row-box2">
                                     <div class="row-box-inner1">
                                         <div class="col-box1 row">
-                                            <div class="col-lg-4 tag-name"><span>매니저 구분</span></div>
+                                            <div class="col-lg-4 tag-name"><span>매니?� 구분</span></div>
                                             <div class="col-lg-8">
                                                 <div class="col-lg-12" id="selectStatus"
-                                                     data-ggsj="dxSelectBox"></div>
+                                                     data-sitebuilder="dxSelectBox"></div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-lg-2" style="display: none" id="employeeCheckup.companyCheckupId"
-                                     data-ggsj="dxTextBox"></div>
-                                <div class="col-lg-2" style="display: none" id="companyId" data-ggsj="dxTextBox"></div>
+                                     data-sitebuilder="dxTextBox"></div>
+                                <div class="col-lg-2" style="display: none" id="companyId" data-sitebuilder="dxTextBox"></div>
 
                                 <div class="row-box2">
                                     <div class="row-box-inner1">
                                         <div class="col-box1 row">
-                                            <div class="col-lg-4 tag-name"><span>로그인 가능</span></div>
+                                            <div class="col-lg-4 tag-name"><span>로그??가??/span></div>
                                             <div class="col-lg-8">
-                                                <div class="col-lg-12" id="selectNoUse" data-ggsj="dxSelectBox"></div>
+                                                <div class="col-lg-12" id="selectNoUse" data-sitebuilder="dxSelectBox"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -63,7 +63,7 @@
                                 <div class="row-box">
                                     <div class="row-box-inner">
                                         <div class="col-box1 row">
-                                            <div class="col-lg-12" id="searchGrid" data-ggsj="dxTextBox"></div>
+                                            <div class="col-lg-12" id="searchGrid" data-sitebuilder="dxTextBox"></div>
                                         </div>
                                     </div>
                                 </div>
@@ -73,7 +73,7 @@
                         </div>
                         <!-- Header -->
 
-                        <div id="dataGridManager" class="main_table" data-ggsj="dxDataGrid">
+                        <div id="dataGridManager" class="main_table" data-sitebuilder="dxDataGrid">
                         </div>
 
 
@@ -82,10 +82,10 @@
                 </div>
 
                 <div class="row btn_area index_btn_area footer-btn">
-                    <div id="btnCompanyManagerCreate" data-ggsj="dxButton">기업 매니저 등록</div>
-                    <div id="btnHospitalManagerCreate" data-ggsj="dxButton">병원 매니저 등록
+                    <div id="btnCompanyManagerCreate" data-sitebuilder="dxButton">기업 매니?� ?�록</div>
+                    <div id="btnHospitalManagerCreate" data-sitebuilder="dxButton">병원 매니?� ?�록
                     </div>
-                    <div id="btnPlatformManagerCreate" data-ggsj="dxButton">총괄 매니저 등록
+                    <div id="btnPlatformManagerCreate" data-sitebuilder="dxButton">총괄 매니?� ?�록
                     </div>
 
 
@@ -102,13 +102,13 @@
 <script>
     /** @param _dxInstances : {btnCompanyManagerCreate,btnHospitalManagerCreate,btnPlatformManagerCreate,selectStatus,dataGridManager} */
     $(function () {
-        ggsj.openMenu('manager');
+        sitebuilder.openMenu('manager');
 
-        let dxInstances = ggsj.createDx(false);
+        let dxInstances = sitebuilder.createDx(false);
         let centerManagerList = [];
 
         dxInstances.searchGrid.option({
-            placeholder: '검색',
+            placeholder: '검??,
             valueChangeEvent: "keyup",
             onValueChanged: function (e) {
                 dxInstances.dataGridManager.searchByText(e.value);
@@ -118,7 +118,7 @@
 
         dxInstances.btnCompanyManagerCreate.option({
             stylingMode: 'contained',
-            text: '기업매니저 등록',
+            text: '기업매니?� ?�록',
             type: 'success',
             onClick: function () {
                 location.href = '<c:url value="/pm/manager/companycreate"/>';
@@ -127,7 +127,7 @@
 
         dxInstances.btnHospitalManagerCreate.option({
             stylingMode: 'contained',
-            text: '병원매니저 등록',
+            text: '병원매니?� ?�록',
             type: 'success',
             onClick: function () {
                 location.href = '<c:url value="/pm/manager/hospitalcreate"/>';
@@ -136,7 +136,7 @@
 
         dxInstances.btnPlatformManagerCreate.option({
             stylingMode: 'contained',
-            text: '총괄매니저 등록',
+            text: '총괄매니?� ?�록',
             type: 'success',
             onClick: function () {
                 location.href = '<c:url value="/pm/manager/platformcreate"/>';
@@ -166,7 +166,7 @@
 
         dxInstances.selectStatus.option({
             dataSource: [
-                {'id': 0, 'text': '전체'},
+                {'id': 0, 'text': '?�체'},
                 {'id': 'CM', 'text': '기업'},
                 {'id': 'HM', 'text': '병원'},
                 {'id': 'PM', 'text': '총괄'}
@@ -181,9 +181,9 @@
 
         dxInstances.selectNoUse.option({
             dataSource: [
-                {'id': 'All', 'text': '전체'},
-                {'id': false, 'text': '로그인 가능'},
-                {'id': true, 'text': '로그인 중지'},
+                {'id': 'All', 'text': '?�체'},
+                {'id': false, 'text': '로그??가??},
+                {'id': true, 'text': '로그??중�?'},
             ],
             value: 'All',
             valueExpr: 'id',
@@ -233,7 +233,7 @@
                 },*/
             }, {
                 dataField: 'groupName',
-                caption: '소속',
+                caption: '?�속',
                 alignment: 'center',
             }, {
                 dataField: 'managerCode',
@@ -241,7 +241,7 @@
                 alignment: 'center',
             }, {
                 dataField: 'managerName',
-                caption: '담당자명',
+                caption: '?�당?�명',
                 alignment: 'center',
                 cellTemplate: function (cellElement, cellInfo) {
 
@@ -261,23 +261,23 @@
                 caption: 'H.P',
                 dataField: 'mobile',
                 alignment: 'center',
-                format: ggsj.phoneWithHyphen,
+                format: sitebuilder.phoneWithHyphen,
             }, {
-                caption: '유선',
+                caption: '?�선',
                 dataField: 'telephone',
                 alignment: 'center',
-                format: ggsj.phoneWithHyphen,
+                format: sitebuilder.phoneWithHyphen,
             }, {
                 dataField: 'email',
-                caption: '이메일',
+                caption: '?�메??,
             }, {
                 dataField: 'noUse',
-                caption: '로그인 중지',
+                caption: '로그??중�?',
             }, {
                 type: 'buttons',
-                caption: '수정',
+                caption: '?�정',
                 buttons: [{
-                    text: '수정',
+                    text: '?�정',
                     onClick: function (e) {
                         console.log(e);
                         let manager = e.row.data;

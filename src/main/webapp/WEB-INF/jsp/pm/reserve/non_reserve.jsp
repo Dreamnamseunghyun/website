@@ -21,7 +21,7 @@
                 <div class="card card-transparent board_internal">
                     <div class="card-header ">
                         <div class="card-title">
-                            <h3 class="h3">미예약자 관리</h3>
+                            <h3 class="h3">미예?�자 관�?/h3>
                         </div>
                     </div>
                     <%--                    <div class="card-body">--%>
@@ -33,10 +33,10 @@
                                 <div class="row-box2">
                                     <div class="row-box-inner1">
                                         <div class="col-box1 row">
-                                            <div class="col-lg-4 tag-name"><span>기업체 검색</span></div>
+                                            <div class="col-lg-4 tag-name"><span>기업�?검??/span></div>
                                             <div class="col-lg-8">
                                                 <div class="col-lg-12" id="lookupCompany"
-                                                     data-ggsj="dxLookup"></div>
+                                                     data-sitebuilder="dxLookup"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -47,8 +47,8 @@
                                         <div class="col-box1 row">
                                             <div class="col-lg-4 tag-name"><span>구분</span></div>
                                             <div class="col-lg-8">
-                                                <div class="col-lg-6" id="vipSearch" data-ggsj="dxCheckBox"></div>
-                                                <div class="col-lg-6" id="myselfSearch" data-ggsj="dxSelectBox"></div>
+                                                <div class="col-lg-6" id="vipSearch" data-sitebuilder="dxCheckBox"></div>
+                                                <div class="col-lg-6" id="myselfSearch" data-sitebuilder="dxSelectBox"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -63,7 +63,7 @@
                                             <div class="col-box1 row">
                                                 <div class="col-lg-12">
                                                     <div id="btnExport" class="btnExcelSample"
-                                                         data-ggsj="dxButton"></div>
+                                                         data-sitebuilder="dxButton"></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -73,7 +73,7 @@
                                         <div class="row-box-inner">
                                             <div class="col-box1 row">
 
-                                                <div id="searchGrid" data-ggsj="dxTextBox"></div>
+                                                <div id="searchGrid" data-sitebuilder="dxTextBox"></div>
 
                                             </div>
                                         </div>
@@ -88,12 +88,12 @@
 
                         </div>
                         <!-- Header -->
-                        <div class="checkText"><i class="xi-info-o"></i>기업부담 직원, 가족만 목록에 보입니다.
+                        <div class="checkText"><i class="xi-info-o"></i>기업부??직원, 가족만 목록??보입?�다.
                         </div>
-                        <div id="dataGridNonReserve" class="main_table" data-ggsj="dxDataGrid">
+                        <div id="dataGridNonReserve" class="main_table" data-sitebuilder="dxDataGrid">
                         </div>
                         <div class="row btn_area footer-btn">
-                            <div class="col-lg-2 btnGGSJ" id="btnNotitok" data-ggsj="dxButton"></div>
+                            <div class="col-lg-2 btnGGSJ" id="btnNotitok" data-sitebuilder="dxButton"></div>
                         </div>
                     </div>
                     <%--</div>--%>
@@ -108,12 +108,12 @@
 </body>
 <script>
     $(function () {
-        ggsj.openMenu('non-reserve');
+        sitebuilder.openMenu('non-reserve');
 
-        let dxInstances = ggsj.createDx(false);
+        let dxInstances = sitebuilder.createDx(false);
 
         dxInstances.btnExport.option({
-            text: '예약현황 다운로드',
+            text: '?�약?�황 ?�운로드',
             onClick: function () {
                 //$('.dx-datagrid-export-button').trigger('click');
 
@@ -126,18 +126,18 @@
 
                 // Title
                 itemData = [];
-                itemData[1] = '순번';
-                itemData[2] = '검진자명';
-                itemData[3] = '생년월일';
-                itemData[4] = '성별';
-                itemData[5] = '부서';
+                itemData[1] = '?�번';
+                itemData[2] = '검진자�?;
+                itemData[3] = '?�년?�일';
+                itemData[4] = '?�별';
+                itemData[5] = '부??;
                 itemData[6] = '직책';
-                itemData[7] = '대상자';
-                itemData[8] = '사번';
-                itemData[9] = '검진유형';
-                itemData[10] = '휴대전화번호';
-                itemData[11] = '이메일';
-                itemData[12] = '특이사항';
+                itemData[7] = '?�?�자';
+                itemData[8] = '?�번';
+                itemData[9] = '검진유??;
+                itemData[10] = '?��??�화번호';
+                itemData[11] = '?�메??;
+                itemData[12] = '?�이?�항';
 
                 worksheet.addRow(itemData);
 
@@ -150,10 +150,10 @@
                         itemData[4] = data[idx].sex;
                         itemData[5] = data[idx].depart;
                         itemData[6] = data[idx].title;
-                        itemData[7] = data[idx].myself === 1 ? '본인' : '가족 (' + data[idx].familyName + ')';
+                        itemData[7] = data[idx].myself === 1 ? '본인' : '가�?(' + data[idx].familyName + ')';
                         itemData[8] = data[idx].employeeNo;
                         itemData[9] = data[idx].companyCheckupTypeCode + '.' + data[idx].companyCheckupTypeName;
-                        itemData[10] = ggsj.phoneWithHyphen(data[idx].mobile);
+                        itemData[10] = sitebuilder.phoneWithHyphen(data[idx].mobile);
                         itemData[11] = data[idx].email;
                         itemData[12] = data[idx].notes;
                         worksheet.addRow(itemData);
@@ -178,7 +178,7 @@
             };
 
             $.when($.ajax(ajaxNonReserve)).then(function (response) {
-                console.log('전체리스트', response);
+                console.log('?�체리스??, response);
 
                 dxInstances.dataGridNonReserve.option({
                     dataSource: response.data,
@@ -205,7 +205,7 @@
             searchExpr: 'companyName',
             searchMode: 'contains',
             searchTimeout: 100,
-            placeholder: "회사를 선택해주세요.",
+            placeholder: "?�사�??�택?�주?�요.",
             onValueChanged: function () {
                 LoadNonReserveList();
             }
@@ -219,14 +219,14 @@
 
         dxInstances.myselfSearch.option({
             dataSource: [
-                {'id': 0, 'text': '전체'},
-                {'id': null, 'text': '가족'},
+                {'id': 0, 'text': '?�체'},
+                {'id': null, 'text': '가�?},
                 {'id': 1, 'text': '본인'},
             ],
             value: 'All',
             valueExpr: 'id',
             displayExpr: 'text',
-            placeholder: "가족/본인",
+            placeholder: "가�?본인",
             onValueChanged: search,
         });
 
@@ -278,14 +278,14 @@
         }
 
         dxInstances.btnNotitok.option({
-            text: '미예약자 알림톡 발송',
+            text: '미예?�자 ?�림??발송',
             onClick: function () {
                 location.href = '<c:url value="/pm/urge"/>';
             },
         });
 
         dxInstances.searchGrid.option({
-            placeholder: '검색',
+            placeholder: '검??,
             valueChangeEvent: "keyup",
             onValueChanged: function (e) {
                 dxInstances.dataGridNonReserve.searchByText(e.value);
@@ -312,33 +312,33 @@
                     container.append($('<div><input id="selectAllBox" type=checkbox></div>'));
                 },
             }, {
-                caption: "순번",
+                caption: "?�번",
                 alignment: 'center',
                 cellTemplate: function (cellElement, cellInfo) {
                     cellElement.text(cellInfo.component.pageIndex() * cellInfo.component.pageSize() + cellInfo.row.rowIndex + 1);
                 },
             }, {
                 dataField: "employeeName",
-                caption: "검진자명",
+                caption: "검진자�?,
                 alignment: 'center',
                 cellTemplate: function (cellElement, cellInfo) {
                     cellElement.append(cellInfo.data.employeeName);
                     if (cellInfo.data.vip === true) {
-                        cellElement.append('<span style="color:red; font-weight: bold;">ⓥ</span>');
+                        cellElement.append('<span style="color:red; font-weight: bold;">??/span>');
                     }
                 },
             }, {
                 dataField: "birth",
-                caption: "생년월일",
+                caption: "?�년?�일",
                 alignment: 'center',
                 dataType: 'date',
             }, {
                 dataField: "sex",
-                caption: "성별",
+                caption: "?�별",
                 alignment: 'center',
             }, {
                 dataField: "depart",
-                caption: "부서",
+                caption: "부??,
                 alignment: 'center',
             }, {
                 dataField: "title",
@@ -346,25 +346,25 @@
                 alignment: 'center',
             }, {
                 dataField: "myself",
-                caption: "대상자",
+                caption: "?�?�자",
                 alignment: 'center',
                 cellTemplate: function (cellElement, cellInfo) {
                     if (cellInfo.data.myself === 1) {
                         cellElement.append('본인');
                     } else {
-                        cellElement.append(cellInfo.data.familyName + '가족');
+                        cellElement.append(cellInfo.data.familyName + '가�?);
                     }
                     // if (cellInfo.data.vip === true) {
-                    //     cellElement.append('<span style="color:red; font-weight: bold;">ⓥ</span>');
+                    //     cellElement.append('<span style="color:red; font-weight: bold;">??/span>');
                     // }
                 },
             }, {
                 dataField: "employeeNo",
-                caption: "사번",
+                caption: "?�번",
                 alignment: 'center',
             }, {
                 dataField: "checkupTypeName",
-                caption: "검진유형",
+                caption: "검진유??,
                 alignment: 'center',
                 cellTemplate: function (cellElement, cellInfo) {
                     let companyCheckupTypeName = cellInfo.data.companyCheckupTypeName;
@@ -373,22 +373,22 @@
                 },
             }, {
                 dataField: "mobile",
-                caption: "휴대전화번호",
+                caption: "?��??�화번호",
                 alignment: 'center',
                 format: function (value) {
-                    return ggsj.phoneWithHyphen(value);
+                    return sitebuilder.phoneWithHyphen(value);
                 }
             }, {
                 dataField: "email",
-                caption: "이메일",
+                caption: "?�메??,
                 alignment: 'center',
             }, {
                 dataField: "notes",
-                caption: "특이사항",
+                caption: "?�이?�항",
                 alignment: 'center',
             }, {
                 dataField: "notokUrge",
-                caption: "예약독려 제외",
+                caption: "?�약?�려 ?�외",
                 alignment: 'center',
                 allowEditing: false,
             }],

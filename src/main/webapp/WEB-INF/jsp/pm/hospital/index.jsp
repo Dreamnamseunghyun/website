@@ -33,8 +33,8 @@
                                 <div class="row-box">
                                     <div class="row-box-inner">
                                         <div class="col-box1 row">
-                                            <div class="col-lg-5 tag-name"><span>특수검진 가능병원 조회</span></div>
-                                            <div class="col-lg-7" id="selectSpecial" data-ggsj="dxSelectBox"></div>
+                                            <div class="col-lg-5 tag-name"><span>?�수검�?가?�병??조회</span></div>
+                                            <div class="col-lg-7" id="selectSpecial" data-sitebuilder="dxSelectBox"></div>
                                         </div>
                                     </div>
                                 </div>
@@ -46,7 +46,7 @@
                                 <div class="row-box">
                                     <div class="row-box-inner">
                                         <div class="col-box1 row">
-                                            <div class="col-lg-12" id="searchGrid" data-ggsj="dxTextBox"></div>
+                                            <div class="col-lg-12" id="searchGrid" data-sitebuilder="dxTextBox"></div>
                                         </div>
                                     </div>
                                 </div>
@@ -55,7 +55,7 @@
                         </div>
                         <!-- Header -->
 
-                        <div id="dataGridHospital" class="main_table" data-ggsj="dxDataGrid">
+                        <div id="dataGridHospital" class="main_table" data-sitebuilder="dxDataGrid">
                         </div>
 
 
@@ -64,7 +64,7 @@
                 </div>
 
                 <div class="row btn_area index_btn_area footer-btn">
-                    <div id="btnCreate" data-ggsj="dxButton">
+                    <div id="btnCreate" data-sitebuilder="dxButton">
                         <div class="write_btn">
                             <div>
                                 <div class="pencil"></div>
@@ -77,7 +77,7 @@
                                     <div class="paper"></div>
                                 </div>
                             </div>
-                            <span>병원 등록</span>
+                            <span>병원 ?�록</span>
                         </div>
                     </div>
                 </div>
@@ -92,14 +92,14 @@
 </body>
 <script>
     $(function () {
-        ggsj.openMenu('hospital');
+        sitebuilder.openMenu('hospital');
 
-        let dxInstances = ggsj.createDx(false);
+        let dxInstances = sitebuilder.createDx(false);
 
         dxInstances.selectSpecial.option({
             dataSource: [
-                {'id': 'All', 'text': '전체'},
-                {'id': 1, 'text': '특수검진 가능병원 조회'},
+                {'id': 'All', 'text': '?�체'},
+                {'id': 1, 'text': '?�수검�?가?�병??조회'},
             ],
             value: 'All',
             valueExpr: 'id',
@@ -113,7 +113,7 @@
         });
 
         dxInstances.searchGrid.option({
-            placeholder: '검색',
+            placeholder: '검??,
             valueChangeEvent: "keyup",
             onValueChanged: function (e) {
                 dxInstances.dataGridHospital.searchByText(e.value);
@@ -129,7 +129,7 @@
             //allowColumnReordering: true,
             columns: [
                 {
-                    caption: '병원명',
+                    caption: '병원�?,
                     groupIndex: 0,
                     dataField: 'hospitalId',
                     calculateDisplayValue: 'hospitalName',
@@ -147,7 +147,7 @@
                         $("<div class='green'>")
                             .css({'float': 'right', 'margin': '0 5px'})
                             .dxButton({
-                                text: "연도별 기준수가",
+                                text: "?�도�?기�??��?",
                                 onClick: function () {
                                     location.href = '<c:url value="/pm/hospital"/>/' + hospitalId + '/checkup/2022';
                                 }
@@ -155,7 +155,7 @@
                         $("<div class='blue'>")
                             .css({'float': 'right', 'margin': '0 5px'})
                             .dxButton({
-                                text: "센터 등록",
+                                text: "?�터 ?�록",
                                 onClick: function () {
                                     location.href = '<c:url value="/pm/center"/>/' + hospitalId + '/create';
                                 }
@@ -170,7 +170,7 @@
                             }).appendTo(cellElement);
                     },
                 }, {
-                    caption: '병원명',
+                    caption: '병원�?,
                     dataField: 'hospitalName',
                     visible: false,
                 }, {
@@ -186,7 +186,7 @@
                     visible: true,
                 }, {
                     dataField: 'centerName',
-                    caption: '센터명',
+                    caption: '?�터�?,
                     width: 300,
                     cellTemplate: function (cellElement, cellInfo) {
                         let centerId = cellInfo.row.data.centerId;
@@ -194,23 +194,23 @@
                         cellElement.append('<a href = ' + '<c:url value="/pm/center"/>/' + centerId + '>' + cellInfo.data.centerName + '</a>');
                     },
                 }, {
-                    caption: '특수검진 가능병원',
+                    caption: '?�수검�?가?�병??,
                     dataField: 'ableSpecial',
                     alignment: 'center',
                     lookup: {
                         dataSource: [
                             {id: false, text: ''},
-                            {id: true, text: '특수검진 가능'},
+                            {id: true, text: '?�수검�?가??},
                         ],
                         valueExpr: 'id',
                         displayExpr: 'text',
                     },
                 }, {
                     type: 'buttons',
-                    caption: '병원홍보',
+                    caption: '병원?�보',
                     buttons: [{
                         name: 'hospitalInfo',
-                        text: '병원홍보',
+                        text: '병원?�보',
                         onClick: function (e) {
                             let hospital = e.row.data;
                             location.href = '<c:url value="/pm/center"/>/' + hospital.centerId + '/info';
@@ -218,10 +218,10 @@
                     }],
                 }, {
                     type: 'buttons',
-                    caption: '예약불가',
+                    caption: '?�약불�?',
                     buttons: [{
                         name: 'reserveLimit',
-                        text: '예약불가',
+                        text: '?�약불�?',
                         onClick: function (e) {
                             let hospital = e.row.data;
                             location.href = '<c:url value="/pm/day-off"/>?' + $.param({
@@ -231,10 +231,10 @@
                     }],
                 }, {
                     type: 'buttons',
-                    caption: '수정',
+                    caption: '?�정',
                     buttons: [{
                         name: 'hospitalDetail',
-                        text: '수정',
+                        text: '?�정',
                         method: 'PUT',
                         onClick: function (e) {
                             let hospital = e.row.data;
@@ -246,7 +246,7 @@
         dxInstances.btnCreate.option({
             stylingMode: 'outlined',
             icon: 'comment',
-            text: '등록',
+            text: '?�록',
             type: 'success',
             onClick: function () {
                 location.href = '<c:url value="/pm/hospital/create"/>';

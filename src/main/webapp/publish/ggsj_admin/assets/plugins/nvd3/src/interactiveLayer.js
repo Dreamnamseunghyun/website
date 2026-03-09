@@ -1,4 +1,4 @@
-/* Utility class to handle creation of an interactive layer.
+﻿/* Utility class to handle creation of an interactive layer.
 This places a rectangle on top of the chart. When you mouse move over it, it sends a dispatch
 containing the X-coordinate. It can also render a vertical line where the mouse is located.
 

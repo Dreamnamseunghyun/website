@@ -2,12 +2,12 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>kr.co.dsong</groupId>
-    <artifactId>ggsj</artifactId>
+    <groupId>kr.co.sitebuilder</groupId>
+    <artifactId>sitebuilder-api</artifactId>
     <packaging>war</packaging>
     <version>1.0.0</version>
-    <name>ggsj</name>
-    <url>https://www.ggsj.co.kr/</url>
+    <name>sitebuilder</name>
+    <url>https://www.sitebuilder.co.kr/</url>
 
     <licenses>
         <license>
@@ -45,7 +45,7 @@
     </repositories>
 
     <dependencies>
-        <!-- log4j 보안패치 버전 -->
+        <!-- log4j 보안?�치 버전 -->
         <dependency>
             <groupId>org.apache.logging.log4j</groupId>
             <artifactId>log4j-core</artifactId>
@@ -57,7 +57,7 @@
             <version>2.17.1</version>
         </dependency>
 
-        <!-- 표준프레임워크 실행환경 -->
+        <!-- ?��??�레?�워???�행?�경 -->
         <dependency>
             <groupId>egovframework.rte</groupId>
             <artifactId>egovframework.rte.ptl.mvc</artifactId>

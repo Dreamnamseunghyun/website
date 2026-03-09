@@ -1,4 +1,4 @@
-/* ============================================================
+﻿/* ============================================================
  * Form Wizard
  * Multistep form wizard using Bootstrap Wizard Plugin
  * For DEMO purposes only. Extract what you need.

@@ -1,4 +1,4 @@
-<%@ page contentType="text/html; charset=utf-8" pageEncoding="utf-8" %>
+﻿<%@ page contentType="text/html; charset=utf-8" pageEncoding="utf-8" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 
@@ -21,7 +21,7 @@
                 <div class="card card-transparent board_internal">
                     <div class="card-header ">
                         <div class="card-title">
-                            <h3 class="h3">결과조회</h3>
+                            <h3 class="h3">寃곌낵議고쉶</h3>
                         </div>
                     </div>
                     <%--                    <div class="card-body">--%>
@@ -31,10 +31,10 @@
                                 <div class="row-box2" style="width:370px;">
                                     <div class="row-box-inner1">
                                         <div class="col-box1 row">
-                                            <div class="col-lg-4 tag-name"><span>기업체 검색</span></div>
+                                            <div class="col-lg-4 tag-name"><span>湲곗뾽泥?寃??/span></div>
                                             <div class="col-lg-8">
                                                 <div class="col-lg-12" id="lookupCompany"
-                                                     data-ggsj="dxLookup"></div>
+                                                     data-sitebuilder="dxLookup"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -44,10 +44,10 @@
                                     <div class="row-box-inner1">
                                         <div class="col-box1 row">
                                             <div class="col-lg-12">
-                                                <div class="col-lg-4 tag-name"><span>대상년도</span></div>
+                                                <div class="col-lg-4 tag-name"><span>??곷뀈??/span></div>
                                                 <div class="col-lg-8">
                                                     <div class="col-lg-12" id="selectCompanyYear"
-                                                         data-ggsj="dxSelectBox"></div>
+                                                         data-sitebuilder="dxSelectBox"></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -57,7 +57,7 @@
                                 <div class="row-box right-btn">
                                     <div class="row-box-inner">
                                         <div class="col-box1 row">
-                                            <div id="btnExelDownload" class="btnExcelSample" data-ggsj="dxButton"
+                                            <div id="btnExelDownload" class="btnExcelSample" data-sitebuilder="dxButton"
                                                  style="height:34px!important;"></div>
                                         </div>
                                     </div>
@@ -68,7 +68,7 @@
                                 <div class="row-box">
                                     <div class="row-box-inner">
                                         <div class="col-box1 row">
-                                            <div class="col-lg-12" id="searchGrid" data-ggsj="dxTextBox"></div>
+                                            <div class="col-lg-12" id="searchGrid" data-sitebuilder="dxTextBox"></div>
                                         </div>
                                     </div>
                                 </div>
@@ -76,7 +76,7 @@
                         </div>
 
                         <div class="row">
-                            <div id="dataGridResultLookup" class="main_table" data-ggsj="dxDataGrid">
+                            <div id="dataGridResultLookup" class="main_table" data-sitebuilder="dxDataGrid">
                             </div>
                         </div>
                         <%--                    </div>--%>
@@ -91,9 +91,9 @@
 </body>
 <script>
     $(function () {
-        ggsj.openMenu('result-lookup');
+        sitebuilder.openMenu('result-lookup');
 
-        let dxInstances = ggsj.createDx(false);
+        let dxInstances = sitebuilder.createDx(false);
 
         dxInstances.lookupCompany.option({
             displayExpr: 'companyName',
@@ -112,7 +112,7 @@
         });
 
         dxInstances.selectCompanyYear.option({
-            dataSource: ggsj.typeDef.Year,
+            dataSource: sitebuilder.typeDef.Year,
             value: new Date().getFullYear(),
             valueExpr: 'id',
             displayExpr: 'text',
@@ -122,11 +122,11 @@
         });
 
         dxInstances.btnExelDownload.option({
-            text: '엑셀다운로드'
+            text: '?묒??ㅼ슫濡쒕뱶'
         });
 
         dxInstances.searchGrid.option({
-            placeholder: '검색',
+            placeholder: '寃??,
             valueChangeEvent: "keyup",
             mode: 'search',
             onValueChanged: function (e) {
@@ -137,50 +137,47 @@
         dxInstances.dataGridResultLookup.option({
             dataSource: [],
             columns: [{
-                //기업체코드
-                dataField: 'companyCode',
-                caption: '기업체코드',
+                //湲곗뾽泥댁퐫??                dataField: 'companyCode',
+                caption: '湲곗뾽泥댁퐫??,
                 alignment: 'center',
             }, {
-                //기업체명
+                //湲곗뾽泥대챸
                 dataField: 'companyName',
-                caption: '기업체명',
+                caption: '湲곗뾽泥대챸',
                 alignment: 'center',
             }, {
-                //병원코드
+                //蹂묒썝肄붾뱶
                 dataField: 'hospitalCode',
-                caption: '병원코드',
+                caption: '蹂묒썝肄붾뱶',
                 alignment: 'center',
             }, {
-                //병원명
-                dataField: 'hospitalName',
-                caption: '병원명',
+                //蹂묒썝紐?                dataField: 'hospitalName',
+                caption: '蹂묒썝紐?,
                 alignment: 'center',
             }, {
-                //센터코드
+                //?쇳꽣肄붾뱶
                 dataField: 'centerCode',
-                caption: '센터코드',
+                caption: '?쇳꽣肄붾뱶',
                 alignment: 'center',
             }, {
-                //센터명
-                dataField: 'centerName',
-                caption: '센터명',
+                //?쇳꽣紐?                dataField: 'centerName',
+                caption: '?쇳꽣紐?,
                 alignment: 'center',
             }, {
-                //이름
+                //?대쫫
                 dataField: 'employeeName',
-                caption: '검진자명',
+                caption: '寃吏꾩옄紐?,
                 alignment: 'center',
             }, {
-                //생년월일
+                //?앸뀈?붿씪
                 dataField: 'birth',
-                caption: '생년월일',
+                caption: '?앸뀈?붿씪',
                 alignment: 'center',
                 dataType: 'date',
             }, {
-                //성별
+                //?깅퀎
                 dataField: 'sex',
-                caption: '성별',
+                caption: '?깅퀎',
                 alignment: 'center',
             }, {
                 //ID
@@ -188,31 +185,30 @@
                 caption: 'ID',
                 alignment: 'center',
             }, {
-                //검진일
+                //寃吏꾩씪
                 dataField: 'checkupedAt',
-                caption: '수검완료일',
+                caption: '?섍??꾨즺??,
                 alignment: 'center',
                 dataType: 'date',
             }, {
-                //결과등록일
-                dataField: 'employeeRegisteredAt',
-                caption: '결과등록일',
+                //寃곌낵?깅줉??                dataField: 'employeeRegisteredAt',
+                caption: '寃곌낵?깅줉??,
                 alignment: 'center',
                 dataType: 'date',
             }, {
                 type: 'buttons',
-                caption: '결과보기',
+                caption: '寃곌낵蹂닿린',
                 buttons: [{
-                    text: '보기'
+                    text: '蹂닿린'
                 }]
             }, {
                 type: 'buttons',
-                caption: '삭제',
+                caption: '??젣',
                 buttons: [{
-                    text: '삭제',
+                    text: '??젣',
                     dataField: '',
                     onClick: function (e) {
-                        if (confirm('정말로 삭제하시겠습니까?')) {
+                        if (confirm('?뺣쭚濡???젣?섏떆寃좎뒿?덇퉴?')) {
                             $.ajax({
                                 url: '<c:url value="/hm/result"/>/' + e.row.data.checkupResultEmployeeId + '/employee',
                                 method: 'DELETE',

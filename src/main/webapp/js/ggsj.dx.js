@@ -1,22 +1,22 @@
-(function (window) {
+﻿(function (window) {
     'use strict';
 
-    let ggsj = window.ggsj || {};
+    let sitebuilder = window.sitebuilder || {};
 
     /** @param _dxInstances : {btnAttach,btnCreate,btnDelete,btnEdit,btnList,btnSave,btnTargetSearch} */
     let _dxInstances = {};
 
-    ggsj.createDx = function (bReadOnly) {
+    sitebuilder.createDx = function (bReadOnly) {
         bReadOnly = !!bReadOnly;
 
-        $('[data-ggsj*="dx"]').each(function (index, item) {
+        $('[data-sitebuilder*="dx"]').each(function (index, item) {
             let id = $(item).attr('id');
             if (!id) {
                 return;
             }
 
-            let dataType = $(item).attr('data-ggsj');
-            let dataFormat = $(item).attr('data-ggsj-format');
+            let dataType = $(item).attr('data-sitebuilder');
+            let dataFormat = $(item).attr('data-sitebuilder-format');
 
             _dxInstances[id] = ($(item)[dataType]())[dataType]('instance');
             _dxInstances[id].option({readOnly: bReadOnly});
@@ -39,7 +39,7 @@
                     },
                     onFocusOut: function (e) {
                         let value = e.component.option('value');
-                        value = ggsj.phoneWithHyphen(value);
+                        value = sitebuilder.phoneWithHyphen(value);
                         e.component.option('value', value);
                     },
                 });
@@ -49,16 +49,16 @@
         return _dxInstances;
     };
 
-    ggsj.valuesToDx = function (values) {
-        let dotizedValues = ggsj.dotize.convert(values);
+    sitebuilder.valuesToDx = function (values) {
+        let dotizedValues = sitebuilder.dotize.convert(values);
         for (let id in dotizedValues) {
             if (!dotizedValues.hasOwnProperty(id)) {
                 continue;
             }
 
             if (_dxInstances[id] && typeof _dxInstances[id].option === 'function') {
-                if (_dxInstances[id].element().attr('data-ggsj-format') === 'tel') {
-                    _dxInstances[id].option({value: ggsj.phoneWithHyphen(dotizedValues[id])});
+                if (_dxInstances[id].element().attr('data-sitebuilder-format') === 'tel') {
+                    _dxInstances[id].option({value: sitebuilder.phoneWithHyphen(dotizedValues[id])});
                 } else {
                     _dxInstances[id].option({value: dotizedValues[id]});
                 }
@@ -68,7 +68,7 @@
         }
     };
 
-    ggsj.dxToValues = function () {
+    sitebuilder.dxToValues = function () {
         let values = {};
 
         for (let id in _dxInstances) {
@@ -78,7 +78,7 @@
 
             if (_dxInstances[id] && typeof _dxInstances[id].option === 'function') {
                 if (_dxInstances[id].option().value !== undefined) {
-                    if (_dxInstances[id].element().attr('data-ggsj-format') === 'tel') {
+                    if (_dxInstances[id].element().attr('data-sitebuilder-format') === 'tel') {
                         values[id] = _dxInstances[id].option().value.replace(/-/g, '');
                     } else {
                         values[id] = _dxInstances[id].option().value;
@@ -89,8 +89,8 @@
             }
         }
 
-        return ggsj.dotize.backward(values);
+        return sitebuilder.dotize.backward(values);
     }
 
-    window.ggsj = ggsj;
+    window.sitebuilder = sitebuilder;
 })(window);

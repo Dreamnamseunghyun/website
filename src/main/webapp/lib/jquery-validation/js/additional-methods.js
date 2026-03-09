@@ -1,9 +1,9 @@
-/*!
+﻿/*!
  * jQuery Validation Plugin v1.13.0
  *
  * http://jqueryvalidation.org/
  *
- * Copyright (c) 2014 Jörn Zaefferer
+ * Copyright (c) 2014 J철rn Zaefferer
  * Released under the MIT license
  */
 (function( factory ) {
@@ -20,7 +20,7 @@
 		// remove html tags and space chars
 		return value.replace(/<.[^<>]*?>/g, " ").replace(/&nbsp;|&#160;/gi, " ")
 		// remove punctuation
-		.replace(/[.(),;:!?%#$'\"_+=\/\-“”’]*/g, "");
+		.replace(/[.(),;:!?%#$'\"_+=\/\-?쒋앪?*/g, "");
 	}
 
 	$.validator.addMethod("maxWords", function(value, element, params) {
@@ -127,7 +127,7 @@ $.validator.addMethod("bic", function(value, element) {
 }, "Please specify a valid BIC code");
 
 /*
- * Código de identificación fiscal ( CIF ) is the tax identification code for Spanish legal entities
+ * C처digo de identificaci처n fiscal ( CIF ) is the tax identification code for Spanish legal entities
  * Further rules can be found in Spanish on http://es.wikipedia.org/wiki/C%C3%B3digo_de_identificaci%C3%B3n_fiscal
  */
 $.validator.addMethod( "cifES", function( value ) {
@@ -263,7 +263,7 @@ $.validator.addMethod("creditcardtypes", function(value, element, param) {
  * Symbols can be optional or required. Symbols required by default
  *
  * Usage examples:
- *  currency: ["£", false] - Use false for soft currency validation
+ *  currency: ["짙", false] - Use false for soft currency validation
  *  currency: ["$", false]
  *  currency: ["RM", false] - also works with text based symbols such as "RM" - Malaysia Ringgit etc
  *
@@ -283,7 +283,7 @@ $.validator.addMethod("creditcardtypes", function(value, element, param) {
  *
  * Multiple Symbols
  *  currencyInput: {
- *     currency: "$,£,¢"
+ *     currency: "$,짙,짖"
  *  }
  */
 $.validator.addMethod("currency", function(value, element, param) {
@@ -527,7 +527,7 @@ $.validator.addMethod("mobileUK", function(phone_number, element) {
 }, "Please specify a valid mobile number");
 
 /*
- * The número de identidad de extranjero ( NIE )is a code used to identify the non-nationals in Spain
+ * The n첬mero de identidad de extranjero ( NIE )is a code used to identify the non-nationals in Spain
  */
 $.validator.addMethod( "nieES", function( value ) {
 	"use strict";
@@ -562,7 +562,7 @@ $.validator.addMethod( "nieES", function( value ) {
 }, "Please specify a valid NIE number." );
 
 /*
- * The Número de Identificación Fiscal ( NIF ) is the way tax identification used in Spain for individuals
+ * The N첬mero de Identificaci처n Fiscal ( NIF ) is the way tax identification used in Spain for individuals
  */
 $.validator.addMethod( "nifES", function( value ) {
 	"use strict";

@@ -21,71 +21,71 @@
                 <div class="card card-transparent board_internal">
                     <div class="card-header ">
                         <div class="card-title">
-                            <h3 class="h3">검진 유형 상세</h3>
+                            <h3 class="h3">검�??�형 ?�세</h3>
                         </div>
                     </div>
                     <%--                    <div class="card-body">--%>
                     <div class="dx-viewport">
-                        <!-- 검진 유형 세부 정보 -->
+                        <!-- 검�??�형 ?��? ?�보 -->
                         <div class="row-wrap">
-                            <div class="row-box-title"><i class="xi-play-circle"></i>검진 유형 세부 정보</div>
+                            <div class="row-box-title"><i class="xi-play-circle"></i>검�??�형 ?��? ?�보</div>
                             <div class="row-box1">
                                 <div class="row-box-inner width-box">
                                     <div class="col-box2 row">
-                                        <div class="col-lg-2 tag-name"><span>병원명</span></div>
+                                        <div class="col-lg-2 tag-name"><span>병원�?/span></div>
                                         <div class="col-lg-10 row period">
-                                            <div class="col-lg-12" id="hospitalCenterName" data-ggsj="dxTextBox"></div>
+                                            <div class="col-lg-12" id="hospitalCenterName" data-sitebuilder="dxTextBox"></div>
                                         </div>
                                     </div>
                                     <div class="col-box2 row">
                                         <div class="col-lg-2 tag-name"><span>기업체명</span></div>
                                         <div class="col-lg-10 row period">
-                                            <div class="col-lg-12" id="companyNameYear" data-ggsj="dxTextBox"></div>
+                                            <div class="col-lg-12" id="companyNameYear" data-sitebuilder="dxTextBox"></div>
                                         </div>
                                     </div>
                                 </div>
 
                                 <div class="row-box-inner width-box">
                                     <div class="col-box2 row">
-                                        <div class="col-lg-2 tag-name"><span>검진유형</span></div>
+                                        <div class="col-lg-2 tag-name"><span>검진유??/span></div>
                                         <div class="col-lg-10 row period">
                                             <div class="col-lg-12" id="checkupContractTypeId"
-                                                 data-ggsj="dxSelectBox"></div>
+                                                 data-sitebuilder="dxSelectBox"></div>
                                         </div>
                                     </div>
                                     <div class="col-box2 row">
-                                        <div class="col-lg-2 tag-name"><span>세부유형명</span></div>
+                                        <div class="col-lg-2 tag-name"><span>?��??�형�?/span></div>
                                         <div class="col-lg-10 row period">
-                                            <div class="col-lg-12" id="subTypeName" data-ggsj="dxTextBox"></div>
+                                            <div class="col-lg-12" id="subTypeName" data-sitebuilder="dxTextBox"></div>
                                         </div>
                                     </div>
                                 </div>
 
                                 <div class="row-box-inner width-box">
                                     <div class="col-box2 row">
-                                        <div class="col-lg-2 tag-name"><span>병원청구액</span></div>
+                                        <div class="col-lg-2 tag-name"><span>병원�?��??/span></div>
                                         <div class="col-lg-10 row period">
                                             <div class="col-lg-12" id="checkupContractTypes.hospitalPay"
-                                                 data-ggsj="dxNumberBox"></div>
+                                                 data-sitebuilder="dxNumberBox"></div>
                                         </div>
                                     </div>
                                     <div class="col-box2 row">
-                                        <div class="col-lg-2 tag-name"><span>업그레이드형</span></div>
+                                        <div class="col-lg-2 tag-name"><span>?�그?�이?�형</span></div>
                                         <div class="col-lg-10 row period">
-                                            <div class="col-lg-12" id="upgradePay" data-ggsj="dxNumberBox"></div>
+                                            <div class="col-lg-12" id="upgradePay" data-sitebuilder="dxNumberBox"></div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <!-- 검진 유형 세부 정보 -->
+                        <!-- 검�??�형 ?��? ?�보 -->
 
-                        <!-- 선택 검진 세부 정보 -->
+                        <!-- ?�택 검�??��? ?�보 -->
                         <div class="row-wrap">
-                            <div class="row-box-title"><i class="xi-play-circle"></i>선택 검진 세부 정보
+                            <div class="row-box-title"><i class="xi-play-circle"></i>?�택 검�??��? ?�보
 
                                 <div class="right button-box">
-                                    <div class="btnExcelDown" id="btnExport" data-ggsj="dxButton"></div>
+                                    <div class="btnExcelDown" id="btnExport" data-sitebuilder="dxButton"></div>
                                 </div>
 
 
@@ -93,107 +93,107 @@
                             <div class="row-box1">
                                 <div class="row-box-inner width-box">
                                     <div class="col-box2 row">
-                                        <div class="col-lg-2 tag-name border-right"><span>선택검진</span></div>
+                                        <div class="col-lg-2 tag-name border-right"><span>?�택검�?/span></div>
                                         <div class="col-lg-10 row period">
                                             <div class="col-lg-2 tag-name border-right"><span>개수</span></div>
                                             <div class="col-lg-10 tag-name"><span>메모</span></div>
-                                            <%--                                            <div class="col-lg-2 center" id="text_1" data-ggsj="dxTextBox"></div>--%>
-                                            <%--                                            <div class="col-lg-10 center" id="text_2" data-ggsj="dxTextBox"></div>--%>
+                                            <%--                                            <div class="col-lg-2 center" id="text_1" data-sitebuilder="dxTextBox"></div>--%>
+                                            <%--                                            <div class="col-lg-10 center" id="text_2" data-sitebuilder="dxTextBox"></div>--%>
                                         </div>
                                     </div>
                                     <div class="col-box2 row">
-                                        <div class="col-lg-2 tag-name border-right"><span>선택검진</span></div>
+                                        <div class="col-lg-2 tag-name border-right"><span>?�택검�?/span></div>
                                         <div class="col-lg-10 row period">
                                             <div class="col-lg-2 tag-name border-right"><span>개수</span></div>
                                             <div class="col-lg-10 tag-name"><span>메모</span></div>
-                                            <%--                                            <div class="col-lg-2 center" id="text_3" data-ggsj="dxTextBox"></div>--%>
-                                            <%--                                            <div class="col-lg-10 center" id="text_4" data-ggsj="dxTextBox"></div>--%>
+                                            <%--                                            <div class="col-lg-2 center" id="text_3" data-sitebuilder="dxTextBox"></div>--%>
+                                            <%--                                            <div class="col-lg-10 center" id="text_4" data-sitebuilder="dxTextBox"></div>--%>
                                         </div>
                                     </div>
                                 </div>
 
                                 <div class="row-box-inner width-box">
                                     <div class="col-box2 row">
-                                        <div class="col-lg-2 tag-name"><span>선택A</span></div>
+                                        <div class="col-lg-2 tag-name"><span>?�택A</span></div>
                                         <div class="col-lg-10 row period">
                                             <div class="col-lg-2 center border-right" id="selectACount"
-                                                 data-ggsj="dxNumberBox"></div>
-                                            <div class="col-lg-10 center" id="selectAMemo" data-ggsj="dxTextBox"></div>
+                                                 data-sitebuilder="dxNumberBox"></div>
+                                            <div class="col-lg-10 center" id="selectAMemo" data-sitebuilder="dxTextBox"></div>
                                         </div>
                                     </div>
                                     <div class="col-box2 row">
-                                        <div class="col-lg-2 tag-name"><span>선택D</span></div>
+                                        <div class="col-lg-2 tag-name"><span>?�택D</span></div>
                                         <div class="col-lg-10 row period">
                                             <div class="col-lg-2 center border-right" id="selectDCount"
-                                                 data-ggsj="dxNumberBox"></div>
-                                            <div class="col-lg-10 center" id="selectDMemo" data-ggsj="dxTextBox"></div>
+                                                 data-sitebuilder="dxNumberBox"></div>
+                                            <div class="col-lg-10 center" id="selectDMemo" data-sitebuilder="dxTextBox"></div>
                                         </div>
                                     </div>
                                 </div>
 
                                 <div class="row-box-inner width-box">
                                     <div class="col-box2 row">
-                                        <div class="col-lg-2 tag-name"><span>선택B</span></div>
+                                        <div class="col-lg-2 tag-name"><span>?�택B</span></div>
                                         <div class="col-lg-10 row period">
                                             <div class="col-lg-2 center border-right" id="selectBCount"
-                                                 data-ggsj="dxNumberBox"></div>
-                                            <div class="col-lg-10 center" id="selectBMemo" data-ggsj="dxTextBox"></div>
+                                                 data-sitebuilder="dxNumberBox"></div>
+                                            <div class="col-lg-10 center" id="selectBMemo" data-sitebuilder="dxTextBox"></div>
                                         </div>
                                     </div>
                                     <div class="col-box2 row">
-                                        <div class="col-lg-2 tag-name"><span>선택E</span></div>
+                                        <div class="col-lg-2 tag-name"><span>?�택E</span></div>
                                         <div class="col-lg-10 row period">
                                             <div class="col-lg-2 center border-right" id="selectECount"
-                                                 data-ggsj="dxNumberBox"></div>
-                                            <div class="col-lg-10 center" id="selectEMemo" data-ggsj="dxTextBox"></div>
+                                                 data-sitebuilder="dxNumberBox"></div>
+                                            <div class="col-lg-10 center" id="selectEMemo" data-sitebuilder="dxTextBox"></div>
                                         </div>
                                     </div>
                                 </div>
 
                                 <div class="row-box-inner width-box">
                                     <div class="col-box2 row">
-                                        <div class="col-lg-2 tag-name"><span>선택C</span></div>
+                                        <div class="col-lg-2 tag-name"><span>?�택C</span></div>
                                         <div class="col-lg-10 row period">
                                             <div class="col-lg-2 center border-right" id="selectCCount"
-                                                 data-ggsj="dxNumberBox"></div>
-                                            <div class="col-lg-10 center" id="selectCMemo" data-ggsj="dxTextBox"></div>
+                                                 data-sitebuilder="dxNumberBox"></div>
+                                            <div class="col-lg-10 center" id="selectCMemo" data-sitebuilder="dxTextBox"></div>
                                         </div>
                                     </div>
                                     <div class="col-box2 row">
-                                        <div class="col-lg-2 tag-name"><span>선택F</span></div>
+                                        <div class="col-lg-2 tag-name"><span>?�택F</span></div>
                                         <div class="col-lg-10 row period">
                                             <div class="col-lg-2 center border-right" id="selectFCount"
-                                                 data-ggsj="dxNumberBox"></div>
-                                            <div class="col-lg-10 center" id="selectFMemo" data-ggsj="dxTextBox"></div>
+                                                 data-sitebuilder="dxNumberBox"></div>
+                                            <div class="col-lg-10 center" id="selectFMemo" data-sitebuilder="dxTextBox"></div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <!-- 선택 검진 세부 정보 -->
+                        <!-- ?�택 검�??��? ?�보 -->
 
                         <%--<div class="row">
-                            <div class="col-lg-4">개별등록 (등록패키지 미리보기)</div>
+                            <div class="col-lg-4">개별?�록 (?�록?�키지 미리보기)</div>
                         </div>--%>
 
                         <!-- checkBox -->
                         <div class="row-wrap row-wrap-box">
                             <div class="row-wrap logo-area-left">
-                                <div class="row-box-title"><i class="xi-play-circle"></i>검진 항목 세부 정보</div>
+                                <div class="row-box-title"><i class="xi-play-circle"></i>검�???�� ?��? ?�보</div>
 
                                 <div class="row-box1">
                                     <div class="col-box1 row">
-                                        <div class="col-lg-2 tag-name"><span>검색항목</span></div>
-                                        <div class="col-lg-1" id="all" data-ggsj="dxCheckBox"></div>
-                                        <div class="col-lg-1" id="noInc" data-ggsj="dxCheckBox"></div>
-                                        <div class="col-lg-1" id="basic" data-ggsj="dxCheckBox"></div>
-                                        <div class="col-lg-1" id="A" data-ggsj="dxCheckBox"></div>
-                                        <div class="col-lg-1" id="B" data-ggsj="dxCheckBox"></div>
-                                        <div class="col-lg-1" id="C" data-ggsj="dxCheckBox"></div>
-                                        <div class="col-lg-1" id="D" data-ggsj="dxCheckBox"></div>
-                                        <div class="col-lg-1" id="E" data-ggsj="dxCheckBox"></div>
-                                        <div class="col-lg-1" id="F" data-ggsj="dxCheckBox"></div>
-                                        <div class="col-lg-1" id="add" data-ggsj="dxCheckBox"></div>
+                                        <div class="col-lg-2 tag-name"><span>검?�항�?/span></div>
+                                        <div class="col-lg-1" id="all" data-sitebuilder="dxCheckBox"></div>
+                                        <div class="col-lg-1" id="noInc" data-sitebuilder="dxCheckBox"></div>
+                                        <div class="col-lg-1" id="basic" data-sitebuilder="dxCheckBox"></div>
+                                        <div class="col-lg-1" id="A" data-sitebuilder="dxCheckBox"></div>
+                                        <div class="col-lg-1" id="B" data-sitebuilder="dxCheckBox"></div>
+                                        <div class="col-lg-1" id="C" data-sitebuilder="dxCheckBox"></div>
+                                        <div class="col-lg-1" id="D" data-sitebuilder="dxCheckBox"></div>
+                                        <div class="col-lg-1" id="E" data-sitebuilder="dxCheckBox"></div>
+                                        <div class="col-lg-1" id="F" data-sitebuilder="dxCheckBox"></div>
+                                        <div class="col-lg-1" id="add" data-sitebuilder="dxCheckBox"></div>
                                     </div>
                                 </div>
                             </div>
@@ -206,7 +206,7 @@
                                         <div class="row-wrap-box right">
                                             <div class="row-wrap row-wrap1">
                                                 <div class="col-box1 row text-box-area">
-                                                    <div class="col-lg-12" id="searchGrid" data-ggsj="dxTextBox"></div>
+                                                    <div class="col-lg-12" id="searchGrid" data-sitebuilder="dxTextBox"></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -217,14 +217,14 @@
                         <!-- checkBox -->
 
                         <div class="row">
-                            <div id="treeviewCheckupItemCodeView" data-ggsj="dxTreeList"></div>
+                            <div id="treeviewCheckupItemCodeView" data-sitebuilder="dxTreeList"></div>
                         </div>
 
                         <div class="row btn_area footer-btn">
-                            <div class="col-lg-1" id="btnEdit" data-ggsj="dxButton"><i class="xi-file-check"></i>수정
+                            <div class="col-lg-1" id="btnEdit" data-sitebuilder="dxButton"><i class="xi-file-check"></i>?�정
                             </div>
-                            <div class="col-lg-1" id="btnList" data-ggsj="dxButton">목록</div>
-                            <div class="col-lg-1" id="btnDelete" data-ggsj="dxButton">삭제</div>
+                            <div class="col-lg-1" id="btnList" data-sitebuilder="dxButton">목록</div>
+                            <div class="col-lg-1" id="btnDelete" data-sitebuilder="dxButton">??��</div>
                         </div>
                     </div>
                 </div>
@@ -237,13 +237,13 @@
 </body>
 <script>
     $(function () {
-        ggsj.openMenu('contract-checkup');
+        sitebuilder.openMenu('contract-checkup');
 
         /** @param dxInstances : {btnExport,treeviewCheckupItemCodeView,btnEdit,btnList,btnDelete} */
-        let dxInstances = ggsj.createDx(true);
+        let dxInstances = sitebuilder.createDx(true);
 
         dxInstances.btnExport.option({
-            text: 'Excel 다운로드',
+            text: 'Excel ?�운로드',
             onClick: function () {
                 exportExcelContractCheckup();
             }
@@ -272,7 +272,7 @@
         dxInstances.upgradePay.option({readOnly: true,});
 
         dxInstances.all.option({
-            text: '전체',
+            text: '?�체',
             value: true,
             readOnly: false,
             onValueChanged: function (data) {
@@ -297,70 +297,70 @@
         });
 
         dxInstances.noInc.option({
-            text: '미포함',
+            text: '미포??,
             value: true,
             readOnly: false,
             onValueChanged: search,
         });
 
         dxInstances.basic.option({
-            text: '기본항목',
+            text: '기본??��',
             value: true,
             readOnly: false,
             onValueChanged: search,
         });
 
         dxInstances.A.option({
-            text: '선택A',
+            text: '?�택A',
             value: true,
             readOnly: false,
             onValueChanged: search,
         });
 
         dxInstances.B.option({
-            text: '선택B',
+            text: '?�택B',
             value: true,
             readOnly: false,
             onValueChanged: search,
         });
 
         dxInstances.C.option({
-            text: '선택C',
+            text: '?�택C',
             value: true,
             readOnly: false,
             onValueChanged: search,
         });
 
         dxInstances.D.option({
-            text: '선택D',
+            text: '?�택D',
             value: true,
             readOnly: false,
             onValueChanged: search,
         });
 
         dxInstances.E.option({
-            text: '선택E',
+            text: '?�택E',
             value: true,
             readOnly: false,
             onValueChanged: search,
         });
 
         dxInstances.F.option({
-            text: '선택F',
+            text: '?�택F',
             value: true,
             readOnly: false,
             onValueChanged: search,
         });
 
         dxInstances.add.option({
-            text: '추가검사',
+            text: '추�?검??,
             value: true,
             readOnly: false,
             onValueChanged: search,
         });
 
         dxInstances.searchGrid.option({
-            placeholder: '검색',
+            placeholder: '검??,
             valueChangeEvent: "keyup",
             readOnly: false,
             onValueChanged: function (e) {
@@ -381,33 +381,33 @@
             },
             searchPanel: {visible: false},
             columns: [{
-                caption: '대분류',
+                caption: '?�분류',
                 dataField: 'code',
                 allowEditing: false,
             }, {
-                caption: '중분류',
+                caption: '중분�?,
                 dataField: 'name',
                 allowEditing: false,
             }, {
-                caption: '등록',
+                caption: '?�록',
                 dataField: 'register',
                 lookup: {
-                    dataSource: ggsj.typeDef.registerType,
+                    dataSource: sitebuilder.typeDef.registerType,
                     displayExpr: 'text',
                     valueExpr: 'id'
                 }
             }, {
-                caption: '수납비용',
+                caption: '?�납비용',
                 dataField: 'copay',
             }, {
-                caption: '항목 메모',
+                caption: '??�� 메모',
                 dataField: 'checkupContractItemMemo',
             }, {
-                caption: '병원 기준수가',
+                caption: '병원 기�??��?',
                 dataField: 'bill',
                 allowEditing: false,
             }, {
-                caption: '기업체 할인수가',
+                caption: '기업�??�인?��?',
                 dataField: 'discountBill',
             }],
             onToolbarPreparing: function (e) {
@@ -427,7 +427,7 @@
 
         dxInstances.btnEdit.option({
             stylingMode: 'contained',
-            text: '수정',
+            text: '?�정',
             type: 'success',
             onClick: function () {
                 location.href = '<c:url value="/pm/contract-checkup/${checkupContractSubTypeId}/edit"/>';
@@ -445,10 +445,10 @@
 
         dxInstances.btnDelete.option({
             stylingMode: "contained",
-            text: "삭제",
+            text: "??��",
             type: "danger",
             onClick: function () {
-                if (confirm('정말로 삭제하시겠습니까?')) {
+                if (confirm('?�말�???��?�시겠습?�까?')) {
                     $.ajax({
                         url: '<c:url value="/pm/contract-checkup/${checkupContractSubTypeId}"/>',
                         method: 'DELETE',
@@ -481,7 +481,7 @@
 
             worksheet.mergeCells('A1:A2');
             worksheet.getCell('A1').alignment = {vertical: 'middle', horizontal: 'center'};
-            worksheet.getCell('A1').value = '대분류명';
+            worksheet.getCell('A1').value = '?�분류�?;
             worksheet.getCell('A1').font = {color: {argb: 'FFFFFFFF'},};
             worksheet.getCell('A1').fill = {type: 'pattern', pattern: 'solid', fgColor: {argb: 'FF3A3838'}};
 
@@ -493,42 +493,42 @@
 
             worksheet.mergeCells('C1:C2');
             worksheet.getCell('C1').alignment = {vertical: 'middle', horizontal: 'center'};
-            worksheet.getCell('C1').value = '소분류';
+            worksheet.getCell('C1').value = '?�분�?;
             worksheet.getCell('C1').font = {color: {argb: 'FFFFFFFF'},};
             worksheet.getCell('C1').fill = {type: 'pattern', pattern: 'solid', fgColor: {argb: 'FF3A3838'}};
 
             worksheet.mergeCells('D1:D2');
             worksheet.getCell('D1').alignment = {vertical: 'middle', horizontal: 'center'};
-            worksheet.getCell('D1').value = '소분류아이디';
+            worksheet.getCell('D1').value = '?�분류아?�디';
             worksheet.getCell('D1').font = {color: {argb: 'FFFFFFFF'},};
             worksheet.getCell('D1').fill = {type: 'pattern', pattern: 'solid', fgColor: {argb: 'FF3A3838'}};
 
             worksheet.mergeCells('E1:E2');
             worksheet.getCell('E1').alignment = {vertical: 'middle', horizontal: 'center'};
-            worksheet.getCell('E1').value = '소분류코드';
+            worksheet.getCell('E1').value = '?�분류코??;
             worksheet.getCell('E1').font = {color: {argb: 'FFFFFFFF'},};
             worksheet.getCell('E1').fill = {type: 'pattern', pattern: 'solid', fgColor: {argb: 'FF3A3838'}};
 
             worksheet.getCell('F1').alignment = {vertical: 'middle', horizontal: 'center'};
-            worksheet.getCell('F1').value = '포함여부';
+            worksheet.getCell('F1').value = '?�함?��?';
             worksheet.getCell('F1').font = {color: {argb: 'FFFFFFFF'},};
             worksheet.getCell('F1').fill = {type: 'pattern', pattern: 'solid', fgColor: {argb: 'FF3A3838'}};
             worksheet.getCell('F2').alignment = {vertical: 'middle', horizontal: 'left', wrapText: true};
-            worksheet.getCell('F2').value = '▶미포함:0\n▶기본항목:1\n▶추가항목:2\n▶선택검사:A~F';
+            worksheet.getCell('F2').value = '?��??�함:0\n?�기본항�?1\n?�추가??��:2\n?�선?��???A~F';
             worksheet.getCell('F2').font = {color: {argb: 'FF000000'},};
             worksheet.getCell('F2').fill = {type: 'pattern', pattern: 'solid', fgColor: {argb: 'FFAEAAAA'}};
 
             worksheet.getCell('G1').alignment = {vertical: 'middle', horizontal: 'center'};
-            worksheet.getCell('G1').value = '수납비용';
+            worksheet.getCell('G1').value = '?�납비용';
             worksheet.getCell('G1').font = {color: {argb: 'FFFFFFFF'},};
             worksheet.getCell('G1').fill = {type: 'pattern', pattern: 'solid', fgColor: {argb: 'FF3A3838'}};
             worksheet.getCell('G2').alignment = {vertical: 'middle', horizontal: 'left'};
-            worksheet.getCell('G2').value = '(숫자로 표시)';
+            worksheet.getCell('G2').value = '(?�자�??�시)';
             worksheet.getCell('G2').font = {color: {argb: 'FF000000'},};
             worksheet.getCell('G2').fill = {type: 'pattern', pattern: 'solid', fgColor: {argb: 'FFAEAAAA'}};
 
             worksheet.getCell('H1').alignment = {vertical: 'middle', horizontal: 'center'};
-            worksheet.getCell('H1').value = '항목 메모';
+            worksheet.getCell('H1').value = '??�� 메모';
             worksheet.getCell('H1').font = {color: {argb: 'FFFFFFFF'},};
             worksheet.getCell('H1').fill = {type: 'pattern', pattern: 'solid', fgColor: {argb: 'FF3A3838'}};
             worksheet.getCell('H2').alignment = {vertical: 'middle', horizontal: 'left'};
@@ -537,17 +537,17 @@
             worksheet.getCell('H2').fill = {type: 'pattern', pattern: 'solid', fgColor: {argb: 'FFAEAAAA'}};
 
             worksheet.getCell('I1').alignment = {vertical: 'middle', horizontal: 'center'};
-            worksheet.getCell('I1').value = '추가검사 기업체 할인수가';
+            worksheet.getCell('I1').value = '추�?검??기업�??�인?��?';
             worksheet.getCell('I1').font = {color: {argb: 'FFFFFFFF'},};
             worksheet.getCell('I1').fill = {type: 'pattern', pattern: 'solid', fgColor: {argb: 'FF3A3838'}};
             worksheet.getCell('I2').alignment = {vertical: 'middle', horizontal: 'left'};
-            worksheet.getCell('I2').value = '(숫자로 표시)';
+            worksheet.getCell('I2').value = '(?�자�??�시)';
             worksheet.getCell('I2').font = {color: {argb: 'FF000000'},};
             worksheet.getCell('I2').fill = {type: 'pattern', pattern: 'solid', fgColor: {argb: 'FFAEAAAA'}};
 
             worksheet.mergeCells('K1:K2');
             worksheet.getCell('K1').alignment = {vertical: 'middle', horizontal: 'center'};
-            worksheet.getCell('K1').value = '선택항목';
+            worksheet.getCell('K1').value = '?�택??��';
             worksheet.getCell('K1').font = {color: {argb: 'FFFFFFFF'},};
             worksheet.getCell('K1').fill = {type: 'pattern', pattern: 'solid', fgColor: {argb: 'FF3A3838'}};
 
@@ -622,12 +622,12 @@
 
                 worksheet.addRow(itemData);
             }
-            worksheet.getCell('K3').value = '선택A';
-            worksheet.getCell('K4').value = '선택B';
-            worksheet.getCell('K5').value = '선택C';
-            worksheet.getCell('K6').value = '선택D';
-            worksheet.getCell('K7').value = '선택E';
-            worksheet.getCell('K8').value = '선택F';
+            worksheet.getCell('K3').value = '?�택A';
+            worksheet.getCell('K4').value = '?�택B';
+            worksheet.getCell('K5').value = '?�택C';
+            worksheet.getCell('K6').value = '?�택D';
+            worksheet.getCell('K7').value = '?�택E';
+            worksheet.getCell('K8').value = '?�택F';
 
             worksheet.getCell('L3').value = dxInstances.selectACount.option('value');
             worksheet.getCell('L4').value = dxInstances.selectBCount.option('value');
@@ -725,7 +725,7 @@
             let treeviewCheckupItemCodeViewLoad = dxInstances.treeviewCheckupItemCodeView.getDataSource().load();
 
             $.when(checkupContractTypeIdLoad, treeviewCheckupItemCodeViewLoad).then(function () {
-                ggsj.valuesToDx(response.data);
+                sitebuilder.valuesToDx(response.data);
             });
         });
     });

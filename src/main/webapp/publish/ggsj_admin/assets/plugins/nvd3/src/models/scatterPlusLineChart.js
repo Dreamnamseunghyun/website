@@ -1,4 +1,4 @@
-
+﻿
 nv.models.scatterPlusLineChart = function() {
   "use strict";
   //============================================================

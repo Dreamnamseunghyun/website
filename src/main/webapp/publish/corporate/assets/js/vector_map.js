@@ -1,4 +1,4 @@
-/* ============================================================
+﻿/* ============================================================
  * Vector Map
  * Render a vector map (SVG) using Mapplic plugin
  * For DEMO purposes only. Extract what you need.

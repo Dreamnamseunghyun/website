@@ -1,4 +1,4 @@
-<%@ page contentType="text/html; charset=utf-8" pageEncoding="utf-8" %>
+﻿<%@ page contentType="text/html; charset=utf-8" pageEncoding="utf-8" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 
@@ -21,7 +21,7 @@
                 <div class="card card-transparent board_internal">
                     <div class="card-header ">
                         <div class="card-title">
-                            <h3 class="h3">건강한 건강상식</h3>
+                            <h3 class="h3">嫄닿컯??嫄닿컯?곸떇</h3>
                         </div>
                     </div>
                     <%--<div class="card-body">--%>
@@ -33,7 +33,7 @@
                                 <div class="row-box">
                                     <div class="row-box-inner">
                                         <div class="col-box1 row">
-                                            <div class="col-lg-12" id="searchGrid" data-ggsj="dxTextBox"></div>
+                                            <div class="col-lg-12" id="searchGrid" data-sitebuilder="dxTextBox"></div>
                                         </div>
                                     </div>
                                 </div>
@@ -41,7 +41,7 @@
                         </div>
                         <!-- Header -->
 
-                        <div id="dataGridHealthCare" class="main_table" data-ggsj="dxDataGrid">
+                        <div id="dataGridHealthCare" class="main_table" data-sitebuilder="dxDataGrid">
                         </div>
                     </div>
                     <%--</div>--%>
@@ -49,7 +49,7 @@
 
 
                 <div class="row btn_area index_btn_area footer-btn">
-                    <div id="btnCreate" data-ggsj="dxButton">
+                    <div id="btnCreate" data-sitebuilder="dxButton">
                         <div class="write_btn">
                             <div>
                                 <div class="pencil"></div>
@@ -62,7 +62,7 @@
                                     <div class="paper"></div>
                                 </div>
                             </div>
-                            <span>등록</span>
+                            <span>?깅줉</span>
                         </div>
                     </div>
                 </div>
@@ -79,12 +79,12 @@
 </body>
 <script>
     $(function () {
-        ggsj.openMenu('healthcare');
+        sitebuilder.openMenu('healthcare');
 
-        let dxInstances = ggsj.createDx(false);
+        let dxInstances = sitebuilder.createDx(false);
 
         dxInstances.searchGrid.option({
-            placeholder: '검색',
+            placeholder: '寃??,
             valueChangeEvent: "keyup",
             onValueChanged: function (e) {
                 dxInstances.dataGridHealthCare.searchByText(e.value);
@@ -94,30 +94,30 @@
 
         dxInstances.dataGridHealthCare.option({
             columns: [{
-                caption: '순번',
+                caption: '?쒕쾲',
                 alignment: 'center',
                 cellTemplate: function (cellElement, cellInfo) {
                     cellElement.text(cellInfo.component.pageIndex() * cellInfo.component.pageSize() + cellInfo.row.rowIndex + 1);
                 },
             }, {
                 dataField: 'title',
-                caption: '제목',
+                caption: '?쒕ぉ',
                 cellTemplate: function (cellElement, cellInfo) {
                     console.log(cellInfo);
                     cellElement.append("<a href = " + '<c:url value="/pm/healthsense"/>' + '/' + cellInfo.data.healthSenseId + ">" + cellInfo.text + "</a>");
                 },
             }, {
                 dataField: 'writedAt',
-                caption: '작성일',
+                caption: '?묒꽦??,
                 alignment: 'center',
                 dataType: 'date',
                 format: 'yyyy-MM-dd'
             }, {
                 type: 'buttons',
-                caption: '수정',
+                caption: '?섏젙',
                 alignment: 'center',
                 buttons: [{
-                    text: '수정',
+                    text: '?섏젙',
                     onClick: function (e) {
                         location.href = '<c:url value="/pm/healthsense"/>/' + e.row.data.healthSenseId + '/edit';
                     },
@@ -125,12 +125,12 @@
                 ]
             }, {
                 type: 'buttons',
-                caption: '삭제',
+                caption: '??젣',
                 alignment: 'center',
                 buttons: [{
-                    text: '삭제',
+                    text: '??젣',
                     onClick: function (e) {
-                        if (confirm('정말로 삭제하시겠습니까?')) {
+                        if (confirm('?뺣쭚濡???젣?섏떆寃좎뒿?덇퉴?')) {
                             let healthSenseId = e.row.data.healthSenseId;
                             $.ajax({
                                 url: '<c:url value="/pm/healthsense"/>/' + healthSenseId,
@@ -149,7 +149,7 @@
         dxInstances.btnCreate.option({
             stylingMode: 'outlined',
             icon: 'comment',
-            text: '등록',
+            text: '?깅줉',
             type: 'success',
             onClick: function () {
                 location.href = '<c:url value="/pm/healthsense/create"/>';
@@ -160,7 +160,7 @@
             url: '<c:url value="/pm/healthsense"/>',
             method: 'GET',
         }).then(function (response) {
-            ggsj.valuesToDx(response.data);
+            sitebuilder.valuesToDx(response.data);
             console.log(response);
             dxInstances.dataGridHealthCare.option({
                 dataSource: response.data

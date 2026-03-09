@@ -20,28 +20,28 @@
                 <div class="card card-transparent board_internal">
                     <div class="card-header ">
                         <div class="card-title">
-                            <h3 class="h3">병원매니저 수정</h3>
+                            <h3 class="h3">병원매니?� ?�정</h3>
                         </div>
                     </div>
                     <%--                    <div class="card-body">--%>
                     <div class="dx-viewport">
-                        <!-- 병원 매니저 -->
+                        <!-- 병원 매니?� -->
                         <div class="row-wrap">
-                            <div class="row-box-title"><i class="xi-play-circle"></i>병원 매니저</div>
+                            <div class="row-box-title"><i class="xi-play-circle"></i>병원 매니?�</div>
                             <div class="row-box1">
                                 <div class="row-box-inner width-box">
                                     <div class="col-box2 row">
                                         <div class="col-lg-2 tag-name"><span>ID</span></div>
                                         <div class="col-lg-10 row period">
-                                            <div class="col-lg-6" id="centerManagerCode" data-ggsj="dxTextBox"></div>
-                                            <div class="col-lg-3" id="notokUrge" data-ggsj="dxCheckBox"></div>
-                                            <div class="col-lg-3" id="noUse" data-ggsj="dxCheckBox"></div>
+                                            <div class="col-lg-6" id="centerManagerCode" data-sitebuilder="dxTextBox"></div>
+                                            <div class="col-lg-3" id="notokUrge" data-sitebuilder="dxCheckBox"></div>
+                                            <div class="col-lg-3" id="noUse" data-sitebuilder="dxCheckBox"></div>
                                         </div>
                                     </div>
                                     <div class="col-box2 row">
-                                        <div class="col-lg-2 tag-name"><span>소속</span></div>
+                                        <div class="col-lg-2 tag-name"><span>?�속</span></div>
                                         <div class="col-lg-10 row period">
-                                            <div class="col-lg-12" id="hospitalId" data-ggsj="dxSelectBox"></div>
+                                            <div class="col-lg-12" id="hospitalId" data-sitebuilder="dxSelectBox"></div>
                                         </div>
                                     </div>
                                 </div>
@@ -51,47 +51,47 @@
                                         <div class="col-lg-2 tag-name"><span>PW</span></div>
                                         <div class="col-lg-10 row period center-box">
                                             <div class="col-lg-9 btnGray" id="btnResetPW"
-                                                 data-ggsj="dxButton"></div>
+                                                 data-sitebuilder="dxButton"></div>
                                         </div>
                                     </div>
                                     <div class="col-box2 row">
-                                        <div class="col-lg-2 tag-name"><span>센터</span></div>
+                                        <div class="col-lg-2 tag-name"><span>?�터</span></div>
                                         <div class="col-lg-10 row period">
-                                            <div class="col-lg-12" id="centerId" data-ggsj="dxSelectBox"></div>
+                                            <div class="col-lg-12" id="centerId" data-sitebuilder="dxSelectBox"></div>
                                         </div>
                                     </div>
                                 </div>
 
                                 <div class="row-box-inner width-box">
                                     <div class="col-box2 row">
-                                        <div class="col-lg-2 tag-name"><span>매니저명</span></div>
+                                        <div class="col-lg-2 tag-name"><span>매니?��?/span></div>
                                         <div class="col-lg-10 row period">
                                             <div class="col-lg-12" id="centerManagerName"
-                                                 data-ggsj="dxTextBox"></div>
+                                                 data-sitebuilder="dxTextBox"></div>
                                         </div>
                                     </div>
                                     <div class="col-box2 row">
-                                        <div class="col-lg-2 tag-name"><span>유선</span></div>
+                                        <div class="col-lg-2 tag-name"><span>?�선</span></div>
                                         <div class="col-lg-10 row">
                                             <div class="col-lg-12" id="telephone"
-                                                 data-ggsj="dxTextBox" data-ggsj-format="tel"></div>
+                                                 data-sitebuilder="dxTextBox" data-sitebuilder-format="tel"></div>
                                         </div>
                                     </div>
                                 </div>
 
                                 <div class="row-box-inner width-box">
                                     <div class="col-box2 row">
-                                        <div class="col-lg-2 tag-name"><span>이메일</span></div>
+                                        <div class="col-lg-2 tag-name"><span>?�메??/span></div>
                                         <div class="col-lg-10 row period">
                                             <div class="col-lg-12" id="email"
-                                                 data-ggsj="dxTextBox"></div>
+                                                 data-sitebuilder="dxTextBox"></div>
                                         </div>
                                     </div>
                                     <div class="col-box2 row">
-                                        <div class="col-lg-2 tag-name"><span>휴대전화</span></div>
+                                        <div class="col-lg-2 tag-name"><span>?��??�화</span></div>
                                         <div class="col-lg-10 row">
                                             <div class="col-lg-12" id="mobile"
-                                                 data-ggsj="dxTextBox" data-ggsj-format="tel"></div>
+                                                 data-sitebuilder="dxTextBox" data-sitebuilder-format="tel"></div>
                                         </div>
                                     </div>
                                 </div>
@@ -101,22 +101,22 @@
                                         <div class="col-lg-1 tag-name"><span>메모</span></div>
                                         <div class="col-lg-11 row period">
                                             <div class="col-lg-12" id="notes"
-                                                 data-ggsj="dxTextArea"></div>
+                                                 data-sitebuilder="dxTextArea"></div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <!-- 병원 매니저 -->
+                        <!-- 병원 매니?� -->
 
                         <div class="row">
-                            <div id="centerManagerGrid" class="sub_table" data-ggsj="dxDataGrid"></div>
+                            <div id="centerManagerGrid" class="sub_table" data-sitebuilder="dxDataGrid"></div>
                         </div>
 
                         <div class="row btn_area footer-btn">
-                            <div class="col-lg-1" id="btnSave" data-ggsj="dxButton"><i class="xi-save"></i>저장</div>
-                            <div class="col-lg-1" id="btnList" data-ggsj="dxButton">목록</div>
-                            <div class="col-lg-1" id="btnDelete" data-ggsj="dxButton">삭제</div>
+                            <div class="col-lg-1" id="btnSave" data-sitebuilder="dxButton"><i class="xi-save"></i>?�??/div>
+                            <div class="col-lg-1" id="btnList" data-sitebuilder="dxButton">목록</div>
+                            <div class="col-lg-1" id="btnDelete" data-sitebuilder="dxButton">??��</div>
                         </div>
 
                     </div>
@@ -133,9 +133,9 @@
 <script>
     /** @param _dxInstances : {btnHospitalSearch,hospitalManagerName} */
     $(function () {
-        ggsj.openMenu('manager');
+        sitebuilder.openMenu('manager');
 
-        let dxInstances = ggsj.createDx(false);
+        let dxInstances = sitebuilder.createDx(false);
 
         let dsHospital = new DevExpress.data.DataSource({
             load: function () {
@@ -148,7 +148,7 @@
 
         dxInstances.hospitalId.option({
             dataSource: dsHospital,
-            placeholder: '병원검색',
+            placeholder: '병원검??,
             valueExpr: 'hospitalId',
             displayExpr: 'hospitalName',
             searchEnabled: true,
@@ -166,26 +166,26 @@
         });
 
         dxInstances.centerId.option({
-            placeholder: "센터검색",
+            placeholder: "?�터검??,
             valueExpr: 'centerId',
             displayExpr: 'centerName',
         });
 
         dxInstances.noUse.option({
-            text: '로그인중지',
+            text: '로그?�중지',
         });
 
         dxInstances.notokUrge.option({
-            text: '알림톡 독려 제외',
+            text: '?�림???�려 ?�외',
         });
 
         dxInstances.btnResetPW.option({
-            text: '비번초기화',
+            text: '비번초기??,
             onClick: function () {
                 $.ajax({
                     url: '<c:url value="/pm/manager/reset"/>',
                     method: 'PUT',
-                    data: JSON.stringify(ggsj.dxToValues()),
+                    data: JSON.stringify(sitebuilder.dxToValues()),
                 }).then(function () {
                 });
             }
@@ -207,7 +207,7 @@
                 //     rowData.companyId = value;
                 // },
             }, {
-                caption: '세부업무',
+                caption: '?��??�무',
                 alignment: 'center',
                 columns: [{
                     dataField: 'contract',
@@ -215,7 +215,7 @@
                     dataType: 'boolean',
                 }, {
                     dataField: 'reserve',
-                    caption: '예약',
+                    caption: '?�약',
                     dataType: 'boolean',
                 }, {
                     dataField: 'result',
@@ -228,7 +228,7 @@
                 // Grid Title
                 e.toolbarOptions.items.unshift({
                     location: 'before',
-                    text: '담당 기업체',
+                    text: '?�당 기업�?,
                 });
 
                 // Modifies an existing item
@@ -249,10 +249,10 @@
 
         dxInstances.btnSave.option({
             stylingMode: 'contained',
-            text: '저장',
+            text: '?�??,
             type: 'success',
             onClick: function () {
-                let data = ggsj.dxToValues();
+                let data = sitebuilder.dxToValues();
                 let gridData = dxInstances.centerManagerGrid.option('editing.changes').map(function (v) {
                     if (v.type !== 'insert') {
                         v.data = $.extend(true, {}, v.key, v.data);
@@ -262,19 +262,19 @@
                 });
 
                 if (!data.centerManagerCode) {
-                    alert('ID를 입력하세요');
+                    alert('ID�??�력?�세??);
                     return;
                 }
                 if (!data.centerManagerName) {
-                    alert('이름을 입력하세요');
+                    alert('?�름???�력?�세??);
                     return;
                 }
                 if (!data.mobile) {
-                    alert('휴대전화 번호를 입력하세요');
+                    alert('?��??�화 번호�??�력?�세??);
                     return;
                 }
                 if (!data.email) {
-                    alert('이메일을 입력하세요');
+                    alert('?�메?�을 ?�력?�세??);
                     return;
                 }
                 data.centerManagerCompany = gridData;
@@ -284,7 +284,7 @@
                     method: 'PUT',
                     data: JSON.stringify(data),
                 }).then(function () {
-                    ggsj.notify("저장되었습니다.");
+                    sitebuilder.notify("?�?�되?�습?�다.");
                     location.href = '<c:url value="/pm/manager"/>';
                 });
             },
@@ -300,10 +300,10 @@
 
         dxInstances.btnDelete.option({
             stylingMode: 'contained',
-            text: '삭제',
+            text: '??��',
             type: 'danger',
             onClick: function () {
-                if (confirm('정말로 삭제하시겠습니까?')) {
+                if (confirm('?�말�???��?�시겠습?�까?')) {
                     $.ajax({
                         url: '<c:url value="/pm/manager/${userId}/hospital"/>',
                         method: 'DELETE',
@@ -335,7 +335,7 @@
                 method: 'GET',
             }).then(function (response) {
                 console.log(response.data);
-                ggsj.valuesToDx(response.data);
+                sitebuilder.valuesToDx(response.data);
                 dxInstances.centerManagerGrid.option({
                     dataSource: response.data.centerManagerCompany
                 })

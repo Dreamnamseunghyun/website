@@ -1,4 +1,4 @@
-
+﻿
 nv.models.linePlusBarWithFocusChart = function() {
   "use strict";
   //============================================================

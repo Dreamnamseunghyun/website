@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This combined file was created by the DataTables downloader builder:
  *   https://datatables.net/download
  *
@@ -11,7 +11,7 @@
  */
 
 /*! DataTables 1.11.3
- * ©2008-2021 SpryMedia Ltd - datatables.net/license
+ * 짤2008-2021 SpryMedia Ltd - datatables.net/license
  */
 
 /**
@@ -1324,10 +1324,10 @@
     // - fr - Swiss Franc
     // - kr - Swedish krona, Norwegian krone and Danish krone
     // - \u2009 is thin space and \u202F is narrow no-break space, both used in many
-    // - Ƀ - Bitcoin
-    // - Ξ - Ethereum
+    // - ? - Bitcoin
+    // - ? - Ethereum
     //   standards as thousands separators.
-    var _re_formatted_numeric = /['\u00A0,$£€¥%\u2009\u202F\u20BD\u20a9\u20BArfkɃΞ]/gi;
+    var _re_formatted_numeric = /['\u00A0,$짙???\u2009\u202F\u20BD\u20a9\u20BArfk??]/gi;
 
 
     var _empty = function (d) {
@@ -14850,7 +14850,7 @@
 
 
 /*! DataTables styling integration
- * ©2018 SpryMedia Ltd - datatables.net/license
+ * 짤2018 SpryMedia Ltd - datatables.net/license
  */
 
 (function (factory) {

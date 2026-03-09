@@ -1,12 +1,12 @@
-/**
+﻿/**
  * Swedish translation for bootstrap-datepicker
  * Patrik Ragnarsson <patrik@starkast.net>
  */
 ;(function($){
 	$.fn.datepicker.dates['sv'] = {
-		days: ["Söndag", "Måndag", "Tisdag", "Onsdag", "Torsdag", "Fredag", "Lördag", "Söndag"],
-		daysShort: ["Sön", "Mån", "Tis", "Ons", "Tor", "Fre", "Lör", "Sön"],
-		daysMin: ["Sö", "Må", "Ti", "On", "To", "Fr", "Lö", "Sö"],
+		days: ["S철ndag", "M책ndag", "Tisdag", "Onsdag", "Torsdag", "Fredag", "L철rdag", "S철ndag"],
+		daysShort: ["S철n", "M책n", "Tis", "Ons", "Tor", "Fre", "L철r", "S철n"],
+		daysMin: ["S철", "M책", "Ti", "On", "To", "Fr", "L철", "S철"],
 		months: ["Januari", "Februari", "Mars", "April", "Maj", "Juni", "Juli", "Augusti", "September", "Oktober", "November", "December"],
 		monthsShort: ["Jan", "Feb", "Mar", "Apr", "Maj", "Jun", "Jul", "Aug", "Sep", "Okt", "Nov", "Dec"],
 		today: "Idag",

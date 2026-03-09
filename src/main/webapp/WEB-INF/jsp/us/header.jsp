@@ -623,12 +623,12 @@
     <nav>
         <ul class="h_nav">
             <li>
-                <a><span class="h_title">건강검진 예약</span></a>
+                <a><span class="h_title">건강검�??�약</span></a>
                 <div class="sub_menu">
                     <ul class="sub_menu_list">
-                        <li><a href="target_information.html"><span>예약하기</span><i class="xi-angle-right-min"></i></a></li>
-                        <li><a href="target_information.html"><span>예약 조회</span><i class="xi-angle-right-min"></i></a></li>
-                        <li><a href="target_information.html"><span>변경 및 취소</span><i class="xi-angle-right-min"></i></a></li>
+                        <li><a href="target_information.html"><span>?�약?�기</span><i class="xi-angle-right-min"></i></a></li>
+                        <li><a href="target_information.html"><span>?�약 조회</span><i class="xi-angle-right-min"></i></a></li>
+                        <li><a href="target_information.html"><span>변�?�?취소</span><i class="xi-angle-right-min"></i></a></li>
                     </ul>
                 </div>
             </li>
@@ -636,22 +636,22 @@
             <li><a><span class="h_title">결과 조회</span></a>
                 <div class="sub_menu">
                     <ul class="sub_menu_list">
-                        <li><a href="check_result.html"><span>건강검진 결과조회</span><i class="xi-angle-right-min"></i></a></li>
-<%--            <li><a href="javascript:delay_alert();" class="pre_btn"><span>건강검진 결과조회</span><i class="xi-angle-right-min"></i></a></li>--%>
+                        <li><a href="check_result.html"><span>건강검�?결과조회</span><i class="xi-angle-right-min"></i></a></li>
+<%--            <li><a href="javascript:delay_alert();" class="pre_btn"><span>건강검�?결과조회</span><i class="xi-angle-right-min"></i></a></li>--%>
                     </ul>
                 </div>
             </li>
 
-            <li><a><span class="h_title">고객센터</span></a>
+            <li><a><span class="h_title">고객?�터</span></a>
                 <div class="sub_menu">
                     <ul class="sub_menu_list">
-                        <li><a href="notice.html"><span>공지사항</span><i class="xi-angle-right-min"></i></a></li>
-                        <li><a href="faq.html"><span>자주 묻는 질문</span><i class="xi-angle-right-min"></i></a></li>
-                        <li><a href="inquiry.html"><span>1:1 문의하기</span><i class="xi-angle-right-min"></i></a></li>
+                        <li><a href="notice.html"><span>공�??�항</span><i class="xi-angle-right-min"></i></a></li>
+                        <li><a href="faq.html"><span>?�주 묻는 질문</span><i class="xi-angle-right-min"></i></a></li>
+                        <li><a href="inquiry.html"><span>1:1 문의?�기</span><i class="xi-angle-right-min"></i></a></li>
                     </ul>
                 </div>
             </li>
-            <li><a href="common_sense.html"><span class="h_title">건강 상식</span></a></li>
+            <li><a href="common_sense.html"><span class="h_title">건강 ?�식</span></a></li>
 
             <c:choose>
                 <c:when test="${sessionUserType == 'US'}">
@@ -661,37 +661,37 @@
 
                             <c:if test="${reserve != null}">
                                 <span class="status_btn cost">
-                                    <c:out value="${reserve.supportType ? '본인부담' : '기업부담'}"/>
+                                    <c:out value="${reserve.supportType ? '본인부?? : '기업부??}"/>
                                 </span>
 
                                 <c:choose>
                                     <c:when test="${reserve.reservationState == null}">
                                         <c:set var="reservationStateClass" value="not_reservation"/>
-                                        <c:set var="reservationStateText" value="미예약"/>
+                                        <c:set var="reservationStateText" value="미예??/>
                                     </c:when>
                                     <c:when test="${reserve.reservationState == 0}">
                                         <c:set var="reservationStateClass" value="reservation_cancel"/>
-                                        <c:set var="reservationStateText" value="예약취소"/>
+                                        <c:set var="reservationStateText" value="?�약취소"/>
                                     </c:when>
                                     <c:when test="${reserve.reservationState == 1}">
                                         <c:set var="reservationStateClass" value="reservation_request"/>
-                                        <c:set var="reservationStateText" value="예약신청"/>
+                                        <c:set var="reservationStateText" value="?�약?�청"/>
                                     </c:when>
                                     <c:when test="${reserve.reservationState == 2}">
                                         <c:set var="reservationStateClass" value="reservation_confirm"/>
-                                        <c:set var="reservationStateText" value="예약확정"/>
+                                        <c:set var="reservationStateText" value="?�약?�정"/>
                                     </c:when>
                                     <c:when test="${reserve.reservationState == 3}">
                                         <c:set var="reservationStateClass" value="reservation_change"/>
-                                        <c:set var="reservationStateText" value="예약변경"/>
+                                        <c:set var="reservationStateText" value="?�약변�?/>
                                     </c:when>
                                     <c:when test="${reserve.reservationState == 4}">
                                         <c:set var="reservationStateClass" value="examination_complete"/>
-                                        <c:set var="reservationStateText" value="수검완료"/>
+                                        <c:set var="reservationStateText" value="?��??�료"/>
                                     </c:when>
                                     <c:when test="${reserve.reservationState == 5}">
                                         <c:set var="reservationStateClass" value="not_reservation"/>
-                                        <c:set var="reservationStateText" value="예약보류"/>
+                                        <c:set var="reservationStateText" value="?�약보류"/>
                                     </c:when>
                                 </c:choose>
 
@@ -701,11 +701,11 @@
                             </c:if>
                         </a>
                     </li>
-                    <li class="logout"><a href="<c:url value="/logout"/>">로그아웃</a></li>
+                    <li class="logout"><a href="<c:url value="/logout"/>">로그?�웃</a></li>
                 </c:when>
                 <c:otherwise>
-                    <li><a href="mypage.html"><span class="h_title">마이페이지</span></a></li>
-                    <li class="h_login"><a href="login.html">로그인</a></li>
+                    <li><a href="mypage.html"><span class="h_title">마이?�이지</span></a></li>
+                    <li class="h_login"><a href="login.html">로그??/a></li>
                 </c:otherwise>
             </c:choose>
 
@@ -733,11 +733,11 @@
 
 
             <li>
-                <a>건강검진 예약<span class="detail_icon"><span class="width"></span><span class="height"></span></span></a>
+                <a>건강검�??�약<span class="detail_icon"><span class="width"></span><span class="height"></span></span></a>
                 <ul class="list_area_sub">
-                    <li><a href="target_information.html">예약하기</a></li>
-                    <li><a href="target_information.html">예약조회</a></li>
-                    <li><a href="target_information.html">변경 및 취소</a></li>
+                    <li><a href="target_information.html">?�약?�기</a></li>
+                    <li><a href="target_information.html">?�약조회</a></li>
+                    <li><a href="target_information.html">변�?�?취소</a></li>
 
                 </ul>
             </li>
@@ -745,19 +745,19 @@
                 <a href="check_result.html">결과조회</a>
             </li>
             <li>
-                <a>고객센터<span class="detail_icon"><span class="width"></span><span class="height"></span></span></a>
+                <a>고객?�터<span class="detail_icon"><span class="width"></span><span class="height"></span></span></a>
                 <ul class="list_area_sub">
-                    <li><a href="faq.html">자주 묻는 질문</a></li>
-                    <li><a href="inquiry.html">1:1 문의하기</a></li>
+                    <li><a href="faq.html">?�주 묻는 질문</a></li>
+                    <li><a href="inquiry.html">1:1 문의?�기</a></li>
                 </ul>
             </li>
 
 
             <li>
-                <a href="common_sense.html"><span class="en_txt">건강상식</span></a>
+                <a href="common_sense.html"><span class="en_txt">건강?�식</span></a>
             </li>
 <%--            <li>--%>
-<%--                <a href="mypage.html?userId=<c:out value="${reserve.userId}"/>"><span class="en_txt">마이페이지</span></a>--%>
+<%--                <a href="mypage.html?userId=<c:out value="${reserve.userId}"/>"><span class="en_txt">마이?�이지</span></a>--%>
 <%--            </li>--%>
         </ul>
         <ul class="login_area">
@@ -769,11 +769,11 @@
 
 <%--                        </a>--%>
 <%--                    </li>--%>
-<%--                    <li class="logout"><a href="<c:url value="/logout"/>">로그아웃</a></li>--%>
+<%--                    <li class="logout"><a href="<c:url value="/logout"/>">로그?�웃</a></li>--%>
 <%--                </c:when>--%>
 <%--                <c:otherwise>--%>
-<%--                    <li><a href="mypage.html"><span class="h_title">마이페이지</span></a></li>--%>
-<%--                    <li><a href="login.html">기업 회원 로그인</a></li>--%>
+<%--                    <li><a href="mypage.html"><span class="h_title">마이?�이지</span></a></li>--%>
+<%--                    <li><a href="login.html">기업 ?�원 로그??/a></li>--%>
 <%--                </c:otherwise>--%>
 <%--            </c:choose>--%>
 
@@ -785,37 +785,37 @@
 
                     <c:if test="${reserve != null}">
                                 <span class="status_btn cost">
-                                    <c:out value="${reserve.supportType ? '본인부담' : '기업부담'}"/>
+                                    <c:out value="${reserve.supportType ? '본인부?? : '기업부??}"/>
                                 </span>
 
                         <c:choose>
                             <c:when test="${reserve.reservationState == null}">
                                 <c:set var="reservationStateClass" value="not_reservation"/>
-                                <c:set var="reservationStateText" value="미예약"/>
+                                <c:set var="reservationStateText" value="미예??/>
                             </c:when>
                             <c:when test="${reserve.reservationState == 0}">
                                 <c:set var="reservationStateClass" value="reservation_cancel"/>
-                                <c:set var="reservationStateText" value="예약취소"/>
+                                <c:set var="reservationStateText" value="?�약취소"/>
                             </c:when>
                             <c:when test="${reserve.reservationState == 1}">
                                 <c:set var="reservationStateClass" value="reservation_request"/>
-                                <c:set var="reservationStateText" value="예약신청"/>
+                                <c:set var="reservationStateText" value="?�약?�청"/>
                             </c:when>
                             <c:when test="${reserve.reservationState == 2}">
                                 <c:set var="reservationStateClass" value="reservation_confirm"/>
-                                <c:set var="reservationStateText" value="예약확정"/>
+                                <c:set var="reservationStateText" value="?�약?�정"/>
                             </c:when>
                             <c:when test="${reserve.reservationState == 3}">
                                 <c:set var="reservationStateClass" value="reservation_change"/>
-                                <c:set var="reservationStateText" value="예약변경"/>
+                                <c:set var="reservationStateText" value="?�약변�?/>
                             </c:when>
                             <c:when test="${reserve.reservationState == 4}">
                                 <c:set var="reservationStateClass" value="examination_complete"/>
-                                <c:set var="reservationStateText" value="수검완료"/>
+                                <c:set var="reservationStateText" value="?��??�료"/>
                             </c:when>
                             <c:when test="${reserve.reservationState == 5}">
                                 <c:set var="reservationStateClass" value="not_reservation"/>
-                                <c:set var="reservationStateText" value="예약보류"/>
+                                <c:set var="reservationStateText" value="?�약보류"/>
                             </c:when>
                         </c:choose>
 
@@ -827,29 +827,29 @@
             </li>
 
 
-            <li class="logout"><a href="<c:url value="/logout"/>">로그아웃</a></li>
+            <li class="logout"><a href="<c:url value="/logout"/>">로그?�웃</a></li>
         </c:when>
 
 
 
         <c:otherwise>
-<%--            <li><a href="mypage.html"><span class="h_title">마이페이지</span></a></li>--%>
-            <li class="h_login"><a href="login.html">로그인</a></li>
+<%--            <li><a href="mypage.html"><span class="h_title">마이?�이지</span></a></li>--%>
+            <li class="h_login"><a href="login.html">로그??/a></li>
         </c:otherwise>
 
     </c:choose>
 
-            <li><a href="find_id.html">아이디 찾기</a></li>
-            <li><a href="find_password.html">비밀번호 찾기</a></li>
+            <li><a href="find_id.html">?�이??찾기</a></li>
+            <li><a href="find_password.html">비�?번호 찾기</a></li>
         </ul>
 
         <div class="help_area">
             <ul>
-                <li>도움이 필요하세요?</li>
-                <li><a href="tel:1644-7527">고객센터 : 1644-7527</a></li>
+                <li>?��????�요?�세??</li>
+                <li><a href="tel:1644-7527">고객?�터 : 1644-7527</a></li>
             </ul>
         </div>
-        <div class="copyright">Copyright  ⓒ  VOLK LIFE CARE.<br>All Rights Reserved.</div>
+        <div class="copyright">Copyright  ?? VOLK LIFE CARE.<br>All Rights Reserved.</div>
     </div><!--scroll_area-->
 
 
@@ -868,8 +868,7 @@
     // $("header .logo > a").load("logo.html");
 
 
-    //헤더 스크롤다운
-    $(function () {
+    //?�더 ?�크롤다??    $(function () {
 
         var header_height = $("header").height() - 40;
 
@@ -883,8 +882,7 @@
         });
 
 
-        //렌더시 스크롤 내려가있으면
-        $("document").ready(function () {
+        //?�더???�크�??�려가?�으�?        $("document").ready(function () {
             var render_scroll = $(document).scrollTop();
             if (render_scroll >= 10) {
                 $('header').addClass('scroll_down');
@@ -934,7 +932,7 @@
     })
 
     function delay_alert(){
-        Swal.fire('현재 페이지 준비 중에 있습니다.\n 빠른 시일 내에 오픈하도록\n하겠습니다 :D', '', 'error' );
+        Swal.fire('?�재 ?�이지 준�?중에 ?�습?�다.\n 빠른 ?�일 ?�에 ?�픈?�도�?n?�겠?�니??:D', '', 'error' );
     }
 
 
@@ -947,7 +945,7 @@
 
 
 
-    /*햄버거 메뉴*/
+    /*?�버�?메뉴*/
     var McButton = $("header .McButton");
     var all_menu = $("header .all_menu");
     var McBar1 = McButton.find("b:nth-child(1)");

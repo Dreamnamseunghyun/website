@@ -1,5 +1,5 @@
-/*! Scroller 1.2.2
- * ©2011-2014 SpryMedia Ltd - datatables.net/license
+﻿/*! Scroller 1.2.2
+ * 짤2011-2014 SpryMedia Ltd - datatables.net/license
  */
 
 /**

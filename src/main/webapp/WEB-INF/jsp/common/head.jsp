@@ -1,10 +1,10 @@
-<%@ page contentType="text/html; charset=utf-8" pageEncoding="utf-8" %>
+﻿<%@ page contentType="text/html; charset=utf-8" pageEncoding="utf-8" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <head>
     <meta http-equiv="content-type" content="text/html;charset=UTF-8"/>
     <meta charset="utf-8"/>
-    <title>건강살자</title>
+    <title>嫄닿컯?댁옄</title>
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no"/>
     <link rel="apple-touch-icon" href="<c:url value="/lib/pages/ico/60.png"/>">
@@ -14,7 +14,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-touch-fullscreen" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
-    <meta content="건강살자" name="description"/>
+    <meta content="嫄닿컯?댁옄" name="description"/>
     <link rel="stylesheet" type="text/css" href="<c:url value="/lib/bootstrap/css/bootstrap.min.css"/>"/>
     <link rel="stylesheet" type="text/css" href="<c:url value="/lib/pages/css/themes/corporate.css"/>"
           class="main-stylesheet"/>
@@ -38,8 +38,8 @@
     <%--<link rel="stylesheet" href="<c:url value="/lib/devextreme/dx.light.css"/>">--%>
 
     <!-- DevExtreme theme for GGSJ -->
-    <%--<link rel="stylesheet" href="<c:url value="/lib/devextreme/dx.material.ggsj.css"/>">--%>
-    <link rel="stylesheet" href="<c:url value="/lib/devextreme/dx.material.ggsj-custom-scheme.css"/>">
+    <%--<link rel="stylesheet" href="<c:url value="/lib/devextreme/dx.material.sitebuilder.css"/>">--%>
+    <link rel="stylesheet" href="<c:url value="/lib/devextreme/dx.material.sitebuilder-custom-scheme.css"/>">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
 

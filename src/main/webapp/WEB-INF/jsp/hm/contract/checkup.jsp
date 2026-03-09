@@ -1,4 +1,4 @@
-<%@ page contentType="text/html; charset=utf-8" pageEncoding="utf-8" %>
+﻿<%@ page contentType="text/html; charset=utf-8" pageEncoding="utf-8" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 
@@ -19,7 +19,7 @@
                 <div class="card card-transparent board_internal">
                     <div class="card-header ">
                         <div class="card-title">
-                            <h3 class="h3">검진 유형 목록</h3>
+                            <h3 class="h3">寃吏??좏삎 紐⑸줉</h3>
                         </div>
                     </div>
                     <%--<div class="card-body">--%>
@@ -32,8 +32,8 @@
                                 <div class="row-box">
                                     <div class="row-box-inner">
                                         <div class="col-box1 row">
-                                            <div class="col-lg-5 tag-name"><span>대상 년도</span></div>
-                                            <div class="col-lg-7" id="checkupYear" data-ggsj="dxSelectBox"></div>
+                                            <div class="col-lg-5 tag-name"><span>????꾨룄</span></div>
+                                            <div class="col-lg-7" id="checkupYear" data-sitebuilder="dxSelectBox"></div>
                                         </div>
                                     </div>
                                 </div>
@@ -44,7 +44,7 @@
                                 <div class="row-box">
                                     <div class="row-box-inner">
                                         <div class="col-box1 row">
-                                            <div class="col-lg-12" id="searchGrid" data-ggsj="dxTextBox"></div>
+                                            <div class="col-lg-12" id="searchGrid" data-sitebuilder="dxTextBox"></div>
                                         </div>
                                     </div>
                                 </div>
@@ -54,7 +54,7 @@
                         </div>
                         <!-- Header -->
 
-                        <div id="dataGridCheckupTypeList" class="main_table" data-ggsj="dxDataGrid">
+                        <div id="dataGridCheckupTypeList" class="main_table" data-sitebuilder="dxDataGrid">
                         </div>
                     </div>
                 </div>
@@ -67,19 +67,19 @@
 </body>
 <script>
     $(function () {
-        ggsj.openMenu('contract-checkup');
+        sitebuilder.openMenu('contract-checkup');
 
         /** @param dxInstances : {dataGridCheckupTypeList} */
-        let dxInstances = ggsj.createDx(false);
+        let dxInstances = sitebuilder.createDx(false);
 
         dxInstances.checkupYear.option({
-            dataSource: ggsj.typeDef.Year,
+            dataSource: sitebuilder.typeDef.Year,
             value: new Date().getFullYear(),
             onValueChanged: LoadContractCheckupList,
         });
 
         dxInstances.searchGrid.option({
-            placeholder: '검색',
+            placeholder: '寃??,
             valueChangeEvent: "keyup",
             onValueChanged: function (e) {
                 dxInstances.dataGridCheckupTypeList.searchByText(e.value);
@@ -93,11 +93,11 @@
                 enabled: false,
             },
             columns: [{
-                caption: '기업체명',
+                caption: '湲곗뾽泥대챸',
                 dataField: 'companyName',
                 groupIndex: 0,
             }, {
-                caption: '진행병원(센터)',
+                caption: '吏꾪뻾蹂묒썝(?쇳꽣)',
                 groupIndex: 1,
                 dataField: 'hospitalCenterName',
                 groupCellTemplate: function (cellElement, cellInfo) {
@@ -107,7 +107,7 @@
                     $("<div>")
                         .css({'float': 'right'})
                         .dxButton({
-                            text: "등록",
+                            text: "?깅줉",
                             onClick: function (e) {
                                 location.href = '<c:url value="/hm/contract-checkup/create"/>?' + $.param({
                                     checkupContractId: cellInfo.data.items[0].checkupContractId,
@@ -118,36 +118,36 @@
                 },
             }, {
                 dataField: 'companyCheckupTypeCode',
-                caption: '검진유형',
+                caption: '寃吏꾩쑀??,
                 alignment: 'center',
             }, {
                 dataField: 'companyCheckupTypeName',
-                caption: '검진유형명',
+                caption: '寃吏꾩쑀?뺣챸',
                 alignment: 'center',
             }, {
                 dataField: 'subTypeName',
-                caption: '세부유형명',
+                caption: '?몃??좏삎紐?,
                 alignment: 'center',
             }, {
                 dataField: 'hospitalPay',
-                caption: '병원청구액',
+                caption: '蹂묒썝泥?뎄??,
                 alignment: 'center',
                 format: {
                     type: "fixedPoint",
                 }
             }, {
                 dataField: 'upgradePay',
-                caption: '업그레이드형 본인부담액',
+                caption: '?낃렇?덉씠?쒗삎 蹂몄씤遺?댁븸',
                 alignment: 'center',
                 format: {
                     type: "fixedPoint",
                 }
             }, {
                 type: 'buttons',
-                caption: '검사유형',
+                caption: '寃?ъ쑀??,
                 buttons: [{
                     name: 'detail',
-                    text: '상세',
+                    text: '?곸꽭',
                     visible: function (e) {
                         return e.row.data.checkupContractSubTypeId !== null;
                     },

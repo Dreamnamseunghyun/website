@@ -1,4 +1,4 @@
-(function( factory ) {
+﻿(function( factory ) {
 	if ( typeof define === "function" && define.amd ) {
 		define( ["jquery", "../jquery.validate"], factory );
 	} else {
@@ -11,20 +11,20 @@
  * Locale: ET (Estonian; eesti, eesti keel)
  */
 $.extend($.validator.messages, {
-	required: "See väli peab olema täidetud.",
-	maxlength: $.validator.format("Palun sisestage vähem kui {0} tähemärki."),
-	minlength: $.validator.format("Palun sisestage vähemalt {0} tähemärki."),
-	rangelength: $.validator.format("Palun sisestage väärtus vahemikus {0} kuni {1} tähemärki."),
+	required: "See v채li peab olema t채idetud.",
+	maxlength: $.validator.format("Palun sisestage v채hem kui {0} t채hem채rki."),
+	minlength: $.validator.format("Palun sisestage v채hemalt {0} t채hem채rki."),
+	rangelength: $.validator.format("Palun sisestage v채채rtus vahemikus {0} kuni {1} t채hem채rki."),
 	email: "Palun sisestage korrektne e-maili aadress.",
 	url: "Palun sisestage korrektne URL.",
-	date: "Palun sisestage korrektne kuupäev.",
-	dateISO: "Palun sisestage korrektne kuupäev (YYYY-MM-DD).",
+	date: "Palun sisestage korrektne kuup채ev.",
+	dateISO: "Palun sisestage korrektne kuup채ev (YYYY-MM-DD).",
 	number: "Palun sisestage korrektne number.",
 	digits: "Palun sisestage ainult numbreid.",
-	equalTo: "Palun sisestage sama väärtus uuesti.",
-	range: $.validator.format("Palun sisestage väärtus vahemikus {0} kuni {1}."),
-	max: $.validator.format("Palun sisestage väärtus, mis on väiksem või võrdne arvuga {0}."),
-	min: $.validator.format("Palun sisestage väärtus, mis on suurem või võrdne arvuga {0}."),
+	equalTo: "Palun sisestage sama v채채rtus uuesti.",
+	range: $.validator.format("Palun sisestage v채채rtus vahemikus {0} kuni {1}."),
+	max: $.validator.format("Palun sisestage v채채rtus, mis on v채iksem v천i v천rdne arvuga {0}."),
+	min: $.validator.format("Palun sisestage v채채rtus, mis on suurem v천i v천rdne arvuga {0}."),
 	creditcard: "Palun sisestage korrektne krediitkaardi number."
 });
 

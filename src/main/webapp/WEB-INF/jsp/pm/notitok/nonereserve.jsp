@@ -21,26 +21,26 @@
                 <div class="card card-transparent board_internal">
                     <div class="card-header ">
                         <div class="card-title">
-                            <h3 class="h3">알림톡 관리</h3>
+                            <h3 class="h3">?�림??관�?/h3>
                         </div>
                     </div>
                     <%--                    <div class="card-body">--%>
                     <div class="dx-viewport">
                         <%-- checkup type dataGrid --%>
                         <div class="row">
-                            <div class="col-lg-3" id="btnCheckupInfo" data-ggsj="dxButton"></div>
-                            <div class="col-lg-3" id="btnReserve" data-ggsj="dxButton"></div>
-                            <div class="col-lg-3" id="btnEncouragement" data-ggsj="dxButton"></div>
-                            <div class="col-lg-3" id="btnNoneReserve" data-ggsj="dxButton"></div>
+                            <div class="col-lg-3" id="btnCheckupInfo" data-sitebuilder="dxButton"></div>
+                            <div class="col-lg-3" id="btnReserve" data-sitebuilder="dxButton"></div>
+                            <div class="col-lg-3" id="btnEncouragement" data-sitebuilder="dxButton"></div>
+                            <div class="col-lg-3" id="btnNoneReserve" data-sitebuilder="dxButton"></div>
                         </div>
                         <div class="row">
-                            <div id="dxGridExceptList" data-ggsj="dxDataGrid"></div>
+                            <div id="dxGridExceptList" data-sitebuilder="dxDataGrid"></div>
                         </div>
                         <div class="row">
-                            <div class="col-lg-12" id="contents" data-ggsj="dxTextArea"></div>
+                            <div class="col-lg-12" id="contents" data-sitebuilder="dxTextArea"></div>
                         </div>
                         <div class="row">
-                            <div class="col-lg-2" id="btnNoneReserveLink" data-ggsj="dxButton"></div>
+                            <div class="col-lg-2" id="btnNoneReserveLink" data-sitebuilder="dxButton"></div>
                         </div>
                     </div>
                     <%--                    </div>--%>
@@ -55,30 +55,30 @@
 </body>
 <script>
     $(function () {
-        ggsj.openMenu('notitokinfo');
+        sitebuilder.openMenu('notitokinfo');
 
-        let dxInstances = ggsj.createDx(false);
+        let dxInstances = sitebuilder.createDx(false);
 
         dxInstances.btnCheckupInfo.option({
-            text: '검진실시 안내',
+            text: '검진실???�내',
             onClick: function () {
                 location.href = '<c:url value="/pm/notitokinfo"/>';
             }
         });
         dxInstances.btnReserve.option({
-            text: '예약',
+            text: '?�약',
             onClick: function () {
                 location.href = '<c:url value="/pm/notitokreserve"/>';
             }
         });
         dxInstances.btnEncouragement.option({
-            text: '독려',
+            text: '?�려',
             onClick: function () {
                 location.href = '<c:url value="/pm/notitokencouragement"/>';
             }
         });
         dxInstances.btnNoneReserve.option({
-            text: '미예약자 관리',
+            text: '미예?�자 관�?,
             onClick: function () {
                 location.href = '<c:url value="/pm/notitoknonereserve"/>';
             }
@@ -86,18 +86,18 @@
 
         dxInstances.contents.option({
             height: 300,
-            value: '오늘은 건강검진 예약이 하고 싶어지는 날입니다 ♬   지금 꼭 예약 부탁드립니다.' + '\n' +
-                    '■ 웹사이트 : https://www.ggsj.co.kr' + '\n' +
-                    '■ 기업체 코드 : 【001001】' + '\n' +
-                    '■ ID, PW : 예약 플랫폼 화면에서 안내' + '\n' +
-                    '■ 예약가능기간 : 【2021-00-00~2021-00-00】' + '\n' +
-                    '※ 포털사이트에서 "건강살자"를 검색하셔도 접속이 가능합니다.' + '\n' +
-                    '▷ 건강살자 ☎1566-7527 ◁',
+            value: '?�늘?� 건강검�??�약???�고 ?�어지???�입?�다 ??  지�?�??�약 부?�드립니??' + '\n' +
+                    '???�사?�트 : https://www.sitebuilder.co.kr' + '\n' +
+                    '??기업�?코드 : ??01001?? + '\n' +
+                    '??ID, PW : ?�약 ?�랫???�면?�서 ?�내' + '\n' +
+                    '???�약가?�기�?: ??021-00-00~2021-00-00?? + '\n' +
+                    '???�털?�이?�에??"건강?�자"�?검?�하?�도 ?�속??가?�합?�다.' + '\n' +
+                    '??건강?�자 ??566-7527 ??,
             readOnly: true,
         });
 
         dxInstances.btnNoneReserveLink.option({
-            text: '미예약자 관리 바로가기',
+            text: '미예?�자 관�?바로가�?,
         });
 
         dxInstances.dxGridExceptList.option({
@@ -108,12 +108,12 @@
             columnAutoWidth: true,
             allowColumnReordering: true,
             columns: [{
-                caption: '순번',
+                caption: '?�번',
                 cellTemplate: function (cellElement, cellInfo) {
                     cellElement.text(cellInfo.component.pageIndex() * cellInfo.component.pageSize() + cellInfo.row.rowIndex + 1);
                 },
             }, {
-                caption: '발송일',
+                caption: '발송??,
                 dataField: 'sendDate',
             }, {
                 dataField: 'companyName',
@@ -126,7 +126,7 @@
                 }
             }, {
                 dataField: 'totalSuccess',
-                caption: '성공건수',
+                caption: '?�공건수',
                 format: {
                     type: "fixedPoint",
                 }
@@ -135,7 +135,7 @@
                 // Grid Title
                 e.toolbarOptions.items.unshift({
                     location: 'before',
-                    text: '미예약자 관리 발송 목록',
+                    text: '미예?�자 관�?발송 목록',
                 });
             },
         });

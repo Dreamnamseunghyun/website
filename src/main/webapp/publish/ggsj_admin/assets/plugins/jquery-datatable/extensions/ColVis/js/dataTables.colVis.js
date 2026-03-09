@@ -1,5 +1,5 @@
-/*! ColVis 1.1.2
- * ©2010-2015 SpryMedia Ltd - datatables.net/license
+﻿/*! ColVis 1.1.2
+ * 짤2010-2015 SpryMedia Ltd - datatables.net/license
  */
 
 /**

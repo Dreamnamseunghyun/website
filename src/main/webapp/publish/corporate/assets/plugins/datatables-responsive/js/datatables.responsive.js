@@ -1,4 +1,4 @@
-/**
+﻿/**
  * File:        datatables.responsive.js
  * Version:     0.2.0
  * Author:      Seen Sai Yang

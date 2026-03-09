@@ -1,4 +1,4 @@
-/*!
+﻿/*!
  * jquery.unevent.js 0.2
  * https://github.com/yckart/jquery.unevent.js
  *

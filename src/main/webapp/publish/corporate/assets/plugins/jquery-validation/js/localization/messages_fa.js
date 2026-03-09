@@ -1,4 +1,4 @@
-(function( factory ) {
+﻿(function( factory ) {
 	if ( typeof define === "function" && define.amd ) {
 		define( ["jquery", "../jquery.validate"], factory );
 	} else {
@@ -8,29 +8,29 @@
 
 /*
  * Translated default messages for the jQuery validation plugin.
- * Locale: FA (Persian; فارسی)
+ * Locale: FA (Persian; ?碼邈卍?)
  */
 $.extend($.validator.messages, {
-	required: "تکمیل این فیلد اجباری است.",
-	remote: "لطفا این فیلد را تصحیح کنید.",
-	email: ".لطفا یک ایمیل صحیح وارد کنید",
-	url: "لطفا آدرس صحیح وارد کنید.",
-	date: "لطفا یک تاریخ صحیح وارد کنید",
-	dateFA: "لطفا یک تاریخ صحیح وارد کنید",
-	dateISO: "لطفا تاریخ صحیح وارد کنید (ISO).",
-	number: "لطفا عدد صحیح وارد کنید.",
-	digits: "لطفا تنها رقم وارد کنید",
-	creditcard: "لطفا کریدیت کارت صحیح وارد کنید.",
-	equalTo: "لطفا مقدار برابری وارد کنید",
-	extension: "لطفا مقداری وارد کنید که ",
-	maxlength: $.validator.format("لطفا بیشتر از {0} حرف وارد نکنید."),
-	minlength: $.validator.format("لطفا کمتر از {0} حرف وارد نکنید."),
-	rangelength: $.validator.format("لطفا مقداری بین {0} تا {1} حرف وارد کنید."),
-	range: $.validator.format("لطفا مقداری بین {0} تا {1} حرف وارد کنید."),
-	max: $.validator.format("لطفا مقداری کمتر از {0} حرف وارد کنید."),
-	min: $.validator.format("لطفا مقداری بیشتر از {0} حرف وارد کنید."),
-	minWords: $.validator.format("لطفا حداقل {0} کلمه وارد کنید."),
-	maxWords: $.validator.format("لطفا حداکثر {0} کلمه وارد کنید.")
+	required: "魔沕??? 碼?? ???膜 碼寞磨碼邈? 碼卍魔.",
+	remote: "?慢?碼 碼?? ???膜 邈碼 魔巒幕?幕 沕??膜.",
+	email: ".?慢?碼 ?沕 碼???? 巒幕?幕 ?碼邈膜 沕??膜",
+	url: "?慢?碼 笠膜邈卍 巒幕?幕 ?碼邈膜 沕??膜.",
+	date: "?慢?碼 ?沕 魔碼邈?漠 巒幕?幕 ?碼邈膜 沕??膜",
+	dateFA: "?慢?碼 ?沕 魔碼邈?漠 巒幕?幕 ?碼邈膜 沕??膜",
+	dateISO: "?慢?碼 魔碼邈?漠 巒幕?幕 ?碼邈膜 沕??膜 (ISO).",
+	number: "?慢?碼 晩膜膜 巒幕?幕 ?碼邈膜 沕??膜.",
+	digits: "?慢?碼 魔??碼 邈?? ?碼邈膜 沕??膜",
+	creditcard: "?慢?碼 沕邈?膜?魔 沕碼邈魔 巒幕?幕 ?碼邈膜 沕??膜.",
+	equalTo: "?慢?碼 ??膜碼邈 磨邈碼磨邈? ?碼邈膜 沕??膜",
+	extension: "?慢?碼 ??膜碼邈? ?碼邈膜 沕??膜 沕? ",
+	maxlength: $.validator.format("?慢?碼 磨?娩魔邈 碼万 {0} 幕邈? ?碼邈膜 ?沕??膜."),
+	minlength: $.validator.format("?慢?碼 沕?魔邈 碼万 {0} 幕邈? ?碼邈膜 ?沕??膜."),
+	rangelength: $.validator.format("?慢?碼 ??膜碼邈? 磨?? {0} 魔碼 {1} 幕邈? ?碼邈膜 沕??膜."),
+	range: $.validator.format("?慢?碼 ??膜碼邈? 磨?? {0} 魔碼 {1} 幕邈? ?碼邈膜 沕??膜."),
+	max: $.validator.format("?慢?碼 ??膜碼邈? 沕?魔邈 碼万 {0} 幕邈? ?碼邈膜 沕??膜."),
+	min: $.validator.format("?慢?碼 ??膜碼邈? 磨?娩魔邈 碼万 {0} 幕邈? ?碼邈膜 沕??膜."),
+	minWords: $.validator.format("?慢?碼 幕膜碼?? {0} 沕??? ?碼邈膜 沕??膜."),
+	maxWords: $.validator.format("?慢?碼 幕膜碼沕麻邈 {0} 沕??? ?碼邈膜 沕??膜.")
 });
 
 }));

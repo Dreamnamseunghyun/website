@@ -1,4 +1,4 @@
-(function( factory ) {
+﻿(function( factory ) {
 	if ( typeof define === "function" && define.amd ) {
 		define( ["jquery", "../jquery.validate"], factory );
 	} else {
@@ -8,26 +8,26 @@
 
 /*
  * Translated default messages for the jQuery validation plugin.
- * Locale: ZH (Chinese, 中文 (Zhōngwén), 汉语, 漢語)
+ * Locale: ZH (Chinese, 訝?뻼 (Zh흲ngw챕n), 黎됭?, 轢?첑)
  */
 $.extend($.validator.messages, {
-	required: "必须填写",
-	remote: "请修正此栏位",
-	email: "请输入有效的电子邮件",
-	url: "请输入有效的网址",
-	date: "请输入有效的日期",
-	dateISO: "请输入有效的日期 (YYYY-MM-DD)",
-	number: "请输入正确的数字",
-	digits: "只可输入数字",
-	creditcard: "请输入有效的信用卡号码",
-	equalTo: "你的输入不相同",
-	extension: "请输入有效的后缀",
-	maxlength: $.validator.format("最多 {0} 个字"),
-	minlength: $.validator.format("最少 {0} 个字"),
-	rangelength: $.validator.format("请输入长度为 {0} 至 {1} 之間的字串"),
-	range: $.validator.format("请输入 {0} 至 {1} 之间的数值"),
-	max: $.validator.format("请输入不大于 {0} 的数值"),
-	min: $.validator.format("请输入不小于 {0} 的数值")
+	required: "恙낂』櫻ュ넍",
+	remote: "瑥룝엶閭ｆ??뤶퐤",
+	email: "瑥룩풏?ζ쐣?덄쉪?드춴??뻑",
+	url: "瑥룩풏?ζ쐣?덄쉪營묈?",
+	date: "瑥룩풏?ζ쐣?덄쉪?ζ쐿",
+	dateISO: "瑥룩풏?ζ쐣?덄쉪?ζ쐿 (YYYY-MM-DD)",
+	number: "瑥룩풏?ζ?簾?쉪?겼춻",
+	digits: "?ゅ룾渦볟뀯?겼춻",
+	creditcard: "瑥룩풏?ζ쐣?덄쉪岳←뵪?▼뤇??,
+	equalTo: "鵝좂쉪渦볟뀯訝띸쎑??,
+	extension: "瑥룩풏?ζ쐣?덄쉪?롧?",
+	maxlength: $.validator.format("?鸚?{0} 訝ゅ춻"),
+	minlength: $.validator.format("?弱?{0} 訝ゅ춻"),
+	rangelength: $.validator.format("瑥룩풏?ι빣佯╊맏 {0} ??{1} 阿뗩뼋?꾢춻訝?),
+	range: $.validator.format("瑥룩풏??{0} ??{1} 阿뗩뿴?꾣빊??),
+	max: $.validator.format("瑥룩풏?δ툖鸚㏛틢 {0} ?꾣빊??),
+	min: $.validator.format("瑥룩풏?δ툖弱뤶틢 {0} ?꾣빊??)
 });
 
 }));

@@ -1,4 +1,4 @@
-/* ============================================================
+﻿/* ============================================================
  * Gallery
  * Showcase your portfolio or even use it for an online store!
  * For DEMO purposes only. Extract what you need.

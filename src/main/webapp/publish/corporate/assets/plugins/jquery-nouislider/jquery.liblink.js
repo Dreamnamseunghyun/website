@@ -1,4 +1,4 @@
-/*jslint browser: true */
+﻿/*jslint browser: true */
 /*jslint white: true */
 
 (function( $ ){

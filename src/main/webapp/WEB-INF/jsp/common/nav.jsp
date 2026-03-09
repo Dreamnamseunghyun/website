@@ -1,4 +1,4 @@
-<%@ page contentType="text/html; charset=utf-8" pageEncoding="utf-8" %>
+﻿<%@ page contentType="text/html; charset=utf-8" pageEncoding="utf-8" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <%--@elvariable id="sessionUserType" type="java.lang.String"--%>
@@ -16,8 +16,7 @@
             <div class="row">
                 <div class="col-md-9">
                     <p class="name_tag">
-                        <b class="white"><c:out value="${sessionLoginName}"/></b>님 <br> 로그인 되었습니다
-                    </p>
+                        <b class="white"><c:out value="${sessionLoginName}"/></b>??<br> 濡쒓렇???섏뿀?듬땲??                    </p>
                 </div>
                 <div class="col-md-3">
                     <div class="dropdown pull-right d-lg-block d-none user_thumb">
@@ -27,14 +26,14 @@
                         <span class="thumbnail-wrapper d32 circular inline">
 <%--                        <img src="<c:url value="/img/avatar.jpg"/>" alt="" data-src="<c:url value="/img/avatar.jpg"/>"--%>
 <%--                             data-src-retina="<c:url value="/img/avatar@2x.jpg"/>" width="32" height="32" />--%>
-                            <i class="logout_icon xi-log-out" title="로그아웃"></i>
+                            <i class="logout_icon xi-log-out" title="濡쒓렇?꾩썐"></i>
                         </span>
                         </button>
                         <div class="dropdown-menu dropdown-menu-right profile-dropdown" role="menu">
-                            <a href="#" class="dropdown-item">매니저 관리 <span
+                            <a href="#" class="dropdown-item">留ㅻ땲? 愿由?<span
                                     class="pg-icon pull-right">settings</span></a>
                             <div class="dropdown-divider"></div>
-                            <a href="#" class="dropdown-item logout">로그아웃 <span
+                            <a href="#" class="dropdown-item logout">濡쒓렇?꾩썐 <span
                                     class="pg-icon pull-right">exit</span></a>
                         </div>
                     </div>
@@ -91,11 +90,11 @@
     }
 
     window.onload = function () {
-        //circle 생성
+        //circle ?앹꽦
         setTimeout('dx_button_custom()', 1000);
         setTimeout('dx_button_hover()', 1000);
 
-        //tag-name icon-box 생성
+        //tag-name icon-box ?앹꽦
         $(".row-wrap .row .tag-name").prepend('<span class="icon-area"></span>');
         $(".row-wrap .row .tag-name.check .icon-area").append('<i class="xi-check-min"></i>');
     };

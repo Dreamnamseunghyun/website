@@ -1,4 +1,4 @@
-(function(exports){
+﻿(function(exports){
 crossfilter.version = "1.0.3";
 function crossfilter_identity(d) {
   return d;
@@ -536,8 +536,7 @@ function crossfilter() {
     var n0 = n,
         n1 = newData.length;
 
-    // If there's actually new data to add…
-    // Merge the new data into the existing data.
+    // If there's actually new data to add??    // Merge the new data into the existing data.
     // Lengthen the filter bitset to handle the new records.
     // Notify listeners (dimensions and groups) that new data is available.
     if (n1) {
@@ -564,7 +563,7 @@ function crossfilter() {
     var one = 1 << m++, // bit mask, e.g., 00001000
         zero = ~one, // inverted one, e.g., 11110111
         values, // sorted, cached array
-        index, // value rank ↦ object id
+        index, // value rank ??object id
         newValues, // temporary array storing newly-added values
         newIndex, // temporary array storing newly-added index
         sort = quicksort_by(function(i) { return newValues[i]; }),
@@ -752,7 +751,7 @@ function crossfilter() {
       };
 
       var groups, // array of {key, value}
-          groupIndex, // object id ↦ group id
+          groupIndex, // object id ??group id
           groupWidth = 8,
           groupCapacity = crossfilter_capacity(groupWidth),
           k = 0, // cardinality
@@ -807,8 +806,7 @@ function crossfilter() {
         // Find the first new key (x1), skipping NaN keys.
         while (i1 < n1 && !((x1 = key(newValues[i1])) >= x1)) ++i1;
 
-        // While new keys remain…
-        while (i1 < n1) {
+        // While new keys remain??        while (i1 < n1) {
 
           // Determine the lesser of the two current keys; new and old.
           // If there are no old keys remaining, then always add the new key.

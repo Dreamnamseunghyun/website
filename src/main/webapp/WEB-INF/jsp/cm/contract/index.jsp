@@ -1,4 +1,4 @@
-<%@ page contentType="text/html; charset=utf-8" pageEncoding="utf-8" %>
+﻿<%@ page contentType="text/html; charset=utf-8" pageEncoding="utf-8" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 
@@ -22,7 +22,7 @@
                 <div class="card card-transparent board_internal">
                     <div class="card-header ">
                         <div class="card-title">
-                            <h3 class="h3">진행병원</h3>
+                            <h3 class="h3">吏꾪뻾蹂묒썝</h3>
                         </div>
                     </div>
                     <%--<div class="card-body">--%>
@@ -37,8 +37,8 @@
                                 <div class="row-box">
                                     <div class="row-box-inner">
                                         <div class="col-box1 row">
-                                            <div class="col-lg-5 tag-name"><span>대상 년도</span></div>
-                                            <div class="col-lg-7" id="checkupYear" data-ggsj="dxSelectBox"></div>
+                                            <div class="col-lg-5 tag-name"><span>????꾨룄</span></div>
+                                            <div class="col-lg-7" id="checkupYear" data-sitebuilder="dxSelectBox"></div>
                                         </div>
                                     </div>
                                 </div>
@@ -49,7 +49,7 @@
                                 <div class="row-box">
                                     <div class="row-box-inner">
                                         <div class="col-box1 row">
-                                            <div class="col-lg-12" id="searchGrid" data-ggsj="dxTextBox"></div>
+                                            <div class="col-lg-12" id="searchGrid" data-sitebuilder="dxTextBox"></div>
                                         </div>
                                     </div>
                                 </div>
@@ -60,11 +60,11 @@
 
                         <!-- Header -->
 
-                        <div id="popupHospital" data-ggsj="dxPopup"></div>
-                        <div id="dataGridContractList" class="main_table" data-ggsj="dxDataGrid">
+                        <div id="popupHospital" data-sitebuilder="dxPopup"></div>
+                        <div id="dataGridContractList" class="main_table" data-sitebuilder="dxDataGrid">
                         </div>
 <%--                        <div class="row btn_area footer-btn">--%>
-<%--                            <div class="col-lg-1" id="btnSave" data-ggsj="dxButton"><i class="xi-save"></i>저장</div>--%>
+<%--                            <div class="col-lg-1" id="btnSave" data-sitebuilder="dxButton"><i class="xi-save"></i>???/div>--%>
 <%--                        </div>--%>
 
                     </div>
@@ -77,23 +77,23 @@
 </body>
 <script>
     $(function () {
-        ggsj.openMenu('contract');
+        sitebuilder.openMenu('contract');
 
         /** @param dxInstances : {dataGridContractList} */
-        let dxInstances = ggsj.createDx(false);
+        let dxInstances = sitebuilder.createDx(false);
         let dsHospital = [];
         let companyName = [];
 
         LoadContractList();
 
         dxInstances.checkupYear.option({
-            dataSource: ggsj.typeDef.Year,
+            dataSource: sitebuilder.typeDef.Year,
             value: new Date().getFullYear(),
             onValueChanged: LoadContractList,
         });
 
         dxInstances.searchGrid.option({
-            placeholder: '검색',
+            placeholder: '寃??,
             valueChangeEvent: "keyup",
             mode: 'search',
             onValueChanged: function (e) {
@@ -146,28 +146,28 @@
                 dataField: 'companyCheckupId',
                 visible: false,
             }, {
-                caption: '기업 아이디',
+                caption: '湲곗뾽 ?꾩씠??,
                 dataField: 'companyId',
                 groupIndex: 0,
                 calculateDisplayValue: 'companyName',
                 groupCellTemplate: function (cellElement, cellInfo) {
                     let companyId = cellInfo.data.key;
                     $('<span>')
-                        .text('기업체명 : ' + cellInfo.data.key)
+                        .text('湲곗뾽泥대챸 : ' + cellInfo.data.key)
                         .appendTo(cellElement);
                 },
             }, {
-                caption: '기업명',
+                caption: '湲곗뾽紐?,
                 dataField: 'companyName',
                 allowEditing: false,
                 visible: false,
             }, {
-                caption: '진행병원 (센터)',
+                caption: '吏꾪뻾蹂묒썝 (?쇳꽣)',
                 dataField: 'centerId',
                 allowEditing: false,
                 allowSorting: true,
             }, {
-                caption: '검진 유형',
+                caption: '寃吏??좏삎',
                 dataField: 'contractTypes',
                 allowEditing: false,
                 cellTemplate: function (container, options) {

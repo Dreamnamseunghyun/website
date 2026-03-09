@@ -1,4 +1,4 @@
-/* ============================================================
+﻿/* ============================================================
  * Nestables
  * Creates draggable, nested list structures using jQuery Nestable
  * plugin

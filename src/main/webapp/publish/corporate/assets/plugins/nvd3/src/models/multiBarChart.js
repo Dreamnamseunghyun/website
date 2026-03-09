@@ -1,4 +1,4 @@
-
+﻿
 nv.models.multiBarChart = function() {
   "use strict";
   //============================================================

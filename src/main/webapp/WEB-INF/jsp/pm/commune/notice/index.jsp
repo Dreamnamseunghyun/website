@@ -21,7 +21,7 @@
                 <div class="card card-transparent board_internal">
                     <div class="card-header ">
                         <div class="card-title">
-                            <h3 class="h3">공지사항</h3>
+                            <h3 class="h3">공�??�항</h3>
                         </div>
                     </div>
                     <%--                    <div class="card-body">--%>
@@ -36,7 +36,7 @@
                                             <div class="col-lg-4 tag-name"><span>구분</span></div>
                                             <div class="col-lg-8">
                                                 <div class="col-lg-12" id="selectStatus"
-                                                     data-ggsj="dxSelectBox"></div>
+                                                     data-sitebuilder="dxSelectBox"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -45,11 +45,11 @@
                                 <div class="row-box2">
                                     <div class="row-box-inner1">
                                         <div class="col-box1 row">
-                                            <div class="col-lg-4 tag-name"><span>작성일자</span></div>
+                                            <div class="col-lg-4 tag-name"><span>?�성?�자</span></div>
                                             <div class="col-lg-8 row period">
-                                                <div class="col-lg-6" id="startDate" data-ggsj="dxDateBox"></div>
+                                                <div class="col-lg-6" id="startDate" data-sitebuilder="dxDateBox"></div>
                                                 <div class="text-center wavy">~</div>
-                                                <div class="col-lg-6" id="endDate" data-ggsj="dxDateBox"></div>
+                                                <div class="col-lg-6" id="endDate" data-sitebuilder="dxDateBox"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -62,7 +62,7 @@
                                 <div class="row-box">
                                     <div class="row-box-inner">
                                         <div class="col-box1 row">
-                                            <div class="col-lg-12" id="searchGrid" data-ggsj="dxTextBox"></div>
+                                            <div class="col-lg-12" id="searchGrid" data-sitebuilder="dxTextBox"></div>
                                         </div>
                                     </div>
                                 </div>
@@ -72,7 +72,7 @@
                         </div>
                         <!-- Header -->
 
-                        <div id="dataGridNotice" class="main_table" data-ggsj="dxDataGrid">
+                        <div id="dataGridNotice" class="main_table" data-sitebuilder="dxDataGrid">
                         </div>
                     </div>
 
@@ -80,7 +80,7 @@
                 </div>
 
                 <div class="row btn_area index_btn_area footer-btn">
-                    <div id="btnCreate" data-ggsj="dxButton">
+                    <div id="btnCreate" data-sitebuilder="dxButton">
                         <div class="write_btn">
                             <div>
                                 <div class="pencil"></div>
@@ -93,7 +93,7 @@
                                     <div class="paper"></div>
                                 </div>
                             </div>
-                            <span>등록</span>
+                            <span>?�록</span>
                         </div>
                     </div>
                 </div>
@@ -108,18 +108,18 @@
 </body>
 <script>
     $(function () {
-        ggsj.openMenu('notice');
+        sitebuilder.openMenu('notice');
 
         /** @param dxInstances : {selectStatus,dataGridNotice} */
-        let dxInstances = ggsj.createDx(false);
+        let dxInstances = sitebuilder.createDx(false);
 
         dxInstances.selectStatus.option({
             dataSource: [
-                {id: 0, text: '전체'},
-                {id: 'US', text: '회원'},
+                {id: 0, text: '?�체'},
+                {id: 'US', text: '?�원'},
                 {id: 'CM', text: '기업'},
                 {id: 'HM', text: '병원'},
-                {id: 'PM', text: '내부'},
+                {id: 'PM', text: '?��?'},
             ],
             value: 0,
             valueExpr: 'id',
@@ -173,7 +173,7 @@
         });
 
         dxInstances.searchGrid.option({
-            placeholder: '검색',
+            placeholder: '검??,
             valueChangeEvent: "keyup",
             onValueChanged: function (e) {
                 dxInstances.dataGridNotice.searchByText(e.value);
@@ -183,7 +183,7 @@
 
         dxInstances.dataGridNotice.option({
             columns: [{
-                caption: '순번',
+                caption: '?�번',
                 width: 80,
                 alignment: 'center',
                 cellTemplate: function (cellElement, cellInfo) {
@@ -199,18 +199,18 @@
                 width: 80,
                 alignment: 'center',
                 lookup: {
-                    dataSource: ggsj.typeDef.userType,
+                    dataSource: sitebuilder.typeDef.userType,
                     valueExpr: 'id',
                     displayExpr: 'text',
                 },
             }, {
                 dataField: 'targetName',
-                caption: '대상',
+                caption: '?�??,
                 width: 150,
                 alignment: 'center',
             }, {
                 dataField: 'title',
-                caption: '제목',
+                caption: '?�목',
                 alignment: 'left',
                 width: 700,
                 cellTemplate: function (cellElement, cellInfo) {
@@ -229,25 +229,25 @@
                 //     lookup: {
                 //         dataSource: [
                 //             {'id': false, 'text': ''},
-                //             {'id': true, 'text': '📌'},
+                //             {'id': true, 'text': '?��'},
                 //         ],
                 //         valueExpr: 'id',
                 //         displayExpr: 'text',
                 //     },
             }, {
                 dataField: 'writedUserName',
-                caption: '작성자',
+                caption: '?�성??,
                 alignment: 'center',
             }, {
                 dataField: 'writedAt',
-                caption: '작성일',
+                caption: '?�성??,
                 alignment: 'center',
                 dataType: 'date',
             }, {
                 type: 'buttons',
-                caption: '수정',
+                caption: '?�정',
                 buttons: [{
-                    text: '수정',
+                    text: '?�정',
                     onClick: function (e) {
                         let notice_id = e.row.data;
                         location.href = '<c:url value="/pm/commune/notice"/>/' + notice_id.noticeId + '/edit';
@@ -255,11 +255,11 @@
                 }]
             }, {
                 type: 'buttons',
-                caption: '삭제',
+                caption: '??��',
                 buttons: [{
-                    text: '삭제',
+                    text: '??��',
                     onClick: function (e) {
-                        if (confirm('정말로 삭제하시겠습니까?')) {
+                        if (confirm('?�말�???��?�시겠습?�까?')) {
                             let notice_id = e.row.data;
                             $.ajax({
                                 url: '<c:url value="/pm/commune/notice"/>/' + notice_id.noticeId,
@@ -276,7 +276,7 @@
         // Create
         dxInstances.btnCreate.option({
             stylingMode: 'outlined',
-            text: '등록',
+            text: '?�록',
             type: 'success',
             icon: 'comment',
             onClick: function () {

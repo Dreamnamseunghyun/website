@@ -1,4 +1,4 @@
-//*********************************** START PLUGIN EXTENTIONS  ***************************** 
+﻿//*********************************** START PLUGIN EXTENTIONS  ***************************** 
 
 
 /* Default class modification */

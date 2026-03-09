@@ -1,4 +1,4 @@
-
+﻿
 nv.models.cumulativeLineChart = function() {
   "use strict";
   //============================================================

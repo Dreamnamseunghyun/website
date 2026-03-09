@@ -19,7 +19,7 @@
                 <div class="card card-transparent board_internal">
                     <div class="card-header ">
                         <div class="card-title">
-                            <h3 class="h3">검진 유형 목록</h3>
+                            <h3 class="h3">검�??�형 목록</h3>
                         </div>
                     </div>
                     <%--<div class="card-body">--%>
@@ -32,8 +32,8 @@
                                 <div class="row-box">
                                     <div class="row-box-inner">
                                         <div class="col-box1 row">
-                                            <div class="col-lg-5 tag-name"><span>대상 년도</span></div>
-                                            <div class="col-lg-7" id="checkupYear" data-ggsj="dxSelectBox"></div>
+                                            <div class="col-lg-5 tag-name"><span>?�???�도</span></div>
+                                            <div class="col-lg-7" id="checkupYear" data-sitebuilder="dxSelectBox"></div>
                                         </div>
                                     </div>
                                 </div>
@@ -48,7 +48,7 @@
                                 <div class="row-box">
                                     <div class="row-box-inner">
                                         <div class="col-box1 row">
-                                            <div class="col-lg-12" id="searchGrid" data-ggsj="dxTextBox"></div>
+                                            <div class="col-lg-12" id="searchGrid" data-sitebuilder="dxTextBox"></div>
                                         </div>
                                     </div>
                                 </div>
@@ -58,7 +58,7 @@
                         </div>
                         <!-- Header -->
 
-                        <div id="dataGridCheckupTypeList" class="main_table" data-ggsj="dxDataGrid">
+                        <div id="dataGridCheckupTypeList" class="main_table" data-sitebuilder="dxDataGrid">
                         </div>
                     </div>
                 </div>
@@ -71,19 +71,19 @@
 </body>
 <script>
     $(function () {
-        ggsj.openMenu('contract-checkup');
+        sitebuilder.openMenu('contract-checkup');
 
         /** @param dxInstances : {dataGridCheckupTypeList} */
-        let dxInstances = ggsj.createDx(false);
+        let dxInstances = sitebuilder.createDx(false);
 
         dxInstances.checkupYear.option({
-            dataSource: ggsj.typeDef.Year,
+            dataSource: sitebuilder.typeDef.Year,
             value: new Date().getFullYear(),
             onValueChanged: LoadContractCheckupList,
         });
 
         dxInstances.searchGrid.option({
-            placeholder: '검색',
+            placeholder: '검??,
             valueChangeEvent: "keyup",
             onValueChanged: function (e) {
                 dxInstances.dataGridCheckupTypeList.searchByText(e.value);
@@ -104,7 +104,7 @@
                 dataField: 'companyName',
                 groupIndex: 0,
             }, {
-                caption: '진행병원(센터)',
+                caption: '진행병원(?�터)',
                 groupIndex: 1,
                 dataField: 'hospitalCenterName',
                 groupCellTemplate: function (cellElement, cellInfo) {
@@ -114,7 +114,7 @@
                     $("<div>")
                         .css({'float': 'right'})
                         .dxButton({
-                            text: "등록",
+                            text: "?�록",
                             onClick: function (e) {
                                 location.href = '<c:url value="/pm/contract-checkup/create"/>?' + $.param({
                                     checkupContractId: cellInfo.data.items[0].checkupContractId,
@@ -125,36 +125,36 @@
                 },
             }, {
                 dataField: 'companyCheckupTypeCode',
-                caption: '검진유형',
+                caption: '검진유??,
                 alignment: 'center',
             }, {
                 dataField: 'companyCheckupTypeName',
-                caption: '검진유형명',
+                caption: '검진유?�명',
                 alignment: 'center',
             }, {
                 dataField: 'subTypeName',
-                caption: '세부유형명',
+                caption: '?��??�형�?,
                 alignment: 'center',
             }, {
                 dataField: 'hospitalPay',
-                caption: '병원청구액',
+                caption: '병원�?��??,
                 alignment: 'center',
                 format: {
                     type: "fixedPoint",
                 }
             }, {
                 dataField: 'upgradePay',
-                caption: '업그레이드형 본인부담액',
+                caption: '?�그?�이?�형 본인부?�액',
                 alignment: 'center',
                 format: {
                     type: "fixedPoint",
                 }
             }, {
                 type: 'buttons',
-                caption: '검사유형',
+                caption: '검?�유??,
                 buttons: [{
                     name: 'detail',
-                    text: '상세',
+                    text: '?�세',
                     visible: function (e) {
                         return e.row.data.checkupContractSubTypeId !== null;
                     },

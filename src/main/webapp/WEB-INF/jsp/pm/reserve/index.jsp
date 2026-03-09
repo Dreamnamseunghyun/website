@@ -21,7 +21,7 @@
                 <div class="card card-transparent board_internal">
                     <div class="card-header ">
                         <div class="card-title">
-                            <h3 class="h3">예약현황</h3>
+                            <h3 class="h3">?�약?�황</h3>
                         </div>
                     </div>
                     <%--                    <div class="card-body">--%>
@@ -30,9 +30,9 @@
                         <div class="row-wrap row-wrap-box">
                             <div class="row-wrap">
                                 <div class="row-box-title">
-                                    <i class="xi-play-circle"></i>예약현황 검색 및 예약상태 처리
+                                    <i class="xi-play-circle"></i>?�약?�황 검??�??�약?�태 처리
                                     <div class="right">
-                                        <div class="btnCancel" id="btnCancelReserveList" data-ggsj="dxButton"></div>
+                                        <div class="btnCancel" id="btnCancelReserveList" data-sitebuilder="dxButton"></div>
                                     </div>
                                 </div>
 
@@ -44,67 +44,67 @@
                                                 <div class="col-lg-box1 col-lg-box-vertical row">
                                                     <div class="col-lg-2 tag-name"><span>기업체명</span></div>
                                                     <div class="col-lg-4" id="lookupCompany"
-                                                         data-ggsj="dxLookup"></div>
-                                                    <div class="col-lg-2 tag-name"><span>병원명</span></div>
+                                                         data-sitebuilder="dxLookup"></div>
+                                                    <div class="col-lg-2 tag-name"><span>병원�?/span></div>
                                                     <div class="col-lg-4" id="hospitalSearch"
-                                                         data-ggsj="dxLookup"></div>
+                                                         data-sitebuilder="dxLookup"></div>
                                                 </div>
 
                                                 <div class="col-lg-box1 col-lg-box-vertical row margin-button">
-                                                    <div class="col-lg-2 tag-name"><span>예약상태 일괄 처리버튼</span></div>
+                                                    <div class="col-lg-2 tag-name"><span>?�약?�태 ?�괄 처리버튼</span></div>
                                                     <div class="col-lg-10" style="padding:0 16px!important">
                                                         <div id="reservation" class="btnReservation"
-                                                             data-ggsj="dxButton"></div>
+                                                             data-sitebuilder="dxButton"></div>
                                                         <div class="btnPayCompleted" id="payCompleted"
-                                                             data-ggsj="dxButton"></div>
+                                                             data-sitebuilder="dxButton"></div>
                                                         <div class="btnReserveCancel" id="reserveCancel"
-                                                             data-ggsj="dxButton"></div>
+                                                             data-sitebuilder="dxButton"></div>
                                                         <div class="btnReserveHold" id="reserveHold"
-                                                             data-ggsj="dxButton"></div>
+                                                             data-sitebuilder="dxButton"></div>
                                                         <div class="xi-info-o"></div>
-                                                        <div class="col-lg-5" id="info" data-ggsj="dxTextBox"
+                                                        <div class="col-lg-5" id="info" data-sitebuilder="dxTextBox"
                                                              style="margin-left: -12px"></div>
                                                     </div>
                                                 </div>
 
                                                 <div class="col-lg-box1 col-lg-box-vertical row margin-button">
-                                                    <div class="col-lg-2 tag-name"><span>예약상태별 조회</span></div>
+                                                    <div class="col-lg-2 tag-name"><span>?�약?�태�?조회</span></div>
                                                     <div class="col-lg-1">
-                                                        <div id="all" data-ggsj="dxCheckBox"></div>
+                                                        <div id="all" data-sitebuilder="dxCheckBox"></div>
                                                     </div>
                                                     <div class="col-lg-1">
                                                         <div id="reserveApply"
-                                                             data-ggsj="dxCheckBox"></div>
+                                                             data-sitebuilder="dxCheckBox"></div>
                                                     </div>
                                                     <div class="col-lg-1">
                                                         <div id="reserveCompleted"
-                                                             data-ggsj="dxCheckBox"></div>
+                                                             data-sitebuilder="dxCheckBox"></div>
                                                     </div>
                                                     <div class="col-lg-1">
                                                         <div id="reserveChanged"
-                                                             data-ggsj="dxCheckBox"></div>
+                                                             data-sitebuilder="dxCheckBox"></div>
                                                     </div>
                                                     <div class="col-lg-1">
-                                                        <div id="completePay" data-ggsj="dxCheckBox"></div>
+                                                        <div id="completePay" data-sitebuilder="dxCheckBox"></div>
                                                     </div>
                                                     <div class="col-lg-1">
-                                                        <div id="holdReserve" data-ggsj="dxCheckBox"></div>
+                                                        <div id="holdReserve" data-sitebuilder="dxCheckBox"></div>
                                                     </div>
                                                     <div class="col-lg-2 border-right"></div>
                                                     <div class="col-lg-1">
-                                                        <div id="vipSearch" data-ggsj="dxCheckBox"></div>
+                                                        <div id="vipSearch" data-sitebuilder="dxCheckBox"></div>
                                                     </div>
                                                 </div>
 
                                                 <div class="col-lg-box1 col-lg-box-vertical row">
-                                                    <div class="col-lg-2 tag-name"><span>날짜검색</span></div>
+                                                    <div class="col-lg-2 tag-name"><span>?�짜검??/span></div>
                                                     <div class="col-lg-2" id="selectStatusDate"
-                                                         data-ggsj="dxSelectBox"></div>
-                                                    <div class="col-lg-2 tag-name"><span>날짜선택</span></div>
+                                                         data-sitebuilder="dxSelectBox"></div>
+                                                    <div class="col-lg-2 tag-name"><span>?�짜?�택</span></div>
                                                     <div class="col-lg-3" id="reserveDateBegin"
-                                                         data-ggsj="dxDateBox"></div>
+                                                         data-sitebuilder="dxDateBox"></div>
                                                     <div class="col-lg-3" id="reserveDateEnd"
-                                                         data-ggsj="dxDateBox"></div>
+                                                         data-sitebuilder="dxDateBox"></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -119,7 +119,7 @@
                                     <div class="row-box-inner">
                                         <div class="col-box1 row">
                                             <div class="col-lg-12">
-                                                <div id="btnExport" class="btnExcelSample" data-ggsj="dxButton"></div>
+                                                <div id="btnExport" class="btnExcelSample" data-sitebuilder="dxButton"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -129,7 +129,7 @@
                                     <div class="row-box-inner">
                                         <div class="col-box1 row">
 
-                                            <div id="searchGrid" data-ggsj="dxTextBox"></div>
+                                            <div id="searchGrid" data-sitebuilder="dxTextBox"></div>
 
                                         </div>
                                     </div>
@@ -141,11 +141,11 @@
 
                         </div>
 
-                        <div id="dataGridReserve" class="main_table" data-ggsj="dxDataGrid"></div>
-                        <div id="popupMemo" data-ggsj="dxPopup"></div>
-                        <div id="popupReserveContent" data-ggsj="dxPopup"></div>
+                        <div id="dataGridReserve" class="main_table" data-sitebuilder="dxDataGrid"></div>
+                        <div id="popupMemo" data-sitebuilder="dxPopup"></div>
+                        <div id="popupReserveContent" data-sitebuilder="dxPopup"></div>
                         <div class="row btn_area footer-btn">
-                            <div class="col-lg-1" id="btnSave" data-ggsj="dxButton"><i class="xi-save"></i>예약상태 저장</div>
+                            <div class="col-lg-1" id="btnSave" data-sitebuilder="dxButton"><i class="xi-save"></i>?�약?�태 ?�??/div>
                         </div>
                     </div>
                 </div>
@@ -159,17 +159,17 @@
 </body>
 <script>
     $(function () {
-        ggsj.openMenu('reserve');
+        sitebuilder.openMenu('reserve');
 
-        let dxInstances = ggsj.createDx(false);
+        let dxInstances = sitebuilder.createDx(false);
 
         dxInstances.info.option({
-            value: '1건이상 선택하여 처리버튼 클릭 후 반드시 저장해주세요.',
+            value: '1건이???�택?�여 처리버튼 ?�릭 ??반드???�?�해주세??',
             readOnly: true,
         });
 
         dxInstances.btnExport.option({
-            text: '예약현황 다운로드',
+            text: '?�약?�황 ?�운로드',
             onClick: function () {
                 //$('.dx-datagrid-export-button').trigger('click');
 
@@ -182,32 +182,32 @@
 
                 // Title
                 itemData = [];
-                itemData[1] = '순번';
-                itemData[2] = '검진병원';
-                itemData[3] = '예약상태';
+                itemData[1] = '?�번';
+                itemData[2] = '검진병??;
+                itemData[3] = '?�약?�태';
                 itemData[4] = '검진일';
-                itemData[5] = '수검일';
-                itemData[6] = '소속기업';
-                itemData[7] = '사원번호';
-                itemData[8] = '부서명/직책';
-                itemData[9] = '검진자명';
-                itemData[10] = '관계';
-                itemData[11] = '생년월일';
-                itemData[12] = '휴대전화';
-                itemData[13] = '이메일';
+                itemData[5] = '?��???;
+                itemData[6] = '?�속기업';
+                itemData[7] = '?�원번호';
+                itemData[8] = '부?�명/직책';
+                itemData[9] = '검진자�?;
+                itemData[10] = '관�?;
+                itemData[11] = '?�년?�일';
+                itemData[12] = '?��??�화';
+                itemData[13] = '?�메??;
                 itemData[14] = '주소';
-                itemData[15] = '검진유형';
-                itemData[16] = '선택검사';
-                itemData[17] = '추가검사';
-                itemData[18] = '특검 대상/물질';
-                itemData[19] = '검진비 청구';
-                itemData[20] = '본인부담비용';
-                itemData[21] = '특이사항';
-                itemData[22] = '고객문의사항';
-                itemData[23] = '건강살자메모';
+                itemData[15] = '검진유??;
+                itemData[16] = '?�택검??;
+                itemData[17] = '추�?검??;
+                itemData[18] = '?��? ?�??물질';
+                itemData[19] = '검진비 �?��';
+                itemData[20] = '본인부?�비??;
+                itemData[21] = '?�이?�항';
+                itemData[22] = '고객문의?�항';
+                itemData[23] = '건강?�자메모';
                 itemData[24] = '병원메모';
-                itemData[25] = '예약보류,취소사유';
-                itemData[26] = '예약등록일';
+                itemData[25] = '?�약보류,취소?�유';
+                itemData[26] = '?�약?�록??;
 
                 worksheet.addRow(itemData);
 
@@ -218,30 +218,30 @@
                         itemData[2] = data[idx].hospitalCenterName;
 
                         if (data[idx].reservationState === 1) {
-                            data[idx].reservationState = '예약신청';
+                            data[idx].reservationState = '?�약?�청';
                         } else if (data[idx].reservationState === 2) {
-                            data[idx].reservationState = '예약확정';
+                            data[idx].reservationState = '?�약?�정';
                         } else if (data[idx].reservationState === 3) {
-                            data[idx].reservationState = '예약변경';
+                            data[idx].reservationState = '?�약변�?;
                         } else if (data[idx].reservationState === 4) {
-                            data[idx].reservationState = '수검완료';
+                            data[idx].reservationState = '?��??�료';
                         } else if (data[idx].reservationState === 5) {
-                            data[idx].reservationState = '예약보류';
+                            data[idx].reservationState = '?�약보류';
                         }
                         itemData[3] = data[idx].reservationState;
 
                         if (data[idx].desiredAmpm === 'AM') {
-                            data[idx].desiredAmpm = '오전';
+                            data[idx].desiredAmpm = '?�전';
                         } else {
-                            data[idx].desiredAmpm = '오후';
+                            data[idx].desiredAmpm = '?�후';
                         }
 
                         itemData[4] = DevExpress.localization.formatDate(new Date(data[idx].desiredAt), "yyyy-MM-dd") + " (" + data[idx].desiredAmpm + ")";
 
                         if (data[idx].checkupedAmpm === 'AM') {
-                            data[idx].checkupedAmpm = '오전';
+                            data[idx].checkupedAmpm = '?�전';
                         } else {
-                            data[idx].checkupedAmpm = '오후';
+                            data[idx].checkupedAmpm = '?�후';
                         }
                         if (!data[idx].checkupedAt) {
                             data[idx].checkupedAt = ' ';
@@ -267,9 +267,9 @@
                             vip = '';
                         }
                         itemData[9] = data[idx].employeeName + vip;
-                        itemData[10] = data[idx].myself === 1 ? '본인' : '가족 (' + data[idx].familyName + ')';
+                        itemData[10] = data[idx].myself === 1 ? '본인' : '가�?(' + data[idx].familyName + ')';
                         itemData[11] = DevExpress.localization.formatDate(new Date(data[idx].birth), "yyyy-MM-dd");
-                        itemData[12] = ggsj.phoneWithHyphen(data[idx].mobile);
+                        itemData[12] = sitebuilder.phoneWithHyphen(data[idx].mobile);
                         itemData[13] = data[idx].email;
 
                         if (!data[idx].zipcode) {
@@ -300,8 +300,8 @@
                             }
                         }
 
-                        itemData[18] = data[idx].specialCheckup === 0 ? '해당없음' : '특검대상' + ' / ' + data[idx].specialCheckupMemo;
-                        itemData[19] = data[idx].supportType === true ? '본인부담' : '기업부담' + ' / ' + data[idx].hospitalPay;
+                        itemData[18] = data[idx].specialCheckup === 0 ? '?�당?�음' : '?��??�?? + ' / ' + data[idx].specialCheckupMemo;
+                        itemData[19] = data[idx].supportType === true ? '본인부?? : '기업부?? + ' / ' + data[idx].hospitalPay;
                         if (data[idx].supportType === true) {
                             itemData[20] = data[idx].hospitalPay + data[idx].upgradePay + data[idx].sumItemCopay + data[idx].sumItemDiscountBill;
                         } else {
@@ -325,12 +325,12 @@
         });
 
         let reserveState = [
-            {'id': 0, 'text': '예약취소'},
-            {'id': 1, 'text': '예약신청'},
-            {'id': 2, 'text': '예약확정'},
-            {'id': 3, 'text': '예약변경'},
-            {'id': 4, 'text': '수검완료'},
-            {'id': 5, 'text': '예약보류'},
+            {'id': 0, 'text': '?�약취소'},
+            {'id': 1, 'text': '?�약?�청'},
+            {'id': 2, 'text': '?�약?�정'},
+            {'id': 3, 'text': '?�약변�?},
+            {'id': 4, 'text': '?��??�료'},
+            {'id': 5, 'text': '?�약보류'},
         ];
 
         LoadCancelReserve();
@@ -373,7 +373,7 @@
             let dsReserveList;
 
             $.when($.ajax(ajaxReserveList)).then(function (responseReserve) {
-                ggsj.valuesToDx(responseReserve.data);
+                sitebuilder.valuesToDx(responseReserve.data);
 
                 dsReserveList = responseReserve.data;
 
@@ -407,14 +407,14 @@
                     for (let i = 0; i < confirmedAt.length; i++) {
                         if (confirmedAt[i] === null) {
                             dxInstances.btnCancelReserveList.option({
-                                template: '예약취소자 <span style="color: red;">NEW</span>',
+                                template: '?�약취소??<span style="color: red;">NEW</span>',
                                 onClick: function () {
                                     location.href = '<c:url value="/pm/cancel-reserve"/>';
                                 }
                             });
                         } else {
                             dxInstances.btnCancelReserveList.option({
-                                text: '예약취소자',
+                                text: '?�약취소??,
                                 onClick: function () {
                                     location.href = '<c:url value="/pm/cancel-reserve"/>';
                                 }
@@ -423,7 +423,7 @@
                     }
                 } else {
                     dxInstances.btnCancelReserveList.option({
-                        text: '예약취소자',
+                        text: '?�약취소??,
                         onClick: function () {
                             location.href = '<c:url value="/pm/cancel-reserve"/>';
                         }
@@ -445,11 +445,11 @@
         });
 
         // dxInstances.btnReserveApply.option({
-        //     text: '일괄확정 업로드',
+        //     text: '?�괄?�정 ?�로??,
         // });
 
         dxInstances.reservation.option({
-            text: '예약확정',
+            text: '?�약?�정',
             value: 2,
             onClick: function () {
                 let getSelectedRowsData = dxInstances.dataGridReserve.getVisibleRows();
@@ -460,7 +460,7 @@
                     }
                 }
                 for (let i = 0; i < getSelectedRows.length; i++) {
-                    // keyExpr 을 사용할 경우
+                    // keyExpr ???�용??경우
                     // const rowIndex = dxInstances.dataGridReserve.getRowIndexByKey(getSelectedRowsData[i].reservationId);
                     const rowIndex = dxInstances.dataGridReserve.getRowIndexByKey(getSelectedRows[i]);
                     dxInstances.dataGridReserve.cellValue(rowIndex, 'reservationState', 2);
@@ -469,7 +469,7 @@
         });
 
         dxInstances.payCompleted.option({
-            text: '수검완료',
+            text: '?��??�료',
             value: 4,
             onClick: function () {
                 let getSelectedRowsData = dxInstances.dataGridReserve.getVisibleRows();
@@ -480,7 +480,7 @@
                     }
                 }
                 for (let i = 0; i < getSelectedRows.length; i++) {
-                    // keyExpr 을 사용할 경우
+                    // keyExpr ???�용??경우
                     // const rowIndex = dxInstances.dataGridReserve.getRowIndexByKey(getSelectedRowsData[i].reservationId);
                     const rowIndex = dxInstances.dataGridReserve.getRowIndexByKey(getSelectedRows[i]);
                     dxInstances.dataGridReserve.cellValue(rowIndex, 'reservationState', 4);
@@ -489,7 +489,7 @@
         });
 
         dxInstances.reserveCancel.option({
-            text: '예약취소',
+            text: '?�약취소',
             value: 0,
             onClick: function () {
                 let getSelectedRowsData = dxInstances.dataGridReserve.getVisibleRows();
@@ -500,7 +500,7 @@
                     }
                 }
                 for (let i = 0; i < getSelectedRows.length; i++) {
-                    // keyExpr 을 사용할 경우
+                    // keyExpr ???�용??경우
                     // const rowIndex = dxInstances.dataGridReserve.getRowIndexByKey(getSelectedRowsData[i].reservationId);
                     const rowIndex = dxInstances.dataGridReserve.getRowIndexByKey(getSelectedRows[i]);
                     dxInstances.dataGridReserve.cellValue(rowIndex, 'reservationState', 0);
@@ -509,7 +509,7 @@
         });
 
         dxInstances.reserveHold.option({
-            text: '예약보류',
+            text: '?�약보류',
             value: 5,
             onClick: function () {
                 let getSelectedRowsData = dxInstances.dataGridReserve.getVisibleRows();
@@ -520,7 +520,7 @@
                     }
                 }
                 for (let i = 0; i < getSelectedRows.length; i++) {
-                    // keyExpr 을 사용할 경우
+                    // keyExpr ???�용??경우
                     // const rowIndex = dxInstances.dataGridReserve.getRowIndexByKey(getSelectedRowsData[i].reservationId);
                     const rowIndex = dxInstances.dataGridReserve.getRowIndexByKey(getSelectedRows[i]);
                     dxInstances.dataGridReserve.cellValue(rowIndex, 'reservationState', 5);
@@ -529,7 +529,7 @@
         });
 
         dxInstances.all.option({
-            text: '전체',
+            text: '?�체',
             value: true,
             onValueChanged: function (data) {
                 if (data.event) {
@@ -549,37 +549,37 @@
         });
 
         dxInstances.reserveApply.option({
-            text: '예약신청',
+            text: '?�약?�청',
             value: true,
             onValueChanged: search,
         });
 
         dxInstances.reserveCompleted.option({
-            text: '예약확정',
+            text: '?�약?�정',
             value: true,
             onValueChanged: search,
         });
 
         dxInstances.reserveChanged.option({
-            text: '예약변경',
+            text: '?�약변�?,
             value: true,
             onValueChanged: search,
         });
 
         dxInstances.completePay.option({
-            text: '수검완료',
+            text: '?��??�료',
             value: true,
             onValueChanged: search,
         });
 
         dxInstances.holdReserve.option({
-            text: '예약보류',
+            text: '?�약보류',
             value: true,
             onValueChanged: search,
         });
 
         dxInstances.searchGrid.option({
-            placeholder: '검색',
+            placeholder: '검??,
             valueChangeEvent: "keyup",
             onValueChanged: function (e) {
                 dxInstances.dataGridReserve.searchByText(e.value);
@@ -616,12 +616,12 @@
                     },
                 }, {
                     dataField: "hospitalCenterName",
-                    caption: "검진병원",
+                    caption: "검진병??,
                     alignment: 'center',
                     allowEditing: false,
                 }, {
                     dataField: "reservationState",
-                    caption: "예약상태",
+                    caption: "?�약?�태",
                     alignment: 'center',
                     lookup: {
                         dataSource: reserveState,
@@ -636,7 +636,7 @@
                     cssClass: "hoverGray"
                 }, {
                     dataField: "desiredAmpm",
-                    caption: "시간",
+                    caption: "?�간",
                     alignment: 'center',
                     lookup: {
                         dataSource: [
@@ -649,13 +649,13 @@
                     cssClass: "hoverGray"
                 }, {
                     dataField: "checkupedAt",
-                    caption: "수검일",
+                    caption: "?��???,
                     alignment: 'center',
                     dataType: "date",
                     cssClass: "hoverBlue"
                 }, {
                     dataField: "checkupedAmpm",
-                    caption: "시간",
+                    caption: "?�간",
                     alignment: 'center',
                     lookup: {
                         dataSource: [
@@ -668,7 +668,7 @@
                     cssClass: "hoverBlue"
                 }, {
                     dataField: "companyName",
-                    caption: "소속기업",
+                    caption: "?�속기업",
                     alignment: 'center',
                     allowEditing: false,
                     cellTemplate: function (cellElement, cellInfo) {
@@ -681,7 +681,7 @@
                     visible: false,
                 }, {
                     dataField: "employeeName",
-                    caption: "검진자명",
+                    caption: "검진자�?,
                     alignment: 'center',
                     allowEditing: false,
                     cellTemplate: function (cellElement, cellInfo) {
@@ -690,15 +690,15 @@
                         if (cellInfo.data.myself === 1) {
                             cellElement.append('본인');
                         } else {
-                            cellElement.append(cellInfo.data.familyName + '가족');
+                            cellElement.append(cellInfo.data.familyName + '가�?);
                         }
                         if (cellInfo.data.vip === true) {
-                            cellElement.append('<span style="color:red; font-weight: bold;">ⓥ</span>');
+                            cellElement.append('<span style="color:red; font-weight: bold;">??/span>');
                         }
                     },
                 }, {
                     dataField: "birth",
-                    caption: "생년월일",
+                    caption: "?�년?�일",
                     alignment: 'center',
                     dataType: "date",
                     allowEditing: false,
@@ -708,15 +708,15 @@
                     width: 100,
                 }, {
                     dataField: "mobile",
-                    caption: "휴대전화",
+                    caption: "?��??�화",
                     alignment: 'center',
                     allowEditing: false,
                     format: function (value) {
-                        return ggsj.phoneWithHyphen(value);
+                        return sitebuilder.phoneWithHyphen(value);
                     },
                 }, {
                     dataField: "companyCheckupTypeName",
-                    caption: "예약내용",
+                    caption: "?�약?�용",
                     alignment: 'center',
                     allowEditing: false,
                     cellTemplate: function (cellElement, cellInfo) {
@@ -724,7 +724,7 @@
                         let companyCheckupTypeCode = cellInfo.data.companyCheckupTypeCode;
                         cellElement.append(companyCheckupTypeCode, '.', companyCheckupTypeName, ' - ', cellInfo.data.subTypeName);
                         if (cellInfo.row.data.specialCheckup === 1) {
-                            cellElement.append('&nbsp<div class="specialCheck">특</div>');
+                            cellElement.append('&nbsp<div class="specialCheck">??/div>');
                         }
                         cellElement.append('&nbsp<div class="reserveContent">+</div>');
                     },
@@ -735,8 +735,8 @@
                     allowEditing: false,
                     lookup: {
                         dataSource: [
-                            {'id': false, 'text': '기업부담'},
-                            {'id': true, 'text': '본인부담'},
+                            {'id': false, 'text': '기업부??},
+                            {'id': true, 'text': '본인부??},
                         ],
                         valueExpr: 'id',
                         displayExpr: 'text',
@@ -748,20 +748,20 @@
                     allowEditing: false,
                     cellTemplate: function (cellElement, cellInfo) {
                         if (cellInfo.row.data.hospitalNotes) {
-                            cellElement.append('<div class="hospitalMemo" title="' + cellInfo.row.data.hospitalNotes + '">병</div>');
+                            cellElement.append('<div class="hospitalMemo" title="' + cellInfo.row.data.hospitalNotes + '">�?/div>');
                         }
                         if (cellInfo.row.data.platformNotes) {
-                            //cellElement.append('<span style="color: blue">●</span>');
-                            cellElement.append('<div class="platformMemo" title="' + cellInfo.row.data.platformNotes + '">건</div>');
+                            //cellElement.append('<span style="color: blue">??/span>');
+                            cellElement.append('<div class="platformMemo" title="' + cellInfo.row.data.platformNotes + '">�?/div>');
                         }
                         if (cellInfo.row.data.employeeNotes) {
-                            //cellElement.html('<span style="color: red">●</span>');
-                            cellElement.append('<div class="employeeMemo" title="' + cellInfo.row.data.employeeNotes + '">고</div>');
+                            //cellElement.html('<span style="color: red">??/span>');
+                            cellElement.append('<div class="employeeMemo" title="' + cellInfo.row.data.employeeNotes + '">�?/div>');
                         }
                     }
                 }, {
                     dataField: "registeredAt",
-                    caption: "예약등록일",
+                    caption: "?�약?�록??,
                     dataType: "datetime",
                     alignment: 'center',
                     allowEditing: false,
@@ -800,27 +800,27 @@
             onRowPrepared: function (e) {
                 // if (e.rowType === 'data' && e.data.reservationState === 5) {
                 //     e.columns[2].lookup.dataSource = [
-                //         {'id': 0, 'text': '예약취소'},
-                //         {'id': 2, 'text': '예약확정'},
-                //         {'id': 3, 'text': '예약변경'},
-                //         {'id': 5, 'text': '예약보류'},
+                //         {'id': 0, 'text': '?�약취소'},
+                //         {'id': 2, 'text': '?�약?�정'},
+                //         {'id': 3, 'text': '?�약변�?},
+                //         {'id': 5, 'text': '?�약보류'},
                 //     ];
                 // } else if (e.rowType === 'data' && (e.data.reservationState === 2 || e.data.reservationState === 3)) {
                 //     e.columns[2].lookup.dataSource = [
-                //         {'id': 0, 'text': '예약취소'},
-                //         {'id': 1, 'text': '예약신청'},
-                //         {'id': 2, 'text': '예약확정'},
-                //         {'id': 3, 'text': '예약변경'},
-                //         {'id': 4, 'text': '수검완료'},
-                //         {'id': 5, 'text': '예약보류'},
+                //         {'id': 0, 'text': '?�약취소'},
+                //         {'id': 1, 'text': '?�약?�청'},
+                //         {'id': 2, 'text': '?�약?�정'},
+                //         {'id': 3, 'text': '?�약변�?},
+                //         {'id': 4, 'text': '?��??�료'},
+                //         {'id': 5, 'text': '?�약보류'},
                 //     ];
                 // } else {
                 //     e.columns[2].lookup.dataSource = [
-                //         {'id': 0, 'text': '예약취소'},
-                //         {'id': 1, 'text': '예약신청'},
-                //         {'id': 2, 'text': '예약확정'},
-                //         {'id': 4, 'text': '수검완료'},
-                //         {'id': 5, 'text': '예약보류'},
+                //         {'id': 0, 'text': '?�약취소'},
+                //         {'id': 1, 'text': '?�약?�청'},
+                //         {'id': 2, 'text': '?�약?�정'},
+                //         {'id': 4, 'text': '?��??�료'},
+                //         {'id': 5, 'text': '?�약보류'},
                 //     ];
                 // }
             },
@@ -829,7 +829,7 @@
                 if (event.rowType === 'data' && event.columnIndex === 13) {
                     dxInstances.popupMemo.show();
                     dxInstances.popupMemo.option({
-                        title: "전체 메모",
+                        title: "?�체 메모",
                         closeOnOutsideClick: true,
                         width: 800,
                         height: 500,
@@ -839,7 +839,7 @@
                                 height: 100,
                                 value: event.key.hospitalNotes,
                             }));
-                            contentElement.append('<br> <div style="font-weight: bold; color: #2ea3aa">건강살자메모</div>');
+                            contentElement.append('<br> <div style="font-weight: bold; color: #2ea3aa">건강?�자메모</div>');
                             contentElement.append($("<div id='platformNotes' />").dxTextArea({
                                 height: 100,
                                 value: event.key.platformNotes,
@@ -851,7 +851,7 @@
                                 readOnly: true,
                             }));
                             contentElement.append($("<div style='alignment: center;'/>").dxButton({
-                                text: '저장',
+                                text: '?�??,
                                 alignment: 'center',
                                 onClick: function () {
                                     let hospitalNotes = DevExpress.ui.dxTextArea.getInstance($('#hospitalNotes'));
@@ -865,7 +865,7 @@
                                         method: 'POST',
                                         data: JSON.stringify(event.data),
                                     }).then(function () {
-                                        ggsj.notify("저장되었습니다.");
+                                        sitebuilder.notify("?�?�되?�습?�다.");
                                         LoadReserveList();
                                         LoadCancelReserve();
                                         dxInstances.popupMemo.hide();
@@ -967,18 +967,18 @@
             dxInstances.popupReserveContent.show();
 
             dxInstances.popupReserveContent.option({
-                title: "예약 세부 내용",
+                title: "?�약 ?��? ?�용",
                 closeOnOutsideClick: true,
                 width: 600,
                 height: 270,
                 contentTemplate: function (contentElement) {
-                    contentElement.append('<div style="font-weight: bold; color: #2ea3aa">선택검사</div>');
+                    contentElement.append('<div style="font-weight: bold; color: #2ea3aa">?�택검??/div>');
                     contentElement.append($("<div />").dxTextArea({
                         height: 60,
                         value: selectReserve,
                         readOnly: true,
                     }));
-                    contentElement.append('<br> <div style="font-weight: bold; color: #2ea3aa">추가검사</div>');
+                    contentElement.append('<br> <div style="font-weight: bold; color: #2ea3aa">추�?검??/div>');
                     contentElement.append($("<div />").dxTextArea({
                         height: 60,
                         value: addReserve,
@@ -988,7 +988,7 @@
                         dxInstances.popupReserveContent.option({
                             height: 350,
                         });
-                        contentElement.append('<br> <div style="font-weight: bold; color: #2ea3aa">특수검사물질</div>');
+                        contentElement.append('<br> <div style="font-weight: bold; color: #2ea3aa">?�수검?�물�?/div>');
                         contentElement.append($("<div />").dxTextArea({
                             height: 60,
                             value: specialCheckupMemo,
@@ -1023,18 +1023,18 @@
             dxInstances.popupReserveContent.show();
 
             dxInstances.popupReserveContent.option({
-                title: "예약 세부 내용",
+                title: "?�약 ?��? ?�용",
                 closeOnOutsideClick: true,
                 width: 600,
                 height: 270,
                 contentTemplate: function (contentElement) {
-                    contentElement.append('<div style="font-weight: bold; color: #2ea3aa">선택검사</div>');
+                    contentElement.append('<div style="font-weight: bold; color: #2ea3aa">?�택검??/div>');
                     contentElement.append($("<div />").dxTextArea({
                         height: 60,
                         value: selectReserve,
                         readOnly: true,
                     }));
-                    contentElement.append('<br> <div style="font-weight: bold; color: #2ea3aa">추가검사</div>');
+                    contentElement.append('<br> <div style="font-weight: bold; color: #2ea3aa">추�?검??/div>');
                     contentElement.append($("<div />").dxTextArea({
                         height: 60,
                         value: addReserve,
@@ -1044,7 +1044,7 @@
                         dxInstances.popupReserveContent.option({
                             height: 350,
                         });
-                        contentElement.append('<br> <div style="font-weight: bold; color: #2ea3aa">특수검사물질</div>');
+                        contentElement.append('<br> <div style="font-weight: bold; color: #2ea3aa">?�수검?�물�?/div>');
                         contentElement.append($("<div />").dxTextArea({
                             height: 60,
                             value: specialCheckupMemo,
@@ -1058,7 +1058,7 @@
 
         dxInstances.selectStatusDate.option({
             dataSource: [
-                {'id': 0, 'text': '예약등록일'},
+                {'id': 0, 'text': '?�약?�록??},
                 {'id': 1, 'text': '검진희망일'}
             ],
             value: 0,
@@ -1077,15 +1077,15 @@
                 });
 
                 if (gridData.length === 0) {
-                    alert('변경된 사항이 없습니다.');
+                    alert('변경된 ?�항???�습?�다.');
                 } else {
-                    if (confirm('정말로 저장하시겠습니까?')) {
+                    if (confirm('?�말�??�?�하?�겠?�니�?')) {
                         $.ajax({
                             url: '<c:url value="/pm/reserve"/>',
                             method: 'POST',
                             data: JSON.stringify(gridData),
                         }).then(function () {
-                            ggsj.notify("저장되었습니다.");
+                            sitebuilder.notify("?�?�되?�습?�다.");
                             LoadReserveList();
                             LoadCancelReserve();
                         });
@@ -1137,12 +1137,12 @@
             url: '<c:url value="/common/company?listType=LAST_ALL"/>',
             method: 'GET',
         }).then(function (response) {
-            response.data.unshift({companyId: null, companyName: '전체'});
+            response.data.unshift({companyId: null, companyName: '?�체'});
             dxInstances.lookupCompany.option({
                 dataSource: response.data,
                 valueExpr: 'companyId',
                 displayExpr: 'companyName',
-                placeholder: '기업체 검색',
+                placeholder: '기업�?검??,
                 searchEnabled: true,
                 searchExpr: 'companyName',
                 searchMode: 'contains',
@@ -1157,12 +1157,12 @@
             url: '<c:url value="/common/hospital"/>',
             method: 'GET',
         }).then(function (response) {
-            response.data.unshift({hospitalId: null, hospitalName: '전체'});
+            response.data.unshift({hospitalId: null, hospitalName: '?�체'});
             dxInstances.hospitalSearch.option({
                 dataSource: response.data,
                 valueExpr: 'hospitalId',
                 displayExpr: 'hospitalName',
-                placeholder: '병원 검색',
+                placeholder: '병원 검??,
                 searchEnabled: true,
                 searchExpr: 'hospitalName',
                 searchMode: 'contains',

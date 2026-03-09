@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:tx="http://www.springframework.org/schema/tx"
        xmlns:aop="http://www.springframework.org/schema/aop"
@@ -15,7 +15,7 @@
     </tx:advice>
 
     <aop:config>
-        <aop:pointcut id="requiredTx" expression="execution(* kr.co.dsong.ggsj..service.impl.*Impl.*(..))"/>
+        <aop:pointcut id="requiredTx" expression="execution(* kr.co.sitebuilder..service.impl.*Impl.*(..))"/>
         <aop:advisor advice-ref="txAdvice" pointcut-ref="requiredTx"/>
     </aop:config>
 

@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="kr.co.dsong.ggsj.companyarchive.service.mapper.CompanyArchiveMapper">
+<mapper namespace="kr.co.sitebuilder.companyarchive.service.mapper.CompanyArchiveMapper">
     <!-- Select Company List -->
     <resultMap id="mapCompanyArchive" type="CompanyArchiveVO" autoMapping="true">
         <id property="companyArchiveId" column="company_archive_id"/>

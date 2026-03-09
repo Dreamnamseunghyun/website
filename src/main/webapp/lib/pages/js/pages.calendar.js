@@ -1,4 +1,4 @@
-//Pages Calendar - Version 3.0.0
+﻿//Pages Calendar - Version 3.0.0
 (function(factory) {
     if (typeof define === 'function' && define.amd) {
         define([ 'jquery', 'moment' ], factory);

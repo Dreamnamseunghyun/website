@@ -1,4 +1,4 @@
-<%@ page contentType="text/html; charset=utf-8" pageEncoding="utf-8" %>
+﻿<%@ page contentType="text/html; charset=utf-8" pageEncoding="utf-8" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 
@@ -28,7 +28,7 @@
                     <div class="dx-viewport">
                         <div class="row-wrap" style="box-shadow: none; margin:0!important">
                             <div class="row-box1 row" style="border:none;">
-                                <div class="tabs-container" id="category" data-ggsj="dxTabs"></div>
+                                <div class="tabs-container" id="category" data-sitebuilder="dxTabs"></div>
                             </div>
                         </div>
 
@@ -37,21 +37,21 @@
                             <div class="row-wrap-box right">
                                 <div class="row-wrap row-wrap1">
                                     <div class="col-box1 row">
-                                        <div class="col-lg-12" id="searchGrid" data-ggsj="dxTextBox"></div>
+                                        <div class="col-lg-12" id="searchGrid" data-sitebuilder="dxTextBox"></div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <!-- Header -->
 
-                        <div id="dataGridFaq" data-ggsj="dxDataGrid" class="main_table">
+                        <div id="dataGridFaq" data-sitebuilder="dxDataGrid" class="main_table">
                         </div>
                     </div>
                     <%--                    </div>--%>
                 </div>
 
                 <div class="row btn_area index_btn_area footer-btn">
-                    <div id="btnCreate" data-ggsj="dxButton">
+                    <div id="btnCreate" data-sitebuilder="dxButton">
                         <div class="write_btn">
                             <div>
                                 <div class="pencil"></div>
@@ -64,7 +64,7 @@
                                     <div class="paper"></div>
                                 </div>
                             </div>
-                            <span>등록</span>
+                            <span>?깅줉</span>
                         </div>
                     </div>
                 </div>
@@ -79,12 +79,12 @@
 </body>
 <script>
     $(function () {
-        ggsj.openMenu('faq');
+        sitebuilder.openMenu('faq');
 
-        let dxInstances = ggsj.createDx(false);
+        let dxInstances = sitebuilder.createDx(false);
 
         dxInstances.category.option({
-            items: [{id: 'ALL', text: '전체'}].concat(ggsj.typeDef.faqCategory),
+            items: [{id: 'ALL', text: '?꾩껜'}].concat(sitebuilder.typeDef.faqCategory),
             onItemClick: function (e) {
                 //console.log(e);
                 if (e.itemData.id === 'ALL') {
@@ -96,7 +96,7 @@
         });
 
         dxInstances.searchGrid.option({
-            placeholder: '검색',
+            placeholder: '寃??,
             valueChangeEvent: "keyup",
             onValueChanged: function (e) {
                 dxInstances.dataGridFaq.searchByText(e.value);
@@ -115,7 +115,7 @@
             },
 
             columns: [{
-                caption: '순번',
+                caption: '?쒕쾲',
                 alignment: 'center',
                 width: 70,
                 cellTemplate: function (cellElement, cellInfo) {
@@ -123,10 +123,10 @@
                 },
             }, {
                 dataField: 'category',
-                caption: '분류',
+                caption: '遺꾨쪟',
                 alignment: 'center',
                 lookup: {
-                    dataSource: ggsj.typeDef.faqCategory,
+                    dataSource: sitebuilder.typeDef.faqCategory,
                     valueExpr: 'id',
                     displayExpr: 'text',
                 },
@@ -136,18 +136,18 @@
                     let faqId = cellInfo.row.data.faqId;
                     cellElement.append('<a href = ' + '<c:url value="/pm/commune/faq"/>/' + faqId + '>' + cellInfo.text + '</a>');
                 },
-                caption: '제목',
+                caption: '?쒕ぉ',
             }, {
                 dataField: 'writedAt',
-                caption: '작성일',
+                caption: '?묒꽦??,
                 alignment: 'center',
                 dataType: 'date',
                 format: 'yyyy-MM-dd HH:mm:ss'
             }, {
                 type: 'buttons',
-                caption: '수정',
+                caption: '?섏젙',
                 buttons: [{
-                    text: '수정',
+                    text: '?섏젙',
                     onClick: function (data) {
                         var faq_id = data.row.data;
                         console.log(data);
@@ -157,11 +157,11 @@
                 ]
             }, {
                 type: 'buttons',
-                caption: '삭제',
+                caption: '??젣',
                 buttons: [{
-                    text: '삭제',
+                    text: '??젣',
                     onClick: function deleteFaq(data) {
-                        if (confirm('정말로 삭제하시겠습니까?')) {
+                        if (confirm('?뺣쭚濡???젣?섏떆寃좎뒿?덇퉴?')) {
                             var row_data = data.row;
                             var faq_id = row_data.data;
                             $.ajax({
@@ -181,7 +181,7 @@
         dxInstances.btnCreate.option({
             stylingMode: 'outlined',
             icon: 'comment',
-            text: '등록',
+            text: '?깅줉',
             type: 'success',
             onClick: function () {
                 location.href = '<c:url value="/pm/commune/faq/create"/>';

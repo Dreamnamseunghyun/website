@@ -1,4 +1,4 @@
-/* ============================================================
+﻿/* ============================================================
  * Charts
  * This files shows how Pages uses Rickshaw, NVD3 and Sparkline
  * to render charts

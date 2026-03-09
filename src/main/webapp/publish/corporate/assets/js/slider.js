@@ -1,4 +1,4 @@
-/* ============================================================
+﻿/* ============================================================
  * Sliders
  * Sliders using Ion Slider and noUiSlider jQuery Plugins
  * For DEMO purposes only. Extract what you need.
@@ -34,7 +34,7 @@
             to: 90000,
             type: 'double',
             step: 500,
-            postfix: " €",
+            postfix: " ??,
             grid: true
         });
 
@@ -52,7 +52,7 @@
             min: -50,
             max: 50,
             from: 0,
-            postfix: "°",
+            postfix: "째",
             prettify_enabled: false,
             grid: true
         });

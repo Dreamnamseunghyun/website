@@ -1,4 +1,4 @@
-(function( factory ) {
+﻿(function( factory ) {
 	if ( typeof define === "function" && define.amd ) {
 		define( ["jquery", "../jquery.validate"], factory );
 	} else {
@@ -8,26 +8,26 @@
 
 /*
  * Translated default messages for the jQuery validation plugin.
- * Locale: TR (Turkish; Türkçe)
+ * Locale: TR (Turkish; T체rk챌e)
  */
 $.extend($.validator.messages, {
-	required: "Bu alanın doldurulması zorunludur.",
-	remote: "Lütfen bu alanı düzeltin.",
-	email: "Lütfen geçerli bir e-posta adresi giriniz.",
-	url: "Lütfen geçerli bir web adresi (URL) giriniz.",
-	date: "Lütfen geçerli bir tarih giriniz.",
-	dateISO: "Lütfen geçerli bir tarih giriniz(ISO formatında)",
-	number: "Lütfen geçerli bir sayı giriniz.",
-	digits: "Lütfen sadece sayısal karakterler giriniz.",
-	creditcard: "Lütfen geçerli bir kredi kartı giriniz.",
-	equalTo: "Lütfen aynı değeri tekrar giriniz.",
-	extension: "Lütfen geçerli uzantıya sahip bir değer giriniz.",
-	maxlength: $.validator.format("Lütfen en fazla {0} karakter uzunluğunda bir değer giriniz."),
-	minlength: $.validator.format("Lütfen en az {0} karakter uzunluğunda bir değer giriniz."),
-	rangelength: $.validator.format("Lütfen en az {0} ve en fazla {1} uzunluğunda bir değer giriniz."),
-	range: $.validator.format("Lütfen {0} ile {1} arasında bir değer giriniz."),
-	max: $.validator.format("Lütfen {0} değerine eşit ya da daha küçük bir değer giriniz."),
-	min: $.validator.format("Lütfen {0} değerine eşit ya da daha büyük bir değer giriniz.")
+	required: "Bu alan캇n doldurulmas캇 zorunludur.",
+	remote: "L체tfen bu alan캇 d체zeltin.",
+	email: "L체tfen ge챌erli bir e-posta adresi giriniz.",
+	url: "L체tfen ge챌erli bir web adresi (URL) giriniz.",
+	date: "L체tfen ge챌erli bir tarih giriniz.",
+	dateISO: "L체tfen ge챌erli bir tarih giriniz(ISO format캇nda)",
+	number: "L체tfen ge챌erli bir say캇 giriniz.",
+	digits: "L체tfen sadece say캇sal karakterler giriniz.",
+	creditcard: "L체tfen ge챌erli bir kredi kart캇 giriniz.",
+	equalTo: "L체tfen ayn캇 de휓eri tekrar giriniz.",
+	extension: "L체tfen ge챌erli uzant캇ya sahip bir de휓er giriniz.",
+	maxlength: $.validator.format("L체tfen en fazla {0} karakter uzunlu휓unda bir de휓er giriniz."),
+	minlength: $.validator.format("L체tfen en az {0} karakter uzunlu휓unda bir de휓er giriniz."),
+	rangelength: $.validator.format("L체tfen en az {0} ve en fazla {1} uzunlu휓unda bir de휓er giriniz."),
+	range: $.validator.format("L체tfen {0} ile {1} aras캇nda bir de휓er giriniz."),
+	max: $.validator.format("L체tfen {0} de휓erine e힊it ya da daha k체챌체k bir de휓er giriniz."),
+	min: $.validator.format("L체tfen {0} de휓erine e힊it ya da daha b체y체k bir de휓er giriniz.")
 });
 
 }));

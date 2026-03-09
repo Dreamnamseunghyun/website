@@ -1,4 +1,4 @@
-(function (window) {
+﻿(function (window) {
     'use strict';
 
     // Convert complex js object to dot notation js object
@@ -220,8 +220,8 @@
         }
     };
 
-    let ggsj = window.ggsj || {};
-    ggsj.dotize = dotize;
+    let sitebuilder = window.sitebuilder || {};
+    sitebuilder.dotize = dotize;
 
-    window.ggsj = ggsj;
+    window.sitebuilder = sitebuilder;
 })(window);

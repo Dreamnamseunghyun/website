@@ -21,7 +21,7 @@
                 <div class="card card-transparent board_internal">
                     <div class="card-header ">
                         <div class="card-title">
-                            <h3 class="h3">미예약 독려 발송</h3>
+                            <h3 class="h3">미예???�려 발송</h3>
                         </div>
                     </div>
                     <div class="dx-viewport">
@@ -32,10 +32,10 @@
                                 <div class="row-box1">
                                     <div class="row-box-inner1">
                                         <div class="col-box1 row">
-                                            <div class="col-lg-4 tag-name"><span>기업체</span></div>
+                                            <div class="col-lg-4 tag-name"><span>기업�?/span></div>
                                             <div class="col-lg-8">
                                                 <div class="col-lg-12" id="selectCompany"
-                                                     data-ggsj="dxLookup" style="width: 250px"></div>
+                                                     data-sitebuilder="dxLookup" style="width: 250px"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -47,7 +47,7 @@
                                 <div class="row-box">
                                     <div class="row-box-inner">
                                         <div class="col-box1 row">
-                                            <div class="col-lg-12" id="searchGrid" data-ggsj="dxTextBox"></div>
+                                            <div class="col-lg-12" id="searchGrid" data-sitebuilder="dxTextBox"></div>
                                         </div>
                                     </div>
                                 </div>
@@ -59,9 +59,8 @@
 
                         <div class="row-wrap row-wrap-box">
                             <div class="row-wrap logo-area-left">
-                                <div class="row-box-title bottom-0"><i class="xi-play-circle"></i>미예약자 목록
-                                    <div class="checkText ml-3"><i class="xi-info-o"></i>휴대전화번호 있는 기업부담 직원, 가족만 목록에
-                                        보입니다.
+                                <div class="row-box-title bottom-0"><i class="xi-play-circle"></i>미예?�자 목록
+                                    <div class="checkText ml-3"><i class="xi-info-o"></i>?��??�화번호 ?�는 기업부??직원, 가족만 목록??                                        보입?�다.
                                     </div>
                                 </div>
                                 <div class="row-box1">
@@ -69,7 +68,7 @@
                                         <div class="col-box1 row col-box-vertical6">
                                             <div class="row">
                                                 <div id="dxGridUrgeList" class="main_table"
-                                                     data-ggsj="dxDataGrid"></div>
+                                                     data-sitebuilder="dxDataGrid"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -77,22 +76,22 @@
                             </div>
 
                             <div class="row-wrap logo-area-right notitok-area">
-                                <div class="row-box-title"><i class="xi-play-circle"></i>템플릿</div>
+                                <div class="row-box-title"><i class="xi-play-circle"></i>?�플�?/div>
                                 <div class="row-box1 notitok-wrap">
                                     <div class="row-box-inner1">
                                         <div class="col-box1 row">
-                                            <div id="notitokTemplateTitle" data-ggsj="dxTextBox">
+                                            <div id="notitokTemplateTitle" data-sitebuilder="dxTextBox">
                                             </div>
-                                            <div id="notitokTemplate" data-ggsj="dxTextArea">
+                                            <div id="notitokTemplate" data-sitebuilder="dxTextArea">
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="row-box2">
                                     <div class="col-box1 row">
-                                        <div class="col-lg-6 tag-name"><span>합계</span></div>
+                                        <div class="col-lg-6 tag-name"><span>?�계</span></div>
                                         <div class="col-lg-6 row period">
-                                            <div class="col-lg-12" id="total" data-ggsj="dxTextBox"></div>
+                                            <div class="col-lg-12" id="total" data-sitebuilder="dxTextBox"></div>
                                         </div>
                                     </div>
                                 </div>
@@ -101,14 +100,14 @@
                                     <div class="col-box1 row">
                                         <div class="col-lg-6 tag-name"><span>발송건수</span></div>
                                         <div class="col-lg-6 row period">
-                                            <div class="col-lg-12" id="totalGuide" data-ggsj="dxTextBox"></div>
+                                            <div class="col-lg-12" id="totalGuide" data-sitebuilder="dxTextBox"></div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="row btn_area footer-btn">
-                            <div class="col-lg-1 btnGGSJ" id="btnSend" data-ggsj="dxButton"></div>
+                            <div class="col-lg-1 btnGGSJ" id="btnSend" data-sitebuilder="dxButton"></div>
                         </div>
                     </div>
                 </div>
@@ -120,14 +119,14 @@
 </body>
 <script>
     $(function () {
-        ggsj.openMenu('urge');
+        sitebuilder.openMenu('urge');
 
         /** @param dxInstances : {dxGridUrgeList} */
-        let dxInstances = ggsj.createDx(false);
+        let dxInstances = sitebuilder.createDx(false);
         let gridData;
 
         dxInstances.searchGrid.option({
-            placeholder: '검색',
+            placeholder: '검??,
             valueChangeEvent: "keyup",
             onValueChanged: function (e) {
                 dxInstances.dxGridUrgeList.searchByText(e.value);
@@ -166,7 +165,7 @@
                 });
 
                 console.log(sendData);
-                if (window.confirm('발송하시겠습니까?') === false) {
+                if (window.confirm('발송?�시겠습?�까?') === false) {
                     return;
                 }
 
@@ -180,7 +179,7 @@
                 });
 
                 $.when(ajaxSendCheckupGuide).then(function (response) {
-                    ggsj.notify("발송되었습니다.");
+                    sitebuilder.notify("발송?�었?�니??");
                 });
             }
         });
@@ -208,7 +207,7 @@
             columnAutoWidth: true,
             allowColumnReordering: true,
             columns: [{
-                caption: '순번',
+                caption: '?�번',
                 alignment: 'center',
                 cellTemplate: function (cellElement, cellInfo) {
                     cellElement.text(cellInfo.component.pageIndex() * cellInfo.component.pageSize() + cellInfo.row.rowIndex + 1);
@@ -216,7 +215,7 @@
                 allowEditing: false,
             }, {
                 dataField: "employeeName",
-                caption: "검진자명",
+                caption: "검진자�?,
                 alignment: 'center',
                 cellTemplate: function (cellElement, cellInfo) {
                     cellElement.append("<a href = " + '<c:url value="/pm/reserve"/>/view' + '/' + cellInfo.data.userId + ">" + cellInfo.text + "</a>");
@@ -227,17 +226,17 @@
                 allowEditing: false,
             }, {
                 dataField: "birth",
-                caption: "생년월일",
+                caption: "?�년?�일",
                 dataType: 'date',
                 allowEditing: false,
             }, {
                 dataField: "sex",
-                caption: "성별",
+                caption: "?�별",
                 alignment: 'center',
                 allowEditing: false,
             }, {
                 dataField: "depart",
-                caption: "부서",
+                caption: "부??,
                 alignment: 'center',
                 allowEditing: false,
             }, {
@@ -247,28 +246,28 @@
                 allowEditing: false,
             }, {
                 dataField: "myself",
-                caption: "대상자",
+                caption: "?�?�자",
                 alignment: 'center',
                 lookup: {
-                    dataSource: [{id: 1, text: '본인'}, {id: 2, text: '가족'},],
+                    dataSource: [{id: 1, text: '본인'}, {id: 2, text: '가�?},],
                     valueExpr: 'id',
                     displayExpr: 'text',
                 },
                 allowEditing: false,
             }, {
                 dataField: "employeeNo",
-                caption: "사번",
+                caption: "?�번",
                 allowEditing: false,
             }, {
                 dataField: "mobile",
-                caption: "휴대전화번호",
+                caption: "?��??�화번호",
                 format: function (value) {
-                    return ggsj.phoneWithHyphen(value);
+                    return sitebuilder.phoneWithHyphen(value);
                 },
                 allowEditing: false,
                 //}, {
                 //     dataField: "email",
-                //     caption: "이메일",
+                //     caption: "?�메??,
                 //     allowEditing: false,
             }, {
                 dataField: "employeeCode",
@@ -276,7 +275,7 @@
                 allowEditing: false,
             }, {
                 dataField: 'notokGuide',
-                caption: '안내제외',
+                caption: '?�내?�외',
                 alignment: 'center',
                 width: 120,
                 allowEditing: false,
@@ -290,11 +289,11 @@
                 },
             }, {
                 dataField: 'checkGuide',
-                caption: '발송여부',
+                caption: '발송?��?',
                 width: 100,
             }, {
                 dataField: "notokUpdatedAt",
-                caption: "발송제외일",
+                caption: "발송?�외??,
                 alignment: 'center',
                 dataType: 'date',
                 allowEditing: false,
@@ -325,7 +324,7 @@
                         });
 
                         dxInstances.totalGuide.option({
-                            value: sendData.length + '명',
+                            value: sendData.length + '�?,
                             readOnly: true,
                             alignment: 'center',
                         });
@@ -347,7 +346,7 @@
             searchExpr: 'companyName',
             searchMode: 'contains',
             searchTimeout: 100,
-            placeholder: "회사를 선택해주세요.",
+            placeholder: "?�사�??�택?�주?�요.",
             onValueChanged: function (e) {
                 LoadUserExceptList();
             }
@@ -375,13 +374,13 @@
                 }
 
                 dxInstances.totalGuide.option({
-                    value: total + '명',
+                    value: total + '�?,
                     readOnly: true,
                     alignment: 'center',
                 });
 
                 dxInstances.total.option({
-                    value: response.data.length + '명',
+                    value: response.data.length + '�?,
                     readOnly: true,
                     alignment: 'center',
                 });

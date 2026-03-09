@@ -1,4 +1,4 @@
-/* ============================================================
+﻿/* ============================================================
  * Widgets
  * Showcase of widgets created using Pages Framework
  * For DEMO purposes only. Extract what you need.

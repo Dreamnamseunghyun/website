@@ -1,4 +1,4 @@
-/* ============================================================
+﻿/* ============================================================
  * DataTables
  * Generate advanced tables with sorting, export options using
  * jQuery DataTables plugin
@@ -26,8 +26,7 @@
                 "sLengthMenu": "_MENU_ ",
                 "sInfo": "Showing <b>_START_ to _END_</b> of _TOTAL_ entries"
             },
-            "iDisplayLength": 10 //210625 admin 리스트 변경
-        };
+            "iDisplayLength": 10 //210625 admin 由ъ뒪??蹂寃?        };
 
         table.dataTable(settings);
 

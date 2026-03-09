@@ -1,4 +1,4 @@
-<%@ page contentType="text/html; charset=utf-8" pageEncoding="utf-8" %>
+﻿<%@ page contentType="text/html; charset=utf-8" pageEncoding="utf-8" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 
@@ -21,7 +21,7 @@
                 <div class="card card-transparent board_internal">
                     <div class="card-header ">
                         <div class="card-title">
-                            <h3 class="h3">예약불가</h3>
+                            <h3 class="h3">?덉빟遺덇?</h3>
                         </div>
                     </div>
                     <%--<div class="card-body">--%>
@@ -32,8 +32,8 @@
                                 <div class="row-box" style="min-width:400px;">
                                     <div class="row-box-inner">
                                         <div class="col-box1 row">
-                                            <div class="col-lg-5 tag-name"><span>병원검색</span></div>
-                                            <div class="col-lg-7" id="lookupCenter" data-ggsj="dxLookup"
+                                            <div class="col-lg-5 tag-name"><span>蹂묒썝寃??/span></div>
+                                            <div class="col-lg-7" id="lookupCenter" data-sitebuilder="dxLookup"
                                                  style="width: 250px"></div>
                                         </div>
                                     </div>
@@ -46,7 +46,7 @@
                                     <div class="row-box-inner">
                                         <div class="col-box1 row">
                                             <div class="col-lg-12">
-                                                <div id="targetCenterId" data-ggsj="dxLookup"
+                                                <div id="targetCenterId" data-sitebuilder="dxLookup"
                                                      style="min-width:190px"></div>
                                             </div>
                                         </div>
@@ -59,7 +59,7 @@
                                     <div class="row-box-inner">
                                         <div class="col-box1 row">
                                             <div class="col-lg-12">
-                                                <div class="btnGGSJ" id="btnCopy" data-ggsj="dxButton"></div>
+                                                <div class="btnGGSJ" id="btnCopy" data-sitebuilder="dxButton"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -70,23 +70,23 @@
                         <!-- Header -->
 
                         <%--                        <div class="row">--%>
-                        <%--                            <div class="col-lg-3" id="lookupCenter" data-ggsj="dxLookup"></div>--%>
+                        <%--                            <div class="col-lg-3" id="lookupCenter" data-sitebuilder="dxLookup"></div>--%>
                         <%--                            <div class="col-lg-5"></div>--%>
-                        <%--                            <div class="col-lg-3" id="targetCenterId" data-ggsj="dxLookup"></div>--%>
-                        <%--                            <div class="col-lg-1" id="btnCopy" data-ggsj="dxButton"></div>--%>
+                        <%--                            <div class="col-lg-3" id="targetCenterId" data-sitebuilder="dxLookup"></div>--%>
+                        <%--                            <div class="col-lg-1" id="btnCopy" data-sitebuilder="dxButton"></div>--%>
                         <%--                        </div>--%>
-                        <div id="dayOffScheduler" data-ggsj="dxScheduler" style="height:78vh"></div>
+                        <div id="dayOffScheduler" data-sitebuilder="dxScheduler" style="height:78vh"></div>
                     </div>
 
-                    <div id="popupMemo" data-ggsj="dxPopup"></div>
-                    <div id="popupItems" data-ggsj="dxPopup"></div>
+                    <div id="popupMemo" data-sitebuilder="dxPopup"></div>
+                    <div id="popupItems" data-sitebuilder="dxPopup"></div>
 
                     <div class="row btn_area footer-btn">
-                        <div class="col-lg-1 btnGGSJ" id="btnItems" data-ggsj="dxButton"></div>
-                        <div class="col-lg-1 btnGray" id="btnAmOff" data-ggsj="dxButton"></div>
-                        <div class="col-lg-1" id="btnPmOff" data-ggsj="dxButton"></div>
-                        <div class="col-lg-1 btnBlue" id="btnAllOff" data-ggsj="dxButton"></div>
-                        <div class="col-lg-1" id="btnOn" data-ggsj="dxButton"></div>
+                        <div class="col-lg-1 btnGGSJ" id="btnItems" data-sitebuilder="dxButton"></div>
+                        <div class="col-lg-1 btnGray" id="btnAmOff" data-sitebuilder="dxButton"></div>
+                        <div class="col-lg-1" id="btnPmOff" data-sitebuilder="dxButton"></div>
+                        <div class="col-lg-1 btnBlue" id="btnAllOff" data-sitebuilder="dxButton"></div>
+                        <div class="col-lg-1" id="btnOn" data-sitebuilder="dxButton"></div>
                     </div>
                 </div>
                 <%--</div>--%>
@@ -99,10 +99,10 @@
 </body>
 <script>
     $(function () {
-        ggsj.openMenu('day-off');
+        sitebuilder.openMenu('day-off');
         /** @param dxInstances : {lookupCenter,targetCenterId,btnCopy,dayOffScheduler,btnAmOff,btnPmOff,btnAllOff,btnOn} */
 
-        let dxInstances = ggsj.createDx(false);
+        let dxInstances = sitebuilder.createDx(false);
         let centerId = null;
 
         function LoadDayOffList() {
@@ -117,7 +117,7 @@
             });
 
             $.when(ajaxDayOff).then(function (response) {
-                //console.log('전체리스트', response.data);
+                //console.log('?꾩껜由ъ뒪??, response.data);
                 dxInstances.dayOffScheduler.option({
                     dataSource: response.data,
                     valueExpr: 'amPm',
@@ -192,8 +192,8 @@
             searchExpr: 'hospitalCenterName',
             searchMode: 'contains',
             searchTimeout: 100,
-            placeholder: "병원을 선택해주세요.",
-            searchPlaceholder: "검색",
+            placeholder: "蹂묒썝???좏깮?댁＜?몄슂.",
+            searchPlaceholder: "寃??,
             onValueChanged: function () {
                 LoadDayOffList();
             },
@@ -212,7 +212,7 @@
                 dxInstances.popupItems.show();
 
                 dxInstances.popupItems.option({
-                    title: "메모",
+                    title: "硫붾え",
                     closeOnOutsideClick: true,
                     width: 500,
                     height: 300,
@@ -246,16 +246,16 @@
         });
 
         dxInstances.btnItems.option({
-            text: '항목 불가',
+            text: '??ぉ 遺덇?',
             onClick: function () {
                 if (!dxInstances.lookupCenter.option('value')) {
-                    alert('병원을 선택해주세요.');
+                    alert('蹂묒썝???좏깮?댁＜?몄슂.');
                     return;
                 }
                 dxInstances.popupMemo.show();
 
                 dxInstances.popupMemo.option({
-                    title: "항목불가 메모",
+                    title: "??ぉ遺덇? 硫붾え",
                     closeOnOutsideClick: true,
                     width: 500,
                     height: 250,
@@ -265,7 +265,7 @@
                         }));
 
                         contentElement.append($("<div style='alignment: center;'/>").dxButton({
-                            text: '저장',
+                            text: '???,
                             alignment: 'center',
                             onClick: function () {
 
@@ -275,7 +275,7 @@
                                 saveDayOff('TX', items);
 
                                 dxInstances.popupMemo.hide();
-                                ggsj.notify("불가 메모가 저장 되었습니다.");
+                                sitebuilder.notify("遺덇? 硫붾え媛 ????섏뿀?듬땲??");
                             }
                         }));
                     },
@@ -284,52 +284,52 @@
         });
 
         dxInstances.btnAmOff.option({
-            text: '오전 불가',
+            text: '?ㅼ쟾 遺덇?',
             onClick: function () {
                 if (!dxInstances.lookupCenter.option('value')) {
-                    alert('병원을 선택해주세요.');
+                    alert('蹂묒썝???좏깮?댁＜?몄슂.');
                     return;
                 }
                 saveDayOff('AM');
-                ggsj.notify("오전 불가 저장 되었습니다.");
+                sitebuilder.notify("?ㅼ쟾 遺덇? ????섏뿀?듬땲??");
             }
         });
 
         dxInstances.btnPmOff.option({
-            text: '오후 불가',
+            text: '?ㅽ썑 遺덇?',
             type: "success",
             onClick: function () {
                 if (!dxInstances.lookupCenter.option('value')) {
-                    alert('병원을 선택해주세요.');
+                    alert('蹂묒썝???좏깮?댁＜?몄슂.');
                     return;
                 }
                 saveDayOff('PM');
-                ggsj.notify("오후 불가 저장 되었습니다.");
+                sitebuilder.notify("?ㅽ썑 遺덇? ????섏뿀?듬땲??");
             }
         });
 
         dxInstances.btnAllOff.option({
-            text: '종일 불가',
+            text: '醫낆씪 遺덇?',
             onClick: function () {
                 if (!dxInstances.lookupCenter.option('value')) {
-                    alert('병원을 선택해주세요.');
+                    alert('蹂묒썝???좏깮?댁＜?몄슂.');
                     return;
                 }
                 saveDayOff('ALL');
-                ggsj.notify("종일 불가 저장 되었습니다.");
+                sitebuilder.notify("醫낆씪 遺덇? ????섏뿀?듬땲??");
             }
         });
 
         dxInstances.btnOn.option({
-            text: '불가 해제',
+            text: '遺덇? ?댁젣',
             type: 'danger',
             onClick: function () {
                 if (!dxInstances.lookupCenter.option('value')) {
-                    alert('병원을 선택해주세요.');
+                    alert('蹂묒썝???좏깮?댁＜?몄슂.');
                     return;
                 }
                 saveDayOff('REMOVE');
-                ggsj.notify("불가 해제 되었습니다.");
+                sitebuilder.notify("遺덇? ?댁젣 ?섏뿀?듬땲??");
             }
         });
 
@@ -344,25 +344,25 @@
             searchExpr: 'centerName',
             searchMode: 'contains',
             searchTimeout: 100,
-            placeholder: "붙여넣을 병원 선택",
-            searchPlaceholder: "검색",
+            placeholder: "遺숈뿬?ｌ쓣 蹂묒썝 ?좏깮",
+            searchPlaceholder: "寃??,
         });
 
         dxInstances.btnCopy.option({
-            text: '전체 복사',
+            text: '?꾩껜 蹂듭궗',
             onClick: function () {
                 if (!dxInstances.lookupCenter.option('value')) {
-                    alert('병원을 선택해주세요.');
+                    alert('蹂묒썝???좏깮?댁＜?몄슂.');
                     return;
                 }
 
                 if (!dxInstances.targetCenterId.option('value')) {
-                    alert('붙여넣을 병원을 선택해주세요.');
+                    alert('遺숈뿬?ｌ쓣 蹂묒썝???좏깮?댁＜?몄슂.');
                     return;
                 }
 
-                if (confirm('경고! 모든정보가 덮어씌어 집니다. 복사하시겠습니까?') !== true) {
-                    alert('취소하였습니다.');
+                if (confirm('寃쎄퀬! 紐⑤뱺?뺣낫媛 ??뼱?뚯뼱 吏묐땲?? 蹂듭궗?섏떆寃좎뒿?덇퉴?') !== true) {
+                    alert('痍⑥냼?섏??듬땲??');
                     return;
                 }
 
@@ -375,7 +375,7 @@
                     })
                 }).then(function () {
                     LoadDayOffList();
-                    ggsj.notify("복사가 완료 되었습니다.");
+                    sitebuilder.notify("蹂듭궗媛 ?꾨즺 ?섏뿀?듬땲??");
                 });
             }
         });

@@ -1,4 +1,4 @@
-(function( factory ) {
+﻿(function( factory ) {
 	if ( typeof define === "function" && define.amd ) {
 		define( ["jquery", "../jquery.validate"], factory );
 	} else {
@@ -21,13 +21,13 @@ $.extend($.validator.messages, {
 	digits: "Unesite samo cife.",
 	creditcard: "Unesite ispravan broj kreditne kartice.",
 	equalTo: "Unesite istu vrednost ponovo.",
-	extension: "Unesite vrednost sa odgovarajućom ekstenzijom.",
+	extension: "Unesite vrednost sa odgovaraju훶om ekstenzijom.",
 	maxlength: $.validator.format("Unesite manje od {0} karaktera."),
 	minlength: $.validator.format("Unesite barem {0} karaktera."),
-	rangelength: $.validator.format("Unesite vrednost dugačku između {0} i {1} karaktera."),
-	range: $.validator.format("Unesite vrednost između {0} i {1}."),
+	rangelength: $.validator.format("Unesite vrednost duga훾ku izme휃u {0} i {1} karaktera."),
+	range: $.validator.format("Unesite vrednost izme휃u {0} i {1}."),
 	max: $.validator.format("Unesite vrednost manju ili jednaku {0}."),
-	min: $.validator.format("Unesite vrednost veću ili jednaku {0}.")
+	min: $.validator.format("Unesite vrednost ve훶u ili jednaku {0}.")
 });
 
 }));

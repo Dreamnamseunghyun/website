@@ -10,7 +10,7 @@
 <head>
     <meta http-equiv="content-type" content="text/html;charset=UTF-8"/>
     <meta charset="utf-8"/>
-    <title>건강살자</title>
+    <title>건강?�자</title>
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no"/>
     <link rel="apple-touch-icon" href="<c:url value="/lib/pages/ico/60.png"/>">
@@ -20,7 +20,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-touch-fullscreen" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
-    <meta content="건강살자" name="description"/>
+    <meta content="건강?�자" name="description"/>
 
     <link rel="stylesheet" type="text/css" href="<c:url value="/lib/bootstrap/css/bootstrap.min.css"/>"/>
     <link rel="stylesheet" type="text/css" class="main-stylesheet"
@@ -52,25 +52,25 @@
     <div class="bg-pic">
         <div class="bg-caption p-l-50">
             <h1 class="normal">
-                “귀기울여 들어준다면 우리 몸은 <br>
-                우리에게 분명하고 구체적으로 얘기한다.”</h1>
+                ?��?기울???�어준?�면 ?�리 몸�? <br>
+                ?�리?�게 분명?�고 구체?�으�??�기?�다.??/h1>
             <h5 class="mont opacity-06 m-t-30">
                 Our bodies communicate to us clearly and specifically, <br>if we are willing to listen to them.
             </h5>
-            <p class="m-t-30">- 삭티 거웨인 Shakti Gawain</p>
+            <p class="m-t-30">- ??�� 거웨??Shakti Gawain</p>
         </div>
     </div>
     <div class="login-container bg-white">
         <div class="login-loc p-l-50 p-r-50">
-            <img src="<c:url value="/img/logo-login.png"/>" alt="건강살자로고">
+            <img src="<c:url value="/img/logo-login.png"/>" alt="건강?�자로고">
             <h4 class="m-t-30 m-b-0 color-gray2 mont">Platform Manager LOGIN</h4>
-            <h2 class="m-t-10 font-weight-bold">플랫폼매니저 로그인</h2>
-            <p class="mw-80 m-t-5 color-gray3">로그인하기 위해 아이디와 패스워드를 입력해주세요.</p>
+            <h2 class="m-t-10 font-weight-bold">?�랫?�매?��? 로그??/h2>
+            <p class="mw-80 m-t-5 color-gray3">로그?�하�??�해 ?�이?��? ?�스?�드�??�력?�주?�요.</p>
             <form id="form-login" class="p-t-15" role="form">
                 <div class="form-group form-group-default">
                     <label for="managerCode" class="mont font-weight-bold">Login</label>
                     <div class="controls">
-                        <input type="text" id="managerCode" placeholder="아이디를 입력해주세요." class="form-control mont"
+                        <input type="text" id="managerCode" placeholder="?�이?��? ?�력?�주?�요." class="form-control mont"
                                required>
                     </div>
                 </div>
@@ -78,23 +78,23 @@
                     <label for="userPw" class="mont font-weight-bold">Password</label>
                     <div class="controls">
                         <input type="password" id="userPw" name="userPw" class="form-control mont"
-                               placeholder="패스워드를 입력해주세요." required>
+                               placeholder="?�스?�드�??�력?�주?�요." required>
                     </div>
                 </div>
                 <%--<div class="row">
                     <div class="col-md-6 no-padding sm-p-l-10">
                         <div class="form-check">
                             <input type="checkbox" value="1" id="checkbox1">
-                            <label for="checkbox1">ID 저장하기</label>
+                            <label for="checkbox1">ID ?�?�하�?/label>
                         </div>
                     </div>
                     <div class="col-md-6 d-flex align-items-center justify-content-end">
 
-                        <a href="#" class="normal change_pw">패스워드를 변경하고 싶으신가요?</a>
+                        <a href="#" class="normal change_pw">?�스?�드�?변경하�??�으?��???</a>
                     </div>
                 </div>--%>
                 <div class="m-b-5 m-t-0">
-                    <button type="submit" aria-label="" class="btn btn-primary btn-lg m-t-10">로그인</button>
+                    <button type="submit" aria-label="" class="btn btn-primary btn-lg m-t-10">로그??/button>
                 </div>
             </form>
         </div>

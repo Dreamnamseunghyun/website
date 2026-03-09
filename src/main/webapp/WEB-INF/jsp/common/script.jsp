@@ -1,4 +1,4 @@
-<%@ page contentType="text/html; charset=utf-8" pageEncoding="utf-8" %>
+﻿<%@ page contentType="text/html; charset=utf-8" pageEncoding="utf-8" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <%--<script type="text/javascript" src="<c:url value="/lib/jquery/jquery-3.2.1.min.js"/>"></script>--%>
@@ -39,7 +39,7 @@
 <script type="text/javascript" src="<c:url value="/lib/devextreme/localization/dx.messages.ko.js"/>"></script>
 
 <%--<!-- GGSJ Javascript -->--%>
-<script type="text/javascript" src="<c:url value="/js/ggsj.dotize.js"/>"></script>
-<script type="text/javascript" src="<c:url value="/js/ggsj.typedef.js"/>"></script>
-<script type="text/javascript" src="<c:url value="/js/ggsj.dx.js"/>"></script>
-<script type="text/javascript" src="<c:url value="/js/ggsj.init.js"/>"></script>
+<script type="text/javascript" src="<c:url value="/js/sitebuilder.dotize.js"/>"></script>
+<script type="text/javascript" src="<c:url value="/js/sitebuilder.typedef.js"/>"></script>
+<script type="text/javascript" src="<c:url value="/js/sitebuilder.dx.js"/>"></script>
+<script type="text/javascript" src="<c:url value="/js/sitebuilder.init.js"/>"></script>

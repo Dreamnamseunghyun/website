@@ -1,4 +1,4 @@
-
+﻿
 nv.utils.windowSize = function() {
     // Sane defaults
     var size = {width: 640, height: 480};

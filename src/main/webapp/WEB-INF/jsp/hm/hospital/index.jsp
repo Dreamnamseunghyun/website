@@ -1,4 +1,4 @@
-<%@ page contentType="text/html; charset=utf-8" pageEncoding="utf-8" %>
+﻿<%@ page contentType="text/html; charset=utf-8" pageEncoding="utf-8" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 
@@ -21,7 +21,7 @@
                 <div class="card card-transparent board_internal">
                     <div class="card-header ">
                         <div class="card-title">
-                            <h3 class="h3">병원목록</h3>
+                            <h3 class="h3">蹂묒썝紐⑸줉</h3>
                         </div>
                     </div>
                     <%--                    <div class="card-body">--%>
@@ -33,8 +33,8 @@
                                 <div class="row-box">
                                     <div class="row-box-inner">
                                         <div class="col-box1 row">
-                                            <div class="col-lg-5 tag-name"><span>특수검진 가능병원 조회</span></div>
-                                            <div class="col-lg-7" id="selectSpecial" data-ggsj="dxSelectBox"></div>
+                                            <div class="col-lg-5 tag-name"><span>?뱀닔寃吏?媛?λ퀝??議고쉶</span></div>
+                                            <div class="col-lg-7" id="selectSpecial" data-sitebuilder="dxSelectBox"></div>
                                         </div>
                                     </div>
                                 </div>
@@ -46,7 +46,7 @@
                                 <div class="row-box">
                                     <div class="row-box-inner">
                                         <div class="col-box1 row">
-                                            <div class="col-lg-12" id="searchGrid" data-ggsj="dxTextBox"></div>
+                                            <div class="col-lg-12" id="searchGrid" data-sitebuilder="dxTextBox"></div>
                                         </div>
                                     </div>
                                 </div>
@@ -55,7 +55,7 @@
                         </div>
                         <!-- Header -->
 
-                        <div id="dataGridHospital" class="main_table" data-ggsj="dxDataGrid">
+                        <div id="dataGridHospital" class="main_table" data-sitebuilder="dxDataGrid">
                         </div>
 
 
@@ -72,9 +72,9 @@
 </body>
 <script>
     $(function () {
-        ggsj.openMenu('hospital');
+        sitebuilder.openMenu('hospital');
 
-        let dxInstances = ggsj.createDx(false);
+        let dxInstances = sitebuilder.createDx(false);
 
         let dshospital = new DevExpress.data.DataSource({
             load: function () {
@@ -87,8 +87,8 @@
 
         dxInstances.selectSpecial.option({
             dataSource: [
-                {'id': 'All', 'text': '전체'},
-                {'id': 1, 'text': '특수검진 가능병원 조회'},
+                {'id': 'All', 'text': '?꾩껜'},
+                {'id': 1, 'text': '?뱀닔寃吏?媛?λ퀝??議고쉶'},
             ],
             value: 'All',
             valueExpr: 'id',
@@ -102,7 +102,7 @@
         });
 
         dxInstances.searchGrid.option({
-            placeholder: '검색',
+            placeholder: '寃??,
             valueChangeEvent: "keyup",
             onValueChanged: function (e) {
                 dxInstances.dataGridHospital.searchByText(e.value);
@@ -121,7 +121,7 @@
                 visible: false,
             },
             columns: [{
-                caption: '병원명',
+                caption: '蹂묒썝紐?,
                 groupIndex: 0,
                 dataField: 'hospitalName',
                 groupCellTemplate: function (cellElement, cellInfo) {
@@ -132,7 +132,7 @@
                         $("<div class='green'>")
                             .css({'float': 'right', 'margin': '0 5px'})
                             .dxButton({
-                                text: "연도별 기준수가",
+                                text: "?곕룄蹂?湲곗??섍?",
                                 onClick: function () {
                                     let hospitalId = cellInfo.data.items[0].hospitalId;
                                     location.href = '<c:url value="/hm/hospital/0/checkup/2022"/>';
@@ -141,7 +141,7 @@
                         $("<div class='blue'>")
                             .css({'float': 'right', 'margin': '0 5px'})
                             .dxButton({
-                                text: "센터 등록",
+                                text: "?쇳꽣 ?깅줉",
                                 onClick: function () {
                                     let hospitalId = cellInfo.data.items[0].hospitalId;
                                     location.href = '<c:url value="/hm/center/0/create"/>';
@@ -150,7 +150,7 @@
                         $("<div class='orange'>")
                             .css({'float': 'right', 'margin': '0 5px'})
                             .dxButton({
-                                text: "계약 기업",
+                                text: "怨꾩빟 湲곗뾽",
                                 onClick: function () {
                                     let hospitalId = cellInfo.data.items[0].hospitalId;
                                     location.href = '<c:url value="/hm/hospital/0/hcontract"/>';
@@ -163,7 +163,7 @@
                         $("<div class='green'>")
                             .css({'float': 'right', 'margin': '0 5px'})
                             .dxButton({
-                                text: "연도별 기준수가",
+                                text: "?곕룄蹂?湲곗??섍?",
                                 onClick: function () {
                                     let hospitalId = cellInfo.data.collapsedItems[0].hospitalId;
                                     location.href = '<c:url value="/hm/hospital/0/checkup/2021"/>';
@@ -172,7 +172,7 @@
                         $("<div class='blue'>")
                             .css({'float': 'right', 'margin': '0 5px'})
                             .dxButton({
-                                text: "센터 등록",
+                                text: "?쇳꽣 ?깅줉",
                                 onClick: function () {
                                     let hospitalId = cellInfo.data.collapsedItems[0].hospitalId;
                                     location.href = '<c:url value="/hm/center/0/create"/>';
@@ -181,7 +181,7 @@
                         $("<div class='orange'>")
                             .css({'float': 'right', 'margin': '0 5px'})
                             .dxButton({
-                                text: "계약 기업",
+                                text: "怨꾩빟 湲곗뾽",
                                 onClick: function () {
                                     let hospitalId = cellInfo.data.collapsedItems[0].hospitalId;
                                     location.href = '<c:url value="/hm/hospital/0/hcontract"/>';
@@ -191,29 +191,29 @@
                 },
             }, {
                 dataField: 'centerName',
-                caption: '센터명',
+                caption: '?쇳꽣紐?,
                 cellTemplate: function (cellElement, cellInfo) {
                     let centerId = cellInfo.row.data.centerId;
                     <%--cellElement.append('<a href = ' + '<c:url value="/hm/center"/>/' + centerId + '>' + cellInfo.text + '</a>');--%>
                     cellElement.append('<a href = ' + '<c:url value="/hm/center"/>/' + centerId + '>' + cellInfo.data.centerName + '</a>');
                 },
             }, {
-                caption: '특수검진 가능병원',
+                caption: '?뱀닔寃吏?媛?λ퀝??,
                 dataField: 'ableSpecial',
                 lookup: {
                     dataSource: [
                         {id: false, text: ''},
-                        {id: true, text: '특수검진 가능'},
+                        {id: true, text: '?뱀닔寃吏?媛??},
                     ],
                     valueExpr: 'id',
                     displayExpr: 'text',
                 },
             }, {
                 type: 'buttons',
-                caption: '병원홍보',
+                caption: '蹂묒썝?띾낫',
                 buttons: [{
                     name: 'hospitalInfo',
-                    text: '병원홍보',
+                    text: '蹂묒썝?띾낫',
                     onClick: function (e) {
                         let hospital = e.row.data;
                         location.href = '<c:url value="/hm/center"/>/' + hospital.centerId + '/info';
@@ -221,10 +221,10 @@
                 }],
             }, {
                 type: 'buttons',
-                caption: '예약불가',
+                caption: '?덉빟遺덇?',
                 buttons: [{
                     name: 'reserveLimit',
-                    text: '예약불가',
+                    text: '?덉빟遺덇?',
                     onClick: function (e) {
                         let hospital = e.row.data;
                         location.href = '<c:url value="/hm/day-off"/>?' + $.param({
@@ -234,10 +234,10 @@
                 }],
             }, {
                 type: 'buttons',
-                caption: '수정',
+                caption: '?섏젙',
                 buttons: [{
                     name: 'hospitalDetail',
-                    text: '수정',
+                    text: '?섏젙',
                     method: 'PUT',
                     onClick: function (e) {
                         let hospital = e.row.data;

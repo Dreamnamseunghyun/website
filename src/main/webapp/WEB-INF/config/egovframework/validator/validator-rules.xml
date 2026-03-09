@@ -1,4 +1,4 @@
-<!DOCTYPE form-validation PUBLIC
+﻿<!DOCTYPE form-validation PUBLIC
           "-//Apache Software Foundation//DTD Commons Validator Rules Configuration 1.0//EN"
           "http://jakarta.apache.org/commons/dtds/validator_1_0.dtd">
 <!--
@@ -1084,9 +1084,8 @@
       </validator>
       
       <!-- 
-      	주민등록번호 validation.
-      	Commons Validator가 제공하는 validator가 아니라 추가된 validator이므로
-      	실행을 위해서는 반드시  egovframework.rte.ptl.mvcXXXXX.jar가 필요하다.
+      	二쇰??깅줉踰덊샇 validation.
+      	Commons Validator媛 ?쒓났?섎뒗 validator媛 ?꾨땲??異붽???validator?대?濡?      	?ㅽ뻾???꾪빐?쒕뒗 諛섎뱶?? egovframework.rte.ptl.mvcXXXXX.jar媛 ?꾩슂?섎떎.
       -->
       <validator name="ihidnum"
             classname="egovframework.rte.ptl.mvc.validation.RteFieldChecks"

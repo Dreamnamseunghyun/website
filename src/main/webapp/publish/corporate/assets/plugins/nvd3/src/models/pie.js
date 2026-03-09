@@ -1,4 +1,4 @@
-nv.models.pie = function() {
+﻿nv.models.pie = function() {
   "use strict";
   //============================================================
   // Public Variables with Default Settings

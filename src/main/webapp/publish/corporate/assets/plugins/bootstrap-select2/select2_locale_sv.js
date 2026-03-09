@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Select2 Swedish translation.
  *
  * Author: Jens Rantil <jens.rantil@telavox.com>
@@ -7,12 +7,12 @@
     "use strict";
 
     $.fn.select2.locales['sv'] = {
-        formatNoMatches: function () { return "Inga träffar"; },
+        formatNoMatches: function () { return "Inga tr채ffar"; },
         formatInputTooShort: function (input, min) { var n = min - input.length; return "Var god skriv in " + n + (n>1 ? " till tecken" : " tecken till"); },
         formatInputTooLong: function (input, max) { var n = input.length - max; return "Var god sudda ut " + n + " tecken"; },
-        formatSelectionTooBig: function (limit) { return "Du kan max välja " + limit + " element"; },
-        formatLoadMore: function (pageNumber) { return "Laddar fler resultat…"; },
-        formatSearching: function () { return "Söker…"; }
+        formatSelectionTooBig: function (limit) { return "Du kan max v채lja " + limit + " element"; },
+        formatLoadMore: function (pageNumber) { return "Laddar fler resultat??; },
+        formatSearching: function () { return "S철ker??; }
     };
 
     $.extend($.fn.select2.defaults, $.fn.select2.locales['sv']);

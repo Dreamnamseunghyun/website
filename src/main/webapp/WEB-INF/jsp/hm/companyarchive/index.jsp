@@ -1,4 +1,4 @@
-<%@ page contentType="text/html; charset=utf-8" pageEncoding="utf-8" %>
+﻿<%@ page contentType="text/html; charset=utf-8" pageEncoding="utf-8" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 
@@ -21,7 +21,7 @@
                 <div class="card card-transparent board_internal">
                     <div class="card-header ">
                         <div class="card-title">
-                            <h3 class="h3">회사보관용 자료</h3>
+                            <h3 class="h3">?뚯궗蹂닿????먮즺</h3>
                         </div>
                     </div>
                     <%--                    <div class="card-body">--%>
@@ -37,28 +37,28 @@
 
                                             <div class="col-lg-12">
                                                 <div class="col-lg-box4 row">
-                                                    <div class="col-lg-4 tag-name"><span>업로드 기업체</span></div>
+                                                    <div class="col-lg-4 tag-name"><span>?낅줈??湲곗뾽泥?/span></div>
                                                     <div class="col-lg-8" id="selectResultCompany"
-                                                         data-ggsj="dxSelectBox"></div>
+                                                         data-sitebuilder="dxSelectBox"></div>
                                                 </div>
                                                 <div class="col-lg-box4 row">
-                                                    <div class="col-lg-4 tag-name"><span>대상년도</span></div>
+                                                    <div class="col-lg-4 tag-name"><span>??곷뀈??/span></div>
                                                     <div class="col-lg-8" id="selectResultCheckupYear"
-                                                         data-ggsj="dxSelectBox"></div>
+                                                         data-sitebuilder="dxSelectBox"></div>
                                                 </div>
                                                 <div class="col-lg-box4 row">
-                                                    <div class="col-lg-4 tag-name"><span>자료명</span></div>
-                                                    <div class="col-lg-8" id="resultTitle" data-ggsj="dxTextBox"></div>
+                                                    <div class="col-lg-4 tag-name"><span>?먮즺紐?/span></div>
+                                                    <div class="col-lg-8" id="resultTitle" data-sitebuilder="dxTextBox"></div>
                                                 </div>
                                                 <div class="col-lg-box4 row">
                                                     <div class="col-lg-12 center">
                                                         <div class="col-lg-4">
-                                                            <div id="noneResultArchive" data-ggsj="dxCheckBox"></div>
+                                                            <div id="noneResultArchive" data-sitebuilder="dxCheckBox"></div>
                                                         </div>
                                                         <div class="col-lg-8">
-                                                            <div class="btn2" id="btnResultAttach" data-ggsj="dxButton"
+                                                            <div class="btn2" id="btnResultAttach" data-sitebuilder="dxButton"
                                                                  style="box-shadow: none; margin-right:5px;"></div>
-                                                            <div class="btn2" id="btnResultSave" data-ggsj="dxButton"
+                                                            <div class="btn2" id="btnResultSave" data-sitebuilder="dxButton"
                                                                  style="border:none;"></div>
                                                         </div>
 
@@ -76,14 +76,14 @@
                         <div class="row-wrap row-wrap-box">
 
                             <div id="resultArchiveFilename" class="section sec02 sub_table"
-                                 data-ggsj="dxDataGrid" style="height:25vh;"></div>
+                                 data-sitebuilder="dxDataGrid" style="height:25vh;"></div>
 
                         </div>
 
 
                         <div class="row-wrap row-wrap-box">
 
-                            <div id="dataGridCheckupResult" class="main_table" data-ggsj="dxDataGrid"
+                            <div id="dataGridCheckupResult" class="main_table" data-sitebuilder="dxDataGrid"
                                  style="height:25vh;"></div>
 
                         </div>
@@ -98,28 +98,28 @@
 
                                             <div class="col-lg-12">
                                                 <div class="col-lg-box4 row">
-                                                    <div class="col-lg-4 tag-name"><span>업로드 기업체</span></div>
+                                                    <div class="col-lg-4 tag-name"><span>?낅줈??湲곗뾽泥?/span></div>
                                                     <div class="col-lg-8" id="selectETCCompany"
-                                                         data-ggsj="dxSelectBox"></div>
+                                                         data-sitebuilder="dxSelectBox"></div>
                                                 </div>
                                                 <div class="col-lg-box4 row">
-                                                    <div class="col-lg-4 tag-name"><span>대상년도</span></div>
+                                                    <div class="col-lg-4 tag-name"><span>??곷뀈??/span></div>
                                                     <div class="col-lg-8" id="selectETCCheckupYear"
-                                                         data-ggsj="dxSelectBox"></div>
+                                                         data-sitebuilder="dxSelectBox"></div>
                                                 </div>
                                                 <div class="col-lg-box4 row">
-                                                    <div class="col-lg-4 tag-name"><span>자료명</span></div>
-                                                    <div class="col-lg-8" id="ETCTitle" data-ggsj="dxTextBox"></div>
+                                                    <div class="col-lg-4 tag-name"><span>?먮즺紐?/span></div>
+                                                    <div class="col-lg-8" id="ETCTitle" data-sitebuilder="dxTextBox"></div>
                                                 </div>
                                                 <div class="col-lg-box4 row">
                                                     <div class="col-lg-12 center">
                                                         <div class="col-lg-4">
-                                                            <div id="noneETCArchive" data-ggsj="dxCheckBox"></div>
+                                                            <div id="noneETCArchive" data-sitebuilder="dxCheckBox"></div>
                                                         </div>
                                                         <div class="col-lg-8">
-                                                            <div class="btn2" id="btnETCAttach" data-ggsj="dxButton"
+                                                            <div class="btn2" id="btnETCAttach" data-sitebuilder="dxButton"
                                                                  style="box-shadow: none; margin-right:5px;"></div>
-                                                            <div class="btn2" id="btnETCSave" data-ggsj="dxButton"
+                                                            <div class="btn2" id="btnETCSave" data-sitebuilder="dxButton"
                                                                  style="border:none;"></div>
                                                         </div>
 
@@ -134,20 +134,20 @@
                         </div>
 
                         <div class="row-wrap row-wrap-box">
-                            <div id="ETCArchiveFilename" class="section sec02 sub_table" data-ggsj="dxDataGrid"
+                            <div id="ETCArchiveFilename" class="section sec02 sub_table" data-sitebuilder="dxDataGrid"
                                  style="height:25vh;"></div>
                         </div>
 
                             <div class="row-wrap row-wrap-box">
 
-                                <div id="dataGridEtc" class="main_table" data-ggsj="dxDataGrid" style="height:25vh;">
+                                <div id="dataGridEtc" class="main_table" data-sitebuilder="dxDataGrid" style="height:25vh;">
                                 </div>
 
                                 <form id="formArchive" style="display:none">
                                     <input type="file" id="archive" name="archive" style="display: none;"
                                            multiple="multiple"/>
                                 </form>
-                                <div id="popupAttach" data-ggsj="dxPopup"></div>
+                                <div id="popupAttach" data-sitebuilder="dxPopup"></div>
                             </div>
 
                     </div>
@@ -163,33 +163,33 @@
 </body>
 <script>
     $(function () {
-        ggsj.openMenu('companyarchive');
+        sitebuilder.openMenu('companyarchive');
 
-        let dxInstances = ggsj.createDx(false);
+        let dxInstances = sitebuilder.createDx(false);
 
         let dsResultList = [];
         let dsETCList = [];
 
         dxInstances.selectResultCheckupYear.option({
-            dataSource: ggsj.typeDef.Year,
+            dataSource: sitebuilder.typeDef.Year,
             value: new Date().getFullYear(),
             valueExpr: 'id',
             displayExpr: 'text',
         });
 
         dxInstances.selectETCCheckupYear.option({
-            dataSource: ggsj.typeDef.Year,
+            dataSource: sitebuilder.typeDef.Year,
             value: new Date().getFullYear(),
             valueExpr: 'id',
             displayExpr: 'text',
         });
 
         dxInstances.noneResultArchive.option({
-            text: '자료없음',
+            text: '?먮즺?놁쓬',
             onValueChanged: function (e) {
                 if (e.value === true) {
                     dxInstances.resultTitle.option({
-                        value: '자료없음',
+                        value: '?먮즺?놁쓬',
                         readOnly: true,
                     });
                     dxInstances.btnResultAttach.option({
@@ -208,11 +208,11 @@
         });
 
         dxInstances.noneETCArchive.option({
-            text: '자료없음',
+            text: '?먮즺?놁쓬',
             onValueChanged: function (e) {
                 if (e.value === true) {
                     dxInstances.ETCTitle.option({
-                        value: '자료없음',
+                        value: '?먮즺?놁쓬',
                         readOnly: true,
                     });
                     dxInstances.btnETCAttach.option({
@@ -232,11 +232,11 @@
 
         dxInstances.btnResultSave.option({
             stylingMode: 'outlined',
-            text: '저장',
+            text: '???,
             type: 'success',
             onClick: function () {
                 if (dxInstances.selectResultCompany.option('value') && dxInstances.resultTitle.option('value')) {
-                    ggsj.notify("저장중입니다...");
+                    sitebuilder.notify("??μ쨷?낅땲??..");
                     let data = {};
                     data.companyId = dxInstances.selectResultCompany.option('value');
                     data.checkupYear = dxInstances.selectResultCheckupYear.option('value');
@@ -259,24 +259,24 @@
                         contentType: false,
                         data: formData,
                     }).then(function () {
-                        ggsj.notify("저장되었습니다.");
+                        sitebuilder.notify("??λ릺?덉뒿?덈떎.");
                         location.reload();
                     });
                 } else if (!dxInstances.selectResultCompany.option('value')) {
-                    alert('업로드할 기업체를 선택해 주세요');
+                    alert('?낅줈?쒗븷 湲곗뾽泥대? ?좏깮??二쇱꽭??);
                 } else if (!dxInstances.resultTitle.option('value')) {
-                    alert('자료명을 입력해 주세요');
+                    alert('?먮즺紐낆쓣 ?낅젰??二쇱꽭??);
                 }
             }
         });
 
         dxInstances.btnETCSave.option({
             stylingMode: 'outlined',
-            text: '저장',
+            text: '???,
             type: 'success',
             onClick: function () {
                 if (dxInstances.selectETCCompany.option('value') && dxInstances.ETCTitle.option('value')) {
-                    ggsj.notify("저장중입니다...");
+                    sitebuilder.notify("??μ쨷?낅땲??..");
                     let data = {};
                     data.companyId = dxInstances.selectETCCompany.option('value');
                     data.checkupYear = dxInstances.selectETCCheckupYear.option('value');
@@ -298,19 +298,19 @@
                         contentType: false,
                         data: formData,
                     }).then(function () {
-                        ggsj.notify("저장되었습니다.");
+                        sitebuilder.notify("??λ릺?덉뒿?덈떎.");
                         location.reload();
                     });
                 } else if (!dxInstances.selectETCCompany.option('value')) {
-                    alert('업로드할 기업체를 선택해 주세요');
+                    alert('?낅줈?쒗븷 湲곗뾽泥대? ?좏깮??二쇱꽭??);
                 } else if (!dxInstances.ETCTitle.option('value')) {
-                    alert('자료명을 입력해 주세요');
+                    alert('?먮즺紐낆쓣 ?낅젰??二쇱꽭??);
                 }
             }
         });
 
         dxInstances.btnResultAttach.option({
-            text: '파일첨부',
+            text: '?뚯씪泥⑤?',
             onClick: function () {
                 $('#archive').trigger('click');
                 $('#archive').on('change', resultArchive);
@@ -318,7 +318,7 @@
         });
 
         dxInstances.btnETCAttach.option({
-            text: '파일첨부',
+            text: '?뚯씪泥⑤?',
             onClick: function () {
                 $('#archive').trigger('click');
                 $('#archive').on('change', ETCArchive);
@@ -332,12 +332,12 @@
             showBorders: true,
             columns: [{
                 dataField: 'archiveFilename',
-                caption: '파일명',
+                caption: '?뚯씪紐?,
             }, {
                 type: 'buttons',
-                caption: '삭제',
+                caption: '??젣',
                 buttons: [{
-                    text: '삭제',
+                    text: '??젣',
                     onClick: function (e) {
                         delete dsResultList[e.row.rowIndex];
                         dsResultList = dsResultList.filter(function (item) {
@@ -353,7 +353,7 @@
                 // Grid Title
                 e.toolbarOptions.items.unshift({
                     location: 'before',
-                    text: '첨부파일',
+                    text: '泥⑤??뚯씪',
                 });
             },
         });
@@ -365,12 +365,12 @@
             showBorders: true,
             columns: [{
                 dataField: 'archiveFilename',
-                caption: '파일명',
+                caption: '?뚯씪紐?,
             }, {
                 type: 'buttons',
-                caption: '삭제',
+                caption: '??젣',
                 buttons: [{
-                    text: '삭제',
+                    text: '??젣',
                     onClick: function (e) {
                         delete dsETCList[e.row.rowIndex];
                         dsETCList = dsETCList.filter(function (item) {
@@ -386,7 +386,7 @@
                 // Grid Title
                 e.toolbarOptions.items.unshift({
                     location: 'before',
-                    text: '첨부파일',
+                    text: '泥⑤??뚯씪',
                 });
             },
         });
@@ -401,7 +401,7 @@
 
             for (let i = 0; i < fileList.length; i++) {
                 if (fileList[0].type !== fileList[i].type) {
-                    alert('자료저장 시 동일한 문서형식(같은 파일의 확장자)의 파일들만\n업로드 가능합니다. (예시 : 자료1-엑셀파일들, 자료2-PDF파일들)');
+                    alert('?먮즺??????숈씪??臾몄꽌?뺤떇(媛숈? ?뚯씪???뺤옣?????뚯씪?ㅻ쭔\n?낅줈??媛?ν빀?덈떎. (?덉떆 : ?먮즺1-?묒??뚯씪?? ?먮즺2-PDF?뚯씪??');
                     location.reload();
                 }
 
@@ -432,7 +432,7 @@
 
             for (let i = 0; i < fileList.length; i++) {
                 if (fileList[0].type !== fileList[i].type) {
-                    alert('자료저장 시 동일한 문서형식(같은 파일의 확장자)의 파일들만\n업로드 가능합니다. (예시 : 자료1-엑셀파일들, 자료2-PDF파일들)');
+                    alert('?먮즺??????숈씪??臾몄꽌?뺤떇(媛숈? ?뚯씪???뺤옣?????뚯씪?ㅻ쭔\n?낅줈??媛?ν빀?덈떎. (?덉떆 : ?먮즺1-?묒??뚯씪?? ?먮즺2-PDF?뚯씪??');
                     location.reload();
                 }
 
@@ -457,7 +457,7 @@
             });
         }
 
-        //기업체 건강진단결과표 및 사후관리소견서
+        //湲곗뾽泥?嫄닿컯吏꾨떒寃곌낵??諛??ы썑愿由ъ냼寃ъ꽌
         dxInstances.dataGridCheckupResult.option({
             searchPanel: {
                 visible: false,
@@ -467,36 +467,33 @@
                 dataField: '_crudType',
                 visible: false,
             }, {
-                //기업체명
+                //湲곗뾽泥대챸
                 dataField: 'companyName',
-                caption: '기업체명',
+                caption: '湲곗뾽泥대챸',
                 alignment: 'center',
             }, {
-                //대상년도
-                dataField: 'checkupYear',
-                caption: '대상년도',
+                //??곷뀈??                dataField: 'checkupYear',
+                caption: '??곷뀈??,
                 alignment: 'center',
             }, {
-                //병원명
-                dataField: 'hospitalName',
-                caption: '병원명',
+                //蹂묒썝紐?                dataField: 'hospitalName',
+                caption: '蹂묒썝紐?,
                 alignment: 'center',
             }, {
-                //자료명
-                dataField: 'title',
-                caption: '자료명',
+                //?먮즺紐?                dataField: 'title',
+                caption: '?먮즺紐?,
                 alignment: 'center',
             }, {
                 dataField: 'attach',
                 type: 'buttons',
-                caption: '첨부파일',
+                caption: '泥⑤??뚯씪',
                 buttons: [{
-                    text: '첨부파일',
+                    text: '泥⑤??뚯씪',
                     onClick: function (e) {
                         if (e.row.data.companyArchiveFiles[0].companyArchiveFileId) {
                             dxInstances.popupAttach.show();
                             dxInstances.popupAttach.option({
-                                title: "첨부파일",
+                                title: "泥⑤??뚯씪",
                                 closeOnOutsideClick: true,
                                 width: 800,
                                 height: 500,
@@ -505,12 +502,12 @@
                                         dataSource: e.row.data.companyArchiveFiles,
                                         columns: [{
                                             dataField: 'archiveFilename',
-                                            caption: '파일명',
+                                            caption: '?뚯씪紐?,
                                         }, {
                                             type: 'buttons',
-                                            caption: '다운로드',
+                                            caption: '?ㅼ슫濡쒕뱶',
                                             buttons: [{
-                                                text: '다운로드',
+                                                text: '?ㅼ슫濡쒕뱶',
                                                 onClick: function (event) {
                                                     location.href = event.row.data.attachUrl;
                                                 }
@@ -520,23 +517,22 @@
                                 },
                             });
                         } else {
-                            alert('등록된 파일이 없습니다.');
+                            alert('?깅줉???뚯씪???놁뒿?덈떎.');
                         }
                     },
                 }],
             }, {
-                //등록일
-                dataField: 'registeredAt',
-                caption: '등록일',
+                //?깅줉??                dataField: 'registeredAt',
+                caption: '?깅줉??,
                 dataType: 'date',
                 alignment: 'center',
             }, {
                 type: 'buttons',
-                caption: '삭제',
+                caption: '??젣',
                 buttons: [{
-                    text: '삭제',
+                    text: '??젣',
                     onClick: function (e) {
-                        if (confirm('정말로 삭제하시겠습니까?')) {
+                        if (confirm('?뺣쭚濡???젣?섏떆寃좎뒿?덇퉴?')) {
                             $.ajax({
                                 url: '<c:url value="/hm/companyarchive"/>/' + e.row.data.companyArchiveId,
                                 method: 'POST',
@@ -551,16 +547,16 @@
                 // Grid Title
                 e.toolbarOptions.items.unshift({
                     location: 'before',
-                    text: '기업체 건강진단결과표 및 사후관리소견서',
+                    text: '湲곗뾽泥?嫄닿컯吏꾨떒寃곌낵??諛??ы썑愿由ъ냼寃ъ꽌',
                 }, {
                     location: 'after',
-                    text: '대상년도',
+                    text: '??곷뀈??,
                 }, {
                     location: 'after',
                     widget: "dxSelectBox",
                     options: {
                         width: 200,
-                        dataSource: ggsj.typeDef.Year,
+                        dataSource: sitebuilder.typeDef.Year,
                         value: new Date().getFullYear(),
                         valueExpr: 'id',
                         displayExpr: 'text',
@@ -572,8 +568,7 @@
             },
         });
 
-        //기타 자료 업로드
-        dxInstances.dataGridEtc.option({
+        //湲고? ?먮즺 ?낅줈??        dxInstances.dataGridEtc.option({
             searchPanel: {
                 visible: false,
             },
@@ -582,35 +577,32 @@
                 dataField: '_crudType',
                 visible: false,
             }, {
-                //기업체명
+                //湲곗뾽泥대챸
                 dataField: 'companyName',
-                caption: '기업체명',
+                caption: '湲곗뾽泥대챸',
                 alignment: 'center',
             }, {
-                //대상년도
-                dataField: 'checkupYear',
-                caption: '대상년도',
+                //??곷뀈??                dataField: 'checkupYear',
+                caption: '??곷뀈??,
                 alignment: 'center',
             }, {
-                //병원명
-                dataField: 'hospitalName',
-                caption: '병원명',
+                //蹂묒썝紐?                dataField: 'hospitalName',
+                caption: '蹂묒썝紐?,
                 alignment: 'center',
             }, {
-                //자료명
-                dataField: 'title',
-                caption: '자료명',
+                //?먮즺紐?                dataField: 'title',
+                caption: '?먮즺紐?,
                 alignment: 'center',
             }, {
                 type: 'buttons',
-                caption: '첨부파일',
+                caption: '泥⑤??뚯씪',
                 buttons: [{
-                    text: '첨부파일',
+                    text: '泥⑤??뚯씪',
                     onClick: function (e) {
                         if (e.row.data.companyArchiveFiles[0].archiveFilename) {
                             dxInstances.popupAttach.show();
                             dxInstances.popupAttach.option({
-                                title: "첨부파일",
+                                title: "泥⑤??뚯씪",
                                 closeOnOutsideClick: true,
                                 width: 800,
                                 height: 500,
@@ -619,12 +611,12 @@
                                         dataSource: e.row.data.companyArchiveFiles,
                                         columns: [{
                                             dataField: 'archiveFilename',
-                                            caption: '파일명',
+                                            caption: '?뚯씪紐?,
                                         }, {
                                             type: 'buttons',
-                                            caption: '다운로드',
+                                            caption: '?ㅼ슫濡쒕뱶',
                                             buttons: [{
-                                                text: '다운로드',
+                                                text: '?ㅼ슫濡쒕뱶',
                                                 onClick: function (event) {
                                                     location.href = event.row.data.attachUrl;
                                                 }
@@ -634,23 +626,22 @@
                                 },
                             });
                         } else {
-                            alert('등록된 파일이 없습니다.');
+                            alert('?깅줉???뚯씪???놁뒿?덈떎.');
                         }
                     },
                 }]
             }, {
-                //등록일
-                dataField: 'registeredAt',
-                caption: '등록일',
+                //?깅줉??                dataField: 'registeredAt',
+                caption: '?깅줉??,
                 dataType: 'date',
                 alignment: 'center',
             }, {
                 type: 'buttons',
-                caption: '삭제',
+                caption: '??젣',
                 buttons: [{
-                    text: '삭제',
+                    text: '??젣',
                     onClick: function (e) {
-                        if (confirm('정말로 삭제하시겠습니까?')) {
+                        if (confirm('?뺣쭚濡???젣?섏떆寃좎뒿?덇퉴?')) {
                             $.ajax({
                                 url: '<c:url value="/hm/companyarchive"/>/' + e.row.data.companyArchiveId,
                                 method: 'POST',
@@ -665,16 +656,16 @@
                 // Grid Title
                 e.toolbarOptions.items.unshift({
                     location: 'before',
-                    text: '기타 자료 업로드',
+                    text: '湲고? ?먮즺 ?낅줈??,
                 }, {
                     location: 'after',
-                    text: '대상년도',
+                    text: '??곷뀈??,
                 }, {
                     location: 'after',
                     widget: "dxSelectBox",
                     options: {
                         width: 200,
-                        dataSource: ggsj.typeDef.Year,
+                        dataSource: sitebuilder.typeDef.Year,
                         value: new Date().getFullYear(),
                         valueExpr: 'id',
                         displayExpr: 'text',
@@ -686,7 +677,7 @@
             },
         });
 
-        //HM 담당 companyList
+        //HM ?대떦 companyList
         let ajaxCompanyList = $.ajax({
             url: '<c:url value="/hm/companylist"/>',
             method: 'GET',

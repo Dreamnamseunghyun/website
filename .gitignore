@@ -1,5 +1,25 @@
+# IDE
 .idea/
-target/
+.vscode/
+
+# OS
 .DS_Store
+._.DS_Store
 Thumbs.db
+
+# Java / Maven
+target/
 *.log
+
+# Node / React
+frontend/node_modules/
+frontend/dist/
+
+# Secrets
+cert/
+.env
+.env.*
+*.pem
+*.key
+*.jks
+*.p12

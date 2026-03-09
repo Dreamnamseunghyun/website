@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="kr.co.dsong.ggsj.notitok.service.mapper.NotitokMapper">
+<mapper namespace="kr.co.sitebuilder.notitok.service.mapper.NotitokMapper">
     <resultMap id="mapNotitok" type="NotitokItemVO" autoMapping="true">
         <result property="employeeNameCrypt" column="employee_name"/>
         <result property="centerManagerNameCrypt" column="center_manager_name"/>
@@ -171,11 +171,11 @@
         , employee.mobile
         , 0
         , REPLACE(REPLACE(REPLACE(REPLACE(#{message},
-        '\#{기업체명}', company.company_name),
-        '\#{기업체코드}', company.company_code),
-        '\#{검진시작일~검진마감일}', CONCAT(DATE(company_checkup.checkup_date_begin), '~',
+        '\#{湲곗뾽泥대챸}', company.company_name),
+        '\#{湲곗뾽泥댁퐫??', company.company_code),
+        '\#{寃吏꾩떆?묒씪~寃吏꾨쭏媛먯씪}', CONCAT(DATE(company_checkup.checkup_date_begin), '~',
         DATE(company_checkup.checkup_date_end))),
-        '\#{예약마감일}', DATE(company_checkup.reserve_date_end))
+        '\#{?덉빟留덇컧??', DATE(company_checkup.reserve_date_end))
         , NOW()
         , #{sessionUserId}
         FROM employee_checkup
@@ -236,12 +236,12 @@
         , employee.mobile
         , 0
         , REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(#{message},
-        '\#{임직원 이름}', AES_DECRYPT(UNHEX(employee_myself.employee_name), 'volk_ggsj.co.kr!')),
-        '\#{검진자 이름}', AES_DECRYPT(UNHEX(employee.employee_name), 'volk_ggsj.co.kr!')),
+        '\#{?꾩쭅???대쫫}', AES_DECRYPT(UNHEX(employee_myself.employee_name), 'volk_sitebuilder.co.kr!')),
+        '\#{寃吏꾩옄 ?대쫫}', AES_DECRYPT(UNHEX(employee.employee_name), 'volk_sitebuilder.co.kr!')),
         '\#{001001}', company.company_code),
-        '\#{검진시작일~검진마감일}', CONCAT(DATE(company_checkup.checkup_date_begin), '~',
+        '\#{寃吏꾩떆?묒씪~寃吏꾨쭏媛먯씪}', CONCAT(DATE(company_checkup.checkup_date_begin), '~',
         DATE(company_checkup.checkup_date_end))),
-        '\#{예약마감일}', DATE(company_checkup.reserve_date_end))
+        '\#{?덉빟留덇컧??', DATE(company_checkup.reserve_date_end))
         , NOW()
         , #{sessionUserId}
         FROM employee_checkup
@@ -309,10 +309,10 @@
              , reservation.mobile
              , 0
              , REPLACE(REPLACE(REPLACE(REPLACE(#{message},
-                                               '\#{고객명}', AES_DECRYPT(UNHEX(reservation.reservation_name), 'volk_ggsj.co.kr!')),
-                                       '\#{병원명}', hospital_center_view.hospital_center_name),
-                               '\#{병원전화번호}', sf_phone_hyphen(hospital_center_view.telephone)),
-                       '\#{검진희망일}', DATE(reservation.desired_at))
+                                               '\#{怨좉컼紐?', AES_DECRYPT(UNHEX(reservation.reservation_name), 'volk_sitebuilder.co.kr!')),
+                                       '\#{蹂묒썝紐?', hospital_center_view.hospital_center_name),
+                               '\#{蹂묒썝?꾪솕踰덊샇}', sf_phone_hyphen(hospital_center_view.telephone)),
+                       '\#{寃吏꾪씗留앹씪}', DATE(reservation.desired_at))
              , NOW()
              , #{sessionUserId}
         FROM reservation
@@ -373,10 +373,10 @@
         , reservation.mobile
         , 0
         , REPLACE(REPLACE(REPLACE(REPLACE(#{message},
-        '\#{고객명}', AES_DECRYPT(UNHEX(reservation.reservation_name), 'volk_ggsj.co.kr!')),
-        '\#{병원명}', hospital_center_view.hospital_center_name),
-        '\#{병원전화번호}', sf_phone_hyphen(hospital_center_view.telephone)),
-        '\#{검진확정일}', DATE(reservation.desired_at))
+        '\#{怨좉컼紐?', AES_DECRYPT(UNHEX(reservation.reservation_name), 'volk_sitebuilder.co.kr!')),
+        '\#{蹂묒썝紐?', hospital_center_view.hospital_center_name),
+        '\#{蹂묒썝?꾪솕踰덊샇}', sf_phone_hyphen(hospital_center_view.telephone)),
+        '\#{寃吏꾪솗?뺤씪}', DATE(reservation.desired_at))
         , NOW()
         , #{sessionUserId}
         FROM reservation
@@ -439,7 +439,7 @@
              , reservation.reservation_name
              , reservation.mobile
              , 0
-             , REPLACE(#{message}, '\#{고객명}', AES_DECRYPT(UNHEX(reservation.reservation_name), 'volk_ggsj.co.kr!'))
+             , REPLACE(#{message}, '\#{怨좉컼紐?', AES_DECRYPT(UNHEX(reservation.reservation_name), 'volk_sitebuilder.co.kr!'))
              , NOW()
              , #{sessionUserId}
         FROM reservation
@@ -495,9 +495,9 @@
              , reservation.mobile
              , 0
              , REPLACE(REPLACE(REPLACE(#{message},
-                                       '\#{고객명}', AES_DECRYPT(UNHEX(reservation.reservation_name), 'volk_ggsj.co.kr!')),
-                               '\#{병원명}', hospital_center_view.hospital_center_name),
-                       '\#{검진희망일}', DATE(reservation.desired_at))
+                                       '\#{怨좉컼紐?', AES_DECRYPT(UNHEX(reservation.reservation_name), 'volk_sitebuilder.co.kr!')),
+                               '\#{蹂묒썝紐?', hospital_center_view.hospital_center_name),
+                       '\#{寃吏꾪씗留앹씪}', DATE(reservation.desired_at))
              , NOW()
              , #{sessionUserId}
         FROM reservation

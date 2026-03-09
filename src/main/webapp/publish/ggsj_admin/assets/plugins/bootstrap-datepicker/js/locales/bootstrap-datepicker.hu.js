@@ -1,14 +1,14 @@
-/**
+﻿/**
  * Hungarian translation for bootstrap-datepicker
- * Sotus László <lacisan@gmail.com>
+ * Sotus L찼szl처 <lacisan@gmail.com>
  */
 ;(function($){
   $.fn.datepicker.dates['hu'] = {
-		days: ["Vasárnap", "Hétfő", "Kedd", "Szerda", "Csütörtök", "Péntek", "Szombat", "Vasárnap"],
-		daysShort: ["Vas", "Hét", "Ked", "Sze", "Csü", "Pén", "Szo", "Vas"],
-		daysMin: ["Va", "Hé", "Ke", "Sz", "Cs", "Pé", "Sz", "Va"],
-		months: ["Január", "Február", "Március", "Április", "Május", "Június", "Július", "Augusztus", "Szeptember", "Október", "November", "December"],
-		monthsShort: ["Jan", "Feb", "Már", "Ápr", "Máj", "Jún", "Júl", "Aug", "Sze", "Okt", "Nov", "Dec"],
+		days: ["Vas찼rnap", "H챕tf흷", "Kedd", "Szerda", "Cs체t철rt철k", "P챕ntek", "Szombat", "Vas찼rnap"],
+		daysShort: ["Vas", "H챕t", "Ked", "Sze", "Cs체", "P챕n", "Szo", "Vas"],
+		daysMin: ["Va", "H챕", "Ke", "Sz", "Cs", "P챕", "Sz", "Va"],
+		months: ["Janu찼r", "Febru찼r", "M찼rcius", "횁prilis", "M찼jus", "J첬nius", "J첬lius", "Augusztus", "Szeptember", "Okt처ber", "November", "December"],
+		monthsShort: ["Jan", "Feb", "M찼r", "횁pr", "M찼j", "J첬n", "J첬l", "Aug", "Sze", "Okt", "Nov", "Dec"],
 		today: "Ma",
 		weekStart: 1,
 		format: "yyyy.mm.dd"

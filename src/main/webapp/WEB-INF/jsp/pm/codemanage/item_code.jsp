@@ -1,4 +1,4 @@
-<%@ page contentType="text/html; charset=utf-8" pageEncoding="utf-8" %>
+﻿<%@ page contentType="text/html; charset=utf-8" pageEncoding="utf-8" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 
@@ -21,7 +21,7 @@
                 <div class="card card-transparent board_internal">
                     <div class="card-header ">
                         <div class="card-title">
-                            <h3 class="h3">항목 코드 관리</h3>
+                            <h3 class="h3">??ぉ 肄붾뱶 愿由?/h3>
                         </div>
                     </div>
                     <%--                    <div class="card-body">--%>
@@ -34,7 +34,7 @@
                                 <div class="row-box">
                                     <div class="row-box-inner">
                                         <div class="col-box1 row">
-                                            <div class="col-lg-12" id="searchGrid" data-ggsj="dxTextBox"></div>
+                                            <div class="col-lg-12" id="searchGrid" data-sitebuilder="dxTextBox"></div>
                                         </div>
                                     </div>
                                 </div>
@@ -43,11 +43,11 @@
                         </div>
                         <!-- Header -->
 
-                        <div id="treeListItemCode" class="main_table" data-ggsj="dxTreeList">
+                        <div id="treeListItemCode" class="main_table" data-sitebuilder="dxTreeList">
                         </div>
 
                         <div class="row btn_area footer-btn">
-                            <div class="col-lg-1" id="btnSave" data-ggsj="dxButton"><i class="xi-save"></i>저장</div>
+                            <div class="col-lg-1" id="btnSave" data-sitebuilder="dxButton"><i class="xi-save"></i>???/div>
                         </div>
                     </div>
                     <%--                    </div>--%>
@@ -62,12 +62,12 @@
 </body>
 <script>
     $(function () {
-        ggsj.openMenu('item-code');
+        sitebuilder.openMenu('item-code');
 
-        let dxInstances = ggsj.createDx();
+        let dxInstances = sitebuilder.createDx();
 
         dxInstances.searchGrid.option({
-            placeholder: '검색',
+            placeholder: '寃??,
             valueChangeEvent: "keyup",
             onValueChanged: function (e) {
                 dxInstances.treeListItemCode.searchByText(e.value);
@@ -86,21 +86,21 @@
             keyExpr: 'keyId',
             parentIdExpr: 'keyParentId',
             columns: [{
-                caption: '항목코드',
+                caption: '??ぉ肄붾뱶',
                 dataField: 'code',
                 width: 200,
                 validationRules: [{type: 'required'}],
             }, {
-                caption: '항목명',
+                caption: '??ぉ紐?,
                 dataField: 'name',
                 // width: 220,
                 validationRules: [{type: 'required'}],
             }, {
-                caption: '검사 설명',
+                caption: '寃???ㅻ챸',
                 dataField: 'itemDesc',
                 width: 400,
             }, {
-                caption: '사용여부',
+                caption: '?ъ슜?щ?',
                 dataField: 'noUse',
                 alignment: 'center',
                 width: 100,
@@ -113,40 +113,40 @@
                     displayExpr: 'text',
                 },
             }, {
-                caption: '참고치(남) 또는 공통',
+                caption: '李멸퀬移??? ?먮뒗 怨듯넻',
                 alignment: 'center',
                 columns: [{
-                    caption: '최저',
+                    caption: '理쒖?',
                     dataField: 'refMmin',
                     alignment: 'center',
                     width: 60,
                 }, {
-                    caption: '최고',
+                    caption: '理쒓퀬',
                     dataField: 'refMmax',
                     alignment: 'center',
                     width: 60,
                 }]
             }, {
-                caption: '참고치(여)',
+                caption: '李멸퀬移???',
                 alignment: 'center',
                 columns: [{
-                    caption: '최저',
+                    caption: '理쒖?',
                     dataField: 'refFmin',
                     alignment: 'center',
                     width: 60,
                 }, {
-                    caption: '최고',
+                    caption: '理쒓퀬',
                     dataField: 'refFmax',
                     alignment: 'center',
                     width: 60,
                 }]
             }, {
-                caption: '단위',
+                caption: '?⑥쐞',
                 dataField: 'refUnit',
                 alignment: 'center',
                 // width: 100,
             }, {
-                caption: '결과코드사용여부',
+                caption: '寃곌낵肄붾뱶?ъ슜?щ?',
                 dataField: 'resultUse',
                 alignment: 'center',
                 width: 110,
@@ -166,7 +166,7 @@
                     e.cellElement.children(".dx-link-add").remove();
                 }
                 if (e.rowType === 'header' && e.columnIndex === 10) {
-                    e.cellElement.append('추가 / 삭제');
+                    e.cellElement.append('異붽? / ??젣');
                     e.cellElement.css('font-weight', 'bold');
                 }
             },
@@ -229,7 +229,7 @@
                 // Grid Title
                 // e.toolbarOptions.items.unshift({
                 //     location: 'before',
-                //     text: '기업 검진 유형',
+                //     text: '湲곗뾽 寃吏??좏삎',
                 // });
 
                 // Modifies an existing item
@@ -244,7 +244,7 @@
 
         dxInstances.btnSave.option({
             stylingMode: "contained",
-            text: "저장",
+            text: "???,
             type: "success",
             onClick: function () {
                 let changes = dxInstances.treeListItemCode.option('editing.changes');
@@ -262,7 +262,7 @@
                     method: 'POST',
                     data: JSON.stringify(gridData),
                 }).then(function () {
-                    ggsj.notify("저장되었습니다.");
+                    sitebuilder.notify("??λ릺?덉뒿?덈떎.");
 
                     //dxInstances.treeListItemCode.cancelEditData();
 

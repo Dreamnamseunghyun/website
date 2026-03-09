@@ -1,4 +1,4 @@
-/*!
+﻿/*!
  * jQuery plug-in to turn bootstrap tabbed navigation into responsive tabbed navigation
  * Original author: @stephen_thomas
  * Plugin Boilerplate: http://coding.smashingmagazine.com/2011/10/11/essential-jquery-plugin-patterns/

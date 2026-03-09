@@ -1,17 +1,17 @@
-/**
+﻿/**
  * Traditional Chinese translation for bootstrap-datepicker
  * Rung-Sheng Jang <daniel@i-trend.co.cc>
  * FrankWu  <frankwu100@gmail.com> Fix more appropriate use of Traditional Chinese habit
  */
 ;(function($){
 	$.fn.datepicker.dates['zh-TW'] = {
-		days: ["星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六", "星期日"],
-		daysShort: ["週日", "週一", "週二", "週三", "週四", "週五", "週六", "週日"],
-		daysMin:  ["日", "一", "二", "三", "四", "五", "六", "日"],
-		months: ["一月", "二月", "三月", "四月", "五月", "六月", "七月", "八月", "九月", "十月", "十一月", "十二月"],
-		monthsShort: ["一月", "二月", "三月", "四月", "五月", "六月", "七月", "八月", "九月", "十月", "十一月", "十二月"],
-		today: "今天",
-		format: "yyyy年mm月dd日",
+		days: ["?잍쐿??, "?잍쐿訝", "?잍쐿雅?, "?잍쐿訝?, "?잍쐿??, "?잍쐿雅?, "?잍쐿??, "?잍쐿??],
+		daysShort: ["?길뿥", "?긴?", "?긴틠", "?긴툒", "?긷썪", "?긴틪", "?긷뀷", "?길뿥"],
+		daysMin:  ["??, "訝", "雅?, "訝?, "??, "雅?, "??, "??],
+		months: ["訝??, "雅뚧쐢", "訝됪쐢", "?쎿쐢", "雅붹쐢", "??쐢", "訝껅쐢", "?ユ쐢", "阿앮쐢", "?곫쐢", "?곦???, "?곦틠??],
+		monthsShort: ["訝??, "雅뚧쐢", "訝됪쐢", "?쎿쐢", "雅붹쐢", "??쐢", "訝껅쐢", "?ユ쐢", "阿앮쐢", "?곫쐢", "?곦???, "?곦틠??],
+		today: "餓듿ㄹ",
+		format: "yyyy亮큟m?늕d??,
 		weekStart: 1
 	};
 }(jQuery));

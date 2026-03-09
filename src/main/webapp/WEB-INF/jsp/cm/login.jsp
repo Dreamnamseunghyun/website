@@ -1,4 +1,4 @@
-<%@ page contentType="text/html; charset=utf-8" pageEncoding="utf-8" %>
+﻿<%@ page contentType="text/html; charset=utf-8" pageEncoding="utf-8" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
@@ -10,7 +10,7 @@
 <head>
     <meta http-equiv="content-type" content="text/html;charset=UTF-8"/>
     <meta charset="utf-8"/>
-    <title>건강살자</title>
+    <title>嫄닿컯?댁옄</title>
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no"/>
     <link rel="apple-touch-icon" href="<c:url value="/lib/pages/ico/60.png"/>">
@@ -20,7 +20,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-touch-fullscreen" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
-    <meta content="건강살자" name="description"/>
+    <meta content="嫄닿컯?댁옄" name="description"/>
 
     <link rel="stylesheet" type="text/css" href="<c:url value="/lib/bootstrap/css/bootstrap.min.css"/>"/>
     <link rel="stylesheet" type="text/css" class="main-stylesheet"
@@ -52,25 +52,25 @@
     <div class="bg-pic">
         <div class="bg-caption p-l-50">
             <h1 class="normal">
-                “귀기울여 들어준다면 우리 몸은 <br>
-                우리에게 분명하고 구체적으로 얘기한다.”</h1>
+                ?쒓?湲곗슱???ㅼ뼱以?ㅻ㈃ ?곕━ 紐몄? <br>
+                ?곕━?먭쾶 遺꾨챸?섍퀬 援ъ껜?곸쑝濡??섍린?쒕떎.??/h1>
             <h5 class="mont opacity-06 m-t-30">
                 Our bodies communicate to us clearly and specifically, <br>if we are willing to listen to them.
             </h5>
-            <p class="m-t-30">- 삭티 거웨인 Shakti Gawain</p>
+            <p class="m-t-30">- ??떚 嫄곗썾??Shakti Gawain</p>
         </div>
     </div>
     <div class="login-container bg-white">
         <div class="login-loc p-l-50 p-r-50">
-            <img src="<c:url value="/img/logo-login.png"/>" alt="건강살자로고">
+            <img src="<c:url value="/img/logo-login.png"/>" alt="嫄닿컯?댁옄濡쒓퀬">
             <h4 class="m-t-30 m-b-0 color-gray2 mont">Company Manager LOGIN</h4>
-            <h2 class="m-t-10 font-weight-bold">기업매니저 로그인</h2>
-            <p class="mw-80 m-t-5 color-gray3">로그인하기 위해 아이디와 패스워드를 입력해주세요.</p>
+            <h2 class="m-t-10 font-weight-bold">湲곗뾽留ㅻ땲? 濡쒓렇??/h2>
+            <p class="mw-80 m-t-5 color-gray3">濡쒓렇?명븯湲??꾪빐 ?꾩씠?붿? ?⑥뒪?뚮뱶瑜??낅젰?댁＜?몄슂.</p>
             <form id="form-login" class="p-t-15" role="form">
                 <div class="form-group form-group-default">
                     <label for="managerCode" class="mont font-weight-bold">Login</label>
                     <div class="controls">
-                        <input type="text" id="managerCode" placeholder="아이디를 입력해주세요." class="form-control mont"
+                        <input type="text" id="managerCode" placeholder="?꾩씠?붾? ?낅젰?댁＜?몄슂." class="form-control mont"
                                required>
                     </div>
                 </div>
@@ -78,30 +78,30 @@
                     <label for="userPw" class="mont font-weight-bold">Password</label>
                     <div class="controls">
                         <input type="password" id="userPw" name="userPw" class="form-control mont"
-                               placeholder="패스워드를 입력해주세요." required>
+                               placeholder="?⑥뒪?뚮뱶瑜??낅젰?댁＜?몄슂." required>
                     </div>
                 </div>
                 <%--<div class="row">
                     <div class="col-md-6 no-padding sm-p-l-10">
                         <div class="form-check">
                             <input type="checkbox" value="1" id="checkbox1">
-                            <label for="checkbox1">ID 저장하기</label>
+                            <label for="checkbox1">ID ??ν븯湲?/label>
                         </div>
                     </div>
                     <div class="col-md-6 d-flex align-items-center justify-content-end">
 
-                        <a href="#" class="normal change_pw">패스워드를 변경하고 싶으신가요?</a>
+                        <a href="#" class="normal change_pw">?⑥뒪?뚮뱶瑜?蹂寃쏀븯怨??띠쑝?좉???</a>
                     </div>
                 </div>--%>
                 <div class="m-b-5 m-t-0">
-                    <button type="submit" aria-label="" class="btn btn-primary btn-lg m-t-10">로그인</button>
+                    <button type="submit" aria-label="" class="btn btn-primary btn-lg m-t-10">濡쒓렇??/button>
                 </div>
             </form>
         </div>
         <div class="pull-bottom login-footer">
             <div class="copyright sm-text-center">
                 <p class="small-text no-margin pull-left sm-pull-reset color-gray1">
-                    © 2021 VOLK KOREA All Rights Reserved.
+                    짤 2021 VOLK KOREA All Rights Reserved.
                 </p>
                 <p class="small no-margin pull-right sm-pull-reset">
                     <span class="hint-text m-l-15 small-text color-gray1">GGSJ v<c:out value="${version}"/></span>

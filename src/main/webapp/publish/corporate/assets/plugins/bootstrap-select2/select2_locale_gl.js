@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Select2 Galician translation
  * 
  * Author: Leandro Regueiro <leandro.regueiro@gmail.com>
@@ -13,7 +13,7 @@
         formatInputTooShort: function (input, min) {
             var n = min - input.length;
             if (n === 1) {
-                return "Engada un carácter";
+                return "Engada un car찼cter";
             } else {
                 return "Engada " + n + " caracteres";
             }
@@ -21,23 +21,23 @@
         formatInputTooLong: function (input, max) {
             var n = input.length - max;
             if (n === 1) {
-                return "Elimine un carácter";
+                return "Elimine un car찼cter";
             } else {
                 return "Elimine " + n + " caracteres";
             }
         },
         formatSelectionTooBig: function (limit) {
             if (limit === 1 ) {
-                return "Só pode seleccionar un elemento";
+                return "S처 pode seleccionar un elemento";
             } else {
-                return "Só pode seleccionar " + limit + " elementos";
+                return "S처 pode seleccionar " + limit + " elementos";
             }
         },
         formatLoadMore: function (pageNumber) {
-            return "Cargando máis resultados…";
+            return "Cargando m찼is resultados??;
         },
         formatSearching: function () {
-            return "Buscando…";
+            return "Buscando??;
         }
     };
 

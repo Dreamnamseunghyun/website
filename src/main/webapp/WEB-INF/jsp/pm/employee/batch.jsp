@@ -20,7 +20,7 @@
                 <div class="card card-transparent board_internal">
                     <div class="card-header ">
                         <div class="card-title">
-                            <h3 class="h3">엑셀 회원등록</h3>
+                            <h3 class="h3">?��? ?�원?�록</h3>
                         </div>
                     </div>
                     <%--<div class="card-body">--%>
@@ -33,8 +33,8 @@
                                 <div class="row-box" style="width:400px;">
                                     <div class="row-box-inner">
                                         <div class="col-box1 row">
-                                            <div class="col-lg-5 tag-name"><span>기업체</span></div>
-                                            <div class="col-lg-7" id="lookupCompany" data-ggsj="dxLookup"
+                                            <div class="col-lg-5 tag-name"><span>기업�?/span></div>
+                                            <div class="col-lg-7" id="lookupCompany" data-sitebuilder="dxLookup"
                                                  style="width: 250px"></div>
                                         </div>
 
@@ -47,7 +47,7 @@
                                         <div class="col-box1 row">
                                             <div class="col-lg-12">
                                                 <div class="btnExcelSample" id="btnSampleDown"
-                                                     data-ggsj="dxButton"></div>
+                                                     data-sitebuilder="dxButton"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -59,7 +59,7 @@
                                 <div class="row-box">
                                     <div class="row-box-inner">
                                         <div class="col-box1 row">
-                                            <div class="col-lg-12" id="searchGrid" data-ggsj="dxTextBox"></div>
+                                            <div class="col-lg-12" id="searchGrid" data-sitebuilder="dxTextBox"></div>
                                         </div>
                                     </div>
                                 </div>
@@ -69,7 +69,7 @@
                         </div>
                         <!-- Header -->
 
-                        <div id="dataGridEmployeeBatch" class="main_table" data-ggsj="dxDataGrid">
+                        <div id="dataGridEmployeeBatch" class="main_table" data-sitebuilder="dxDataGrid">
                         </div>
 
                         <input style="display: none" id="openFile" type="file">
@@ -78,8 +78,8 @@
                 </div>
 
                 <div class="row btn_area index_btn_area footer-btn">
-                    <div id="btnSave" data-ggsj="dxButton"><i class="xi-save"></i>저장</div>
-                    <div id="btnExcel" data-ggsj="dxButton"><i class="fa fa-file-excel"></i>Excel 등록</div>
+                    <div id="btnSave" data-sitebuilder="dxButton"><i class="xi-save"></i>?�??/div>
+                    <div id="btnExcel" data-sitebuilder="dxButton"><i class="fa fa-file-excel"></i>Excel ?�록</div>
                 </div>
 
             </div>
@@ -89,10 +89,10 @@
 </body>
 <script>
     $(function () {
-        ggsj.openMenu('employee-batch');
+        sitebuilder.openMenu('employee-batch');
 
         /** @param dxInstances : {dataGridEmployeeBatch,btnSampleDown,btnSave,btnExcel} */
-        let dxInstances = ggsj.createDx(false);
+        let dxInstances = sitebuilder.createDx(false);
         let keyCompanyId;
         let keyCheckupYear;
         let keyCompanyCheckupId;
@@ -224,7 +224,7 @@
                                 continue;
                             }
 
-                            // 빈 셀을 만나면 중단
+                            // �??�??만나�?중단
                             if (!row.getCell(2).value || !row.getCell(3).value || !row.getCell(13).value) {
                                 // Check Key Field
                                 break;
@@ -272,7 +272,7 @@
 
                             // lookup checkupType
                             if (row.getCell(12).value === null) {
-                                alert('*필수*\n검진유형이 누락되었습니다.\n등록하실 EXCEL 파일을 확인해주세요 !!');
+                                alert('*?�수*\n검진유?�이 ?�락?�었?�니??\n?�록?�실 EXCEL ?�일???�인?�주?�요 !!');
                                 break;
                             }
                             resultRow.employeeCheckup.companyCheckupTypeId = dsCheckupTypeList[0].companyCheckupTypeId; // default
@@ -328,14 +328,14 @@
         });
 
         dxInstances.btnSampleDown.option({
-            text: 'Excel 샘플 다운로드',
+            text: 'Excel ?�플 ?�운로드',
             onClick: function () {
                 location.href = '<c:url value="/storage/template/employee-batch/EmployeeBatchTemplate.xlsx"/>';
             }
         });
 
         dxInstances.searchGrid.option({
-            placeholder: '검색',
+            placeholder: '검??,
             valueChangeEvent: "keyup",
             onValueChanged: function (e) {
                 dxInstances.dataGridEmployeeBatch.searchByText(e.value);
@@ -350,7 +350,7 @@
                 dataField: '_crudType',
                 visible: false,
             }, {
-                caption: '회원번호',
+                caption: '?�원번호',
                 dataField: 'userId',
                 alignment: 'center',
             }, {
@@ -359,33 +359,33 @@
                 alignment: 'center',
             }, {
                 dataField: 'employeeName',
-                caption: '이름',
+                caption: '?�름',
                 alignment: 'center',
                 cellTemplate: function (cellElement, cellInfo) {
                     let employeeCheckupId = cellInfo.data.employeeCheckup.employeeCheckupId;
                     cellElement.append("<a href = " + '<c:url value="/pm/employee"/>/' + employeeCheckupId + ">" + cellInfo.text + "</a>");
                 },
             }, {
-                caption: '생년월일',
+                caption: '?�년?�일',
                 dataField: 'birth',
                 alignment: 'center',
                 dataType: 'date',
             }, {
-                caption: '성별',
+                caption: '?�별',
                 dataField: 'sex',
                 alignment: 'center',
             }, {
-                caption: '휴대전화',
+                caption: '?��??�화',
                 dataField: 'mobile',
                 alignment: 'center',
                 format: function (value) {
-                    return ggsj.phoneWithHyphen(value);
+                    return sitebuilder.phoneWithHyphen(value);
                 },
             }, {
-                caption: '이메일',
+                caption: '?�메??,
                 dataField: 'email',
             }, {
-                caption: '부서',
+                caption: '부??,
                 dataField: 'depart',
                 alignment: 'center',
             }, {
@@ -393,7 +393,7 @@
                 caption: '직책',
                 alignment: 'center',
             }, {
-                caption: '사원번호',
+                caption: '?�원번호',
                 dataField: 'employeeNo',
                 alignment: 'center',
             }, {
@@ -409,40 +409,40 @@
                     displayExpr: 'text',
                 },
             }, {
-                caption: '검진유형',
+                caption: '검진유??,
                 dataField: 'employeeCheckup.companyCheckupTypeId',
                 alignment: 'center',
             }, {
-                caption: '대상자',
+                caption: '?�?�자',
                 dataField: 'myself',
                 alignment: 'center',
                 lookup: {
                     dataSource: [
                         {id: 1, text: '본인'},
-                        {id: 2, text: '가족'},
+                        {id: 2, text: '가�?},
                     ],
                     valueExpr: 'id',
                     displayExpr: 'text',
                 },
             }, {
-                caption: '검진비 청구',
+                caption: '검진비 �?��',
                 dataField: 'employeeCheckup.supportType',
                 alignment: 'center',
                 lookup: {
                     dataSource: [
-                        {id: 0, text: '기업부담'},
-                        {id: 1, text: '본인부담'},
+                        {id: 0, text: '기업부??},
+                        {id: 1, text: '본인부??},
                     ],
                     valueExpr: 'id',
                     displayExpr: 'text',
                 },
             }, {
-                caption: '직원명',
+                caption: '직원�?,
                 dataField: 'employeeCode',
                 alignment: 'center',
                 name: 'employeeCodeFamily',
             }, {
-                caption: '특검대상',
+                caption: '?��??�??,
                 dataField: 'employeeCheckup.specialCheckup',
                 alignment: 'center',
                 lookup: {
@@ -454,11 +454,11 @@
                     displayExpr: 'text',
                 },
             }, {
-                caption: '특수검진 유해물질',
+                caption: '?�수검�??�해물질',
                 dataField: 'employeeCheckup.specialCheckupMemo',
                 alignment: 'center',
             }, {
-                caption: '특이사항',
+                caption: '?�이?�항',
                 dataField: 'employeeCheckup.notes',
             }],
             onRowPrepared: function (e) {
@@ -475,7 +475,7 @@
         // Save
         dxInstances.btnSave.option({
             stylingMode: 'outlined',
-            text: '저장',
+            text: '?�??,
             type: 'success',
             icon: 'save',
             onClick: function () {
@@ -498,7 +498,7 @@
                         contentType: 'application/json',
                         data: JSON.stringify(changes),
                     }).then(function () {
-                        ggsj.notify("저장되었습니다.");
+                        sitebuilder.notify("?�?�되?�습?�다.");
                         LoadEmployeeList();
                     });
 
@@ -508,7 +508,7 @@
 
         // Excel
         dxInstances.btnExcel.option({
-            text: '엑셀첨부',
+            text: '?��?첨�?',
             stylingMode: 'outlined',
             type: 'danger',
             icon: 'xlsxfile',

@@ -22,7 +22,7 @@
                 <div class="card card-transparent board_internal">
                     <div class="card-header ">
                         <div class="card-title">
-                            <h3 class="h3">회원 목록</h3>
+                            <h3 class="h3">?�원 목록</h3>
                         </div>
                     </div>
                     <%--                    <div class="card-body">--%>
@@ -37,21 +37,21 @@
                                             <div class="col-lg-4 tag-name"><span>기업체명</span></div>
                                             <div class="col-lg-8">
                                                 <div class="col-lg-12" id="lookupCompany"
-                                                     data-ggsj="dxLookup"></div>
+                                                     data-sitebuilder="dxLookup"></div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-lg-2" style="display: none" id="employeeCheckup.companyCheckupId"
-                                     data-ggsj="dxTextBox"></div>
-                                <div class="col-lg-2" style="display: none" id="companyId" data-ggsj="dxTextBox"></div>
+                                     data-sitebuilder="dxTextBox"></div>
+                                <div class="col-lg-2" style="display: none" id="companyId" data-sitebuilder="dxTextBox"></div>
 
                                 <div class="row-box2">
                                     <div class="row-box-inner1">
                                         <div class="col-box1 row">
-                                            <div class="col-lg-4 tag-name"><span>대상년도</span></div>
+                                            <div class="col-lg-4 tag-name"><span>?�?�년??/span></div>
                                             <div class="col-lg-8">
-                                                <div class="col-lg-12" id="selectCheckupYear" data-ggsj="dxSelectBox"></div>
+                                                <div class="col-lg-12" id="selectCheckupYear" data-sitebuilder="dxSelectBox"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -64,7 +64,7 @@
                                 <div class="row-box">
                                     <div class="row-box-inner">
                                         <div class="col-box1 row">
-                                            <div class="col-lg-12" id="searchGrid" data-ggsj="dxTextBox"></div>
+                                            <div class="col-lg-12" id="searchGrid" data-sitebuilder="dxTextBox"></div>
                                         </div>
                                     </div>
                                 </div>
@@ -74,14 +74,14 @@
                         </div>
                         <!-- Header -->
 
-                        <div id="dataGridEmployee" class="main_table" data-ggsj="dxDataGrid">
+                        <div id="dataGridEmployee" class="main_table" data-sitebuilder="dxDataGrid">
                         </div>
                     </div>
                     <%--</div>--%>
                 </div>
 
                 <div class="row btn_area index_btn_area footer-btn">
-                    <div id="btnCreate" data-ggsj="dxButton">
+                    <div id="btnCreate" data-sitebuilder="dxButton">
                         <div class="write_btn">
                             <div>
                                 <div class="pencil"></div>
@@ -94,10 +94,10 @@
                                     <div class="paper"></div>
                                 </div>
                             </div>
-                            <span>개별 등록</span>
+                            <span>개별 ?�록</span>
                         </div>
                     </div>
-                    <div id="btnExcel" data-ggsj="dxButton"><i class="fa fa-file-excel"></i>Excel 등록</div>
+                    <div id="btnExcel" data-sitebuilder="dxButton"><i class="fa fa-file-excel"></i>Excel ?�록</div>
                 </div>
             </div>
         </div>
@@ -109,10 +109,10 @@
 </body>
 <script>
     $(function () {
-        ggsj.openMenu('employee');
+        sitebuilder.openMenu('employee');
 
         /** @param dxInstances : {dataGridEmployee,btnCreate,btnExcel} */
-        let dxInstances = ggsj.createDx(false);
+        let dxInstances = sitebuilder.createDx(false);
 
         function LoadEmployeeList() {
             // Lookup CheckupTypeList
@@ -176,7 +176,7 @@
         });
 
         dxInstances.selectCheckupYear.option({
-            dataSource: ggsj.typeDef.Year,
+            dataSource: sitebuilder.typeDef.Year,
             value: new Date().getFullYear(),
             valueExpr: 'id',
             displayExpr: 'text',
@@ -186,7 +186,7 @@
         });
 
         dxInstances.searchGrid.option({
-            placeholder: '검색',
+            placeholder: '검??,
             valueChangeEvent: "keyup",
             mode: 'search',
             onValueChanged: function (e) {
@@ -199,21 +199,21 @@
                 mode: 'multiple',
             },
             columns: [{
-                caption: '순번',
+                caption: '?�번',
                 alignment: 'center',
                 cellTemplate: function (cellElement, cellInfo) {
                     cellElement.text(cellInfo.component.pageIndex() * cellInfo.component.pageSize() + cellInfo.row.rowIndex + 1);
                 },
             }, {
-                caption: '회원번호',
+                caption: '?�원번호',
                 alignment: 'center',
                 dataField: 'userId',
             }, {
-                caption: '기업명',
+                caption: '기업�?,
                 alignment: 'center',
                 dataField: 'companyName',
             }, {
-                caption: '이름',
+                caption: '?�름',
                 alignment: 'center',
                 dataField: 'employeeName',
                 //sortIndex : 1,
@@ -222,26 +222,26 @@
                     let employeeCheckupId = cellInfo.data.employeeCheckup.employeeCheckupId;
                     cellElement.append("<a href = " + '<c:url value="/pm/employee"/>/' + employeeCheckupId + ">" + cellInfo.text + "</a>");
                     if (cellInfo.data.employeeCheckup.vip === true) {
-                        cellElement.append('<span style="color:red; font-weight: bold;">ⓥ</span>');
+                        cellElement.append('<span style="color:red; font-weight: bold;">??/span>');
                     }
                 },
             }, {
-                caption: '생년월일',
+                caption: '?�년?�일',
                 alignment: 'center',
                 dataField: 'birth',
                 dataType: 'date',
             }, {
-                caption: '성별',
+                caption: '?�별',
                 alignment: 'center',
                 dataField: 'sex',
             }, {
-                caption: '대상자',
+                caption: '?�?�자',
                 alignment: 'center',
                 dataField: 'myself',
                 lookup: {
                     dataSource: [
                         {id: 1, text: '본인'},
-                        {id: 2, text: '가족'},
+                        {id: 2, text: '가�?},
                     ],
                     valueExpr: 'id',
                     displayExpr: 'text',
@@ -249,13 +249,13 @@
                 //sortIndex : 0,
                 //sortOrder : 'asc',
             }, {
-                caption: '검진비 청구',
+                caption: '검진비 �?��',
                 alignment: 'center',
                 dataField: 'employeeCheckup.supportType',
                 lookup: {
                     dataSource: [
-                        {id: '0', text: '기업부담'},
-                        {id: '1', text: '본인부담'},
+                        {id: '0', text: '기업부??},
+                        {id: '1', text: '본인부??},
                     ],
                     valueExpr: 'id',
                     displayExpr: 'text',
@@ -265,18 +265,18 @@
                 alignment: 'center',
                 dataField: 'employeeCode',
             }, {
-                caption: '휴대전화',
+                caption: '?��??�화',
                 alignment: 'center',
                 dataField: 'mobile',
                 format: function (value) {
-                    return ggsj.phoneWithHyphen(value);
+                    return sitebuilder.phoneWithHyphen(value);
                 }
             }, {
-                caption: '검진유형',
+                caption: '검진유??,
                 alignment: 'center',
                 dataField: 'employeeCheckup.companyCheckupTypeId',
             }, {
-                caption: '사용여부',
+                caption: '?�용?��?',
                 alignment: 'center',
                 dataField: 'noUse',
                 lookup: {
@@ -288,11 +288,11 @@
                     displayExpr: 'text',
                 },
             }, {
-                caption: '수정',
+                caption: '?�정',
                 type: 'buttons',
                 buttons: [{
                     name: 'detail',
-                    text: '수정',
+                    text: '?�정',
                     onClick: function (e) {
                         let user = e.row.data;
                         location.href = '<c:url value="/pm/employee"/>/' + user.employeeCheckup.employeeCheckupId + '/edit';
@@ -305,7 +305,7 @@
         // Create
         dxInstances.btnCreate.option({
             stylingMode: 'outlined',
-            text: '개별등록',
+            text: '개별?�록',
             type: 'success',
             icon: 'group',
             onClick: function () {
@@ -316,7 +316,7 @@
         // Excel
         dxInstances.btnExcel.option({
             stylingMode: 'outlined',
-            text: '엑셀등록',
+            text: '?��??�록',
             type: 'danger',
             icon: 'xlsxfile',
             onClick: function () {
@@ -332,7 +332,7 @@
         $.when(ajaxCompanyList).then(function (responseCompanyList) {
             // Company List
             let companyList = responseCompanyList.data;
-            companyList.unshift({companyId: 0, companyName: '전체'});
+            companyList.unshift({companyId: 0, companyName: '?�체'});
 
             dxInstances.lookupCompany.option({
                 dataSource: companyList,

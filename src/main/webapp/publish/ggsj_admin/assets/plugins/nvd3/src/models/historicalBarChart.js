@@ -1,4 +1,4 @@
-
+﻿
 nv.models.historicalBarChart = function() {
   "use strict";
   //============================================================

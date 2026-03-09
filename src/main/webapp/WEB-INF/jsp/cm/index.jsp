@@ -1,4 +1,4 @@
-<%@ page contentType="text/html; charset=utf-8" pageEncoding="utf-8" %>
+﻿<%@ page contentType="text/html; charset=utf-8" pageEncoding="utf-8" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 
@@ -28,19 +28,19 @@
                     <div class="dx-viewport">
 
                         <div class="row-wrap row-wrap-box">
-                            <!-- 기업 기본 정보 -->
+                            <!-- 湲곗뾽 湲곕낯 ?뺣낫 -->
                             <div class="row-wrap row-wrap1">
-                                <div class="row-box-title"><i class="xi-play-circle"></i>기업 기본 정보</div>
+                                <div class="row-box-title"><i class="xi-play-circle"></i>湲곗뾽 湲곕낯 ?뺣낫</div>
 
                                 <div class="row-box6">
                                     <div class="row-box-inner1 logo-box">
                                         <div class="col-box1 col-box-vertical5 row logo-img">
                                             <div class="col-lg-12 center-box" style="">
-                                                <img id="ciUrl" src="" alt="기업체로고"/>
+                                                <img id="ciUrl" src="" alt="湲곗뾽泥대줈怨?/>
                                             </div>
                                         </div>
                                         <div class="col-lg-6" id="ciFilename" style="display: none;"
-                                             data-ggsj="dxTextBox"></div>
+                                             data-sitebuilder="dxTextBox"></div>
                                     </div>
                                 </div>
 
@@ -50,47 +50,47 @@
                                         <div class="col-box1 row">
                                             <div class="col-lg-12 row">
                                                 <div class="col-lg-box1 col-lg-box-vertical row">
-                                                    <div class="col-lg-2 tag-name"><span>기업체명</span></div>
-                                                    <div class="col-lg-4" id="companyName" data-ggsj="dxTextBox"></div>
-                                                    <div class="col-lg-2 tag-name"><span>대상년도</span></div>
+                                                    <div class="col-lg-2 tag-name"><span>湲곗뾽泥대챸</span></div>
+                                                    <div class="col-lg-4" id="companyName" data-sitebuilder="dxTextBox"></div>
+                                                    <div class="col-lg-2 tag-name"><span>??곷뀈??/span></div>
                                                     <div class="col-lg-4" id="companyCheckup.checkupYear"
-                                                         data-ggsj="dxTextBox"></div>
+                                                         data-sitebuilder="dxTextBox"></div>
                                                 </div>
                                                 <div class="col-lg-box1 col-lg-box-vertical row">
-                                                    <div class="col-lg-2 tag-name"><span>검진 실시 기간</span></div>
+                                                    <div class="col-lg-2 tag-name"><span>寃吏??ㅼ떆 湲곌컙</span></div>
                                                     <div class="col-lg-4 center"
                                                          id="companyCheckup.checkupDateBegin"
-                                                         data-ggsj="dxDateBox"></div>
+                                                         data-sitebuilder="dxDateBox"></div>
                                                     <div class="text-center wavy">~</div>
                                                     <div class="col-lg-4 center"
                                                          id="companyCheckup.checkupDateEnd"
-                                                         data-ggsj="dxDateBox"></div>
+                                                         data-sitebuilder="dxDateBox"></div>
                                                 </div>
                                                 <div class="col-lg-box1 col-lg-box-vertical row">
-                                                    <div class="col-lg-2 tag-name"><span>예약 가능 기간</span></div>
+                                                    <div class="col-lg-2 tag-name"><span>?덉빟 媛??湲곌컙</span></div>
                                                     <div class="col-lg-4 center"
                                                          id="companyCheckup.reserveDateBegin"
-                                                         data-ggsj="dxDateBox"></div>
+                                                         data-sitebuilder="dxDateBox"></div>
                                                     <div class="text-center wavy">~</div>
                                                     <div class="col-lg-4 center"
                                                          id="companyCheckup.reserveDateEnd"
-                                                         data-ggsj="dxDateBox"></div>
+                                                         data-sitebuilder="dxDateBox"></div>
                                                 </div>
                                                 <div class="col-lg-box1 col-lg-box-vertical row">
-                                                    <div class="col-lg-1 tag-name"><span>대상인원</span></div>
-                                                    <div class="col-lg-2" id="totalNum" data-ggsj="dxTextBox"></div>
-                                                    <div class="col-lg-1 tag-name"><span>예약진행</span></div>
+                                                    <div class="col-lg-1 tag-name"><span>??곸씤??/span></div>
+                                                    <div class="col-lg-2" id="totalNum" data-sitebuilder="dxTextBox"></div>
+                                                    <div class="col-lg-1 tag-name"><span>?덉빟吏꾪뻾</span></div>
                                                     <div class="col-lg-2" id="totalEmployeeNum"
-                                                         data-ggsj="dxTextBox"></div>
-                                                    <div class="col-lg-1 tag-name"><span>수검완료</span></div>
+                                                         data-sitebuilder="dxTextBox"></div>
+                                                    <div class="col-lg-1 tag-name"><span>?섍??꾨즺</span></div>
                                                     <div class="col-lg-2" id="totalFamilyNum"
-                                                         data-ggsj="dxTextBox"></div>
-                                                    <div class="col-lg-1 tag-name"><span>미예약</span></div>
+                                                         data-sitebuilder="dxTextBox"></div>
+                                                    <div class="col-lg-1 tag-name"><span>誘몄삁??/span></div>
                                                     <div class="col-lg-2" id="totalNon"
-                                                         data-ggsj="dxTextBox"></div>
+                                                         data-sitebuilder="dxTextBox"></div>
                                                 </div>
                                                 <div class="col-lg-box1 col-lg-box-vertical row">
-                                                    <div class="col-lg-12" id="Dday" data-ggsj="dxTextBox"></div>
+                                                    <div class="col-lg-12" id="Dday" data-sitebuilder="dxTextBox"></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -102,13 +102,13 @@
                         <div class="dx-viewport">
                             <div class="row-wrap row-wrap-box">
                                 <div class="row-wrap">
-                                    <div id="dataGridNotice" class="main_table" data-ggsj="dxDataGrid"></div>
+                                    <div id="dataGridNotice" class="main_table" data-sitebuilder="dxDataGrid"></div>
                                 </div>
                             </div>
 
                             <div class="row-wrap row-wrap-box">
                                 <div class="row-wrap">
-                                    <div id="dataGridExaminationStatus" data-ggsj="dxDataGrid">
+                                    <div id="dataGridExaminationStatus" data-sitebuilder="dxDataGrid">
                                     </div>
                                 </div>
                             </div>
@@ -118,7 +118,7 @@
 
                                 <div class="row-wrap row-wrap1">
                                     <div class="row-box-title">
-                                        <i class="xi-play-circle"></i>검진 실시 현황
+                                        <i class="xi-play-circle"></i>寃吏??ㅼ떆 ?꾪솴
                                     </div>
                                     <div class="row-box1">
                                         <div class="row-box-inner width-box">
@@ -126,11 +126,11 @@
                                                 <div class="col-box1 row">
                                                     <div class="col-lg-6"
                                                          style="justify-content: center; border-right:1px solid #eaecef; padding:50px 0!important">
-                                                        <div id="PieCheckupApplication" data-ggsj="dxPieChart"></div>
+                                                        <div id="PieCheckupApplication" data-sitebuilder="dxPieChart"></div>
                                                     </div>
                                                     <div class="col-lg-6"
                                                          style="justify-content: center; padding:50px 0!important">
-                                                        <div id="PieCheckupCompleted" data-ggsj="dxPieChart"></div>
+                                                        <div id="PieCheckupCompleted" data-sitebuilder="dxPieChart"></div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -150,7 +150,7 @@
 </body>
 <script>
     $(function () {
-        let dxInstances = ggsj.createDx(false);
+        let dxInstances = sitebuilder.createDx(false);
 
         dxInstances.companyName.option({
             readOnly: true
@@ -193,7 +193,7 @@
                 }
             },
             columns: [{
-                caption: '순번',
+                caption: '?쒕쾲',
                 alignment: 'center',
                 cellTemplate: function (cellElement, cellInfo) {
                     if (cellInfo.data.topList === true) {
@@ -204,16 +204,16 @@
                 },
             }, {
                 dataField: 'group',
-                caption: '구분',
+                caption: '援щ텇',
                 alignment: 'center',
                 lookup: {
-                    dataSource: ggsj.typeDef.userType,
+                    dataSource: sitebuilder.typeDef.userType,
                     valueExpr: 'id',
                     displayExpr: 'text',
                 },
             }, {
                 dataField: 'title',
-                caption: '제목',
+                caption: '?쒕ぉ',
                 cellTemplate: function (cellElement, cellInfo) {
                     let noticeId = cellInfo.row.data.noticeId;
                     if (cellInfo.data.attachUrl) {
@@ -225,11 +225,11 @@
                 },
             }, {
                 dataField: 'writedUserName',
-                caption: '작성자',
+                caption: '?묒꽦??,
                 alignment: 'center',
             }, {
                 dataField: 'writedAt',
-                caption: '작성일시',
+                caption: '?묒꽦?쇱떆',
                 alignment: 'center',
                 dataType: 'datetime',
             }],
@@ -237,7 +237,7 @@
                 // Grid Title
                 e.toolbarOptions.items.unshift({
                     location: 'before',
-                    html: '<div class="row-box-title"><i class="xi-play-circle"></i>공지사항</div>'
+                    html: '<div class="row-box-title"><i class="xi-play-circle"></i>怨듭??ы빆</div>'
                 });
             },
         });
@@ -249,13 +249,13 @@
             },
             columns: [{
                 dataField: 'sum',
-                caption: '합계',
+                caption: '?⑷퀎',
                 alignment: 'center',
                 // sortOrder: 'desc',
                 visible: false,
             }, {
                 dataField: 'count',
-                caption: '순번',
+                caption: '?쒕쾲',
                 alignment: 'center',
                 cellTemplate: function (cellElement, cellInfo) {
                     if (cellInfo.data.topList === true) {
@@ -267,29 +267,29 @@
                 width: 100,
             }, {
                 dataField: 'hospitalCenterName',
-                caption: '병원명',
+                caption: '蹂묒썝紐?,
                 width: 500,
                 alignment: 'center',
             }, {
                 dataField: 'applyCount',
-                caption: '예약진행인원',
+                caption: '?덉빟吏꾪뻾?몄썝',
                 alignment: 'center',
                 cellTemplate: function (cellElement, cellInfo) {
                     if (cellInfo.data.dataCount) {
-                        cellElement.text(cellInfo.data.dataCount.applyCount + '명');
+                        cellElement.text(cellInfo.data.dataCount.applyCount + '紐?);
                     } else {
-                        cellElement.text('0명');
+                        cellElement.text('0紐?);
                     }
                 },
             }, {
                 dataField: 'checkupedCount',
-                caption: '수검완료인원',
+                caption: '?섍??꾨즺?몄썝',
                 alignment: 'center',
                 cellTemplate: function (cellElement, cellInfo) {
                     if (cellInfo.data.dataCount) {
-                        cellElement.text(cellInfo.data.dataCount.checkupedCount + '명');
+                        cellElement.text(cellInfo.data.dataCount.checkupedCount + '紐?);
                     } else {
-                        cellElement.text('0명');
+                        cellElement.text('0紐?);
                     }
                 },
             }],
@@ -297,7 +297,7 @@
                 // Grid Title
                 e.toolbarOptions.items.unshift({
                     location: 'before',
-                    html: '<div class="row-box-title"><i class="xi-play-circle"></i>병원별 검진현황</div>'
+                    html: '<div class="row-box-title"><i class="xi-play-circle"></i>蹂묒썝蹂?寃吏꾪쁽??/div>'
                 });
             },
         });
@@ -316,14 +316,14 @@
 
         <%--    dxInstances.PieCheckupApplication.option({--%>
         <%--        dataSource: [{--%>
-        <%--            name: '총인원',--%>
+        <%--            name: '珥앹씤??,--%>
         <%--            area: 1 - applyCount.toFixed(2)--%>
         <%--        }, {--%>
-        <%--            name: '신청인원',--%>
+        <%--            name: '?좎껌?몄썝',--%>
         <%--            area: applyCount.toFixed(2)--%>
         <%--        }],--%>
         <%--        palette: 'Soft',--%>
-        <%--        title: '예약신청',--%>
+        <%--        title: '?덉빟?좎껌',--%>
         <%--        series: {--%>
         <%--            argumentField: 'name',--%>
         <%--            valueField: 'area',--%>
@@ -336,14 +336,14 @@
 
         <%--    dxInstances.PieCheckupCompleted.option({--%>
         <%--        dataSource: [{--%>
-        <%--            name: '총인원',--%>
+        <%--            name: '珥앹씤??,--%>
         <%--            area: 1 - checkupCount.toFixed(2)--%>
         <%--        }, {--%>
-        <%--            name: '수검완료인원',--%>
+        <%--            name: '?섍??꾨즺?몄썝',--%>
         <%--            area: checkupCount.toFixed(2)--%>
         <%--        }],--%>
         <%--        palette: 'Soft Pastel',--%>
-        <%--        title: '수검완료',--%>
+        <%--        title: '?섍??꾨즺',--%>
         <%--        sizeGroup: {--%>
         <%--            argumentField: 'name',--%>
         <%--            valueField: 'area',--%>
@@ -407,22 +407,22 @@
             }
 
             dxInstances.totalNum.option({
-                value: totalCount + '명',
+                value: totalCount + '紐?,
                 type: 'number',
                 readOnly: true,
             });
             dxInstances.totalEmployeeNum.option({
-                value: applyCount + '명',
+                value: applyCount + '紐?,
                 type: 'number',
                 readOnly: true,
             });
             dxInstances.totalFamilyNum.option({
-                value: checkupedCount + '명',
+                value: checkupedCount + '紐?,
                 type: 'number',
                 readOnly: true,
             });
             dxInstances.totalNon.option({
-                value: (totalCount - applyCount - checkupedCount) + '명',
+                value: (totalCount - applyCount - checkupedCount) + '紐?,
                 type: 'number',
                 readOnly: true,
             });
@@ -433,14 +433,14 @@
             let pieCheckupCount = checkupedCount / totalCount;
             dxInstances.PieCheckupApplication.option({
                 dataSource: [{
-                    name: '총인원',
+                    name: '珥앹씤??,
                     area: 1 - pieApplyCount.toFixed(2)
                 }, {
-                    name: '신청인원',
+                    name: '?좎껌?몄썝',
                     area: pieApplyCount.toFixed(2)
                 }],
                 palette: 'Soft',
-                title: '예약신청',
+                title: '?덉빟?좎껌',
                 series: {
                     argumentField: 'name',
                     valueField: 'area',
@@ -453,14 +453,14 @@
 
             dxInstances.PieCheckupCompleted.option({
                 dataSource: [{
-                    name: '총인원',
+                    name: '珥앹씤??,
                     area: 1 - pieCheckupCount.toFixed(2)
                 }, {
-                    name: '수검완료인원',
+                    name: '?섍??꾨즺?몄썝',
                     area: pieCheckupCount.toFixed(2)
                 }],
                 palette: 'Soft Pastel',
-                title: '수검완료',
+                title: '?섍??꾨즺',
                 sizeGroup: {
                     argumentField: 'name',
                     valueField: 'area',
@@ -486,13 +486,13 @@
             url: '<c:url value="/cm/company/0"/>',
             method: 'GET',
         }).then(function (response) {
-            ggsj.valuesToDx(response.data);
+            sitebuilder.valuesToDx(response.data);
 
             let gap = new Date(response.data.companyCheckup.checkupDateEnd).getTime() - new Date().getTime()
             Dday = Math.ceil(gap / (1000 * 60 * 60 * 24));
 
             dxInstances.Dday.option({
-                value: '검진기간이 ' + Dday + '일 남았습니다.',
+                value: '寃吏꾧린媛꾩씠 ' + Dday + '???⑥븯?듬땲??',
                 readOnly: true,
             })
             if (response.data.ciUrl) {

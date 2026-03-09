@@ -1,4 +1,4 @@
-/* ============================================================
+﻿/* ============================================================
  * Notifications
  * Triggers notifications using Pages Notification plugin.
  * For DEMO purposes only. Extract what you need.

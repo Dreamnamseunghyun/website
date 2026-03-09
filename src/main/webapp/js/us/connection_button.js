@@ -1,4 +1,4 @@
-(()=>{
+﻿(()=>{
   function getNumberOrDef(val, def) {
     return typeof val === 'number' && !isNaN(val) ? val : def;
   }

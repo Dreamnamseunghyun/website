@@ -5,7 +5,7 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>건강살자(사용자) 검진 희망일 선택</title>
+    <title>건강?�자(?�용?? 검�??�망???�택</title>
     <link href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -21,7 +21,7 @@
     <link href="../css/us/jquery_ui.css" rel="stylesheet" type="text/css">
     <link href="../css/us/reserve_checkup_date.css" rel="stylesheet" type="text/css">
 
-    <link rel="stylesheet" href="<c:url value="/lib/devextreme/dx.material.ggsj.css"/>">
+    <link rel="stylesheet" href="<c:url value="/lib/devextreme/dx.material.sitebuilder.css"/>">
     <style>
         .dx-overlay-wrapper {
             z-index: 10000 !important;
@@ -191,7 +191,7 @@
                                                     <h3>STEP 1</h3>
                                                 </div>
                                                 <div class="info">
-                                                    검진 예약
+                                                    검�??�약
                                                 </div>
                                             </div>
                                             <div class="right_area">
@@ -209,7 +209,7 @@
                                                     <h3>STEP 2</h3>
                                                 </div>
                                                 <div class="info">
-                                                    검진 희망일 선택
+                                                    검�??�망???�택
                                                 </div>
                                             </div>
                                             <div class="right_area">
@@ -227,7 +227,7 @@
                                                     <h3>STEP 3</h3>
                                                 </div>
                                                 <div class="info">
-                                                    병원 및 항목 선택
+                                                    병원 �???�� ?�택
                                                 </div>
                                             </div>
                                             <div class="right_area">
@@ -246,7 +246,7 @@
                                                     <h3>STEP 4</h3>
                                                 </div>
                                                 <div class="info">
-                                                    최종 예약 정보
+                                                    최종 ?�약 ?�보
                                                 </div>
                                             </div>
                                             <div class="right_area">
@@ -281,7 +281,7 @@
                                                     <h3>STEP 1</h3>
                                                 </div>
                                                 <div class="info">
-                                                    검진 예약
+                                                    검�??�약
                                                 </div>
                                             </div>
                                             <div class="right_area">
@@ -298,7 +298,7 @@
                                                     <h3>STEP 2</h3>
                                                 </div>
                                                 <div class="info">
-                                                    검진 항목 선택
+                                                    검�???�� ?�택
                                                 </div>
                                             </div>
                                             <div class="right_area">
@@ -315,7 +315,7 @@
                                                     <h3>STEP 3</h3>
                                                 </div>
                                                 <div class="info">
-                                                    병원 및 항목 선택
+                                                    병원 �???�� ?�택
                                                 </div>
                                             </div>
                                             <div class="right_area">
@@ -332,7 +332,7 @@
                                                     <h3>STEP 4</h3>
                                                 </div>
                                                 <div class="info">
-                                                    검진 희망일 선택
+                                                    검�??�망???�택
                                                 </div>
                                             </div>
                                             <div class="right_area">
@@ -349,7 +349,7 @@
                                                     <h3>STEP 5</h3>
                                                 </div>
                                                 <div class="info">
-                                                    최종 예약 정보
+                                                    최종 ?�약 ?�보
                                                 </div>
                                             </div>
                                             <div class="right_area">
@@ -384,7 +384,7 @@
                                                     <h3>STEP 1</h3>
                                                 </div>
                                                 <div class="info">
-                                                    검진 예약
+                                                    검�??�약
                                                 </div>
                                             </div>
                                             <div class="right_area">
@@ -403,7 +403,7 @@
                                                     <h3>STEP 2</h3>
                                                 </div>
                                                 <div class="info">
-                                                    병원 및 항목 선택
+                                                    병원 �???�� ?�택
                                                 </div>
                                             </div>
                                             <div class="right_area">
@@ -422,7 +422,7 @@
                                                     <h3>STEP 3</h3>
                                                 </div>
                                                 <div class="info">
-                                                    검진 희망일 선택
+                                                    검�??�망???�택
                                                 </div>
                                             </div>
                                             <div class="right_area">
@@ -440,7 +440,7 @@
                                                     <h3>STEP 4</h3>
                                                 </div>
                                                 <div class="info">
-                                                    최종 예약 정보
+                                                    최종 ?�약 ?�보
                                                 </div>
                                             </div>
                                             <div class="right_area">
@@ -464,9 +464,9 @@
                     <div class="title_area">
                         <div class="title">
                             <span class="point_line point_color"></span>
-                            <h2>검진 희망일 선택</h2>
+                            <h2>검�??�망???�택</h2>
                         </div>
-                        <div class="title_add_txt">※ 달력의 예약일자 선택 버튼을 클릭하여 원하시는 검진 예약일과 시간을 설정해 주세요.</div>
+                        <div class="title_add_txt">???�력???�약?�자 ?�택 버튼???�릭?�여 ?�하?�는 검�??�약?�과 ?�간???�정??주세??</div>
                     </div>
                     <div class="calendar">
 
@@ -475,7 +475,7 @@
                             <br/>
                             <div class="select_date_box">
                                 <div class="select_date">
-                                    <span class="date_comment">예약 일자 및 예약 시간을 선택한 후 버튼을 클릭 해주세요.</span>
+                                    <span class="date_comment">?�약 ?�자 �??�약 ?�간???�택????버튼???�릭 ?�주?�요.</span>
                                     <span class="form_coment">
                                         <span class="year"></span> <span class="month"></span> <span class="day"></span> <span
                                             class="ap"></span>
@@ -495,7 +495,7 @@
                         <div class="btn date_btn">
                             <span class="button_on_circle"></span>
                             <a href="#none" class="btn_inner blue_gradient">
-                                <span class="btn_txt_area">검진희망일 선택완료</span>
+                                <span class="btn_txt_area">검진희망일 ?�택?�료</span>
                             </a>
                         </div>
                     </div>
@@ -566,9 +566,9 @@
             showOtherMonths: true,
             showMonthAfterYear: true,
             changeMonth: true,
-            yearSuffix: '년',
-            monthNamesShort: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
-            dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
+            yearSuffix: '??,
+            monthNamesShort: ['1??, '2??, '3??, '4??, '5??, '6??, '7??, '8??, '9??, '10??, '11??, '12??],
+            dayNamesMin: ['??, '??, '??, '??, '�?, '�?, '??],
             minDate: checkupDateBegin > minDate ? checkupDateBegin : minDate,
             maxDate: new Date(<c:out value="${reserve.checkupDateEnd.time}"/>),
             defaultDate: null,
@@ -586,12 +586,12 @@
     $('.date_btn').on('click', function () {
         let selectedDate = $('#s_v1').data('selectedDate');
 
-        if (!selectedDate) { //예약정보
+        if (!selectedDate) { //?�약?�보
             $('.res_btn .select_btn button').addClass('btn_focus');
             setTimeout(function () {
                 $('.res_btn .select_btn button').removeClass('btn_focus');
             }, 1000);
-            Swal.fire('예약일자 및 예약시간을\n선택해 주세요.', '', 'warning');
+            Swal.fire('?�약?�자 �??�약?�간??n?�택??주세??', '', 'warning');
             return;
         }
 
@@ -640,10 +640,10 @@
     });
 
 
-    // 특정일 금지
+    // ?�정??금�?
     function dayOffs(date) {
         if (date.getDay() === 0) {
-            return [false, '', '종일불가'];
+            return [false, '', '종일불�?'];
         } else if (date.getDay() === 6) {
             disabledDays[date.getTime()] = $.extend({}, disabledDays[date.getTime()], {pm: true});
         }
@@ -661,7 +661,7 @@
         for (let day in disabledDays) {
             if (Number(day) === date.getTime()) {
                 if (disabledDays[day].am && disabledDays[day].pm) {
-                    return [false, '', '종일불가'];
+                    return [false, '', '종일불�?'];
                 }
 
                 let dateCellClass = 'ui-datepicker-unselectable';
@@ -669,10 +669,10 @@
 
                 if (disabledDays[day].am) {
                     dateCellClass += ' disable-am';
-                    tooltip = '오전불가';
+                    tooltip = '?�전불�?';
                 } else if (disabledDays[day].pm) {
                     dateCellClass += ' disable-pm';
-                    tooltip = '오후불가';
+                    tooltip = '?�후불�?';
                 }
 
                 if (disabledDays[day].notes) {
@@ -695,11 +695,11 @@
         $('#s_v1').val(desiredAt).data('selectedDate', desiredAt);
 
         $('.select_date .date_comment').hide();
-        $('.select_date .year').empty().append(desiredAt.getFullYear() + '년');
-        $('.select_date .month').empty().append((desiredAt.getMonth() + 1) + '월');
-        $('.select_date .day').empty().append(desiredAt.getDate() + '일');
-        $('.select_date .ap').empty().append(desiredAt.getHours() < 12 ? '오전' : '오후');
-        $('.select_date .last_comment').empty().append('(으)로 선택 하셨습니다.');
+        $('.select_date .year').empty().append(desiredAt.getFullYear() + '??);
+        $('.select_date .month').empty().append((desiredAt.getMonth() + 1) + '??);
+        $('.select_date .day').empty().append(desiredAt.getDate() + '??);
+        $('.select_date .ap').empty().append(desiredAt.getHours() < 12 ? '?�전' : '?�후');
+        $('.select_date .last_comment').empty().append('(??�??�택 ?�셨?�니??');
         </c:if>
 
         const year = Number($(".ui-datepicker-year").text());
@@ -724,28 +724,28 @@
                 }
             }
 
-            // //예약가능 셋팅
+            // //?�약가???�팅
             enable.empty().append('\n\
                 <span class="date">' + date + '</span>\n\
-                <div class="possible">예약가능</div>\n\
+                <div class="possible">?�약가??/div>\n\
                 <div class="ampm_btn btn_area">\n\
                     <div class="am btn" style="visibility: ' + visibilityAm + ';">\n\
                         <span class="button_on_circle"></span>\n\
                         <a href="#none" class="btn_inner orange">\n\
-                            <span class="btn_txt_area">오전</span>\n\
+                            <span class="btn_txt_area">?�전</span>\n\
                         </a>\n\
                     </div>\n\
                     <div class="pm btn" style="visibility: ' + visibilityPm + ';">\n\
                         <span class="button_on_circle"></span>\n\
                         <a href="#none" class="btn_inner blue">\n\
-                            <span class="btn_txt_area">오후</span>\n\
+                            <span class="btn_txt_area">?�후</span>\n\
                         </a>\n\
                     </div>\n\
                 </div>\n\
                 <div class="reserve_closed_item btn" style="visibility: ' + visibilityNotes + '">\n\
                     <span class="button_on_circle"></span>\n\
                     <a href="#none" class="btn_inner grey">\n\
-                        <span class="btn_txt_area">예약 마감 항목 보기</span>\n\
+                        <span class="btn_txt_area">?�약 마감 ??�� 보기</span>\n\
                     </a>\n\
                 </div>\n\
             ');
@@ -755,11 +755,11 @@
                 enable.addClass('ui-state-active');
 
                 $('.select_date .date_comment').hide();
-                $('.select_date .year').empty().append(year + '년');
-                $('.select_date .month').empty().append((month + 1) + '월');
-                $('.select_date .day').empty().append(date + '일');
-                $('.select_date .ap').empty().append('오전');
-                $('.select_date .last_comment').empty().append('(으)로 선택 하셨습니다.');
+                $('.select_date .year').empty().append(year + '??);
+                $('.select_date .month').empty().append((month + 1) + '??);
+                $('.select_date .day').empty().append(date + '??);
+                $('.select_date .ap').empty().append('?�전');
+                $('.select_date .last_comment').empty().append('(??�??�택 ?�셨?�니??');
 
                 const selectedDate = new Date(year, month, date, 10);
                 $('#s_v1').val(selectedDate).data('selectedDate', selectedDate);
@@ -770,11 +770,11 @@
                 enable.addClass('ui-state-active');
 
                 $('.select_date .date_comment').hide();
-                $('.select_date .year').empty().append(year + '년');
-                $('.select_date .month').empty().append((month + 1) + '월');
-                $('.select_date .day').empty().append(date + '일');
-                $('.select_date .ap').empty().append('오후');
-                $('.select_date .last_comment').empty().append('(으)로 선택 하셨습니다.');
+                $('.select_date .year').empty().append(year + '??);
+                $('.select_date .month').empty().append((month + 1) + '??);
+                $('.select_date .day').empty().append(date + '??);
+                $('.select_date .ap').empty().append('?�후');
+                $('.select_date .last_comment').empty().append('(??�??�택 ?�셨?�니??');
 
                 const selectedDate = new Date(year, month, date, 14);
                 $('#s_v1').val(selectedDate).data('selectedDate', selectedDate);
@@ -785,7 +785,7 @@
                 Swal.fire(disabledDays[selectedDate.getTime()].notes, '', 'info');
             });
 
-            //예약불가 셋팅
+            //?�약불�? ?�팅
             disable.empty().append('<span class="date">' + disableDate + '</span>');
         });
     }

@@ -1,4 +1,4 @@
-nv.models.legend = function() {
+﻿nv.models.legend = function() {
   "use strict";
   //============================================================
   // Public Variables with Default Settings

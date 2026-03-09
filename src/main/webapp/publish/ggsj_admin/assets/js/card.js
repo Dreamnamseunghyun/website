@@ -1,4 +1,4 @@
-/* ============================================================
+﻿/* ============================================================
  * cards
  * Create cards using Pages cards plugin. Use data attribute
  * data-pages="card" to auto-initialize a basic card without

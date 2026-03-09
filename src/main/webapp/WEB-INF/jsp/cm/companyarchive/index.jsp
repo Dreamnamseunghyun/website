@@ -1,4 +1,4 @@
-<%@ page contentType="text/html; charset=utf-8" pageEncoding="utf-8" %>
+﻿<%@ page contentType="text/html; charset=utf-8" pageEncoding="utf-8" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 
@@ -21,7 +21,7 @@
                 <div class="card card-transparent board_internal">
                     <div class="card-header ">
                         <div class="card-title">
-                            <h3 class="h3">회사보관용 자료</h3>
+                            <h3 class="h3">?뚯궗蹂닿????먮즺</h3>
                         </div>
                     </div>
                     <%--                    <div class="card-body">--%>
@@ -32,10 +32,10 @@
                                     <div class="row-box3" style="border:1px solid #eaecef!important; border-right:0!important">
                                         <div class="row-box-inner1">
                                             <div class="col-box1 row">
-                                                <div class="col-lg-4 tag-name"><span>대상년도</span></div>
+                                                <div class="col-lg-4 tag-name"><span>??곷뀈??/span></div>
                                                 <div class="col-lg-8">
                                                     <div class="col-lg-12" id="selectCheckupYear"
-                                                         data-ggsj="dxSelectBox"></div>
+                                                         data-sitebuilder="dxSelectBox"></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -44,9 +44,9 @@
                                     <div class="row-box3" style="border:1px solid #eaecef!important; border-right:0!important">
                                         <div class="row-box-inner1">
                                             <div class="col-box1 row" style="border-right:0!important">
-                                                <div class="col-lg-4 tag-name"><span>업데이트일시</span></div>
+                                                <div class="col-lg-4 tag-name"><span>?낅뜲?댄듃?쇱떆</span></div>
                                                 <div class="col-lg-8 row">
-                                                    <div class="col-lg-12" id="resultSentDate" data-ggsj="dxDateBox"></div>
+                                                    <div class="col-lg-12" id="resultSentDate" data-sitebuilder="dxDateBox"></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -55,9 +55,9 @@
                                     <div class="row-box3" style="border:1px solid #eaecef!important;">
                                         <div class="row-box-inner1">
                                             <div class="col-box1 row">
-                                                <div class="col-lg-4 tag-name"><span>병원선택</span></div>
+                                                <div class="col-lg-4 tag-name"><span>蹂묒썝?좏깮</span></div>
                                                 <div class="col-lg-8 row">
-                                                    <div class="col-lg-12" id="selectResultHospital" data-ggsj="dxSelectBox"></div>
+                                                    <div class="col-lg-12" id="selectResultHospital" data-sitebuilder="dxSelectBox"></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -69,7 +69,7 @@
 
 
                             <div class="row-wrap row-wrap-box">
-                                <div id="dataGridCheckupResult" class="main_table" data-ggsj="dxDataGrid"
+                                <div id="dataGridCheckupResult" class="main_table" data-sitebuilder="dxDataGrid"
                                      style="height: 35vh;"></div>
                             </div>
 
@@ -79,10 +79,10 @@
                                     <div class="row-box2">
                                         <div class="row-box-inner1">
                                             <div class="col-box1 row" style="border-right:0!important">
-                                                <div class="col-lg-4 tag-name"><span>업데이트일시</span></div>
+                                                <div class="col-lg-4 tag-name"><span>?낅뜲?댄듃?쇱떆</span></div>
                                                 <div class="col-lg-8">
                                                     <div class="col-lg-12" id="ETCSentDate"
-                                                         data-ggsj="dxDateBox"></div>
+                                                         data-sitebuilder="dxDateBox"></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -91,9 +91,9 @@
                                     <div class="row-box2">
                                         <div class="row-box-inner1">
                                             <div class="col-box1 row">
-                                                <div class="col-lg-4 tag-name"><span>병원선택</span></div>
+                                                <div class="col-lg-4 tag-name"><span>蹂묒썝?좏깮</span></div>
                                                 <div class="col-lg-8 row">
-                                                    <div class="col-lg-12" id="selectETCHospital" data-ggsj="dxSelectBox"></div>
+                                                    <div class="col-lg-12" id="selectETCHospital" data-sitebuilder="dxSelectBox"></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -103,12 +103,12 @@
 
 
                             <div class="row-wrap row-wrap-box">
-                            <div id="dataGridEtc" class="main_table" data-ggsj="dxDataGrid" style="height: 35vh;">
+                            <div id="dataGridEtc" class="main_table" data-sitebuilder="dxDataGrid" style="height: 35vh;">
                                 <!--45vh-->
                             </div>
                             </div>
 
-                        <div id="popupAttach" data-ggsj="dxPopup"></div>
+                        <div id="popupAttach" data-sitebuilder="dxPopup"></div>
                         <%--                    </div>--%>
                     </div>
                 </div>
@@ -121,9 +121,9 @@
 </body>
 <script>
     $(function () {
-        ggsj.openMenu('companyarchive');
+        sitebuilder.openMenu('companyarchive');
 
-        let dxInstances = ggsj.createDx(false);
+        let dxInstances = sitebuilder.createDx(false);
 
         let dsHospital = new DevExpress.data.DataSource({
             load: function () {
@@ -135,7 +135,7 @@
         });
 
         dxInstances.selectCheckupYear.option({
-            dataSource: ggsj.typeDef.Year,
+            dataSource: sitebuilder.typeDef.Year,
             value: new Date().getFullYear(),
             valueExpr: 'id',
             displayExpr: 'text',
@@ -144,42 +144,39 @@
             // }
         });
 
-        //기업체 건강진단결과표 및 사후관리소견서
+        //湲곗뾽泥?嫄닿컯吏꾨떒寃곌낵??諛??ы썑愿由ъ냼寃ъ꽌
         dxInstances.dataGridCheckupResult.option({
             searchPanel: {
                 visible: false,
             },
             columns: [{
-                //기업체명
+                //湲곗뾽泥대챸
                 dataField: 'companyName',
-                caption: '기업체명',
+                caption: '湲곗뾽泥대챸',
                 alignment: 'center',
             }, {
-                //대상년도
-                dataField: 'checkupYear',
-                caption: '대상년도',
+                //??곷뀈??                dataField: 'checkupYear',
+                caption: '??곷뀈??,
                 alignment: 'center',
             }, {
-                //병원명
-                dataField: 'hospitalName',
-                caption: '병원명',
+                //蹂묒썝紐?                dataField: 'hospitalName',
+                caption: '蹂묒썝紐?,
                 alignment: 'center',
             }, {
-                //자료명
-                dataField: 'title',
-                caption: '자료명',
+                //?먮즺紐?                dataField: 'title',
+                caption: '?먮즺紐?,
                 alignment: 'center',
             }, {
                 dataField: 'attach',
                 type: 'buttons',
-                caption: '첨부파일',
+                caption: '泥⑤??뚯씪',
                 buttons: [{
-                    text: '첨부파일',
+                    text: '泥⑤??뚯씪',
                     onClick: function (e) {
                         if (e.row.data.companyArchiveFiles[0].companyArchiveFileId) {
                             dxInstances.popupAttach.show();
                             dxInstances.popupAttach.option({
-                                title: "첨부파일",
+                                title: "泥⑤??뚯씪",
                                 closeOnOutsideClick: true,
                                 width: 800,
                                 height: 500,
@@ -188,12 +185,12 @@
                                         dataSource: e.row.data.companyArchiveFiles,
                                         columns: [{
                                             dataField: 'archiveFilename',
-                                            caption: '파일명',
+                                            caption: '?뚯씪紐?,
                                         }, {
                                             type: 'buttons',
-                                            caption: '다운로드',
+                                            caption: '?ㅼ슫濡쒕뱶',
                                             buttons: [{
-                                                text: '다운로드',
+                                                text: '?ㅼ슫濡쒕뱶',
                                                 onClick: function (event) {
                                                     location.href = event.row.data.attachUrl;
                                                 }
@@ -203,7 +200,7 @@
                                 },
                             });
                         } else {
-                            alert('등록된 파일이 없습니다.');
+                            alert('?깅줉???뚯씪???놁뒿?덈떎.');
                         }
                     },
                 }],
@@ -212,47 +209,43 @@
                 // Grid Title
                 e.toolbarOptions.items.unshift({
                     location: 'before',
-                    text: '기업체 건강진단결과표 및 사후관리소견서',
+                    text: '湲곗뾽泥?嫄닿컯吏꾨떒寃곌낵??諛??ы썑愿由ъ냼寃ъ꽌',
                 });
             },
         });
 
-        //기타 자료 업로드
-        dxInstances.dataGridEtc.option({
+        //湲고? ?먮즺 ?낅줈??        dxInstances.dataGridEtc.option({
             searchPanel: {
                 visible: false,
             },
             columns: [{
-                //기업체명
+                //湲곗뾽泥대챸
                 dataField: 'companyName',
-                caption: '기업체명',
+                caption: '湲곗뾽泥대챸',
                 alignment: 'center',
             }, {
-                //대상년도
-                dataField: 'checkupYear',
-                caption: '대상년도',
+                //??곷뀈??                dataField: 'checkupYear',
+                caption: '??곷뀈??,
                 alignment: 'center',
             }, {
-                //병원명
-                dataField: 'hospitalName',
-                caption: '병원명',
+                //蹂묒썝紐?                dataField: 'hospitalName',
+                caption: '蹂묒썝紐?,
                 alignment: 'center',
             }, {
-                //자료명
-                dataField: 'title',
-                caption: '자료명',
+                //?먮즺紐?                dataField: 'title',
+                caption: '?먮즺紐?,
                 alignment: 'center',
             }, {
                 dataField: 'attach',
                 type: 'buttons',
-                caption: '첨부파일',
+                caption: '泥⑤??뚯씪',
                 buttons: [{
-                    text: '첨부파일',
+                    text: '泥⑤??뚯씪',
                     onClick: function (e) {
                         if (e.row.data.companyArchiveFiles[0].companyArchiveFileId) {
                             dxInstances.popupAttach.show();
                             dxInstances.popupAttach.option({
-                                title: "첨부파일",
+                                title: "泥⑤??뚯씪",
                                 closeOnOutsideClick: true,
                                 width: 800,
                                 height: 500,
@@ -261,12 +254,12 @@
                                         dataSource: e.row.data.companyArchiveFiles,
                                         columns: [{
                                             dataField: 'archiveFilename',
-                                            caption: '파일명',
+                                            caption: '?뚯씪紐?,
                                         }, {
                                             type: 'buttons',
-                                            caption: '다운로드',
+                                            caption: '?ㅼ슫濡쒕뱶',
                                             buttons: [{
-                                                text: '다운로드',
+                                                text: '?ㅼ슫濡쒕뱶',
                                                 onClick: function (event) {
                                                     location.href = event.row.data.attachUrl;
                                                 }
@@ -276,7 +269,7 @@
                                 },
                             });
                         } else {
-                            alert('등록된 파일이 없습니다.');
+                            alert('?깅줉???뚯씪???놁뒿?덈떎.');
                         }
                     },
                 }],
@@ -285,7 +278,7 @@
                 // Grid Title
                 e.toolbarOptions.items.unshift({
                     location: 'before',
-                    text: '기타 자료 업로드',
+                    text: '湲고? ?먮즺 ?낅줈??,
                 });
             },
         });

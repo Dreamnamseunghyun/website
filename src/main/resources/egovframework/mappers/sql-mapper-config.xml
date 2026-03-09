@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
 
 <configuration>
@@ -9,15 +9,15 @@
     <typeAliases>
         <typeAlias alias="egovMap" type="egovframework.rte.psl.dataaccess.util.EgovMap"/>
 
-        <package name="kr.co.dsong.ggsj"/>
-        <package name="kr.co.dsong.ggsj.company.vo"/>
-        <package name="kr.co.dsong.ggsj.employee.vo"/>
-        <package name="kr.co.dsong.ggsj.user.vo"/>
-        <package name="kr.co.dsong.ggsj.commune.vo"/>
-        <package name="kr.co.dsong.ggsj.hospital.vo"/>
-        <package name="kr.co.dsong.ggsj.center.vo"/>
-        <package name="kr.co.dsong.ggsj.qna.vo"/>
-        <package name="kr.co.dsong.ggsj.manager.vo"/>
-        <package name="kr.co.dsong.ggsj.contract.vo"/>
+        <package name="kr.co.sitebuilder"/>
+        <package name="kr.co.sitebuilder.company.vo"/>
+        <package name="kr.co.sitebuilder.employee.vo"/>
+        <package name="kr.co.sitebuilder.user.vo"/>
+        <package name="kr.co.sitebuilder.commune.vo"/>
+        <package name="kr.co.sitebuilder.hospital.vo"/>
+        <package name="kr.co.sitebuilder.center.vo"/>
+        <package name="kr.co.sitebuilder.qna.vo"/>
+        <package name="kr.co.sitebuilder.manager.vo"/>
+        <package name="kr.co.sitebuilder.contract.vo"/>
     </typeAliases>
 </configuration>

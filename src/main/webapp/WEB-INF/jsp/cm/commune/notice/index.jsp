@@ -1,4 +1,4 @@
-<%@ page contentType="text/html; charset=utf-8" pageEncoding="utf-8" %>
+﻿<%@ page contentType="text/html; charset=utf-8" pageEncoding="utf-8" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 
@@ -21,7 +21,7 @@
                 <div class="card card-transparent board_internal">
                     <div class="card-header ">
                         <div class="card-title">
-                            <h3 class="h3">공지사항</h3>
+                            <h3 class="h3">怨듭??ы빆</h3>
                         </div>
                     </div>
                     <%--                    <div class="card-body">--%>
@@ -34,11 +34,11 @@
                                 <div class="row-box1">
                                     <div class="row-box-inner1">
                                         <div class="col-box1 row">
-                                            <div class="col-lg-3 tag-name"><span>작성일자</span></div>
+                                            <div class="col-lg-3 tag-name"><span>?묒꽦?쇱옄</span></div>
                                             <div class="col-lg-9 row period">
-                                                <div class="col-lg-6" id="startDate" data-ggsj="dxDateBox"></div>
+                                                <div class="col-lg-6" id="startDate" data-sitebuilder="dxDateBox"></div>
                                                 <div class="text-center wavy">~</div>
-                                                <div class="col-lg-6" id="endDate" data-ggsj="dxDateBox"></div>
+                                                <div class="col-lg-6" id="endDate" data-sitebuilder="dxDateBox"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -51,7 +51,7 @@
                                 <div class="row-box">
                                     <div class="row-box-inner">
                                         <div class="col-box1 row">
-                                            <div class="col-lg-12" id="searchGrid" data-ggsj="dxTextBox"></div>
+                                            <div class="col-lg-12" id="searchGrid" data-sitebuilder="dxTextBox"></div>
                                         </div>
                                     </div>
                                 </div>
@@ -61,7 +61,7 @@
                         </div>
                         <!-- Header -->
 
-                        <div id="dataGridNotice" class="main_table" data-ggsj="dxDataGrid">
+                        <div id="dataGridNotice" class="main_table" data-sitebuilder="dxDataGrid">
                         </div>
                     </div>
 
@@ -77,18 +77,18 @@
 </body>
 <script>
     $(function () {
-        ggsj.openMenu('notice');
+        sitebuilder.openMenu('notice');
 
         /** @param dxInstances : {selectStatus,dataGridNotice} */
-        let dxInstances = ggsj.createDx(false);
+        let dxInstances = sitebuilder.createDx(false);
 
         // dxInstances.selectStatus.option({
         //     dataSource: [
-        //         {id: 0, text: '전체'},
-        //         {id: 'US', text: '회원'},
-        //         {id: 'CM', text: '기업'},
-        //         {id: 'HM', text: '병원'},
-        //         {id: 'PM', text: '내부'},
+        //         {id: 0, text: '?꾩껜'},
+        //         {id: 'US', text: '?뚯썝'},
+        //         {id: 'CM', text: '湲곗뾽'},
+        //         {id: 'HM', text: '蹂묒썝'},
+        //         {id: 'PM', text: '?대?'},
         //     ],
         //     value: 0,
         //     valueExpr: 'id',
@@ -139,7 +139,7 @@
         });
 
         dxInstances.searchGrid.option({
-            placeholder: '검색',
+            placeholder: '寃??,
             valueChangeEvent: "keyup",
             onValueChanged: function (e) {
                 dxInstances.dataGridNotice.searchByText(e.value);
@@ -157,7 +157,7 @@
             },
 
             columns: [{
-                caption: '순번',
+                caption: '?쒕쾲',
                 alignment: 'center',
                 cellTemplate: function (cellElement, cellInfo) {
                     if (cellInfo.data.topList === true) {
@@ -168,21 +168,21 @@
                 },
             }, {
                 dataField: 'group',
-                caption: '구분',
+                caption: '援щ텇',
                 width: 80,
                 alignment: 'center',
                 lookup: {
-                    dataSource: ggsj.typeDef.userType,
+                    dataSource: sitebuilder.typeDef.userType,
                     valueExpr: 'id',
                     displayExpr: 'text',
                 },
             }, {
                 dataField: 'targetName',
-                caption: '대상',
+                caption: '???,
                 alignment: 'center',
             }, {
                 dataField: 'title',
-                caption: '제목',
+                caption: '?쒕ぉ',
                 cellTemplate: function (cellElement, cellInfo) {
                     let noticeId = cellInfo.row.data.noticeId;
                     if (cellInfo.data.attachUrl) {
@@ -198,19 +198,19 @@
                 //     lookup: {
                 //         dataSource: [
                 //             {'id': false, 'text': ''},
-                //             {'id': true, 'text': '📌'},
+                //             {'id': true, 'text': '?뱦'},
                 //         ],
                 //         valueExpr: 'id',
                 //         displayExpr: 'text',
                 //     },
             }, {
                 dataField: 'writedUserName',
-                caption: '작성자',
+                caption: '?묒꽦??,
                 alignment: 'center',
                 width: 80,
             }, {
                 dataField: 'writedAt',
-                caption: '작성일자',
+                caption: '?묒꽦?쇱옄',
                 alignment: 'center',
                 dataType: 'date',
             }],
@@ -222,7 +222,7 @@
             method: 'GET',
         }).then(function (response) {
             console.log(response)
-            ggsj.valuesToDx(response.data);
+            sitebuilder.valuesToDx(response.data);
         });
 
     });

@@ -5,7 +5,7 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>건강살자(사용자) 공지사항</title>
+    <title>건강?�자(?�용?? 공�??�항</title>
     <link href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css" rel="stylesheet" type="text/css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/css/swiper.min.css" rel="stylesheet"
           type="text/css">
@@ -45,7 +45,7 @@
 
                 <div class="board_wrap">
                     <p class="cont_title text-center">
-                        <span class="quotation">고객님께 새로운 소식을 전합니다</span>
+                        <span class="quotation">고객?�께 ?�로???�식???�합?�다</span>
                     </p>
                     <div class="table_wrap">
                         <table class="table">
@@ -56,8 +56,8 @@
                             </colgroup>
                             <thead>
                             <th>구분</th>
-                            <th>제목</th>
-                            <th>작성일자</th>
+                            <th>?�목</th>
+                            <th>?�성?�자</th>
                             </thead>
                             <tbody>
                             <tr>
@@ -82,11 +82,11 @@
                             <div class="file_title_area">
                                 <span class="toggle_button"><i class="xi-caret-up"></i></span>
                                 <i class="xi-paperclip"></i>
-                                <span class="title_text">게시글 첨부파일
+                                <span class="title_text">게시글 첨�??�일
                                         <span class="file_length point_color"><span class="length">
                                     </span>
                                 <%--                                <span class="file_size">(<span class="size">28KB</span>)</span>--%>
-                                <%--                                <a href="#none" class="download_link">모두 저장</a>--%>
+                                <%--                                <a href="#none" class="download_link">모두 ?�??/a>--%>
                             </div>
                             <div class="file_download_area">
                                     <span class="download_icon">
@@ -110,13 +110,13 @@
                                 </colgroup>
                                 <tbody>
                                 <tr>
-                                    <td><a onclick=""><i class="xi-angle-up"></i>다음글</a></td>
+                                    <td><a onclick=""><i class="xi-angle-up"></i>?�음글</a></td>
                                     <td><a onclick="" id="targetNameNext"></a></td>
                                     <td><a href='#none' id="titleNext"></a></td>
                                     <td><a onclick="" id="writedAtNext"></a></td>
                                 </tr>
                                 <tr>
-                                    <td><a onclick=""><i class="xi-angle-down"></i>이전글</a></td>
+                                    <td><a onclick=""><i class="xi-angle-down"></i>?�전글</a></td>
                                     <td><a onclick="" id="targetNameBefore"></a></td>
                                     <td><a href="#none" id="titleBefore"></a></td>
                                     <td><a onclick="" id="writedAtBefore"></a></td>
@@ -136,7 +136,7 @@
         <div class="btn check_btn">
             <span class="button_on_circle"></span>
             <a href="notice" class="btn_inner grey">
-                <span class="btn_txt_area">목록으로</span>
+                <span class="btn_txt_area">목록?�로</span>
             </a>
         </div>
     </div>
@@ -166,7 +166,7 @@
             $("#writedAt").html(new Date(response.data[0].writedAt).toISOString().substring(0, 10));
 
             if (response.data[1] === null) {
-                $("#titleNext").html('다음글이 없습니다.');
+                $("#titleNext").html('?�음글???�습?�다.');
             } else {
                 $("#targetNameNext").html(response.data[1].targetName);
                 $("#titleNext").html(response.data[1].title).attr('href', '<c:url value="/us/notice"/>?noticeId=' + response.data[1].noticeId);
@@ -174,7 +174,7 @@
             }
 
             if (response.data[2] === null) {
-                $("#titleBefore").html('이전글이 없습니다.');
+                $("#titleBefore").html('?�전글???�습?�다.');
             } else {
                 $("#targetNameBefore").html(response.data[2].targetName);
                 $("#titleBefore").html(response.data[2].title).attr('href', '<c:url value="/us/notice"/>?noticeId=' + response.data[2].noticeId);
@@ -192,7 +192,7 @@
                     $(".write_file .file_download_area").remove();
                     $(".write_file .file_title_area .file_size").remove();
                     $(".file_length").empty();
-                    $(".title_text").text('첨부파일이 없습니다.');
+                    $(".title_text").text('첨�??�일???�습?�다.');
                     $(".file_title_area").css({"color": "#999"})
                 }
             }

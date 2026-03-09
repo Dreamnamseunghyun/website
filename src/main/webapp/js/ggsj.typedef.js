@@ -1,9 +1,9 @@
-(function (window) {
+﻿(function (window) {
     'use strict';
 
-    let ggsj = window.ggsj || {};
+    let sitebuilder = window.sitebuilder || {};
 
-    ggsj.typeDef = {
+    sitebuilder.typeDef = {
         Year: [
             {id: 2020, text: '2020'},
             {id: 2021, text: '2021'},
@@ -18,29 +18,29 @@
             {id: 2030, text: '2030'},
         ],
         userType: [
-            {id: 'US', text: '회원'},
-            {id: 'CM', text: '기업'},
-            {id: 'HM', text: '병원'},
-            {id: 'PM', text: '내부'},
+            {id: 'US', text: '?뚯썝'},
+            {id: 'CM', text: '湲곗뾽'},
+            {id: 'HM', text: '蹂묒썝'},
+            {id: 'PM', text: '?대?'},
         ],
         registerType: [
-            {id: '0', text: '미포함'},
-            {id: '1', text: '포함'},
-            {id: '2', text: '추가검사'},
-            {id: 'A', text: '선택A'},
-            {id: 'B', text: '선택B'},
-            {id: 'C', text: '선택C'},
-            {id: 'D', text: '선택D'},
-            {id: 'E', text: '선택E'},
-            {id: 'F', text: '선택F'},
+            {id: '0', text: '誘명룷??},
+            {id: '1', text: '?ы븿'},
+            {id: '2', text: '異붽?寃??},
+            {id: 'A', text: '?좏깮A'},
+            {id: 'B', text: '?좏깮B'},
+            {id: 'C', text: '?좏깮C'},
+            {id: 'D', text: '?좏깮D'},
+            {id: 'E', text: '?좏깮E'},
+            {id: 'F', text: '?좏깮F'},
         ],
         faqCategory: [
-            {id: 'RESERVE', text: '검진예약'},
-            {id: 'RESULT', text: '검진결과'},
-            {id: 'CAUTION', text: '주의사항'},
-            {id: 'ETC', text: '기타'},
+            {id: 'RESERVE', text: '寃吏꾩삁??},
+            {id: 'RESULT', text: '寃吏꾧껐怨?},
+            {id: 'CAUTION', text: '二쇱쓽?ы빆'},
+            {id: 'ETC', text: '湲고?'},
         ],
     };
 
-    window.ggsj = ggsj;
+    window.sitebuilder = sitebuilder;
 })(window);

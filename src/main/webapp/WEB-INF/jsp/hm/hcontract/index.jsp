@@ -1,4 +1,4 @@
-<%@ page contentType="text/html; charset=utf-8" pageEncoding="utf-8" %>
+﻿<%@ page contentType="text/html; charset=utf-8" pageEncoding="utf-8" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 
@@ -21,7 +21,7 @@
                 <div class="card card-transparent board_internal">
                     <div class="card-header ">
                         <div class="card-title">
-                            <h3 class="h3">계약기업</h3>
+                            <h3 class="h3">怨꾩빟湲곗뾽</h3>
                         </div>
                     </div>
                     <%--                    <div class="card-body">--%>
@@ -32,9 +32,9 @@
                                 <div class="row-box2">
                                     <div class="row-box-inner1">
                                         <div class="col-box1 row">
-                                            <div class="col-lg-4 tag-name"><span>병원명</span></div>
+                                            <div class="col-lg-4 tag-name"><span>蹂묒썝紐?/span></div>
                                             <div class="col-lg-8">
-                                                <div class="col-lg-12" id="hospitalName" data-ggsj="dxTextBox"></div>
+                                                <div class="col-lg-12" id="hospitalName" data-sitebuilder="dxTextBox"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -43,10 +43,10 @@
                                 <div class="row-box2">
                                     <div class="row-box-inner1">
                                         <div class="col-box1 row">
-                                            <div class="col-lg-4 tag-name"><span>대상년도</span></div>
+                                            <div class="col-lg-4 tag-name"><span>??곷뀈??/span></div>
                                             <div class="col-lg-8">
                                                 <div class="col-lg-12" id="selectCheckupYear"
-                                                     data-ggsj="dxSelectBox"></div>
+                                                     data-sitebuilder="dxSelectBox"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -58,7 +58,7 @@
                                 <div class="row-box">
                                     <div class="row-box-inner">
                                         <div class="col-box1 row">
-                                            <div class="col-lg-12" id="searchGrid" data-ggsj="dxTextBox"></div>
+                                            <div class="col-lg-12" id="searchGrid" data-sitebuilder="dxTextBox"></div>
                                         </div>
                                     </div>
                                 </div>
@@ -68,11 +68,11 @@
                         </div>
 
                         <%-- checkup type dataGrid --%>
-                        <div id="hcontractgrid" class="main_table" data-ggsj="dxDataGrid">
+                        <div id="hcontractgrid" class="main_table" data-sitebuilder="dxDataGrid">
                         </div>
 
                         <div class="row btn_area footer-btn">
-                            <div class="col-lg-1" id="btnList" data-ggsj="dxButton">목록</div>
+                            <div class="col-lg-1" id="btnList" data-sitebuilder="dxButton">紐⑸줉</div>
                         </div>
                     </div>
                     <%--                    </div>--%>
@@ -87,14 +87,14 @@
 </body>
 <script>
     $(function () {
-        ggsj.openMenu('hospital');
+        sitebuilder.openMenu('hospital');
 
-        let dxInstances = ggsj.createDx(false);
+        let dxInstances = sitebuilder.createDx(false);
 
         LoadHcontractList();
 
         dxInstances.searchGrid.option({
-            placeholder: '검색',
+            placeholder: '寃??,
             valueChangeEvent: "keyup",
             onValueChanged: function (e) {
                 dxInstances.hcontractgrid.searchByText(e.value);
@@ -117,31 +117,31 @@
 
             columns: [
                 {
-                    //기업체명
+                    //湲곗뾽泥대챸
                     dataField: 'companyName',
-                    caption: '기업체명',
+                    caption: '湲곗뾽泥대챸',
                     alignment: 'center',
                     cellTemplate: function (cellElement, cellInfo) {
                         cellElement.append(cellInfo.row.data.companyName);
                     }
                 }, {
                     dataField: 'centerName',
-                    caption: '센터명',
+                    caption: '?쇳꽣紐?,
                     alignment: 'center',
                     // cellTemplate: function (cellElement, cellInfo) {
                     //     console.log(cellInfo);
                     // }
                 }, {
                     dataField: 'checkupYear',
-                    caption: '대상년도',
+                    caption: '??곷뀈??,
                     alignment: 'center',
                     dataType: 'string',
                 }, {
-                    //병원 매니저(센터매니저?병원매니저? 업무가 나뉜 매니저없음)
-                    caption: '병원 매니저',
+                    //蹂묒썝 留ㅻ땲?(?쇳꽣留ㅻ땲??蹂묒썝留ㅻ땲?? ?낅Т媛 ?섎돏 留ㅻ땲??놁쓬)
+                    caption: '蹂묒썝 留ㅻ땲?',
                     alignment: 'center',
                     columns: [{
-                        caption: '영업',
+                        caption: '?곸뾽',
                         dataField: 'contractManagerNames',
                         alignment: 'center',
                         cellTemplate: function (cellElement, cellInfo) {
@@ -154,7 +154,7 @@
                             }
                         },
                     }, {
-                        caption: '예약',
+                        caption: '?덉빟',
                         dataField: 'reserveManagerNames',
                         alignment: 'center',
                         cellTemplate: function (cellElement, cellInfo) {
@@ -166,7 +166,7 @@
                             }
                         },
                     }, {
-                        caption: '결과',
+                        caption: '寃곌낵',
                         dataField: 'resultManagerNames',
                         alignment: 'center',
                         cellTemplate: function (cellElement, cellInfo) {
@@ -182,7 +182,7 @@
         });
 
         dxInstances.selectCheckupYear.option({
-            dataSource: ggsj.typeDef.Year,
+            dataSource: sitebuilder.typeDef.Year,
             value: new Date().getFullYear(),
             valueExpr: 'id',
             displayExpr: 'text',
@@ -193,7 +193,7 @@
 
         dxInstances.btnList.option({
             stylingMode: 'contained',
-            text: '목록',
+            text: '紐⑸줉',
             type: 'success',
             onClick: function () {
                 location.href = '<c:url value="/hm/hospital"/>';
@@ -204,7 +204,7 @@
             url: '<c:url value="/hm/hospital"/>',
             method: 'GET',
         }).then(function (response) {
-            ggsj.valuesToDx(response.data);
+            sitebuilder.valuesToDx(response.data);
             dxInstances.hospitalName.option({
                 value: response.data[0].hospitalName,
                 readOnly: true,
@@ -219,7 +219,7 @@
                     checkupYear: dxInstances.selectCheckupYear.option('value'),
                 }
             }).then(function (response) {
-                ggsj.valuesToDx(response.data);
+                sitebuilder.valuesToDx(response.data);
                 console.log(response.data)
                 dxInstances.hcontractgrid.option({
                     dataSource: response.data

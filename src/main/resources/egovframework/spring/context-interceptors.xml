@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:mvc="http://www.springframework.org/schema/mvc"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
-    <bean id="commonInterceptor" class="kr.co.dsong.ggsj.common.web.CommonInterceptor"/>
+    <bean id="commonInterceptor" class="kr.co.sitebuilder.common.web.CommonInterceptor"/>
     <mvc:interceptors>
         <mvc:interceptor>
             <mvc:mapping path="/**"/>
@@ -33,7 +33,7 @@
             <mvc:exclude-mapping path="/pm/employee/reset"/>
             <mvc:exclude-mapping path="/us/employee/reset"/>
 
-            <!-- TODO: 나중에 html 제거 -->
+            <!-- TODO: ?섏쨷??html ?쒓굅 -->
             <mvc:exclude-mapping path="/us/logo.html"/>
             <mvc:exclude-mapping path="/us/footer.html"/>
             <mvc:exclude-mapping path="/us/header.html"/>
@@ -50,20 +50,20 @@
             <mvc:exclude-mapping path="/us/notice_write.html"/>
 
 
-            <!-- 로그인 안하고 보는 이미지 URL -->
+            <!-- 濡쒓렇???덊븯怨?蹂대뒗 ?대?吏 URL -->
             <mvc:exclude-mapping path="/storage/healthsense/**"/>
 
 
             <!-- robots.txt -->
             <mvc:exclude-mapping path="/robots.txt"/>
 
-            <!-- Bing 검색 등록 -->
+            <!-- Bing 寃???깅줉 -->
             <mvc:exclude-mapping path="/BingSiteAuth.xml"/>
 
-            <!-- Naver 검색 등록 -->
+            <!-- Naver 寃???깅줉 -->
             <mvc:exclude-mapping path="/naverc1fba8449506ee1e27769484ab58edfe.html"/>
 
-            <!-- TODO: 추후 정리되면 삭제! -->
+            <!-- TODO: 異뷀썑 ?뺣━?섎㈃ ??젣! -->
             <mvc:exclude-mapping path="/publish/**"/>
 
             <ref bean="commonInterceptor"/>

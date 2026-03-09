@@ -21,7 +21,7 @@
                 <div class="card card-transparent board_internal">
                     <div class="card-header ">
                         <div class="card-title">
-                            <h3 class="h3">회사보관용 자료</h3>
+                            <h3 class="h3">?�사보�????�료</h3>
                         </div>
                     </div>
                     <%--                    <div class="card-body">--%>
@@ -32,10 +32,10 @@
                                     <div class="row-box2">
                                         <div class="row-box-inner1">
                                             <div class="col-box1 row">
-                                                <div class="col-lg-4 tag-name"><span>대상년도</span></div>
+                                                <div class="col-lg-4 tag-name"><span>?�?�년??/span></div>
                                                 <div class="col-lg-8">
                                                     <div class="col-lg-12" id="selectCheckupYear"
-                                                         data-ggsj="dxSelectBox"></div>
+                                                         data-sitebuilder="dxSelectBox"></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -44,10 +44,10 @@
                                     <div class="row-box2">
                                         <div class="row-box-inner1">
                                             <div class="col-box1 row">
-                                                <div class="col-lg-4 tag-name"><span>기업체 검색</span></div>
+                                                <div class="col-lg-4 tag-name"><span>기업�?검??/span></div>
                                                 <div class="col-lg-8 row">
-                                                    <div class="col-lg-6" id="lookupCompany" data-ggsj="dxSelectBox"></div>
-                                                    <div class="col-lg-6" id="unregisteredHospital" data-ggsj="dxSelectBox"></div>
+                                                    <div class="col-lg-6" id="lookupCompany" data-sitebuilder="dxSelectBox"></div>
+                                                    <div class="col-lg-6" id="unregisteredHospital" data-sitebuilder="dxSelectBox"></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -58,7 +58,7 @@
 
 
                             <div class="row-wrap row-wrap-box" style="margin-bottom:0;">
-                                <div id="dataGridCheckupResult" class="main_table" data-ggsj="dxDataGrid"
+                                <div id="dataGridCheckupResult" class="main_table" data-sitebuilder="dxDataGrid"
                                      style="height: 35vh;"></div>
                             </div>
 
@@ -70,8 +70,8 @@
                                     <div class="row-box" style="width:400px; border:1px solid #eaecef">
                                         <div class="row-box-inner">
                                             <div class="col-box1 row">
-                                                <div class="col-lg-5 tag-name"><span>전송일시</span></div>
-                                                <div class="col-lg-7" id="sendDate1" data-ggsj="dxDateBox"
+                                                <div class="col-lg-5 tag-name"><span>?�송?�시</span></div>
+                                                <div class="col-lg-7" id="sendDate1" data-sitebuilder="dxDateBox"
                                                      style="width: 250px"></div>
                                             </div>
 
@@ -84,7 +84,7 @@
                                             <div class="col-box1 row">
                                                 <div class="col-lg-12">
                                                     <div id="btnSend1"
-                                                         data-ggsj="dxButton" style="height:34px!important"></div>
+                                                         data-sitebuilder="dxButton" style="height:34px!important"></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -94,7 +94,7 @@
 
 
                         <div class="row-wrap row-wrap-box" style="margin-bottom:0;">
-                            <div id="dataGridEtc" class="main_table" data-ggsj="dxDataGrid" style="height: 35vh;">
+                            <div id="dataGridEtc" class="main_table" data-sitebuilder="dxDataGrid" style="height: 35vh;">
                             </div>
                         </div>
 
@@ -105,8 +105,8 @@
                                     <div class="row-box" style="width:400px; border:1px solid #eaecef">
                                         <div class="row-box-inner">
                                             <div class="col-box1 row">
-                                                <div class="col-lg-5 tag-name"><span>전송일시</span></div>
-                                                <div class="col-lg-7" id="sendDate2" data-ggsj="dxDateBox"
+                                                <div class="col-lg-5 tag-name"><span>?�송?�시</span></div>
+                                                <div class="col-lg-7" id="sendDate2" data-sitebuilder="dxDateBox"
                                                      style="width: 250px"></div>
                                             </div>
 
@@ -119,7 +119,7 @@
                                             <div class="col-box1 row">
                                                 <div class="col-lg-12">
                                                     <div id="btnSend2"
-                                                         data-ggsj="dxButton" style="height:34px!important"></div>
+                                                         data-sitebuilder="dxButton" style="height:34px!important"></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -128,7 +128,7 @@
                             </div>
 
 
-                        <div id="popupAttach" data-ggsj="dxPopup"></div>
+                        <div id="popupAttach" data-sitebuilder="dxPopup"></div>
                         <%--                    </div>--%>
                     </div>
                 </div>
@@ -141,38 +141,38 @@
 </body>
 <script>
     $(function () {
-        ggsj.openMenu('companyarchive');
+        sitebuilder.openMenu('companyarchive');
 
-        let dxInstances = ggsj.createDx(false);
+        let dxInstances = sitebuilder.createDx(false);
 
         dxInstances.btnSend1.option({
-            text: '기업 매니저 전송',
+            text: '기업 매니?� ?�송',
             onClick: function () {
                 $.ajax({
                     url: '<c:url value="/pm/companyarchive/1/sent"/>',
                     method: 'POST',
                 }).then(function () {
-                    ggsj.notify("전송되었습니다.");
+                    sitebuilder.notify("?�송?�었?�니??");
                     location.reload();
                 });
             }
         });
 
         dxInstances.btnSend2.option({
-            text: '기업 매니저 전송',
+            text: '기업 매니?� ?�송',
             onClick: function () {
                 $.ajax({
                     url: '<c:url value="/pm/companyarchive/0/sent"/>',
                     method: 'POST',
                 }).then(function () {
-                    ggsj.notify("전송되었습니다.");
+                    sitebuilder.notify("?�송?�었?�니??");
                     location.reload();
                 });
             }
         });
 
         dxInstances.selectCheckupYear.option({
-            dataSource: ggsj.typeDef.Year,
+            dataSource: sitebuilder.typeDef.Year,
             value: new Date().getFullYear(),
             valueExpr: 'id',
             displayExpr: 'text',
@@ -185,8 +185,8 @@
 
         dxInstances.unregisteredHospital.option({
             dataSource: [
-                {id: 0, text: '전체'},
-                {id: 1, text: '미등록병원보기'},
+                {id: 0, text: '?�체'},
+                {id: 1, text: '미등록병?�보�?},
             ],
             value: 0,
             valueExpr: 'id',
@@ -196,7 +196,7 @@
             // }
         });
 
-        //기업체 건강진단결과표 및 사후관리소견서
+        //기업�?건강진단결과??�??�후관리소견서
         dxInstances.dataGridCheckupResult.option({
             paging: {
                 pageSize: 10,
@@ -210,31 +210,28 @@
                 caption: '기업체명',
                 alignment: 'center',
             }, {
-                //대상년도
-                dataField: 'checkupYear',
-                caption: '대상년도',
+                //?�?�년??                dataField: 'checkupYear',
+                caption: '?�?�년??,
                 alignment: 'center',
             }, {
-                //병원명
-                dataField: 'hospitalName',
-                caption: '병원명',
+                //병원�?                dataField: 'hospitalName',
+                caption: '병원�?,
                 alignment: 'center',
             }, {
-                //자료명
-                dataField: 'title',
-                caption: '자료명',
+                //?�료�?                dataField: 'title',
+                caption: '?�료�?,
                 alignment: 'center',
             }, {
                 dataField: 'attach',
                 type: 'buttons',
-                caption: '첨부파일',
+                caption: '첨�??�일',
                 buttons: [{
-                    text: '첨부파일',
+                    text: '첨�??�일',
                     onClick: function (e) {
                         if (e.row.data.companyArchiveFiles[0].companyArchiveFileId) {
                             dxInstances.popupAttach.show();
                             dxInstances.popupAttach.option({
-                                title: "첨부파일",
+                                title: "첨�??�일",
                                 closeOnOutsideClick: true,
                                 width: 800,
                                 height: 500,
@@ -243,12 +240,12 @@
                                         dataSource: e.row.data.companyArchiveFiles,
                                         columns: [{
                                             dataField: 'archiveFilename',
-                                            caption: '파일명',
+                                            caption: '?�일�?,
                                         }, {
                                             type: 'buttons',
-                                            caption: '다운로드',
+                                            caption: '?�운로드',
                                             buttons: [{
-                                                text: '다운로드',
+                                                text: '?�운로드',
                                                 onClick: function (event) {
                                                     location.href = event.row.data.attachUrl;
                                                 }
@@ -258,23 +255,22 @@
                                 },
                             });
                         } else {
-                            alert('등록된 파일이 없습니다.');
+                            alert('?�록???�일???�습?�다.');
                         }
                     },
                 }],
             }, {
-                //등록일
-                dataField: 'registeredAt',
-                caption: '등록일',
+                //?�록??                dataField: 'registeredAt',
+                caption: '?�록??,
                 dataType: 'date',
                 alignment: 'center',
             }, {
                 type: 'buttons',
-                caption: '삭제',
+                caption: '??��',
                 buttons: [{
-                    text: '삭제',
+                    text: '??��',
                     onClick: function (e) {
-                        if (confirm('정말로 삭제하시겠습니까?')) {
+                        if (confirm('?�말�???��?�시겠습?�까?')) {
                             $.ajax({
                                 url: '<c:url value="/pm/companyarchive"/>/' + e.row.data.companyArchiveId,
                                 method: 'POST',
@@ -289,13 +285,12 @@
                 // Grid Title
                 e.toolbarOptions.items.unshift({
                     location: 'before',
-                    text: '기업체 건강진단결과표 및 사후관리소견서',
+                    text: '기업�?건강진단결과??�??�후관리소견서',
                 });
             },
         });
 
-        //기타 자료 업로드
-        dxInstances.dataGridEtc.option({
+        //기�? ?�료 ?�로??        dxInstances.dataGridEtc.option({
             paging: {
                 pageSize: 10,
             },
@@ -308,31 +303,28 @@
                 caption: '기업체명',
                 alignment: 'center',
             }, {
-                //대상년도
-                dataField: 'checkupYear',
-                caption: '대상년도',
+                //?�?�년??                dataField: 'checkupYear',
+                caption: '?�?�년??,
                 alignment: 'center',
             }, {
-                //병원명
-                dataField: 'hospitalName',
-                caption: '병원명',
+                //병원�?                dataField: 'hospitalName',
+                caption: '병원�?,
                 alignment: 'center',
             }, {
-                //자료명
-                dataField: 'title',
-                caption: '자료명',
+                //?�료�?                dataField: 'title',
+                caption: '?�료�?,
                 alignment: 'center',
             }, {
                 dataField: 'attach',
                 type: 'buttons',
-                caption: '첨부파일',
+                caption: '첨�??�일',
                 buttons: [{
-                    text: '첨부파일',
+                    text: '첨�??�일',
                     onClick: function (e) {
                         if (e.row.data.companyArchiveFiles[0].companyArchiveFileId) {
                             dxInstances.popupAttach.show();
                             dxInstances.popupAttach.option({
-                                title: "첨부파일",
+                                title: "첨�??�일",
                                 closeOnOutsideClick: true,
                                 width: 800,
                                 height: 500,
@@ -341,12 +333,12 @@
                                         dataSource: e.row.data.companyArchiveFiles,
                                         columns: [{
                                             dataField: 'archiveFilename',
-                                            caption: '파일명',
+                                            caption: '?�일�?,
                                         }, {
                                             type: 'buttons',
-                                            caption: '다운로드',
+                                            caption: '?�운로드',
                                             buttons: [{
-                                                text: '다운로드',
+                                                text: '?�운로드',
                                                 onClick: function (event) {
                                                     location.href = event.row.data.attachUrl;
                                                 }
@@ -356,23 +348,22 @@
                                 },
                             });
                         } else {
-                            alert('등록된 파일이 없습니다.');
+                            alert('?�록???�일???�습?�다.');
                         }
                     },
                 }],
             }, {
-                //등록일
-                dataField: 'registeredAt',
-                caption: '등록일',
+                //?�록??                dataField: 'registeredAt',
+                caption: '?�록??,
                 dataType: 'date',
                 alignment: 'center',
             }, {
                 type: 'buttons',
-                caption: '삭제',
+                caption: '??��',
                 buttons: [{
-                    text: '삭제',
+                    text: '??��',
                     onClick: function (e) {
-                        if (confirm('정말로 삭제하시겠습니까?')) {
+                        if (confirm('?�말�???��?�시겠습?�까?')) {
                             $.ajax({
                                 url: '<c:url value="/pm/companyarchive"/>/' + e.row.data.companyArchiveId,
                                 method: 'POST',
@@ -387,7 +378,7 @@
                 // Grid Title
                 e.toolbarOptions.items.unshift({
                     location: 'before',
-                    text: '기타 자료 업로드',
+                    text: '기�? ?�료 ?�로??,
                 });
             },
         });

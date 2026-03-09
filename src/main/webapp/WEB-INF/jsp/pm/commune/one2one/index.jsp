@@ -33,7 +33,7 @@
                                 <div class="row-box">
                                     <div class="row-box-inner">
                                         <div class="col-box1 row">
-                                            <div class="col-lg-12" id="searchGrid" data-ggsj="dxTextBox"></div>
+                                            <div class="col-lg-12" id="searchGrid" data-sitebuilder="dxTextBox"></div>
                                         </div>
                                     </div>
                                 </div>
@@ -41,7 +41,7 @@
                         </div>
                         <!-- Header -->
 
-                        <div id="dataGridOne2One" class="main_table" data-ggsj="dxDataGrid">
+                        <div id="dataGridOne2One" class="main_table" data-sitebuilder="dxDataGrid">
                         </div>
                     </div>
                     <%--                    </div>--%>
@@ -56,12 +56,12 @@
 </body>
 <script>
     $(function () {
-        ggsj.openMenu('one2one');
+        sitebuilder.openMenu('one2one');
 
-        let dxInstances = ggsj.createDx(false);
+        let dxInstances = sitebuilder.createDx(false);
 
         dxInstances.searchGrid.option({
-            placeholder: '검색',
+            placeholder: '검??,
             valueChangeEvent: "keyup",
             onValueChanged: function (e) {
                 dxInstances.dataGridOne2One.searchByText(e.value);
@@ -78,7 +78,7 @@
                 }
             },
             columns: [{
-                caption: '순번',
+                caption: '?�번',
                 alignment: 'center',
                 cellTemplate: function (cellElement, cellInfo) {
                     cellElement.text(cellInfo.component.pageIndex() * cellInfo.component.pageSize() + cellInfo.row.rowIndex + 1);
@@ -90,11 +90,11 @@
                 width: 230,
                 lookup: {
                     dataSource: [
-                        {'id': 0, 'text': '예약문의'},
-                        {'id': 1, 'text': '결과상담'},
-                        {'id': 2, 'text': '불만사항'},
-                        {'id': 3, 'text': '홈페이지'},
-                        {'id': 4, 'text': '기타문의'},
+                        {'id': 0, 'text': '?�약문의'},
+                        {'id': 1, 'text': '결과?�담'},
+                        {'id': 2, 'text': '불만?�항'},
+                        {'id': 3, 'text': '?�페?��?'},
+                        {'id': 4, 'text': '기�?문의'},
                     ],
                     valueExpr: 'id',
                     displayExpr: 'text',
@@ -105,7 +105,7 @@
                     let qnaId = cellInfo.row.data.qnaId;
                     cellElement.append("<a href = " + '<c:url value="/pm/commune/one2one"/>/' + qnaId + ">" + cellInfo.text + "</a>");
                 },
-                caption: '제목',
+                caption: '?�목',
             }, {
                 dataField: 'companyName',
                 caption: '기업체명',
@@ -113,19 +113,19 @@
 
             }, {
                 dataField: 'employeeName',
-                caption: '작성자',
+                caption: '?�성??,
                 alignment: 'center',
             }, {
                 dataField: 'questionAt',
-                caption: '작성일',
+                caption: '?�성??,
                 alignment: 'center',
                 dataType: 'date',
                 format: 'yyyy-MM-dd HH:mm:ss'
             }, {
                 type: 'buttons',
-                caption: '답글작성',
+                caption: '?��??�성',
                 buttons: [{
-                    text: '답글작성',
+                    text: '?��??�성',
                     onClick: function (e) {
                         let qna_id = e.row.data;
                         location.href = '<c:url value="/pm/commune/one2one"/>/' + qna_id.qnaId + '/edit';
@@ -133,7 +133,7 @@
                 }]
             }, {
                 dataField: 'answerCheck',
-                caption: '답변완료',
+                caption: '?��??�료',
                 alignment: 'center',
             },],
         });

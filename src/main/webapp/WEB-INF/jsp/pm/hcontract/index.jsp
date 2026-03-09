@@ -32,9 +32,9 @@
                                 <div class="row-box2">
                                     <div class="row-box-inner1">
                                         <div class="col-box1 row">
-                                            <div class="col-lg-4 tag-name"><span>병원명</span></div>
+                                            <div class="col-lg-4 tag-name"><span>병원�?/span></div>
                                             <div class="col-lg-8">
-                                                <div class="col-lg-12" id="hospitalName" data-ggsj="dxTextBox"></div>
+                                                <div class="col-lg-12" id="hospitalName" data-sitebuilder="dxTextBox"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -43,9 +43,9 @@
                                 <div class="row-box2">
                                     <div class="row-box-inner1">
                                         <div class="col-box1 row">
-                                            <div class="col-lg-4 tag-name"><span>대상년도</span></div>
+                                            <div class="col-lg-4 tag-name"><span>?�?�년??/span></div>
                                             <div class="col-lg-8">
-                                                <div class="col-lg-12" id="selectCheckupYear" data-ggsj="dxSelectBox"></div>
+                                                <div class="col-lg-12" id="selectCheckupYear" data-sitebuilder="dxSelectBox"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -58,7 +58,7 @@
                                 <div class="row-box">
                                     <div class="row-box-inner">
                                         <div class="col-box1 row">
-                                            <div class="col-lg-12" id="searchGrid" data-ggsj="dxTextBox"></div>
+                                            <div class="col-lg-12" id="searchGrid" data-sitebuilder="dxTextBox"></div>
                                         </div>
                                     </div>
                                 </div>
@@ -68,11 +68,11 @@
                         </div>
 
                         <%-- checkup type dataGrid --%>
-                        <div id="hcontractgrid" class="main_table" data-ggsj="dxDataGrid">
+                        <div id="hcontractgrid" class="main_table" data-sitebuilder="dxDataGrid">
                         </div>
 
                         <div class="row btn_area footer-btn">
-                            <div class="col-lg-1" id="btnList" data-ggsj="dxButton">목록</div>
+                            <div class="col-lg-1" id="btnList" data-sitebuilder="dxButton">목록</div>
                         </div>
                     </div>
                     <%--                    </div>--%>
@@ -87,14 +87,14 @@
 </body>
 <script>
     $(function () {
-        ggsj.openMenu('hospital');
+        sitebuilder.openMenu('hospital');
 
-        let dxInstances = ggsj.createDx(false);
+        let dxInstances = sitebuilder.createDx(false);
 
         LoadHcontractList();
 
         dxInstances.searchGrid.option({
-            placeholder: '검색',
+            placeholder: '검??,
             valueChangeEvent: "keyup",
             onValueChanged: function (e) {
                 dxInstances.hcontractgrid.searchByText(e.value);
@@ -126,22 +126,22 @@
                     }
                 }, {
                     dataField: 'centerName',
-                    caption: '센터명',
+                    caption: '?�터�?,
                     alignment: 'center',
                     // cellTemplate: function (cellElement, cellInfo) {
                     //     console.log(cellInfo);
                     // }
                 }, {
                     dataField: 'checkupYear',
-                    caption: '대상년도',
+                    caption: '?�?�년??,
                     alignment: 'center',
                     dataType: 'string',
                 }, {
-                    //병원 매니저(센터매니저?병원매니저? 업무가 나뉜 매니저없음)
-                    caption: '병원 매니저',
+                    //병원 매니?�(?�터매니?�?병원매니?�? ?�무가 ?�뉜 매니?�?�음)
+                    caption: '병원 매니?�',
                     alignment: 'center',
                     columns: [{
-                        caption: '영업',
+                        caption: '?�업',
                         dataField: 'contractManagerNames',
                         alignment: 'center',
                         cellTemplate: function (cellElement, cellInfo) {
@@ -154,7 +154,7 @@
                             }
                         },
                     }, {
-                        caption: '예약',
+                        caption: '?�약',
                         dataField: 'reserveManagerNames',
                         alignment: 'center',
                         cellTemplate: function (cellElement, cellInfo) {
@@ -182,7 +182,7 @@
         });
 
         dxInstances.selectCheckupYear.option({
-            dataSource: ggsj.typeDef.Year,
+            dataSource: sitebuilder.typeDef.Year,
             value: new Date().getFullYear(),
             valueExpr: 'id',
             displayExpr: 'text',
@@ -218,7 +218,7 @@
                     checkupYear: dxInstances.selectCheckupYear.option('value'),
                 }
             }).then(function (response) {
-                ggsj.valuesToDx(response.data);
+                sitebuilder.valuesToDx(response.data);
                 console.log(response.data)
                 dxInstances.hcontractgrid.option({
                     dataSource: response.data

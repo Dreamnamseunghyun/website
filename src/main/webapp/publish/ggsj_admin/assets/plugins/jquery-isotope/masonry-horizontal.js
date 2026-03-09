@@ -1,4 +1,4 @@
-/*!
+﻿/*!
  * masonryHorizontal layout mode for Isotope
  * http://isotope.metafizzy.co
  */

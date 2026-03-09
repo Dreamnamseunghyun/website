@@ -1,4 +1,4 @@
-/*20-11-11 select박스 수정보완*/
+﻿/*20-11-11 select諛뺤뒪 ?섏젙蹂댁셿*/
 $(".custom-select").each(function() {
   var classes = $(this).attr("class"),
     id = $(this).attr("id"),
@@ -99,10 +99,10 @@ var select_val = $(this).attr("data-value");
 
 
 
-//자신제외 클릭시 닫힘 추가
+//?먯떊?쒖쇅 ?대┃???ロ옒 異붽?
 $(document).mouseup(function (e) {
-    var select_box = $(".select_box"); //셀렉트박스
-    var custom_select = $(".custom-select"); //커스텀셀렉트
+    var select_box = $(".select_box"); //??됲듃諛뺤뒪
+    var custom_select = $(".custom-select"); //而ㅼ뒪???됲듃
 
 
     if (!select_box.is(e.target) && select_box.has(e.target).length === 0){

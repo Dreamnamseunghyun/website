@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ko">
 <head>
 <meta charset="UTF-8">
-<title>건강살자(사용자) 성별 선택</title>
+<title>嫄닿컯?댁옄(?ъ슜?? ?깅퀎 ?좏깮</title>
 <link href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css" rel="stylesheet"  type="text/css">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/css/swiper.min.css" rel="stylesheet" type="text/css">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css" rel="stylesheet" type="text/css">
@@ -40,7 +40,7 @@
                                             <h3>STEP 1</h3>
                                         </div>
                                         <div class="info">
-                                            검진 예약
+                                            寃吏??덉빟
                                         </div>
                                     </div>
                                     <div class="right_area">
@@ -59,7 +59,7 @@
                                             <h3>STEP 2</h3>
                                         </div>
                                         <div class="info">
-                                            병원 및 항목 선택
+                                            蹂묒썝 諛???ぉ ?좏깮
                                         </div>
                                     </div>
                                     <div class="right_area">
@@ -78,7 +78,7 @@
                                             <h3>STEP 3</h3>
                                         </div>
                                         <div class="info">
-                                            검진 희망일 선택
+                                            寃吏??щ쭩???좏깮
                                         </div>
                                     </div>
                                     <div class="right_area">
@@ -96,7 +96,7 @@
                                             <h3>STEP 4</h3>
                                         </div>
                                         <div class="info">
-                                            최종 예약 정보
+                                            理쒖쥌 ?덉빟 ?뺣낫
                                         </div>
                                     </div>
                                     <div class="right_area">
@@ -114,22 +114,22 @@
                                <div class="title_area">
                                      <div class="title">
                                         <span class="point_line point_color"></span>
-                                        <h2>성별 선택</h2>
+                                        <h2>?깅퀎 ?좏깮</h2>
                                      </div>
-                                     <div class="title_add_txt">정확한 검진 항목 선택을 위해 고객님의 성별을 선택해주세요</div>
+                                     <div class="title_add_txt">?뺥솗??寃吏???ぉ ?좏깮???꾪빐 怨좉컼?섏쓽 ?깅퀎???좏깮?댁＜?몄슂</div>
                              </div>
 
                                 <div class="userSelection">
                                     <div class="selectionBox male" data-sexual="male">
                                         <div class="inner_wrap">
                                             <div class="circle"></div>
-                                            <p>남성</p>
+                                            <p>?⑥꽦</p>
                                         </div><!--innner_wrap-->
                                     </div><!--selectionBox-->
                                     <div class="selectionBox female" data-sexual="female">
                                         <div class="inner_wrap">
                                             <div class="circle"></div>
-                                            <p>여성</p>
+                                            <p>?ъ꽦</p>
                                         </div><!--innner_wrap-->
                                     </div><!--selectionBox-->
 
@@ -146,7 +146,7 @@
                                             <span class="button_on_circle"></span>
                                             <a href="#none" class="btn_inner blue_gradient">
                                               <span class="btn_txt_area">
-                                                예약 시작하기
+                                                ?덉빟 ?쒖옉?섍린
                                               </span>
                                             </a>
                                     </div>
@@ -176,7 +176,7 @@ $("footer").load("footer.html");
 $(".userSelection .selectionBox").click(function(){
     var selection_box_check = $(this).hasClass("select");
 
-    if(selection_box_check){//선택이 되있으면
+    if(selection_box_check){//?좏깮???섏엳?쇰㈃
          $(this).removeClass("select").siblings("div").removeClass("select");
     }
     else{
@@ -188,14 +188,14 @@ $(".userSelection .selectionBox").click(function(){
 $(".sexual_btn").click(function(){
     var select_sexual = $(".userSelection .selectionBox.select").attr("data-sexual");
 
-    if($(".userSelection .selectionBox.select").length <= "0"){//성별
-         Swal.fire('성별을 선택해 주세요', '', 'warning' );
+    if($(".userSelection .selectionBox.select").length <= "0"){//?깅퀎
+         Swal.fire('?깅퀎???좏깮??二쇱꽭??, '', 'warning' );
 		return;
     }
 
     if(select_sexual == "male"){
       location.href="reserve_checkup_h.html"
-    }//남성
+    }//?⑥꽦
 
     if(select_sexual == "female"){
       location.href="reserve_checkup_h.html"

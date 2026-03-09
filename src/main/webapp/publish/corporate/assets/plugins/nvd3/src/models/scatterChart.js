@@ -1,4 +1,4 @@
-nv.models.scatterChart = function() {
+﻿nv.models.scatterChart = function() {
   "use strict";
   //============================================================
   // Public Variables with Default Settings

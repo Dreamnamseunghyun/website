@@ -1,4 +1,4 @@
-
+﻿
 nv.models.discreteBarChart = function() {
   "use strict";
   //============================================================

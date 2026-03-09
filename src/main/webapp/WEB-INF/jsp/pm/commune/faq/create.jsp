@@ -1,4 +1,4 @@
-<%@ page contentType="text/html; charset=utf-8" pageEncoding="utf-8" %>
+﻿<%@ page contentType="text/html; charset=utf-8" pageEncoding="utf-8" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 
@@ -20,7 +20,7 @@
                 <div class="card card-transparent board_internal">
                     <div class="card-header ">
                         <div class="card-title">
-                            <h3 class="h3">FAQ 등록</h3>
+                            <h3 class="h3">FAQ ?깅줉</h3>
                         </div>
                     </div>
                     <%--                    <div class="card-body">--%>
@@ -32,16 +32,16 @@
 
                                 <div class="row-box-inner width-box">
                                     <div class="col-box2 row">
-                                        <div class="col-lg-2 tag-name"><span>주제</span></div>
-                                        <div class="col-lg-4" id="category" data-ggsj="dxSelectBox"></div>
+                                        <div class="col-lg-2 tag-name"><span>二쇱젣</span></div>
+                                        <div class="col-lg-4" id="category" data-sitebuilder="dxSelectBox"></div>
                                     </div>
                                 </div>
 
                                 <div class="row-box-inner width-box">
                                     <div class="col-box1 row center-input">
-                                        <div class="col-lg-1 tag-name"><span>제목</span></div>
+                                        <div class="col-lg-1 tag-name"><span>?쒕ぉ</span></div>
                                         <div class="col-lg-11 row period">
-                                            <div class="col-lg-12" id="title" data-ggsj="dxTextBox"></div>
+                                            <div class="col-lg-12" id="title" data-sitebuilder="dxTextBox"></div>
                                         </div>
                                     </div>
                                 </div>
@@ -49,17 +49,17 @@
                             </div>
                         </div>
                         <div class="row-wrap">
-                            <div class="row-box-title"><i class="xi-play-circle"></i>내용</div>
+                            <div class="row-box-title"><i class="xi-play-circle"></i>?댁슜</div>
 
                             <div class="text-container">
-                                <div class="html-editor" id="contents" data-ggsj="dxHtmlEditor" style="height: 50vh">
+                                <div class="html-editor" id="contents" data-sitebuilder="dxHtmlEditor" style="height: 50vh">
                                 </div>
                             </div>
                         </div>
 
                         <div class="row btn_area footer-btn">
-                            <div class="col-lg-1" id="btnSave" data-ggsj="dxButton"><i class="xi-save"></i>저장</div>
-                            <div class="col-lg-1" id="btnList" data-ggsj="dxButton">목록</div>
+                            <div class="col-lg-1" id="btnSave" data-sitebuilder="dxButton"><i class="xi-save"></i>???/div>
+                            <div class="col-lg-1" id="btnList" data-sitebuilder="dxButton">紐⑸줉</div>
                         </div>
                     </div>
                     <%--                    </div>--%>
@@ -74,18 +74,18 @@
 </body>
 <script>
     $(function () {
-        ggsj.openMenu('faq');
+        sitebuilder.openMenu('faq');
 
-        let dxInstances = ggsj.createDx(false);
+        let dxInstances = sitebuilder.createDx(false);
 
         dxInstances.category.option({
-            dataSource: ggsj.typeDef.faqCategory,
-            placeholder: "주제선택",
+            dataSource: sitebuilder.typeDef.faqCategory,
+            placeholder: "二쇱젣?좏깮",
         });
 
         dxInstances.btnList.option({
             stylingMode: 'contained',
-            text: '목록',
+            text: '紐⑸줉',
             type: 'normal',
             onClick: function () {
                 location.href = '<c:url value="/pm/commune/faq"/>';
@@ -95,28 +95,28 @@
         // save by ajax
         dxInstances.btnSave.option({
             stylingMode: 'contained',
-            text: '저장',
+            text: '???,
             type: 'success',
             onClick: function () {
-                let data = ggsj.dxToValues();
+                let data = sitebuilder.dxToValues();
                 if (!data.category) {
-                    alert('주제를 선택하세요');
+                    alert('二쇱젣瑜??좏깮?섏꽭??);
                     return;
                 }
                 if (!data.title) {
-                    alert('제목을 입력하세요');
+                    alert('?쒕ぉ???낅젰?섏꽭??);
                     return;
                 }
                 if (!data.contents) {
-                    alert('내용을 입력하세요');
+                    alert('?댁슜???낅젰?섏꽭??);
                     return;
                 }
                 $.ajax({
                     url: '<c:url value="/pm/commune/faq"/>',
                     method: 'POST',
-                    data: JSON.stringify(ggsj.dxToValues()),
+                    data: JSON.stringify(sitebuilder.dxToValues()),
                 }).then(function () {
-                    ggsj.notify("저장되었습니다.");
+                    sitebuilder.notify("??λ릺?덉뒿?덈떎.");
                     location.href = '<c:url value="/pm/commune/faq"/>';
                 });
             },

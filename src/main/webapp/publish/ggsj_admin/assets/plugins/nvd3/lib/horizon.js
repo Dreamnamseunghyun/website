@@ -1,4 +1,4 @@
-(function() {
+﻿(function() {
   d3.horizon = function() {
     var bands = 1, // between 1 and 5, typically
         mode = "offset", // or mirror
@@ -13,8 +13,7 @@
         .domain([-1, 0, 1])
         .range(["#d62728", "#fff", "#1f77b4"]);
 
-    // For each small multiple…
-    function horizon(g) {
+    // For each small multiple??    function horizon(g) {
       g.each(function(d, i) {
         var g = d3.select(this),
             n = 2 * bands + 1,

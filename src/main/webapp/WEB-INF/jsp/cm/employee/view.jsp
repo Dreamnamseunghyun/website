@@ -1,4 +1,4 @@
-<%@ page contentType="text/html; charset=utf-8" pageEncoding="utf-8" %>
+﻿<%@ page contentType="text/html; charset=utf-8" pageEncoding="utf-8" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 
@@ -21,22 +21,22 @@
                 <div class="card card-transparent board_internal">
                     <div class="card-header ">
                         <div class="card-title">
-                            <h3 class="h3">회원 기본정보 보기</h3>
+                            <h3 class="h3">?뚯썝 湲곕낯?뺣낫 蹂닿린</h3>
                         </div>
                     </div>
                     <%--                    <div class="card-body">--%>
                     <div class="dx-viewport">
 
-                        <!-- 대상년도 -->
+                        <!-- ??곷뀈??-->
                         <div class="row-wrap row-wrap-box">
                             <div class="row-wrap row-wrap2">
                                 <div class="row-box2">
                                     <div class="row-box-inner1">
                                         <div class="col-box1 row">
-                                            <div class="col-lg-4 tag-name"><span>기업체명</span></div>
+                                            <div class="col-lg-4 tag-name"><span>湲곗뾽泥대챸</span></div>
                                             <div class="col-lg-8 row period">
                                                 <div class="col-lg-12" id="companyId"
-                                                     data-ggsj="dxSelectBox"></div>
+                                                     data-sitebuilder="dxSelectBox"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -44,225 +44,225 @@
                                 <div class="row-box2">
                                     <div class="row-box-inner1">
                                         <div class="col-box1 row">
-                                            <div class="col-lg-4 tag-name"><span>대상년도</span></div>
+                                            <div class="col-lg-4 tag-name"><span>??곷뀈??/span></div>
                                             <div class="col-lg-8 row period">
                                                 <div class="col-lg-12" id="employeeCheckup.companyCheckupId"
-                                                     data-ggsj="dxSelectBox"></div>
+                                                     data-sitebuilder="dxSelectBox"></div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <!-- 대상년도 -->
+                        <!-- ??곷뀈??-->
 
-                        <!-- 기본 인적사항 -->
+                        <!-- 湲곕낯 ?몄쟻?ы빆 -->
                         <div class="row-wrap">
-                            <div class="row-box-title"><i class="xi-play-circle"></i>기본 인적사항</div>
+                            <div class="row-box-title"><i class="xi-play-circle"></i>湲곕낯 ?몄쟻?ы빆</div>
                             <div class="row-box1">
                                 <div class="row-box-inner width-box">
                                     <div class="col-box2 row">
                                         <div class="col-lg-2 tag-name"><span>ID</span></div>
                                         <div class="col-lg-10 row period">
                                             <div class="col-lg-9" id="employeeCode"
-                                                 data-ggsj="dxTextBox"></div>
+                                                 data-sitebuilder="dxTextBox"></div>
                                             <div class="col-lg-3" id="noUse"
-                                                 data-ggsj="dxCheckBox"></div>
+                                                 data-sitebuilder="dxCheckBox"></div>
                                         </div>
                                     </div>
                                     <div class="col-box2 row">
                                         <div class="col-lg-2 tag-name"><span>PW</span></div>
                                         <div class="col-lg-10 row period">
                                             <%--                                            <div class="col-lg-12" id="passwordReset"--%>
-                                            <%--                                                 data-ggsj="dxButton"></div>--%>
+                                            <%--                                                 data-sitebuilder="dxButton"></div>--%>
                                         </div>
                                     </div>
                                 </div>
 
                                 <div class="row-box-inner width-box">
                                     <div class="col-box2 row">
-                                        <div class="col-lg-2 tag-name"><span>검진자명</span></div>
+                                        <div class="col-lg-2 tag-name"><span>寃吏꾩옄紐?/span></div>
                                         <div class="col-lg-10 row period">
                                             <div class="col-lg-9" id="employeeName"
-                                                 data-ggsj="dxTextBox"></div>
+                                                 data-sitebuilder="dxTextBox"></div>
                                             <div class="col-lg-3" id="employeeCheckup.vip"
-                                                 data-ggsj="dxCheckBox"></div>
+                                                 data-sitebuilder="dxCheckBox"></div>
                                         </div>
                                     </div>
                                     <div class="col-box2 row">
-                                        <div class="col-lg-2 tag-name"><span>생년월일</span></div>
+                                        <div class="col-lg-2 tag-name"><span>?앸뀈?붿씪</span></div>
                                         <div class="col-lg-4 row">
                                             <div class="col-lg-12" id="birth"
-                                                 data-ggsj="dxDateBox"></div>
+                                                 data-sitebuilder="dxDateBox"></div>
                                         </div>
                                     </div>
                                 </div>
 
                                 <div class="row-box-inner width-box">
                                     <div class="col-box2 row">
-                                        <div class="col-lg-2 tag-name"><span>휴대전화번호</span></div>
+                                        <div class="col-lg-2 tag-name"><span>?대??꾪솕踰덊샇</span></div>
                                         <div class="col-lg-10 row period">
                                             <div class="col-lg-12" id="mobile"
-                                                 data-ggsj="dxTextBox" data-ggsj-format="tel"></div>
+                                                 data-sitebuilder="dxTextBox" data-sitebuilder-format="tel"></div>
                                         </div>
                                     </div>
                                     <div class="col-box2 row">
-                                        <div class="col-lg-2 tag-name"><span>성별</span></div>
+                                        <div class="col-lg-2 tag-name"><span>?깅퀎</span></div>
                                         <div class="col-lg-10 row">
                                             <div class="col-lg-12" id="sex"
-                                                 data-ggsj="dxSelectBox"></div>
+                                                 data-sitebuilder="dxSelectBox"></div>
                                         </div>
                                     </div>
                                 </div>
 
-                                <%--주소 표기 다시해야됨--%>
+                                <%--二쇱냼 ?쒓린 ?ㅼ떆?댁빞??-%>
                                 <div class="row-box-inner width-box">
                                     <div class="col-box2 row">
-                                        <div class="col-lg-2 tag-name"><span>우편번호</span></div>
+                                        <div class="col-lg-2 tag-name"><span>?고렪踰덊샇</span></div>
                                         <div class="col-lg-10 row period">
                                             <div class="col-lg-2" id="zipcode"
-                                                 data-ggsj="dxTextBox"></div>
+                                                 data-sitebuilder="dxTextBox"></div>
                                         </div>
                                     </div>
                                     <div class="col-box2 row">
-                                        <div class="col-lg-2 tag-name"><span>이메일</span></div>
+                                        <div class="col-lg-2 tag-name"><span>?대찓??/span></div>
                                         <div class="col-lg-10 row period">
                                             <div class="col-lg-12" id="email"
-                                                 data-ggsj="dxTextBox"></div>
+                                                 data-sitebuilder="dxTextBox"></div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="row-box-inner width-box">
                                     <div class="col-box2 row">
-                                        <div class="col-lg-2 tag-name"><span>주소</span></div>
+                                        <div class="col-lg-2 tag-name"><span>二쇱냼</span></div>
                                         <div class="col-lg-10 row period">
                                             <div class="col-lg-12" id="address1"
-                                                 data-ggsj="dxTextBox"></div>
+                                                 data-sitebuilder="dxTextBox"></div>
                                         </div>
                                     </div>
                                     <div class="col-box2 row">
-                                        <div class="col-lg-2 tag-name"><span>상세주소</span></div>
+                                        <div class="col-lg-2 tag-name"><span>?곸꽭二쇱냼</span></div>
                                         <div class="col-lg-10 row period">
                                             <div class="col-lg-12" id="address2"
-                                                 data-ggsj="dxTextBox"></div>
+                                                 data-sitebuilder="dxTextBox"></div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="row-box-inner width-box">
                                     <div class="col-box2 row">
-                                        <div class="col-lg-2 tag-name"><span>알림톡</span></div>
+                                        <div class="col-lg-2 tag-name"><span>?뚮┝??/span></div>
                                         <div class="col-lg-10 row period">
                                             <div class="col-lg-4" id="employeeCheckup.notokGuide"
-                                                 data-ggsj="dxCheckBox"></div>
+                                                 data-sitebuilder="dxCheckBox"></div>
                                             <div class="col-lg-4" id="employeeCheckup.notokReserve"
-                                                 data-ggsj="dxCheckBox"></div>
+                                                 data-sitebuilder="dxCheckBox"></div>
                                             <div class="col-lg-4" id="employeeCheckup.notokUrge"
-                                                 data-ggsj="dxCheckBox"></div>
+                                                 data-sitebuilder="dxCheckBox"></div>
                                         </div>
                                     </div>
                                     <div class="col-box2 row">
-                                        <div class="col-lg-2 tag-name"><span>발송제외 수정일</span></div>
+                                        <div class="col-lg-2 tag-name"><span>諛쒖넚?쒖쇅 ?섏젙??/span></div>
                                         <div class="col-lg-10 row period">
                                             <div class="col-lg-12" id="employeeCheckup.notokUpdatedAt"
-                                                 data-ggsj="dxDateBox"></div>
+                                                 data-sitebuilder="dxDateBox"></div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <!-- 기본 인적사항 -->
+                        <!-- 湲곕낯 ?몄쟻?ы빆 -->
 
-                        <!-- 기업 및 검진정보 -->
+                        <!-- 湲곗뾽 諛?寃吏꾩젙蹂?-->
                         <div class="row-wrap">
-                            <div class="row-box-title"><i class="xi-play-circle"></i>기업 및 검진정보</div>
+                            <div class="row-box-title"><i class="xi-play-circle"></i>湲곗뾽 諛?寃吏꾩젙蹂?/div>
                             <div class="row-box1">
                                 <div class="row-box-inner width-box">
                                     <div class="col-box2 row">
-                                        <div class="col-lg-2 tag-name"><span>직원명</span></div>
+                                        <div class="col-lg-2 tag-name"><span>吏곸썝紐?/span></div>
                                         <div class="col-lg-10 row period">
                                             <div class="col-lg-12" id="familyName"
-                                                 data-ggsj="dxTextBox"></div>
+                                                 data-sitebuilder="dxTextBox"></div>
                                         </div>
                                     </div>
                                     <div class="col-box2 row">
-                                        <div class="col-lg-2 tag-name"><span>부서</span></div>
-                                        <div class="col-lg-4" id="depart" data-ggsj="dxTextBox"></div>
-                                        <div class="col-lg-2 tag-name"><span>직책</span></div>
-                                        <div class="col-lg-4" id="title" data-ggsj="dxTextBox"></div>
+                                        <div class="col-lg-2 tag-name"><span>遺??/span></div>
+                                        <div class="col-lg-4" id="depart" data-sitebuilder="dxTextBox"></div>
+                                        <div class="col-lg-2 tag-name"><span>吏곸콉</span></div>
+                                        <div class="col-lg-4" id="title" data-sitebuilder="dxTextBox"></div>
                                     </div>
                                 </div>
 
                                 <div class="row-box-inner width-box">
                                     <div class="col-box2 row">
-                                        <div class="col-lg-2 tag-name"><span>대상자 구분</span></div>
-                                        <div class="col-lg-4" id="myself" data-ggsj="dxSelectBox"></div>
-                                        <div class="col-lg-2 tag-name"><span>비용청구</span></div>
+                                        <div class="col-lg-2 tag-name"><span>??곸옄 援щ텇</span></div>
+                                        <div class="col-lg-4" id="myself" data-sitebuilder="dxSelectBox"></div>
+                                        <div class="col-lg-2 tag-name"><span>鍮꾩슜泥?뎄</span></div>
                                         <div class="col-lg-4" id="employeeCheckup.supportType"
-                                             data-ggsj="dxSelectBox"></div>
+                                             data-sitebuilder="dxSelectBox"></div>
                                     </div>
                                     <div class="col-box2 row">
-                                        <div class="col-lg-2 tag-name"><span>사원번호</span></div>
+                                        <div class="col-lg-2 tag-name"><span>?ъ썝踰덊샇</span></div>
                                         <div class="col-lg-10 row period">
                                             <div class="col-lg-12" id="employeeNo"
-                                                 data-ggsj="dxTextBox"></div>
+                                                 data-sitebuilder="dxTextBox"></div>
                                         </div>
                                     </div>
                                 </div>
 
                                 <div class="row-box-inner width-box">
                                     <div class="col-box2 row">
-                                        <div class="col-lg-2 tag-name"><span>검진유형</span></div>
+                                        <div class="col-lg-2 tag-name"><span>寃吏꾩쑀??/span></div>
                                         <div class="col-lg-4" id="employeeCheckup.companyCheckupTypeId"
-                                             data-ggsj="dxSelectBox"></div>
-                                        <div class="col-lg-2 tag-name"><span>검진유형명</span></div>
+                                             data-sitebuilder="dxSelectBox"></div>
+                                        <div class="col-lg-2 tag-name"><span>寃吏꾩쑀?뺣챸</span></div>
                                         <div class="col-lg-4" id="companyCheckupType.companyCheckupTypeName"
-                                             data-ggsj="dxSelectBox"></div>
+                                             data-sitebuilder="dxSelectBox"></div>
                                     </div>
                                     <div class="col-box2 row">
-                                        <div class="col-lg-2 tag-name"><span>지원금액</span></div>
+                                        <div class="col-lg-2 tag-name"><span>吏?먭툑??/span></div>
                                         <div class="col-lg-4" id="companyCheckupType.supportPay"
-                                             data-ggsj="dxSelectBox"></div>
-                                        <div class="col-lg-2 tag-name"><span>본인부담액</span></div>
+                                             data-sitebuilder="dxSelectBox"></div>
+                                        <div class="col-lg-2 tag-name"><span>蹂몄씤遺?댁븸</span></div>
                                         <div class="col-lg-4" id="companyCheckupType.copay"
-                                             data-ggsj="dxSelectBox"></div>
+                                             data-sitebuilder="dxSelectBox"></div>
                                     </div>
                                 </div>
 
                                 <div class="row-box-inner width-box">
                                     <div class="col-box2 row">
-                                        <div class="col-lg-2 tag-name"><span>특수검진 대상</span></div>
+                                        <div class="col-lg-2 tag-name"><span>?뱀닔寃吏????/span></div>
                                         <div class="col-lg-10 row period">
                                             <div class="col-lg-12" id="employeeCheckup.specialCheckup"
-                                                 data-ggsj="dxCheckBox"></div>
+                                                 data-sitebuilder="dxCheckBox"></div>
                                         </div>
                                     </div>
                                     <div class="col-box2 row">
-                                        <div class="col-lg-2 tag-name"><span>특수검진 물질</span></div>
+                                        <div class="col-lg-2 tag-name"><span>?뱀닔寃吏?臾쇱쭏</span></div>
                                         <div class="col-lg-10 row period">
                                             <div class="col-lg-12" id="employeeCheckup.specialCheckupMemo"
-                                                 data-ggsj="dxTextBox"></div>
+                                                 data-sitebuilder="dxTextBox"></div>
                                         </div>
                                     </div>
                                 </div>
 
                                 <div class="row-box-inner width-box">
                                     <div class="col-box1 col-box-vertical3 row">
-                                        <div class="col-lg-1 tag-name"><span>특이사항</span></div>
+                                        <div class="col-lg-1 tag-name"><span>?뱀씠?ы빆</span></div>
                                         <div class="col-lg-11 row period">
                                             <div class="col-lg-12" id="employeeCheckup.notes"
-                                                 data-ggsj="dxTextArea"></div>
+                                                 data-sitebuilder="dxTextArea"></div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <!-- 기업 및 검진정보 -->
+                        <!-- 湲곗뾽 諛?寃吏꾩젙蹂?-->
 
                         <div class="row btn_area footer-btn">
-                            <div class="col-lg-1" id="btnEdit" data-ggsj="dxButton"><i class="xi-file-check"></i>수정
+                            <div class="col-lg-1" id="btnEdit" data-sitebuilder="dxButton"><i class="xi-file-check"></i>?섏젙
                             </div>
-                            <div class="col-lg-1" id="btnList" data-ggsj="dxButton">목록</div>
-                            <div class="col-lg-1" id="btnDelete" data-ggsj="dxButton">삭제</div>
+                            <div class="col-lg-1" id="btnList" data-sitebuilder="dxButton">紐⑸줉</div>
+                            <div class="col-lg-1" id="btnDelete" data-sitebuilder="dxButton">??젣</div>
                         </div>
 
                     </div>
@@ -274,9 +274,9 @@
 </body>
 <script>
     $(function () {
-        ggsj.openMenu('employee');
+        sitebuilder.openMenu('employee');
 
-        let dxInstances = ggsj.createDx(true);
+        let dxInstances = sitebuilder.createDx(true);
 
         dxInstances.companyId.option({
             displayExpr: 'companyName',
@@ -295,12 +295,12 @@
         });
 
         dxInstances.noUse.option({
-            text: '회원 로그인 중단',
+            text: '?뚯썝 濡쒓렇??以묐떒',
             value: false,
         });
 
         // dxInstances.passwordReset.option({
-        //     text: '비번 초기화',
+        //     text: '鍮꾨쾲 珥덇린??,
         //     disabled: true
         // });
 
@@ -311,15 +311,15 @@
         });
 
         dxInstances['employeeCheckup.notokGuide'].option({
-            text: '검진실시 안내',
+            text: '寃吏꾩떎???덈궡',
         });
 
         dxInstances['employeeCheckup.notokReserve'].option({
-            text: '예약 안내',
+            text: '?덉빟 ?덈궡',
         });
 
         dxInstances['employeeCheckup.notokUrge'].option({
-            text: '미예약 독려 안내',
+            text: '誘몄삁???낅젮 ?덈궡',
         });
 
         dxInstances['employeeCheckup.notokUpdatedAt'].option({
@@ -334,27 +334,27 @@
 
         dxInstances.sex.option({
             dataSource: [
-                {'id': 'M', 'text': '남'},
-                {'id': 'F', 'text': '여'},
+                {'id': 'M', 'text': '??},
+                {'id': 'F', 'text': '??},
             ],
             valueExpr: 'id',
             displayExpr: 'text',
         });
 
         dxInstances.mobile.option({
-            placeholder: '휴대전화 11자리',
+            placeholder: '?대??꾪솕 11?먮━',
         });
 
         // dxInstances.zipcodeSearch.option({
-        //     text: '우편번호',
+        //     text: '?고렪踰덊샇',
         // });
 
         dxInstances.depart.option({
-            placeholder: '부서',
+            placeholder: '遺??,
         });
 
         dxInstances.title.option({
-            placeholder: '직책',
+            placeholder: '吏곸콉',
         });
 
         dxInstances['employeeCheckup.companyCheckupTypeId'].option({
@@ -369,7 +369,7 @@
 
         dxInstances['companyCheckupType.supportPay'].option({
             displayExpr: function (item) {
-                return item && ggsj.numberWithCommas(item.supportPay);
+                return item && sitebuilder.numberWithCommas(item.supportPay);
             },
             valueExpr: 'companyCheckupTypeId',
             readOnly: true
@@ -377,7 +377,7 @@
 
         dxInstances['companyCheckupType.copay'].option({
             displayExpr: function (item) {
-                return item && ggsj.numberWithCommas(item.copay);
+                return item && sitebuilder.numberWithCommas(item.copay);
             },
             valueExpr: 'companyCheckupTypeId',
             readOnly: true
@@ -391,8 +391,8 @@
 
         dxInstances.myself.option({
             dataSource: [
-                {'id': 1, 'text': '본인'},
-                {'id': 2, 'text': '가족'},
+                {'id': 1, 'text': '蹂몄씤'},
+                {'id': 2, 'text': '媛議?},
             ],
             valueExpr: 'id',
             displayExpr: 'text',
@@ -400,21 +400,21 @@
 
         dxInstances['employeeCheckup.supportType'].option({
             dataSource: [
-                {'id': 0, 'text': '기업부담'},
-                {'id': 1, 'text': '본인부담'},
+                {'id': 0, 'text': '湲곗뾽遺??},
+                {'id': 1, 'text': '蹂몄씤遺??},
             ],
             valueExpr: 'id',
             displayExpr: 'text',
         });
 
         dxInstances['employeeCheckup.specialCheckup'].option({
-            text: '특검대상',
+            text: '?밴????,
         });
 
         // Edit
         dxInstances.btnEdit.option({
             stylingMode: 'contained',
-            text: '수정',
+            text: '?섏젙',
             type: 'success',
             onClick: function () {
                 location.href = '<c:url value="/cm/employee/${employeeCheckupId}"/>/edit';
@@ -424,7 +424,7 @@
         // List
         dxInstances.btnList.option({
             stylingMode: 'contained',
-            text: '목록',
+            text: '紐⑸줉',
             type: 'normal',
             onClick: function () {
                 location.href = '<c:url value="/cm/employee"/>';
@@ -434,12 +434,12 @@
         // Delete
         dxInstances.btnDelete.option({
             stylingMode: 'contained',
-            text: '삭제',
+            text: '??젣',
             type: 'danger',
             onClick: function () {
-                let data = ggsj.dxToValues();
+                let data = sitebuilder.dxToValues();
 
-                if (confirm('정말로 삭제하시겠습니까?')) {
+                if (confirm('?뺣쭚濡???젣?섏떆寃좎뒿?덇퉴?')) {
                     $.ajax({
                         url: '<c:url value="/cm/employee/${employeeCheckupId}"/>',
                         method: 'DELETE',
@@ -456,7 +456,7 @@
             url: '<c:url value="/cm/employee/${employeeCheckupId}"/>',
             method: 'GET',
         }).then(function (response) {
-            ggsj.valuesToDx(response.data);
+            sitebuilder.valuesToDx(response.data);
 
             $.ajax({
                 url: '<c:url value="/common/companycheckuptype"/>',

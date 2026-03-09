@@ -1,4 +1,4 @@
-nv.models.indentedTree = function() {
+﻿nv.models.indentedTree = function() {
   "use strict";
   //============================================================
   // Public Variables with Default Settings
@@ -88,8 +88,7 @@ nv.models.indentedTree = function() {
       tree.size([height, depth * childIndent]); //TODO: see if this is necessary at all
 
 
-      // Update the nodes…
-      var node = tbody.selectAll('tr')
+      // Update the nodes??      var node = tbody.selectAll('tr')
           // .data(function(d) { return d; }, function(d) { return d.id || (d.id == ++i)});
           .data(function(d) { return d.filter(function(d) { return (filterZero && !d.children) ? filterZero(d) :  true; } )}, function(d,i) { return d.id || (d.id || ++idx)});
           //.style('display', 'table-row'); //TODO: see if this does anything

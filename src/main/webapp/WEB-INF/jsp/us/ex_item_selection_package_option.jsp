@@ -5,7 +5,7 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>건강살자(사용자) 검진옵션 선택</title>
+    <title>건강?�자(?�용?? 검진옵???�택</title>
     <link href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css" rel="stylesheet" type="text/css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/css/swiper.min.css" rel="stylesheet"
           type="text/css">
@@ -18,7 +18,7 @@
     <link href="../css/us/sub_common.css" rel="stylesheet" type="text/css">
     <link href="../css/us/ex_item_selection_package_option.css" rel="stylesheet" type="text/css">
 
-    <link rel="stylesheet" href="<c:url value="/lib/devextreme/dx.material.ggsj.css"/>">
+    <link rel="stylesheet" href="<c:url value="/lib/devextreme/dx.material.sitebuilder.css"/>">
     <style>
         .dx-overlay-wrapper {
             z-index: 10000 !important;
@@ -61,7 +61,7 @@
                                                     <h3>STEP 1</h3>
                                                 </div>
                                                 <div class="info">
-                                                    검진 예약
+                                                    검�??�약
                                                 </div>
                                             </div>
                                             <div class="right_area">
@@ -79,7 +79,7 @@
                                                     <h3>STEP 2</h3>
                                                 </div>
                                                 <div class="info">
-                                                    검진 희망일 선택
+                                                    검�??�망???�택
                                                 </div>
                                             </div>
                                             <div class="right_area">
@@ -97,7 +97,7 @@
                                                     <h3>STEP 3</h3>
                                                 </div>
                                                 <div class="info">
-                                                    병원 및 항목 선택
+                                                    병원 �???�� ?�택
                                                 </div>
                                             </div>
                                             <div class="right_area">
@@ -116,7 +116,7 @@
                                                     <h3>STEP 4</h3>
                                                 </div>
                                                 <div class="info">
-                                                    최종 예약 정보
+                                                    최종 ?�약 ?�보
                                                 </div>
                                             </div>
                                             <div class="right_area">
@@ -151,7 +151,7 @@
                                                     <h3>STEP 1</h3>
                                                 </div>
                                                 <div class="info">
-                                                    검진 예약
+                                                    검�??�약
                                                 </div>
                                             </div>
                                             <div class="right_area">
@@ -168,7 +168,7 @@
                                                     <h3>STEP 2</h3>
                                                 </div>
                                                 <div class="info">
-                                                    검진 항목 선택
+                                                    검�???�� ?�택
                                                 </div>
                                             </div>
                                             <div class="right_area">
@@ -185,7 +185,7 @@
                                                     <h3>STEP 3</h3>
                                                 </div>
                                                 <div class="info">
-                                                    병원 및 항목 선택
+                                                    병원 �???�� ?�택
                                                 </div>
                                             </div>
                                             <div class="right_area">
@@ -202,7 +202,7 @@
                                                     <h3>STEP 4</h3>
                                                 </div>
                                                 <div class="info">
-                                                    검진 희망일 선택
+                                                    검�??�망???�택
                                                 </div>
                                             </div>
                                             <div class="right_area">
@@ -219,7 +219,7 @@
                                                     <h3>STEP 5</h3>
                                                 </div>
                                                 <div class="info">
-                                                    최종 예약 정보
+                                                    최종 ?�약 ?�보
                                                 </div>
                                             </div>
                                             <div class="right_area">
@@ -254,7 +254,7 @@
                                                     <h3>STEP 1</h3>
                                                 </div>
                                                 <div class="info">
-                                                    검진 예약
+                                                    검�??�약
                                                 </div>
                                             </div>
                                             <div class="right_area">
@@ -273,7 +273,7 @@
                                                     <h3>STEP 2</h3>
                                                 </div>
                                                 <div class="info">
-                                                    병원 및 항목 선택
+                                                    병원 �???�� ?�택
                                                 </div>
                                             </div>
                                             <div class="right_area">
@@ -292,7 +292,7 @@
                                                     <h3>STEP 3</h3>
                                                 </div>
                                                 <div class="info">
-                                                    검진 희망일 선택
+                                                    검�??�망???�택
                                                 </div>
                                             </div>
                                             <div class="right_area">
@@ -310,7 +310,7 @@
                                                     <h3>STEP 4</h3>
                                                 </div>
                                                 <div class="info">
-                                                    최종 예약 정보
+                                                    최종 ?�약 ?�보
                                                 </div>
                                             </div>
                                             <div class="right_area">
@@ -334,12 +334,12 @@
                         <div class="title_area">
                             <div class="title">
                                 <span class="point_line point_color"></span>
-                                <h2>검진 옵션 선택</h2>
+                                <h2>검�??�션 ?�택</h2>
                             </div>
                             <div class="search_area">
                                 <div class="row">
                                     <div class="col-md-2">
-                                        <span>검사항목 검색</span>
+                                        <span>검?�항�?검??/span>
                                     </div>
                                     <div class="col-md-8">
                                         <div class="search_box_area write">
@@ -347,7 +347,7 @@
                                                 <label for="search">
                                                     <input type="text" name="search" id="search" placeholder="&nbsp;"
                                                            required="" autocomplete="off">
-                                                    <span class="label">검색하실 단어를 입력해 주세요.</span>
+                                                    <span class="label">검?�하???�어�??�력??주세??</span>
                                                 </label>
                                             </div>
                                         </div><!--search_box-->
@@ -357,8 +357,7 @@
                                             <span class="button_on_circle"></span>
                                             <a href="#none" class="btn_inner point_color">
                                                       <span class="btn_txt_area">
-                                                        검색하기
-                                                      </span>
+                                                        검?�하�?                                                      </span>
                                             </a>
                                         </div>
 
@@ -372,7 +371,7 @@
 
                             <a class="btn_inner">
 
-                                <i class="xi-renew"></i> 항목비교 다시하기
+                                <i class="xi-renew"></i> ??��비교 ?�시?�기
 
                             </a>
                         </div>
@@ -384,7 +383,7 @@
                         <div class="tbody">
                             <div class="tr hospital_select">
                                 <div class="tr_wrap">
-                                    <div class="left_area sub_title">병원선택</div>
+                                    <div class="left_area sub_title">병원?�택</div>
                                     <div class="right_area">
                                         <div class="td selectList">
                                             <div class="select_box_area">
@@ -407,7 +406,7 @@
 
                             <div class="tr checkup_select">
                                 <div class="tr_wrap">
-                                    <div class="left_area sub_title">검진유형선택</div>
+                                    <div class="left_area sub_title">검진유?�선??/div>
                                     <div class="right_area">
                                         <div class="td selectList">
                                             <div class="select_box_area">
@@ -433,7 +432,7 @@
 
                     <div class="table main_table basic_item">
                         <div class="thead sub_title">
-                            기본<br>항목
+                            기본<br>??��
                         </div>
 
                         <div class="tbody">
@@ -442,9 +441,8 @@
                                     <c:choose>
                                         <c:when test="${checkupItemClass.itemClassCode == 'F'}">
                                             <div class="tr_wrap basicItemClassF">
-                                                <div class="left_area item_name detail_view_btn select_item_name">특수장비
-                                                    검사
-                                                </div>
+                                                <div class="left_area item_name detail_view_btn select_item_name">?�수?�비
+                                                    검??                                                </div>
                                                 <div class="right_area">
                                                     <div class="td"
                                                          id="checkupClass1_<c:out value="${checkupItemClass.itemClassId}"/>">
@@ -474,15 +472,15 @@
                                                 <div class="right_area">
                                                     <div class="td checkupClass1 zero"
                                                          id="checkupClass1_<c:out value="${checkupItemClass.itemClassId}"/>">
-                                                        <c:out value="${checkupItemClass.itemClassCode == 'A' ? '미제공' : '0 개'}"/>
+                                                        <c:out value="${checkupItemClass.itemClassCode == 'A' ? '미제�? : '0 �?}"/>
                                                     </div>
                                                     <div class="td checkupClass2 zero"
                                                          id="checkupClass2_<c:out value="${checkupItemClass.itemClassId}"/>">
-                                                        <c:out value="${checkupItemClass.itemClassCode == 'A' ? '미제공' : '0 개'}"/>
+                                                        <c:out value="${checkupItemClass.itemClassCode == 'A' ? '미제�? : '0 �?}"/>
                                                     </div>
                                                     <div class="td checkupClass3 zero"
                                                          id="checkupClass3_<c:out value="${checkupItemClass.itemClassId}"/>">
-                                                        <c:out value="${checkupItemClass.itemClassCode == 'A' ? '미제공' : '0 개'}"/>
+                                                        <c:out value="${checkupItemClass.itemClassCode == 'A' ? '미제�? : '0 �?}"/>
                                                     </div>
                                                 </div>
                                             </div>
@@ -545,7 +543,7 @@
 
                     <div class="table main_table select_item">
                         <div class="thead sub_title">
-                            선택<br>항목
+                            ?�택<br>??��
                         </div>
                         <div class="tbody">
                             <div class="tr selectA">
@@ -553,13 +551,13 @@
                                     <div class="left_area item_name select_item_name"
                                          style="height:auto;"></div>
                                     <div class="right_area">
-                                        <div class="td choice_num_area">선택갯수<span
+                                        <div class="td choice_num_area">?�택�?��<span
                                                 class="point_color add_info choic_num checkupClass1"
                                                 id="checkupClass1_A_count"></span></div>
-                                        <div class="td choice_num_area">선택갯수<span
+                                        <div class="td choice_num_area">?�택�?��<span
                                                 class="point_color add_info choic_num checkupClass2"
                                                 id="checkupClass2_A_count"></span></div>
-                                        <div class="td choice_num_area">선택갯수<span
+                                        <div class="td choice_num_area">?�택�?��<span
                                                 class="point_color add_info choic_num checkupClass3"
                                                 id="checkupClass3_A_count"></span></div>
                                     </div>
@@ -567,7 +565,7 @@
                             </div><!--tr-->
                             <div class="tr selectA">
                                 <div class="tr_wrap">
-                                    <div class="left_area item_name select_item_name">선택<br>A</div>
+                                    <div class="left_area item_name select_item_name">?�택<br>A</div>
                                     <div class="right_area">
                                         <div class="td" id="checkupClass1_A">
                                             <ul class="checkupClass1"></ul>
@@ -587,13 +585,13 @@
                                     <div class="left_area item_name select_item_name"
                                          style="height:auto;"></div>
                                     <div class="right_area">
-                                        <div class="td choice_num_area">선택갯수<span
+                                        <div class="td choice_num_area">?�택�?��<span
                                                 class="point_color add_info choic_num checkupClass1"
                                                 id="checkupClass1_B_count"></span></div>
-                                        <div class="td choice_num_area">선택갯수<span
+                                        <div class="td choice_num_area">?�택�?��<span
                                                 class="point_color add_info choic_num checkupClass2"
                                                 id="checkupClass2_B_count"></span></div>
-                                        <div class="td choice_num_area">선택갯수<span
+                                        <div class="td choice_num_area">?�택�?��<span
                                                 class="point_color add_info choic_num checkupClass3"
                                                 id="checkupClass3_B_count"></span></div>
                                     </div>
@@ -601,7 +599,7 @@
                             </div><!--tr-->
                             <div class="tr selectB">
                                 <div class="tr_wrap">
-                                    <div class="left_area item_name select_item_name">선택<br>B</div>
+                                    <div class="left_area item_name select_item_name">?�택<br>B</div>
                                     <div class="right_area">
                                         <div class="td" id="checkupClass1_B">
                                             <ul class="checkupClass1"></ul>
@@ -621,13 +619,13 @@
                                     <div class="left_area item_name select_item_name"
                                          style="height:auto;"></div>
                                     <div class="right_area">
-                                        <div class="td choice_num_area">선택갯수<span
+                                        <div class="td choice_num_area">?�택�?��<span
                                                 class="point_color add_info choic_num checkupClass1"
                                                 id="checkupClass1_C_count"></span></div>
-                                        <div class="td choice_num_area">선택갯수<span
+                                        <div class="td choice_num_area">?�택�?��<span
                                                 class="point_color add_info choic_num checkupClass2"
                                                 id="checkupClass2_C_count"></span></div>
-                                        <div class="td choice_num_area">선택갯수<span
+                                        <div class="td choice_num_area">?�택�?��<span
                                                 class="point_color add_info choic_num checkupClass3"
                                                 id="checkupClass3_C_count"></span></div>
                                     </div>
@@ -635,7 +633,7 @@
                             </div><!--tr-->
                             <div class="tr selectC">
                                 <div class="tr_wrap">
-                                    <div class="left_area item_name select_item_name">선택<br>C</div>
+                                    <div class="left_area item_name select_item_name">?�택<br>C</div>
                                     <div class="right_area">
                                         <div class="td" id="checkupClass1_C">
                                             <ul class="checkupClass1"></ul>
@@ -655,13 +653,13 @@
                                     <div class="left_area item_name select_item_name"
                                          style="height:auto;"></div>
                                     <div class="right_area">
-                                        <div class="td choice_num_area">선택갯수<span
+                                        <div class="td choice_num_area">?�택�?��<span
                                                 class="point_color add_info choic_num checkupClass1"
                                                 id="checkupClass1_D_count"></span></div>
-                                        <div class="td choice_num_area">선택갯수<span
+                                        <div class="td choice_num_area">?�택�?��<span
                                                 class="point_color add_info choic_num checkupClass2"
                                                 id="checkupClass2_D_count"></span></div>
-                                        <div class="td choice_num_area">선택갯수<span
+                                        <div class="td choice_num_area">?�택�?��<span
                                                 class="point_color add_info choic_num checkupClass3"
                                                 id="checkupClass3_D_count"></span></div>
                                     </div>
@@ -669,7 +667,7 @@
                             </div><!--tr-->
                             <div class="tr selectD">
                                 <div class="tr_wrap">
-                                    <div class="left_area item_name select_item_name">선택<br>D</div>
+                                    <div class="left_area item_name select_item_name">?�택<br>D</div>
                                     <div class="right_area">
                                         <div class="td" id="checkupClass1_D">
                                             <ul class="checkupClass1"></ul>
@@ -689,13 +687,13 @@
                                     <div class="left_area item_name select_item_name"
                                          style="height:auto;"></div>
                                     <div class="right_area">
-                                        <div class="td choice_num_area">선택갯수<span
+                                        <div class="td choice_num_area">?�택�?��<span
                                                 class="point_color add_info choic_num checkupClass1"
                                                 id="checkupClass1_E_count"></span></div>
-                                        <div class="td choice_num_area">선택갯수<span
+                                        <div class="td choice_num_area">?�택�?��<span
                                                 class="point_color add_info choic_num checkupClass2"
                                                 id="checkupClass2_E_count"></span></div>
-                                        <div class="td choice_num_area">선택갯수<span
+                                        <div class="td choice_num_area">?�택�?��<span
                                                 class="point_color add_info choic_num checkupClass3"
                                                 id="checkupClass3_E_count"></span></div>
                                     </div>
@@ -703,7 +701,7 @@
                             </div><!--tr-->
                             <div class="tr selectE">
                                 <div class="tr_wrap">
-                                    <div class="left_area item_name select_item_name">선택<br>E</div>
+                                    <div class="left_area item_name select_item_name">?�택<br>E</div>
                                     <div class="right_area">
                                         <div class="td" id="checkupClass1_E">
                                             <ul class="checkupClass1"></ul>
@@ -723,13 +721,13 @@
                                     <div class="left_area item_name select_item_name"
                                          style="height:auto;"></div>
                                     <div class="right_area">
-                                        <div class="td choice_num_area">선택갯수<span
+                                        <div class="td choice_num_area">?�택�?��<span
                                                 class="point_color add_info choic_num checkupClass1"
                                                 id="checkupClass1_F_count"></span></div>
-                                        <div class="td choice_num_area">선택갯수<span
+                                        <div class="td choice_num_area">?�택�?��<span
                                                 class="point_color add_info choic_num checkupClass2"
                                                 id="checkupClass2_F_count"></span></div>
-                                        <div class="td choice_num_area">선택갯수<span
+                                        <div class="td choice_num_area">?�택�?��<span
                                                 class="point_color add_info choic_num checkupClass3"
                                                 id="checkupClass3_F_count"></span></div>
                                     </div>
@@ -737,7 +735,7 @@
                             </div><!--tr-->
                             <div class="tr selectF">
                                 <div class="tr_wrap">
-                                    <div class="left_area item_name select_item_name">선택<br>F</div>
+                                    <div class="left_area item_name select_item_name">?�택<br>F</div>
                                     <div class="right_area">
                                         <div class="td" id="checkupClass1_F">
                                             <ul class="checkupClass1"></ul>
@@ -754,7 +752,7 @@
 
                             <div class="tr selectADD">
                                 <div class="tr_wrap">
-                                    <div class="left_area item_name select_item_name">추가<br>검사</div>
+                                    <div class="left_area item_name select_item_name">추�?<br>검??/div>
                                     <div class="right_area">
                                         <div class="td" id="checkupClass1_ADD">
                                             <ul class="checkupClass1"></ul>
@@ -788,7 +786,7 @@
                                                         <span class="button_on_circle"></span>
                                                         <a href="#none" class="btn_inner blue_gradient">
                                                         <span class="btn_txt_area">
-                                                            예약하기
+                                                            ?�약?�기
                                                         </span>
                                                         </a>
                                                     </div>
@@ -800,7 +798,7 @@
                                                         <span class="button_on_circle"></span>
                                                         <a href="#none" class="btn_inner blue_gradient">
                                                         <span class="btn_txt_area">
-                                                            예약하기
+                                                            ?�약?�기
                                                         </span>
                                                         </a>
                                                     </div>
@@ -812,7 +810,7 @@
                                                         <span class="button_on_circle"></span>
                                                         <a href="#none" class="btn_inner blue_gradient">
                                                         <span class="btn_txt_area">
-                                                            예약하기
+                                                            ?�약?�기
                                                         </span>
                                                         </a>
                                                     </div>
@@ -961,17 +959,17 @@
         let centerId = $('#center' + index).dxSelectBox('instance').option('value');
         let checkupContractSubTypeId = $('#checkup' + index).dxSelectBox('instance').option('value');
 
-        if (!centerId) { //병원선택
-            Swal.fire('병원을 선택해 주세요.', '', 'warning');
+        if (!centerId) { //병원?�택
+            Swal.fire('병원???�택??주세??', '', 'warning');
             return;
         }
 
-        if (!checkupContractSubTypeId) { //검진유형 선택
-            Swal.fire('검진유형을 선택해 주세요.', '', 'warning');
+        if (!checkupContractSubTypeId) { //검진유???�택
+            Swal.fire('검진유?�을 ?�택??주세??', '', 'warning');
             return;
         }
 
-        //통과
+        //?�과
         location.href = "ex_item_selection_package.html?" + $.param({
             reserveType: '<c:out value="${reserveType}"/>',
             userId: <c:out value="${userId}"/>,
@@ -991,7 +989,7 @@
             }
         }).then(function (response) {
             $('.checkupClass' + index).empty();
-            $('.checkupClass' + index + '.zero').html(0 + ' 개');
+            $('.checkupClass' + index + '.zero').html(0 + ' �?);
             $('.checkupItem' + index + ' i').removeClass('xi-check-circle-o').addClass('xi-close-circle-o');
 
             let itemA;
@@ -1016,12 +1014,12 @@
                                 });
                             } else {
                                 if (itemClass.itemClassCode === 'A') {
-                                    $('#checkupClass' + index + '_' + itemClass.itemClassId).html(itemClass.itemCount ? '제공' : '미제공');
+                                    $('#checkupClass' + index + '_' + itemClass.itemClassId).html(itemClass.itemCount ? '?�공' : '미제�?);
                                 } else {
                                     if (itemA !== true) {
-                                        $('#checkupClass' + index + '_1').html('미제공');
+                                        $('#checkupClass' + index + '_1').html('미제�?);
                                     }
-                                    $('#checkupClass' + index + '_' + itemClass.itemClassId).html(itemClass.itemCount + ' 개');
+                                    $('#checkupClass' + index + '_' + itemClass.itemClassId).html(itemClass.itemCount + ' �?);
                                 }
                                 itemClass.checkupItemCategories.forEach(function (itemCategory) {
                                     itemCategory.checkupItems.forEach(function (item) {
@@ -1051,21 +1049,19 @@
                 });
             }
 
-            // 기본항목
+            // 기본??��
             $('.basicItemCategory:has(i.xi-check-circle-o)').show();
             $('.basicItemCategory:not(:has(i.xi-check-circle-o))').hide();
             $('.basicItem:has(i.xi-check-circle-o)').show();
             $('.basicItem:not(:has(i.xi-check-circle-o))').hide();
 
-            // 특수장비 검사
-            if ($('.basicItemClassF ul:empty').length === 3) {
+            // ?�수?�비 검??            if ($('.basicItemClassF ul:empty').length === 3) {
                 $('.basicItemClassF').hide();
             } else {
                 $('.basicItemClassF').show();
             }
 
-            // 선택검사
-            if (!selectItem) {
+            // ?�택검??            if (!selectItem) {
                 $('.select_item').hide();
             } else {
                 if ($('.selectA ul:empty').length === 3) {
@@ -1099,8 +1095,7 @@
                     $('.selectF').show();
                 }
 
-                // 추가검사
-                if ($('.selectADD ul:empty').length === 3) {
+                // 추�?검??                if ($('.selectADD ul:empty').length === 3) {
                     $('.selectADD').hide();
                 } else {
                     $('.selectADD').show();
@@ -1116,10 +1111,10 @@
         var search_val = $(this).val();
         var search_val_length = $(this).val().length;
 
-        if (search_val_length < 1) { //적은 단어가 1개 이하일때 (하나도없을때)
+        if (search_val_length < 1) { //?��? ?�어가 1�??�하?�때 (?�나?�없?�때)
             $('.main_table').show();
             $('.main_table > .tbody > .tr').show();
-        } else if (search_val_length > 0) {//적은 단어가 0개 이상일때 (하나라도 있을때)
+        } else if (search_val_length > 0) {//?��? ?�어가 0�??�상?�때 (?�나?�도 ?�을??
             $('.main_table').hide();
             $('.main_table > .tbody > .tr').hide();
 

@@ -1,4 +1,4 @@
-(function( factory ) {
+﻿(function( factory ) {
 	if ( typeof define === "function" && define.amd ) {
 		define( ["jquery", "../jquery.validate"], factory );
 	} else {
@@ -8,30 +8,30 @@
 
 /*
  * Translated default messages for the jQuery validation plugin.
- * Locale: ES (Spanish; Español)
+ * Locale: ES (Spanish; Espa챰ol)
  * Region: AR (Argentina)
  */
 $.extend($.validator.messages, {
 	required: "Este campo es obligatorio.",
-	remote: "Por favor, completá este campo.",
-	email: "Por favor, escribí una dirección de correo válida.",
-	url: "Por favor, escribí una URL válida.",
-	date: "Por favor, escribí una fecha válida.",
-	dateISO: "Por favor, escribí una fecha (ISO) válida.",
-	number: "Por favor, escribí un número entero válido.",
-	digits: "Por favor, escribí sólo dígitos.",
-	creditcard: "Por favor, escribí un número de tarjeta válido.",
-	equalTo: "Por favor, escribí el mismo valor de nuevo.",
-	extension: "Por favor, escribí un valor con una extensión aceptada.",
-	maxlength: $.validator.format("Por favor, no escribas más de {0} caracteres."),
+	remote: "Por favor, complet찼 este campo.",
+	email: "Por favor, escrib챠 una direcci처n de correo v찼lida.",
+	url: "Por favor, escrib챠 una URL v찼lida.",
+	date: "Por favor, escrib챠 una fecha v찼lida.",
+	dateISO: "Por favor, escrib챠 una fecha (ISO) v찼lida.",
+	number: "Por favor, escrib챠 un n첬mero entero v찼lido.",
+	digits: "Por favor, escrib챠 s처lo d챠gitos.",
+	creditcard: "Por favor, escrib챠 un n첬mero de tarjeta v찼lido.",
+	equalTo: "Por favor, escrib챠 el mismo valor de nuevo.",
+	extension: "Por favor, escrib챠 un valor con una extensi처n aceptada.",
+	maxlength: $.validator.format("Por favor, no escribas m찼s de {0} caracteres."),
 	minlength: $.validator.format("Por favor, no escribas menos de {0} caracteres."),
-	rangelength: $.validator.format("Por favor, escribí un valor entre {0} y {1} caracteres."),
-	range: $.validator.format("Por favor, escribí un valor entre {0} y {1}."),
-	max: $.validator.format("Por favor, escribí un valor menor o igual a {0}."),
-	min: $.validator.format("Por favor, escribí un valor mayor o igual a {0}."),
-	nifES: "Por favor, escribí un NIF válido.",
-	nieES: "Por favor, escribí un NIE válido.",
-	cifES: "Por favor, escribí un CIF válido."
+	rangelength: $.validator.format("Por favor, escrib챠 un valor entre {0} y {1} caracteres."),
+	range: $.validator.format("Por favor, escrib챠 un valor entre {0} y {1}."),
+	max: $.validator.format("Por favor, escrib챠 un valor menor o igual a {0}."),
+	min: $.validator.format("Por favor, escrib챠 un valor mayor o igual a {0}."),
+	nifES: "Por favor, escrib챠 un NIF v찼lido.",
+	nieES: "Por favor, escrib챠 un NIE v찼lido.",
+	cifES: "Por favor, escrib챠 un CIF v찼lido."
 });
 
 }));

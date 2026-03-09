@@ -5,7 +5,7 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>건강살자(사용자) 성별 선택</title>
+    <title>건강?�자(?�용?? ?�별 ?�택</title>
     <link href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css" rel="stylesheet" type="text/css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/css/swiper.min.css" rel="stylesheet"
           type="text/css">
@@ -44,7 +44,7 @@
                                             <h3>STEP 1</h3>
                                         </div>
                                         <div class="info">
-                                            검진 예약
+                                            검�??�약
                                         </div>
                                     </div>
                                     <div class="right_area">
@@ -61,7 +61,7 @@
                                             <h3>STEP 2</h3>
                                         </div>
                                         <div class="info">
-                                            검진 항목 선택
+                                            검�???�� ?�택
                                         </div>
                                     </div>
                                     <div class="right_area">
@@ -78,7 +78,7 @@
                                             <h3>STEP 3</h3>
                                         </div>
                                         <div class="info">
-                                            병원 및 항목 선택
+                                            병원 �???�� ?�택
                                         </div>
                                     </div>
                                     <div class="right_area">
@@ -95,7 +95,7 @@
                                             <h3>STEP 4</h3>
                                         </div>
                                         <div class="info">
-                                            검진 희망일 선택
+                                            검�??�망???�택
                                         </div>
                                     </div>
                                     <div class="right_area">
@@ -112,7 +112,7 @@
                                             <h3>STEP 5</h3>
                                         </div>
                                         <div class="info">
-                                            최종 예약 정보
+                                            최종 ?�약 ?�보
                                         </div>
                                     </div>
                                     <div class="right_area">
@@ -130,22 +130,22 @@
                 <div class="title_area">
                     <div class="title">
                         <span class="point_line point_color"></span>
-                        <h2>성별 선택</h2>
+                        <h2>?�별 ?�택</h2>
                     </div>
-                    <div class="title_add_txt">정확한 검진 항목 선택을 위해 고객님의 성별을 선택해주세요</div>
+                    <div class="title_add_txt">?�확??검�???�� ?�택???�해 고객?�의 ?�별???�택?�주?�요</div>
                 </div>
 
                 <div class="userSelection">
                     <div class="selectionBox male" data-sexual="M">
                         <div class="inner_wrap">
                             <div class="circle"></div>
-                            <p>남성</p>
+                            <p>?�성</p>
                         </div><!--innner_wrap-->
                     </div><!--selectionBox-->
                     <div class="selectionBox female" data-sexual="F">
                         <div class="inner_wrap">
                             <div class="circle"></div>
-                            <p>여성</p>
+                            <p>?�성</p>
                         </div><!--innner_wrap-->
                     </div><!--selectionBox-->
 
@@ -162,7 +162,7 @@
             <span class="button_on_circle"></span>
             <a href="#none" class="btn_inner blue_gradient">
                 <span class="btn_txt_area">
-                    예약 시작하기
+                    ?�약 ?�작?�기
                 </span>
             </a>
         </div>
@@ -187,7 +187,7 @@
     $(".userSelection .selectionBox").click(function () {
         var selection_box_check = $(this).hasClass("select");
 
-        if (selection_box_check) {//선택이 되있으면
+        if (selection_box_check) {//?�택???�있?�면
             $(this).removeClass("select").siblings("div").removeClass("select");
         } else {
             $(this).addClass("select").siblings("div").removeClass("select");
@@ -198,12 +198,12 @@
     $(".sexual_btn").click(function () {
         let sex = $(".userSelection .selectionBox.select").attr("data-sexual");
 
-        if ($(".userSelection .selectionBox.select").length <= "0") {//성별
-            Swal.fire('성별을 선택해 주세요', '', 'warning');
+        if ($(".userSelection .selectionBox.select").length <= "0") {//?�별
+            Swal.fire('?�별???�택??주세??, '', 'warning');
             return;
         }
 
-        //통과
+        //?�과
         $.ajax({
             url: '<c:url value="/us/reserve"/>',
             method: 'POST',

@@ -1,4 +1,4 @@
-/* ============================================================
+﻿/* ============================================================
  * Demo
  * Try various layout options available in Pages
  * For DEMO purposes only.

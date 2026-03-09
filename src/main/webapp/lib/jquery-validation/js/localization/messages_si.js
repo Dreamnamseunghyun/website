@@ -1,4 +1,4 @@
-(function( factory ) {
+﻿(function( factory ) {
 	if ( typeof define === "function" && define.amd ) {
 		define( ["jquery", "../jquery.validate"], factory );
 	} else {
@@ -17,17 +17,17 @@ $.extend($.validator.messages, {
 	url: "Prosimo, vnesite pravi URL.",
 	date: "Prosimo, vnesite pravi datum.",
 	dateISO: "Prosimo, vnesite pravi datum (ISO).",
-	number: "Prosimo, vnesite pravo številko.",
-	digits: "Prosimo, vnesite samo številke.",
-	creditcard: "Prosimo, vnesite pravo številko kreditne kartice.",
+	number: "Prosimo, vnesite pravo 큄tevilko.",
+	digits: "Prosimo, vnesite samo 큄tevilke.",
+	creditcard: "Prosimo, vnesite pravo 큄tevilko kreditne kartice.",
 	equalTo: "Prosimo, ponovno vnesite enako vsebino.",
-	extension: "Prosimo, vnesite vsebino z pravo končnico.",
-	maxlength: $.validator.format("Prosimo, da ne vnašate več kot {0} znakov."),
+	extension: "Prosimo, vnesite vsebino z pravo kon훾nico.",
+	maxlength: $.validator.format("Prosimo, da ne vna큄ate ve훾 kot {0} znakov."),
 	minlength: $.validator.format("Prosimo, vnesite vsaj {0} znakov."),
 	rangelength: $.validator.format("Prosimo, vnesite od {0} do {1} znakov."),
 	range: $.validator.format("Prosimo, vnesite vrednost med {0} in {1}."),
-	max: $.validator.format("Prosimo, vnesite vrednost manjšo ali enako {0}."),
-	min: $.validator.format("Prosimo, vnesite vrednost večjo ali enako {0}.")
+	max: $.validator.format("Prosimo, vnesite vrednost manj큄o ali enako {0}."),
+	min: $.validator.format("Prosimo, vnesite vrednost ve훾jo ali enako {0}.")
 });
 
 }));

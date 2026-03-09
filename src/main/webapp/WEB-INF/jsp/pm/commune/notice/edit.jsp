@@ -21,43 +21,43 @@
                 <div class="card card-transparent board_internal">
                     <div class="card-header ">
                         <div class="card-title">
-                            <h3 class="h3">공지사항 수정</h3>
+                            <h3 class="h3">공�??�항 ?�정</h3>
                         </div>
                     </div>
                     <%--                    <div class="card-body">--%>
                     <div class="dx-viewport">
 
                         <div class="row-wrap">
-                            <div class="row-box-title"><i class="xi-play-circle"></i>공지사항</div>
+                            <div class="row-box-title"><i class="xi-play-circle"></i>공�??�항</div>
                             <div class="row-box1">
 
                                 <div class="row-box-inner width-box">
                                     <div class="col-box2 row">
                                         <div class="col-lg-2 tag-name"><span>구분</span></div>
-                                        <div class="col-lg-8" id="group" data-ggsj="dxSelectBox"></div>
-                                        <div class="col-lg-2" id="topList" data-ggsj="dxCheckBox"></div>
+                                        <div class="col-lg-8" id="group" data-sitebuilder="dxSelectBox"></div>
+                                        <div class="col-lg-2" id="topList" data-sitebuilder="dxCheckBox"></div>
                                     </div>
                                     <div class="col-box2 row">
-                                        <div class="col-lg-2 tag-name" id="searchName" data-ggsj="dxTextBox"></div>
-                                        <div class="col-lg-10" id="targetId" data-ggsj="dxLookup"></div>
+                                        <div class="col-lg-2 tag-name" id="searchName" data-sitebuilder="dxTextBox"></div>
+                                        <div class="col-lg-10" id="targetId" data-sitebuilder="dxLookup"></div>
                                     </div>
                                 </div>
                                 <div class="row-box-inner width-box">
                                     <div class="col-box2 row">
-                                        <div class="col-lg-2 tag-name"><span>작성자</span></div>
-                                        <div class="col-lg-10" id="writedUserName" data-ggsj="dxTextBox"></div>
+                                        <div class="col-lg-2 tag-name"><span>?�성??/span></div>
+                                        <div class="col-lg-10" id="writedUserName" data-sitebuilder="dxTextBox"></div>
                                     </div>
                                     <div class="col-box2 row">
-                                        <div class="col-lg-2 tag-name"><span>작성일시</span></div>
-                                        <div class="col-lg-10" id="writedAt" data-ggsj="dxDateBox"></div>
+                                        <div class="col-lg-2 tag-name"><span>?�성?�시</span></div>
+                                        <div class="col-lg-10" id="writedAt" data-sitebuilder="dxDateBox"></div>
                                     </div>
                                 </div>
 
                                 <div class="row-box-inner width-box">
                                     <div class="col-box1 row center-input">
-                                        <div class="col-lg-1 tag-name"><span>제목</span></div>
+                                        <div class="col-lg-1 tag-name"><span>?�목</span></div>
                                         <div class="col-lg-11 row period">
-                                            <div class="col-lg-12" id="title" data-ggsj="dxTextBox"></div>
+                                            <div class="col-lg-12" id="title" data-sitebuilder="dxTextBox"></div>
                                         </div>
                                     </div>
                                 </div>
@@ -65,9 +65,9 @@
                             </div>
                         </div>
                         <div class="row-wrap">
-                            <div class="row-box-title"><i class="xi-play-circle"></i>내용</div>
+                            <div class="row-box-title"><i class="xi-play-circle"></i>?�용</div>
                             <div class="text-container">
-                                <div class="html-editor" id="contents" data-ggsj="dxHtmlEditor" style="height: 50vh">
+                                <div class="html-editor" id="contents" data-sitebuilder="dxHtmlEditor" style="height: 50vh">
                                 </div>
                             </div>
                         </div>
@@ -75,8 +75,8 @@
 
 <%--                        <div class="row">--%>
 
-<%--                            <div class="col-lg-2" id="attachFilename" data-ggsj="dxTextBox"></div>--%>
-<%--                            <div class="col-lg-1 btnGray" id="btnAttach" data-ggsj="dxButton"></div>--%>
+<%--                            <div class="col-lg-2" id="attachFilename" data-sitebuilder="dxTextBox"></div>--%>
+<%--                            <div class="col-lg-1 btnGray" id="btnAttach" data-sitebuilder="dxButton"></div>--%>
 
 <%--                            <form id="formAttach">--%>
 <%--                                <input type="file" id="attach" name="attach" style="display: none;"/>--%>
@@ -93,8 +93,8 @@
                                             <form id="formAttach" style="display: none;">
                                                 <input type="file" id="attach" name="attach">
                                             </form>
-                                            <div class="col-lg-9" id="attachFilename" data-ggsj="dxTextBox"></div>
-                                            <div class="col-lg-3" id="btnDel" data-ggsj="dxButton"></div>
+                                            <div class="col-lg-9" id="attachFilename" data-sitebuilder="dxTextBox"></div>
+                                            <div class="col-lg-3" id="btnDel" data-sitebuilder="dxButton"></div>
                                         </div>
 
                                     </div>
@@ -105,7 +105,7 @@
                                     <div class="row-box-inner">
                                         <div class="col-box1 row">
                                             <div class="col-lg-12">
-                                                <div id="btnAttach" data-ggsj="dxButton"></div>
+                                                <div id="btnAttach" data-sitebuilder="dxButton"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -120,9 +120,9 @@
                     </div>
 
                     <div class="row btn_area footer-btn">
-                        <div class="col-lg-1" id="btnSave" data-ggsj="dxButton"><i class="xi-save"></i>저장</div>
-                        <div class="col-lg-1" id="btnList" data-ggsj="dxButton">목록</div>
-                        <div class="col-lg-1" id="btnDelete" data-ggsj="dxButton">삭제</div>
+                        <div class="col-lg-1" id="btnSave" data-sitebuilder="dxButton"><i class="xi-save"></i>?�??/div>
+                        <div class="col-lg-1" id="btnList" data-sitebuilder="dxButton">목록</div>
+                        <div class="col-lg-1" id="btnDelete" data-sitebuilder="dxButton">??��</div>
                     </div>
                 </div>
                 <%--                    </div>--%>
@@ -137,9 +137,9 @@
 </body>
 <script>
     $(function () {
-        ggsj.openMenu('notice');
+        sitebuilder.openMenu('notice');
 
-        let dxInstances = ggsj.createDx(false);
+        let dxInstances = sitebuilder.createDx(false);
 
         dxInstances.targetId.option({
             searchEnabled: true,
@@ -148,7 +148,7 @@
         });
 
         dxInstances.group.option({
-            dataSource: ggsj.typeDef.userType,
+            dataSource: sitebuilder.typeDef.userType,
             onValueChanged: function (e) {
                 if (e.previousValue !== null) {
                     dxInstances.targetId.option({
@@ -158,17 +158,17 @@
 
                 if (e.value === 'CM') {
                     dxInstances.searchName.option({
-                        value: '기업체 검색',
+                        value: '기업�?검??,
                     });
                     LoadCompanyList();
                 } else if (e.value === 'HM') {
                     dxInstances.searchName.option({
-                        value: '병원 검색',
+                        value: '병원 검??,
                     });
                     LoadHospitalList();
                 } else if (e.value === 'PM') {
                     dxInstances.searchName.option({
-                        value: '내부',
+                        value: '?��?',
                     });
                     dxInstances.targetId.option({
                         dataSource: null,
@@ -176,7 +176,7 @@
                     });
                 } else {
                     dxInstances.searchName.option({
-                        value: '기업체 검색',
+                        value: '기업�?검??,
                     });
                     LoadCompanyList();
                 }
@@ -185,7 +185,7 @@
 
         dxInstances.searchName.option({
             readOnly: true,
-            value: '- 구분 선택 -'
+            value: '- 구분 ?�택 -'
         });
 
         dxInstances.writedUserName.option({
@@ -197,19 +197,19 @@
         });
 
         dxInstances.topList.option({
-            text: 'Top 공지',
+            text: 'Top 공�?',
             value: false,
         });
 
         dxInstances.btnAttach.option({
-            text: '파일첨부',
+            text: '?�일첨�?',
             onClick: function () {
                 $('#attach').trigger('click');
             },
         });
 
         dxInstances.btnDel.option({
-            text: '파일삭제',
+            text: '?�일??��',
             onClick: function () {
                 dxInstances.attachFilename.option('value', null);
             },
@@ -230,10 +230,10 @@
         // Save
         dxInstances.btnSave.option({
             stylingMode: 'contained',
-            text: '저장',
+            text: '?�??,
             type: 'success',
             onClick: function () {
-                let data = ggsj.dxToValues();
+                let data = sitebuilder.dxToValues();
 
                 let formData = new FormData($('#formAttach')[0]);
                 formData.append('notice', new Blob([JSON.stringify(data)], {
@@ -247,7 +247,7 @@
                     contentType: false,
                     data: formData,
                 }).then(function () {
-                    ggsj.notify("저장되었습니다.");
+                    sitebuilder.notify("?�?�되?�습?�다.");
                     <%--location.href = '<c:url value="/pm/commune/notice"/>';--%>
                 });
             },
@@ -266,10 +266,10 @@
         // Delete
         dxInstances.btnDelete.option({
             stylingMode: 'contained',
-            text: '삭제',
+            text: '??��',
             type: 'danger',
             onClick: function () {
-                if (confirm('정말로 삭제하시겠습니까?')) {
+                if (confirm('?�말�???��?�시겠습?�까?')) {
                     $.ajax({
                         url: '<c:url value="/pm/commune/notice/${noticeId}"/>',
                         method: 'DELETE',
@@ -285,7 +285,7 @@
             url: '<c:url value="/pm/commune/notice/${noticeId}"/>',
             method: 'GET',
         }).then(function (response) {
-            ggsj.valuesToDx(response.data);
+            sitebuilder.valuesToDx(response.data);
 
             dxInstances.targetId.option({
                 value: response.data.targetId,
@@ -300,7 +300,7 @@
 
             $.when($.ajax(ajaxCompany)).then(function (response) {
                 let allCompany = response.data;
-                allCompany.unshift({companyId: 0, companyName: '전체'});
+                allCompany.unshift({companyId: 0, companyName: '?�체'});
 
                 dxInstances.targetId.option({
                     readOnly: false,
@@ -319,7 +319,7 @@
 
             $.when($.ajax(ajaxHospital)).then(function (response) {
                 let allHospital = response.data;
-                allHospital.unshift({hospitalId: 0, hospitalName: '전체'});
+                allHospital.unshift({hospitalId: 0, hospitalName: '?�체'});
 
                 dxInstances.targetId.option({
                     readOnly: false,

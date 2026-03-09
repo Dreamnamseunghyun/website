@@ -1,4 +1,4 @@
-/* Tooltip rendering model for nvd3 charts.
+﻿/* Tooltip rendering model for nvd3 charts.
 window.nv.models.tooltip is the updated,new way to render tooltips.
 
 window.nv.tooltip.show is the old tooltip code.

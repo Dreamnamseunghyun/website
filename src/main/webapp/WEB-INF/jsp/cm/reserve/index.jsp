@@ -1,4 +1,4 @@
-<%@ page contentType="text/html; charset=utf-8" pageEncoding="utf-8" %>
+﻿<%@ page contentType="text/html; charset=utf-8" pageEncoding="utf-8" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 
@@ -21,7 +21,7 @@
                 <div class="card card-transparent board_internal">
                     <div class="card-header ">
                         <div class="card-title">
-                            <h3 class="h3">예약현황</h3>
+                            <h3 class="h3">?덉빟?꾪솴</h3>
                         </div>
                     </div>
                     <%--                    <div class="card-body">--%>
@@ -30,7 +30,7 @@
                         <div class="row-wrap row-wrap-box">
                             <div class="row-wrap">
                                 <div class="row-box-title">
-                                    <i class="xi-play-circle"></i>예약현황 검색 및 예약상태 처리
+                                    <i class="xi-play-circle"></i>?덉빟?꾪솴 寃??諛??덉빟?곹깭 泥섎━
                                 </div>
 
 
@@ -39,52 +39,52 @@
                                         <div class="col-box1 row">
                                             <div class="col-lg-12 row">
                                                 <div class="col-lg-box1 col-lg-box-vertical row">
-                                                    <div class="col-lg-2 tag-name"><span>기업체명</span></div>
+                                                    <div class="col-lg-2 tag-name"><span>湲곗뾽泥대챸</span></div>
                                                     <div class="col-lg-4" id="companyName"
-                                                         data-ggsj="dxTextBox"></div>
-                                                    <div class="col-lg-2 tag-name"><span>병원명</span></div>
+                                                         data-sitebuilder="dxTextBox"></div>
+                                                    <div class="col-lg-2 tag-name"><span>蹂묒썝紐?/span></div>
                                                     <div class="col-lg-4" id="hospitalSearch"
-                                                         data-ggsj="dxLookup"></div>
+                                                         data-sitebuilder="dxLookup"></div>
                                                 </div>
 
                                                 <div class="col-lg-box1 col-lg-box-vertical row margin-button">
-                                                    <div class="col-lg-2 tag-name"><span>예약상태별 조회</span></div>
+                                                    <div class="col-lg-2 tag-name"><span>?덉빟?곹깭蹂?議고쉶</span></div>
                                                     <div class="col-lg-1">
-                                                        <div id="all" data-ggsj="dxCheckBox"></div>
+                                                        <div id="all" data-sitebuilder="dxCheckBox"></div>
                                                     </div>
                                                     <div class="col-lg-1">
                                                         <div id="reserveApply"
-                                                             data-ggsj="dxCheckBox"></div>
+                                                             data-sitebuilder="dxCheckBox"></div>
                                                     </div>
                                                     <div class="col-lg-1">
                                                         <div id="reserveCompleted"
-                                                             data-ggsj="dxCheckBox"></div>
+                                                             data-sitebuilder="dxCheckBox"></div>
                                                     </div>
                                                     <div class="col-lg-1">
                                                         <div id="reserveChanged"
-                                                             data-ggsj="dxCheckBox"></div>
+                                                             data-sitebuilder="dxCheckBox"></div>
                                                     </div>
                                                     <div class="col-lg-1">
-                                                        <div id="completePay" data-ggsj="dxCheckBox"></div>
+                                                        <div id="completePay" data-sitebuilder="dxCheckBox"></div>
                                                     </div>
                                                     <div class="col-lg-1">
-                                                        <div id="holdReserve" data-ggsj="dxCheckBox"></div>
+                                                        <div id="holdReserve" data-sitebuilder="dxCheckBox"></div>
                                                     </div>
                                                     <div class="col-lg-2 border-right"></div>
                                                     <div class="col-lg-1">
-                                                        <div id="vipSearch" data-ggsj="dxCheckBox"></div>
+                                                        <div id="vipSearch" data-sitebuilder="dxCheckBox"></div>
                                                     </div>
                                                 </div>
 
                                                 <div class="col-lg-box1 col-lg-box-vertical row">
-                                                    <div class="col-lg-2 tag-name"><span>날짜검색</span></div>
+                                                    <div class="col-lg-2 tag-name"><span>?좎쭨寃??/span></div>
                                                     <div class="col-lg-2" id="selectStatusDate"
-                                                         data-ggsj="dxSelectBox"></div>
-                                                    <div class="col-lg-2 tag-name"><span>날짜선택</span></div>
+                                                         data-sitebuilder="dxSelectBox"></div>
+                                                    <div class="col-lg-2 tag-name"><span>?좎쭨?좏깮</span></div>
                                                     <div class="col-lg-3" id="reserveDateBegin"
-                                                         data-ggsj="dxDateBox"></div>
+                                                         data-sitebuilder="dxDateBox"></div>
                                                     <div class="col-lg-3" id="reserveDateEnd"
-                                                         data-ggsj="dxDateBox"></div>
+                                                         data-sitebuilder="dxDateBox"></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -99,7 +99,7 @@
                                     <div class="row-box-inner">
                                         <div class="col-box1 row">
                                             <div class="col-lg-12">
-                                                <div id="btnExport" class="btnExcelSample" data-ggsj="dxButton"></div>
+                                                <div id="btnExport" class="btnExcelSample" data-sitebuilder="dxButton"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -109,7 +109,7 @@
                                     <div class="row-box-inner">
                                         <div class="col-box1 row">
 
-                                            <div id="searchGrid" data-ggsj="dxTextBox"></div>
+                                            <div id="searchGrid" data-sitebuilder="dxTextBox"></div>
 
                                         </div>
                                     </div>
@@ -121,9 +121,9 @@
 
                         </div>
 
-                        <div id="dataGridReserve" class="main_table" data-ggsj="dxDataGrid"></div>
-                        <div id="popupMemo" data-ggsj="dxPopup"></div>
-                        <div id="popupReserveContent" data-ggsj="dxPopup"></div>
+                        <div id="dataGridReserve" class="main_table" data-sitebuilder="dxDataGrid"></div>
+                        <div id="popupMemo" data-sitebuilder="dxPopup"></div>
+                        <div id="popupReserveContent" data-sitebuilder="dxPopup"></div>
                     </div>
                 </div>
                 <%--                    </div>--%>
@@ -136,17 +136,17 @@
 </body>
 <script>
     $(function () {
-        ggsj.openMenu('reserve');
+        sitebuilder.openMenu('reserve');
 
-        let dxInstances = ggsj.createDx(false);
+        let dxInstances = sitebuilder.createDx(false);
 
         // dxInstances.info.option({
-        //     value: '1건이상 선택하여 처리버튼 클릭 후 반드시 저장해주세요.',
+        //     value: '1嫄댁씠???좏깮?섏뿬 泥섎━踰꾪듉 ?대┃ ??諛섎뱶????ν빐二쇱꽭??',
         //     readOnly: true,
         // });
 
         dxInstances.btnExport.option({
-            text: '예약현황 다운로드',
+            text: '?덉빟?꾪솴 ?ㅼ슫濡쒕뱶',
             onClick: function () {
                 //$('.dx-datagrid-export-button').trigger('click');
 
@@ -159,32 +159,32 @@
 
                 // Title
                 itemData = [];
-                itemData[1] = '순번';
-                itemData[2] = '검진병원';
-                itemData[3] = '예약상태';
-                itemData[4] = '검진일';
-                itemData[5] = '수검일';
-                itemData[6] = '소속기업';
-                itemData[7] = '사원번호';
-                itemData[8] = '부서명/직책';
-                itemData[9] = '검진자명';
-                itemData[10] = '관계';
-                itemData[11] = '생년월일';
-                itemData[12] = '휴대전화';
-                itemData[13] = '이메일';
-                itemData[14] = '주소';
-                itemData[15] = '검진유형';
-                itemData[16] = '선택검사';
-                itemData[17] = '추가검사';
-                itemData[18] = '특검 대상/물질';
-                itemData[19] = '검진비 청구';
-                itemData[20] = '본인부담비용';
-                itemData[21] = '특이사항';
-                itemData[22] = '고객문의사항';
-                itemData[23] = '건강살자메모';
-                itemData[24] = '병원메모';
-                itemData[25] = '예약보류,취소사유';
-                itemData[26] = '예약등록일';
+                itemData[1] = '?쒕쾲';
+                itemData[2] = '寃吏꾨퀝??;
+                itemData[3] = '?덉빟?곹깭';
+                itemData[4] = '寃吏꾩씪';
+                itemData[5] = '?섍???;
+                itemData[6] = '?뚯냽湲곗뾽';
+                itemData[7] = '?ъ썝踰덊샇';
+                itemData[8] = '遺?쒕챸/吏곸콉';
+                itemData[9] = '寃吏꾩옄紐?;
+                itemData[10] = '愿怨?;
+                itemData[11] = '?앸뀈?붿씪';
+                itemData[12] = '?대??꾪솕';
+                itemData[13] = '?대찓??;
+                itemData[14] = '二쇱냼';
+                itemData[15] = '寃吏꾩쑀??;
+                itemData[16] = '?좏깮寃??;
+                itemData[17] = '異붽?寃??;
+                itemData[18] = '?밴? ???臾쇱쭏';
+                itemData[19] = '寃吏꾨퉬 泥?뎄';
+                itemData[20] = '蹂몄씤遺?대퉬??;
+                itemData[21] = '?뱀씠?ы빆';
+                itemData[22] = '怨좉컼臾몄쓽?ы빆';
+                itemData[23] = '嫄닿컯?댁옄硫붾え';
+                itemData[24] = '蹂묒썝硫붾え';
+                itemData[25] = '?덉빟蹂대쪟,痍⑥냼?ъ쑀';
+                itemData[26] = '?덉빟?깅줉??;
 
                 worksheet.addRow(itemData);
 
@@ -195,30 +195,30 @@
                         itemData[2] = data[idx].hospitalCenterName;
 
                         if (data[idx].reservationState === 1) {
-                            data[idx].reservationState = '예약신청';
+                            data[idx].reservationState = '?덉빟?좎껌';
                         } else if (data[idx].reservationState === 2) {
-                            data[idx].reservationState = '예약확정';
+                            data[idx].reservationState = '?덉빟?뺤젙';
                         } else if (data[idx].reservationState === 3) {
-                            data[idx].reservationState = '예약변경';
+                            data[idx].reservationState = '?덉빟蹂寃?;
                         } else if (data[idx].reservationState === 4) {
-                            data[idx].reservationState = '수검완료';
+                            data[idx].reservationState = '?섍??꾨즺';
                         } else if (data[idx].reservationState === 5) {
-                            data[idx].reservationState = '예약보류';
+                            data[idx].reservationState = '?덉빟蹂대쪟';
                         }
                         itemData[3] = data[idx].reservationState;
 
                         if (data[idx].desiredAmpm === 'AM') {
-                            data[idx].desiredAmpm = '오전';
+                            data[idx].desiredAmpm = '?ㅼ쟾';
                         } else {
-                            data[idx].desiredAmpm = '오후';
+                            data[idx].desiredAmpm = '?ㅽ썑';
                         }
 
                         itemData[4] = DevExpress.localization.formatDate(new Date(data[idx].desiredAt), "yyyy-MM-dd") + " (" + data[idx].desiredAmpm + ")";
 
                         if (data[idx].checkupedAmpm === 'AM') {
-                            data[idx].checkupedAmpm = '오전';
+                            data[idx].checkupedAmpm = '?ㅼ쟾';
                         } else {
-                            data[idx].checkupedAmpm = '오후';
+                            data[idx].checkupedAmpm = '?ㅽ썑';
                         }
                         if (!data[idx].checkupedAt) {
                             data[idx].checkupedAt = ' ';
@@ -244,9 +244,9 @@
                             vip = '';
                         }
                         itemData[9] = data[idx].employeeName + vip;
-                        itemData[10] = data[idx].myself === 1 ? '본인' : '가족 (' + data[idx].familyName + ')';
+                        itemData[10] = data[idx].myself === 1 ? '蹂몄씤' : '媛議?(' + data[idx].familyName + ')';
                         itemData[11] = DevExpress.localization.formatDate(new Date(data[idx].birth), "yyyy-MM-dd");
-                        itemData[12] = ggsj.phoneWithHyphen(data[idx].mobile);
+                        itemData[12] = sitebuilder.phoneWithHyphen(data[idx].mobile);
                         itemData[13] = data[idx].email;
 
                         if (!data[idx].zipcode) {
@@ -277,8 +277,8 @@
                             }
                         }
 
-                        itemData[18] = data[idx].specialCheckup === 0 ? '해당없음' : '특검대상' + ' / ' + data[idx].specialCheckupMemo;
-                        itemData[19] = data[idx].supportType === true ? '본인부담' : '기업부담' + ' / ' + data[idx].hospitalPay;
+                        itemData[18] = data[idx].specialCheckup === 0 ? '?대떦?놁쓬' : '?밴???? + ' / ' + data[idx].specialCheckupMemo;
+                        itemData[19] = data[idx].supportType === true ? '蹂몄씤遺?? : '湲곗뾽遺?? + ' / ' + data[idx].hospitalPay;
                         if (data[idx].supportType === true) {
                             itemData[20] = data[idx].hospitalPay + data[idx].upgradePay + data[idx].sumItemCopay + data[idx].sumItemDiscountBill;
                         } else {
@@ -302,12 +302,12 @@
         });
 
         let reserveState = [
-            {'id': 0, 'text': '예약취소'},
-            {'id': 1, 'text': '예약신청'},
-            {'id': 2, 'text': '예약확정'},
-            {'id': 3, 'text': '예약변경'},
-            {'id': 4, 'text': '수검완료'},
-            {'id': 5, 'text': '예약보류'},
+            {'id': 0, 'text': '?덉빟痍⑥냼'},
+            {'id': 1, 'text': '?덉빟?좎껌'},
+            {'id': 2, 'text': '?덉빟?뺤젙'},
+            {'id': 3, 'text': '?덉빟蹂寃?},
+            {'id': 4, 'text': '?섍??꾨즺'},
+            {'id': 5, 'text': '?덉빟蹂대쪟'},
         ];
 
         LoadCancelReserve();
@@ -349,7 +349,7 @@
             let dsReserveList;
 
             $.when($.ajax(ajaxReserveList)).then(function (responseReserve) {
-                ggsj.valuesToDx(responseReserve.data);
+                sitebuilder.valuesToDx(responseReserve.data);
 
                 dsReserveList = responseReserve.data;
 
@@ -389,7 +389,7 @@
         }
 
         dxInstances.vipSearch.option({
-            text: 'VIP조회',
+            text: 'VIP議고쉶',
             value: false,
             onValueChanged: function (e) {
                 if (e.value === true) {
@@ -401,7 +401,7 @@
         });
 
         dxInstances.all.option({
-            text: '전체',
+            text: '?꾩껜',
             value: true,
             onValueChanged: function (data) {
                 if (data.event) {
@@ -421,37 +421,37 @@
         });
 
         dxInstances.reserveApply.option({
-            text: '예약신청',
+            text: '?덉빟?좎껌',
             value: true,
             onValueChanged: search,
         });
 
         dxInstances.reserveCompleted.option({
-            text: '예약확정',
+            text: '?덉빟?뺤젙',
             value: true,
             onValueChanged: search,
         });
 
         dxInstances.reserveChanged.option({
-            text: '예약변경',
+            text: '?덉빟蹂寃?,
             value: true,
             onValueChanged: search,
         });
 
         dxInstances.completePay.option({
-            text: '수검완료',
+            text: '?섍??꾨즺',
             value: true,
             onValueChanged: search,
         });
 
         dxInstances.holdReserve.option({
-            text: '예약보류',
+            text: '?덉빟蹂대쪟',
             value: true,
             onValueChanged: search,
         });
 
         dxInstances.searchGrid.option({
-            placeholder: '검색',
+            placeholder: '寃??,
             valueChangeEvent: "keyup",
             onValueChanged: function (e) {
                 dxInstances.dataGridReserve.searchByText(e.value);
@@ -480,12 +480,12 @@
                     },
                 }, {
                     dataField: "hospitalCenterName",
-                    caption: "검진병원",
+                    caption: "寃吏꾨퀝??,
                     alignment: 'center',
                     allowEditing: false,
                 }, {
                     dataField: "reservationState",
-                    caption: "예약상태",
+                    caption: "?덉빟?곹깭",
                     alignment: 'center',
                     lookup: {
                         dataSource: reserveState,
@@ -494,13 +494,13 @@
                     }
                 }, {
                     dataField: "desiredAt",
-                    caption: "검진일",
+                    caption: "寃吏꾩씪",
                     alignment: 'center',
                     dataType: "date",
                     cssClass: "hoverGray"
                 }, {
                     dataField: "desiredAmpm",
-                    caption: "시간",
+                    caption: "?쒓컙",
                     alignment: 'center',
                     lookup: {
                         dataSource: [
@@ -513,13 +513,13 @@
                     cssClass: "hoverGray"
                 }, {
                     dataField: "checkupedAt",
-                    caption: "수검일",
+                    caption: "?섍???,
                     alignment: 'center',
                     dataType: "date",
                     cssClass: "hoverBlue"
                 }, {
                     dataField: "checkupedAmpm",
-                    caption: "시간",
+                    caption: "?쒓컙",
                     alignment: 'center',
                     lookup: {
                         dataSource: [
@@ -532,7 +532,7 @@
                     cssClass: "hoverBlue"
                 }, {
                     dataField: "companyName",
-                    caption: "소속기업",
+                    caption: "?뚯냽湲곗뾽",
                     alignment: 'center',
                     allowEditing: false,
                     cellTemplate: function (cellElement, cellInfo) {
@@ -545,7 +545,7 @@
                     visible: false,
                 }, {
                     dataField: "employeeName",
-                    caption: "검진자명",
+                    caption: "寃吏꾩옄紐?,
                     alignment: 'center',
                     allowEditing: false,
                     cellTemplate: function (cellElement, cellInfo) {
@@ -553,17 +553,17 @@
                         cellElement.append("<a href = " + '<c:url value="/cm/reserve"/>/view' + '/' + cellInfo.data.reservationId + ">" + cellInfo.data.employeeName + "</a>");
                         cellElement.append(' - ');
                         if (cellInfo.data.myself === 1) {
-                            cellElement.append('본인');
+                            cellElement.append('蹂몄씤');
                         } else {
-                            cellElement.append(cellInfo.data.familyName + '가족');
+                            cellElement.append(cellInfo.data.familyName + '媛議?);
                         }
                         if (cellInfo.data.vip === true) {
-                            cellElement.append('<span style="color:red; font-weight: bold;">ⓥ</span>');
+                            cellElement.append('<span style="color:red; font-weight: bold;">??/span>');
                         }
                     },
                 }, {
                     dataField: "birth",
-                    caption: "생년월일",
+                    caption: "?앸뀈?붿씪",
                     alignment: 'center',
                     dataType: "date",
                     allowEditing: false,
@@ -573,15 +573,15 @@
                     width: 100,
                 }, {
                     dataField: "mobile",
-                    caption: "휴대전화",
+                    caption: "?대??꾪솕",
                     alignment: 'center',
                     allowEditing: false,
                     format: function (value) {
-                        return ggsj.phoneWithHyphen(value);
+                        return sitebuilder.phoneWithHyphen(value);
                     },
                 }, {
                     dataField: "companyCheckupTypeName",
-                    caption: "예약내용",
+                    caption: "?덉빟?댁슜",
                     alignment: 'center',
                     allowEditing: false,
                     cellTemplate: function (cellElement, cellInfo) {
@@ -589,44 +589,44 @@
                         let companyCheckupTypeCode = cellInfo.data.companyCheckupTypeCode;
                         cellElement.append(companyCheckupTypeCode, '.', companyCheckupTypeName, ' - ', cellInfo.data.subTypeName);
                         if (cellInfo.row.data.specialCheckup === 1) {
-                            cellElement.append('&nbsp<div class="specialCheck">특</div>');
+                            cellElement.append('&nbsp<div class="specialCheck">??/div>');
                         }
                         cellElement.append('&nbsp<div class="reserveContent">+</div>');
                     },
                 }, {
                     dataField: "supportType",
-                    caption: "검진비 결제",
+                    caption: "寃吏꾨퉬 寃곗젣",
                     alignment: 'center',
                     allowEditing: false,
                     lookup: {
                         dataSource: [
-                            {'id': false, 'text': '기업부담'},
-                            {'id': true, 'text': '본인부담'},
+                            {'id': false, 'text': '湲곗뾽遺??},
+                            {'id': true, 'text': '蹂몄씤遺??},
                         ],
                         valueExpr: 'id',
                         displayExpr: 'text',
                     }
                 }, {
                     dataField: "allMemo",
-                    caption: "메모",
+                    caption: "硫붾え",
                     alignment: 'center',
                     allowEditing: false,
                     cellTemplate: function (cellElement, cellInfo) {
                         if (cellInfo.row.data.hospitalNotes) {
-                            cellElement.append('<div class="hospitalMemo" title="' + cellInfo.row.data.hospitalNotes + '">병</div>');
+                            cellElement.append('<div class="hospitalMemo" title="' + cellInfo.row.data.hospitalNotes + '">蹂?/div>');
                         }
                         if (cellInfo.row.data.platformNotes) {
-                            //cellElement.append('<span style="color: blue">●</span>');
-                            cellElement.append('<div class="platformMemo" title="' + cellInfo.row.data.platformNotes + '">건</div>');
+                            //cellElement.append('<span style="color: blue">??/span>');
+                            cellElement.append('<div class="platformMemo" title="' + cellInfo.row.data.platformNotes + '">嫄?/div>');
                         }
                         if (cellInfo.row.data.employeeNotes) {
-                            //cellElement.html('<span style="color: red">●</span>');
-                            cellElement.append('<div class="employeeMemo" title="' + cellInfo.row.data.employeeNotes + '">고</div>');
+                            //cellElement.html('<span style="color: red">??/span>');
+                            cellElement.append('<div class="employeeMemo" title="' + cellInfo.row.data.employeeNotes + '">怨?/div>');
                         }
                     }
                 }, {
                     dataField: "registeredAt",
-                    caption: "예약등록일",
+                    caption: "?덉빟?깅줉??,
                     dataType: "datetime",
                     alignment: 'center',
                     allowEditing: false,
@@ -666,29 +666,29 @@
                 if (event.rowType === 'data' && event.columnIndex === 13) {
                     dxInstances.popupMemo.show();
                     dxInstances.popupMemo.option({
-                        title: "전체 메모",
+                        title: "?꾩껜 硫붾え",
                         closeOnOutsideClick: true,
                         width: 800,
                         height: 500,
                         contentTemplate: function (contentElement) {
-                            contentElement.append('<div style="font-weight: bold; color: #2ea3aa">병원메모</div>');
+                            contentElement.append('<div style="font-weight: bold; color: #2ea3aa">蹂묒썝硫붾え</div>');
                             contentElement.append($("<div id='hospitalNotes' />").dxTextArea({
                                 height: 100,
                                 value: event.key.hospitalNotes,
                             }));
-                            contentElement.append('<br> <div style="font-weight: bold; color: #2ea3aa">건강살자메모</div>');
+                            contentElement.append('<br> <div style="font-weight: bold; color: #2ea3aa">嫄닿컯?댁옄硫붾え</div>');
                             contentElement.append($("<div id='platformNotes' />").dxTextArea({
                                 height: 100,
                                 value: event.key.platformNotes,
                             }));
-                            contentElement.append('<br> <div style="font-weight: bold; color: #2ea3aa">고객메모</div>');
+                            contentElement.append('<br> <div style="font-weight: bold; color: #2ea3aa">怨좉컼硫붾え</div>');
                             contentElement.append($("<div id='employeeNotes' />").dxTextArea({
                                 height: 100,
                                 value: event.key.employeeNotes,
                                 readOnly: true,
                             }));
                             contentElement.append($("<div style='alignment: center;'/>").dxButton({
-                                text: '저장',
+                                text: '???,
                                 alignment: 'center',
                                 onClick: function () {
                                     let hospitalNotes = DevExpress.ui.dxTextArea.getInstance($('#hospitalNotes'));
@@ -702,7 +702,7 @@
                                         method: 'POST',
                                         data: JSON.stringify(event.data),
                                     }).then(function () {
-                                        ggsj.notify("저장되었습니다.");
+                                        sitebuilder.notify("??λ릺?덉뒿?덈떎.");
                                         LoadReserveList();
                                         LoadCancelReserve();
                                         dxInstances.popupMemo.hide();
@@ -759,18 +759,18 @@
             dxInstances.popupReserveContent.show();
 
             dxInstances.popupReserveContent.option({
-                title: "예약 세부 내용",
+                title: "?덉빟 ?몃? ?댁슜",
                 closeOnOutsideClick: true,
                 width: 600,
                 height: 270,
                 contentTemplate: function (contentElement) {
-                    contentElement.append('<div style="font-weight: bold; color: #2ea3aa">선택검사</div>');
+                    contentElement.append('<div style="font-weight: bold; color: #2ea3aa">?좏깮寃??/div>');
                     contentElement.append($("<div />").dxTextArea({
                         height: 60,
                         value: selectReserve,
                         readOnly: true,
                     }));
-                    contentElement.append('<br> <div style="font-weight: bold; color: #2ea3aa">추가검사</div>');
+                    contentElement.append('<br> <div style="font-weight: bold; color: #2ea3aa">異붽?寃??/div>');
                     contentElement.append($("<div />").dxTextArea({
                         height: 60,
                         value: addReserve,
@@ -780,7 +780,7 @@
                         dxInstances.popupReserveContent.option({
                             height: 350,
                         });
-                        contentElement.append('<br> <div style="font-weight: bold; color: #2ea3aa">특수검사물질</div>');
+                        contentElement.append('<br> <div style="font-weight: bold; color: #2ea3aa">?뱀닔寃?щЪ吏?/div>');
                         contentElement.append($("<div />").dxTextArea({
                             height: 60,
                             value: specialCheckupMemo,
@@ -815,18 +815,18 @@
             dxInstances.popupReserveContent.show();
 
             dxInstances.popupReserveContent.option({
-                title: "예약 세부 내용",
+                title: "?덉빟 ?몃? ?댁슜",
                 closeOnOutsideClick: true,
                 width: 600,
                 height: 270,
                 contentTemplate: function (contentElement) {
-                    contentElement.append('<div style="font-weight: bold; color: #2ea3aa">선택검사</div>');
+                    contentElement.append('<div style="font-weight: bold; color: #2ea3aa">?좏깮寃??/div>');
                     contentElement.append($("<div />").dxTextArea({
                         height: 60,
                         value: selectReserve,
                         readOnly: true,
                     }));
-                    contentElement.append('<br> <div style="font-weight: bold; color: #2ea3aa">추가검사</div>');
+                    contentElement.append('<br> <div style="font-weight: bold; color: #2ea3aa">異붽?寃??/div>');
                     contentElement.append($("<div />").dxTextArea({
                         height: 60,
                         value: addReserve,
@@ -836,7 +836,7 @@
                         dxInstances.popupReserveContent.option({
                             height: 350,
                         });
-                        contentElement.append('<br> <div style="font-weight: bold; color: #2ea3aa">특수검사물질</div>');
+                        contentElement.append('<br> <div style="font-weight: bold; color: #2ea3aa">?뱀닔寃?щЪ吏?/div>');
                         contentElement.append($("<div />").dxTextArea({
                             height: 60,
                             value: specialCheckupMemo,
@@ -850,8 +850,8 @@
 
         dxInstances.selectStatusDate.option({
             dataSource: [
-                {'id': 0, 'text': '예약등록일'},
-                {'id': 1, 'text': '검진희망일'}
+                {'id': 0, 'text': '?덉빟?깅줉??},
+                {'id': 1, 'text': '寃吏꾪씗留앹씪'}
             ],
             value: 0,
             valueExpr: 'id',
@@ -916,7 +916,7 @@
                 hospitalId: dxInstances.hospitalSearch.option('value'),
             },
         }).then(function (response) {
-            ggsj.valuesToDx(response.data);
+            sitebuilder.valuesToDx(response.data);
             console.log(response.data)
             dxInstances.dataGridReserve.option({
                 dataSource: response.data
@@ -942,12 +942,12 @@
             method: 'GET',
         }).then(function (response) {
             // console.log(response.data)
-            response.data.unshift({hospitalId: null, hospitalName: '전체'});
+            response.data.unshift({hospitalId: null, hospitalName: '?꾩껜'});
             dxInstances.hospitalSearch.option({
                 dataSource: response.data,
                 valueExpr: 'hospitalId',
                 displayExpr: 'hospitalName',
-                placeholder: '병원 검색',
+                placeholder: '蹂묒썝 寃??,
                 searchEnabled: true,
                 searchExpr: 'hospitalName',
                 searchMode: 'contains',

@@ -1,4 +1,4 @@
-/**
+﻿/**
  * stepsForm.js v1.0.0
  * http://www.codrops.com
  *
@@ -199,7 +199,7 @@
 	// TODO (next version..)
 	// the validation function
 	stepsForm.prototype._validade = function() {
-		// current question´s input
+		// current question쨈s input
 		var input = this.questions[ this.current ].querySelector( 'input' ).value;
 		if( input === '' ) {
 			this._showError( 'EMPTYSTR' );

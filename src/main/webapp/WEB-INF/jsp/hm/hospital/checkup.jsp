@@ -1,4 +1,4 @@
-<%@ page contentType="text/html; charset=utf-8" pageEncoding="utf-8" %>
+﻿<%@ page contentType="text/html; charset=utf-8" pageEncoding="utf-8" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 
@@ -21,7 +21,7 @@
                 <div class="card card-transparent board_internal">
                     <div class="card-header ">
                         <div class="card-title">
-                            <h3 class="h3">추가검사 수가 등록</h3>
+                            <h3 class="h3">異붽?寃???섍? ?깅줉</h3>
                         </div>
                     </div>
                     <%--                    <div class="card-body">--%>
@@ -33,10 +33,10 @@
                                 <div class="row-box2">
                                     <div class="row-box-inner1">
                                         <div class="col-box1 row">
-                                            <div class="col-lg-4 tag-name"><span>병원명</span></div>
+                                            <div class="col-lg-4 tag-name"><span>蹂묒썝紐?/span></div>
                                             <div class="col-lg-8 period">
                                                 <div class="col-lg-12" id="hospitalName"
-                                                     data-ggsj="dxTextBox"></div>
+                                                     data-sitebuilder="dxTextBox"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -47,9 +47,9 @@
                                 <div class="row-box2">
                                     <div class="row-box-inner1">
                                         <div class="col-box1 row">
-                                            <div class="col-lg-4 tag-name"><span>대상년도</span></div>
+                                            <div class="col-lg-4 tag-name"><span>??곷뀈??/span></div>
                                             <div class="col-lg-8 row period">
-                                                <div class="col-lg-12" id="checkupYear" data-ggsj="dxTextBox"></div>
+                                                <div class="col-lg-12" id="checkupYear" data-sitebuilder="dxTextBox"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -59,7 +59,7 @@
                                 <div class="row-box right-btn">
                                     <div class="row-box-inner">
                                         <div class="col-box1 row">
-                                            <div class="col-lg-12"><div id="btnSame" data-ggsj="dxButton"></div></div>
+                                            <div class="col-lg-12"><div id="btnSame" data-sitebuilder="dxButton"></div></div>
                                         </div>
                                     </div>
                                 </div>
@@ -74,7 +74,7 @@
                                 <div class="row-box">
                                     <div class="row-box-inner">
                                         <div class="col-box1 row">
-                                            <div class="col-lg-12"><div id="searchGrid" data-ggsj="dxTextBox"></div></div>
+                                            <div class="col-lg-12"><div id="searchGrid" data-sitebuilder="dxTextBox"></div></div>
                                         </div>
                                     </div>
                                 </div>
@@ -84,11 +84,11 @@
                         </div>
                         <!-- header -->
 
-                        <div id="treeListHospitalCheckup" data-ggsj="dxTreeList"></div>
+                        <div id="treeListHospitalCheckup" data-sitebuilder="dxTreeList"></div>
 
                         <div class="row btn_area footer-btn">
-                            <div class="col-lg-1" id="btnSave" data-ggsj="dxButton"><i class="xi-save"></i>저장</div>
-                            <div class="col-lg-1" id="btnList" data-ggsj="dxButton">목록</div>
+                            <div class="col-lg-1" id="btnSave" data-sitebuilder="dxButton"><i class="xi-save"></i>???/div>
+                            <div class="col-lg-1" id="btnList" data-sitebuilder="dxButton">紐⑸줉</div>
                         </div>
                     </div>
                 </div>
@@ -102,9 +102,9 @@
 </body>
 <script>
     $(function () {
-        ggsj.openMenu('hospital-checkup');
+        sitebuilder.openMenu('hospital-checkup');
 
-        let dxInstances = ggsj.createDx(false);
+        let dxInstances = sitebuilder.createDx(false);
 
         dxInstances.hospitalName.option({
             readOnly: true,
@@ -117,11 +117,11 @@
         dxInstances.btnSame.option({
             stylingMode: 'contained',
             type: 'normal',
-            text: '전 년도 동일 적용',
+            text: '???꾨룄 ?숈씪 ?곸슜',
         });
 
         dxInstances.searchGrid.option({
-            placeholder: '검색',
+            placeholder: '寃??,
             valueChangeEvent: "keyup",
             onValueChanged: function (e) {
                 dxInstances.treeListHospitalCheckup.searchByText(e.value);
@@ -145,15 +145,15 @@
             },
             searchPanel: {visible: false},
             columns: [{
-                caption: '분류코드',
+                caption: '遺꾨쪟肄붾뱶',
                 dataField: 'code',
                 allowEditing: false,
             }, {
-                caption: '분류명',
+                caption: '遺꾨쪟紐?,
                 dataField: 'name',
                 allowEditing: false,
             }, {
-                caption: '검사 수가(원)',
+                caption: '寃???섍?(??',
                 dataField: 'bill',
                 dataType: 'number',
                 allowEditing: true,
@@ -171,7 +171,7 @@
                 method: 'GET',
             }).then(function (response) {
                 console.log(response);
-                ggsj.valuesToDx(response.data);
+                sitebuilder.valuesToDx(response.data);
 
                 dxInstances.treeListHospitalCheckup.option({
                     dataSource: response.data.hospitalCheckupItems,
@@ -190,10 +190,10 @@
 
         dxInstances.btnSave.option({
             stylingMode: 'contained',
-            text: '저장',
+            text: '???,
             type: 'success',
             onClick: function () {
-                let data = ggsj.dxToValues();
+                let data = sitebuilder.dxToValues();
                 let gridData = dxInstances.treeListHospitalCheckup.option('editing.changes').map(function (v) {
                     v.data._crudType = 'INSERT';
                     v.data.id = v.key;
@@ -210,8 +210,8 @@
                     method: 'POST',
                     data: JSON.stringify(data),
                 }).then(function () {
-                    //location.href = '<c:url value="/hm/hospital"/>'; // refresh 가 맞지 않을까?
-                    ggsj.notify("저장되었습니다.");
+                    //location.href = '<c:url value="/hm/hospital"/>'; // refresh 媛 留욎? ?딆쓣源?
+                    sitebuilder.notify("??λ릺?덉뒿?덈떎.");
 
                     LoadHospitalCheckupList();
                 });

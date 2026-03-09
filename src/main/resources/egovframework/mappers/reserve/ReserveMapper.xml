@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="kr.co.dsong.ggsj.reserve.service.mapper.ReserveMapper">
+<mapper namespace="kr.co.sitebuilder.reserve.service.mapper.ReserveMapper">
     <resultMap id="mapReserve" type="ReserveVO" autoMapping="true">
         <id property="reservationId" column="reservation_id"/>
         <result property="employeeNameCrypt" column="employee_name"/>
@@ -858,7 +858,7 @@
              , am_pm
              , item_ids
              , notes
-             , (CASE am_pm WHEN 'AM' THEN '오전 불가' WHEN 'PM' THEN '오후 불가' ELSE notes END) AS impossible
+             , (CASE am_pm WHEN 'AM' THEN '?ㅼ쟾 遺덇?' WHEN 'PM' THEN '?ㅽ썑 遺덇?' ELSE notes END) AS impossible
         FROM day_off
         WHERE center_id = #{centerId}
           AND deleted_at IS NULL

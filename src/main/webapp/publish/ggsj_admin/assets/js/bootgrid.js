@@ -1,4 +1,4 @@
-/* ============================================================
+﻿/* ============================================================
  * BootGrid Tables
  * Generate advanced tables with sorting, export options using
  * jQuery BootGrid plugin
