@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="kr.co.dsong.ggsj.user.service.mapper.LoginMapper">
+    <resultMap id="mapLogin" type="UserVO" autoMapping="true">
+        <id property="userId" column="user_id"/>
+        <result property="loginNameCrypt" column="login_name"/>
+    </resultMap>
+    <select id="login" resultMap="mapLogin" parameterType="UserVO">
+        SELECT U.user_id
+             , U.user_pw
+             , U.user_type
+             , UU.login_id
+             , UU.login_name
+             , UU.type_id
+             , UU.sub_type_id
+        FROM user U
+        <choose>
+            <when test="userType == 'PM'">
+                JOIN (
+                    SELECT user_id
+                         , platform_manager_code AS login_id
+                         , platform_manager_name AS login_name
+                         , user_id AS type_id
+                         , NULL AS sub_type_id
+                    FROM platform_manager
+                    WHERE deleted_at IS NULL
+                      AND no_use = 0
+                ) UU
+                    ON U.user_id = UU.user_id
+            </when>
+            <when test="userType == 'CM'">
+                JOIN (
+                    SELECT user_id
+                         , company_manager_code AS login_id
+                         , company_manager_name AS login_name
+                         , company_id AS type_id
+                         , NULL AS sub_type_id
+                    FROM company_manager
+                    WHERE deleted_at IS NULL
+                      AND no_use = 0
+                ) UU
+                    ON U.user_id = UU.user_id
+            </when>
+            <when test="userType == 'HM'">
+                JOIN (
+                    SELECT HM.user_id
+                         , HM.center_manager_code AS login_id
+                         , HM.center_manager_name AS login_name
+                         , C.hospital_id AS type_id
+                         , C.center_id AS sub_type_id
+                    FROM center_manager HM JOIN center C ON C.center_id = HM.center_id
+                    WHERE HM.deleted_at IS NULL
+                      AND C.deleted_at IS NULL
+                      AND HM.no_use = 0
+                ) UU
+                    ON U.user_id = UU.user_id
+            </when>
+            <when test="userType == 'US'">
+                JOIN (
+                    SELECT E.user_id
+                         , E.employee_code AS login_id
+                         , E.employee_name AS login_name
+                         , E.company_id AS type_id
+                         , NULL AS sub_type_id
+                    FROM employee E JOIN company C ON E.company_id = C.company_id
+                    WHERE E.deleted_at IS NULL
+                      AND C.deleted_at IS NULL
+                      AND E.myself = 1
+                      AND E.no_use = 0
+                      AND C.company_code = #{companyCode}
+                ) UU
+                    ON U.user_id = UU.user_id
+            </when>
+        </choose>
+        WHERE U.deleted_at IS NULL
+          AND U.user_type = #{userType}
+          AND UU.login_id = #{loginId}
+    </select>
+</mapper>

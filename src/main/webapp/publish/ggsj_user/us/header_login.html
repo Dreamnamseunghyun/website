@@ -1,0 +1,126 @@
+<div class="container">
+     <h1 class="logo"><a href="index.html"></a></h1>
+     <nav>
+         <ul class="h_nav">
+             <li>
+             <a><span class="h_title">건강검진 예약</span></a>
+                 <div class="sub_menu">
+                                <ul class="sub_menu_list">
+                                   <li><a href="target_information.html"><span>예약하기</span><i class="xi-angle-right-min"></i></a></li>
+                                   <li><a href="check_result.html"><span>예약 조회</span><i class="xi-angle-right-min"></i></a></li>
+                                   <li><a href="target_information.html"><span>변경 및 취소</span><i class="xi-angle-right-min"></i></a></li>
+                                </ul>
+                 </div>
+             </li>
+
+             <li><a><span class="h_title">결과 조회</span></a>
+                 <div class="sub_menu">
+                                <ul class="sub_menu_list">
+                                   <li><a href="check_result.html"><span class="h_title">건강검진 결과조회</span><i class="xi-angle-right-min"></i></a></li>
+                                </ul>
+                 </div>
+             </li>
+             <li><a href="common_sense.html"><span class="h_title">건강 상식</span></a></li>
+             <li><a><span class="h_title">고객센터</span></a>
+                 <div class="sub_menu">
+                                <ul class="sub_menu_list">
+                                   <li><a href="notice.html"><span class="h_title">공지사항</span><i class="xi-angle-right-min"></i></a></li>
+                                   <li><a href="fnq.html"><span class="h_title">자주 묻는 질문</span><i class="xi-angle-right-min"></i></a></li>
+                                   <li><a href="qna.html"><span class="h_title">1:1 문의하기</span><i class="xi-angle-right-min"></i></a></li>
+                                </ul>
+                 </div>
+             </li>
+
+             <li class="mypage_login">
+                 <a href="mypage.html">
+                     <span class="h_title">김건강</span>
+                      <span class="status_btn cost">본인부담</span>
+                      <span class="status_btn reserve">미예약</span>
+                 </a>
+             </li>
+             <li class="logout"><a>로그아웃</a></li>
+
+
+
+         </ul>
+     </nav>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+<script>
+$("header .logo > a").load("logo.html");
+
+
+//헤더 스크롤다운
+    $(function () {
+
+        var header_height = $("header").height() - 40;
+
+        $(window).scroll(function () {
+            var scroll = getCurrentScroll();
+            if (scroll >= header_height) {
+                $('header').addClass('scroll_down');
+            } else {
+                $('header').removeClass('scroll_down');
+            }
+        });
+
+
+        //렌더시 스크롤 내려가있으면
+        $("document").ready(function () {
+            var render_scroll = $(document).scrollTop();
+            if (render_scroll >= 10) {
+                $('header').addClass('scroll_down');
+            } else {
+                $('header').removeClass('scroll_down');
+            }
+
+        })
+
+        function getCurrentScroll() {
+            return window.pageYOffset || document.documentElement.scrollTop;
+        }
+    });
+
+
+    /*btn*/
+    $(".btn .btn_inner").mouseenter(function (e) {
+        var parentOffset = $(this).offset();
+
+        var relX = e.pageX - parentOffset.left;
+        var relY = e.pageY - parentOffset.top;
+        $(this).prev(".button_on_circle").css({"left": relX, "top": relY});
+        $(this).prev(".button_on_circle").removeClass("desplode-circle");
+        $(this).prev(".button_on_circle").addClass("explode-circle");
+
+    });
+
+    $(".btn .btn_inner").mouseleave(function (e) {
+
+        var parentOffset = $(this).offset();
+
+        var relX = e.pageX - parentOffset.left;
+        var relY = e.pageY - parentOffset.top;
+        $(this).prev(".button_on_circle").css({"left": relX, "top": relY});
+        $(this).prev(".button_on_circle").removeClass("explode-circle");
+        $(this).prev(".button_on_circle").addClass("desplode-circle");
+
+    });
+
+
+    $("header .sub_menu").on("mouseover focusin", function () {
+        $(this).parents("li").addClass("hover")
+    })
+
+    $("header .sub_menu").on("mouseleave blur", function () {
+        $(this).parents("li").removeClass("hover")
+    })
+
+    function delay_alert(){
+        Swal.fire('현재 페이지 준비 중에 있습니다.\n 빠른 시일 내에 오픈하도록\n하겠습니다 :D', '', 'error' );
+    }
+
+
+</script>
+
+

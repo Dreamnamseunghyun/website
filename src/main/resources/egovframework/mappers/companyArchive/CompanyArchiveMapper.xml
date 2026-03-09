@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="kr.co.dsong.ggsj.companyarchive.service.mapper.CompanyArchiveMapper">
+    <!-- Select Company List -->
+    <resultMap id="mapCompanyArchive" type="CompanyArchiveVO" autoMapping="true">
+        <id property="companyArchiveId" column="company_archive_id"/>
+        <collection property="companyArchiveFiles" ofType="CompanyArchiveFileVO" autoMapping="true">
+            <id property="companyArchiveFileId" column="company_archive_file_id"/>
+        </collection>
+    </resultMap>
+
+    <select id="selectCompanyArchiveList" resultMap="mapCompanyArchive">
+        SELECT C.company_id
+        , C.company_name
+        , CH.checkup_year
+        , H.hospital_id
+        , H.hospital_name
+        , CA.company_archive_id
+        , CA.title
+        , CA.registered_at
+        , CA.sent_at
+        , CAF.company_archive_file_id
+        , CAF.archive_filename
+        , CAF.archive_filename AS org_filename
+        , CA.registered_at
+<!--        , MAX(CA.sent_at)-->
+        FROM company_archive CA
+        LEFT JOIN company_archive_file CAF ON CA.company_archive_id = CAF.company_archive_id
+        LEFT JOIN checkup_contract CC ON CA.checkup_contract_id = CC.checkup_contract_id
+        LEFT JOIN company_checkup CH ON CC.company_checkup_id = CH.company_checkup_id
+        LEFT JOIN hospital H ON CC.hospital_id = H.hospital_id
+        LEFT JOIN company C ON CH.company_id = C.company_id
+        WHERE CA.deleted_at IS NULL
+        <if test="type == 1">
+            AND CA.type = 1
+        </if>
+        <if test="type == 0">
+            AND CA.type = 0
+        </if>
+        ORDER BY CA.registered_at DESC
+    </select>
+
+    <select id="selectHmCompanyArchiveList" resultMap="mapCompanyArchive">
+        SELECT C.company_id
+        , C.company_name
+        , CH.checkup_year
+        , H.hospital_id
+        , H.hospital_name
+        , CA.company_archive_id
+        , CA.title
+        , CA.registered_at
+        , CA.sent_at
+        , CAF.company_archive_file_id
+        , CAF.archive_filename
+        , CAF.archive_filename AS org_filename
+        , CA.registered_at
+        FROM company_archive CA
+        LEFT JOIN company_archive_file CAF ON CA.company_archive_id = CAF.company_archive_id
+        LEFT JOIN checkup_contract CC ON CA.checkup_contract_id = CC.checkup_contract_id
+        LEFT JOIN company_checkup CH ON CC.company_checkup_id = CH.company_checkup_id
+        LEFT JOIN hospital H ON CC.hospital_id = H.hospital_id
+        LEFT JOIN center HC ON H.hospital_id = HC.hospital_id
+        LEFT JOIN company C ON CH.company_id = C.company_id
+        WHERE CA.deleted_at IS NULL
+        AND HC.center_id = (SELECT center_id FROM center_manager WHERE user_id = #{userId})
+        <if test="type == 1">
+            AND CA.type = 1
+        </if>
+        <if test="type == 0">
+            AND CA.type = 0
+        </if>
+        ORDER BY CA.registered_at DESC
+    </select>
+
+    <select id="selectCmCompanyArchiveList" resultMap="mapCompanyArchive">
+        SELECT C.company_id
+        , C.company_name
+        , CH.checkup_year
+        , H.hospital_id
+        , H.hospital_name
+        , CA.company_archive_id
+        , CA.title
+        , CA.registered_at
+        , CA.sent_at
+        , CAF.company_archive_file_id
+        , CAF.archive_filename
+        , CAF.archive_filename AS org_filename
+        , CA.registered_at
+        FROM company_archive CA
+        LEFT JOIN company_archive_file CAF ON CA.company_archive_id = CAF.company_archive_id
+        LEFT JOIN checkup_contract CC ON CA.checkup_contract_id = CC.checkup_contract_id
+        LEFT JOIN company_checkup CH ON CC.company_checkup_id = CH.company_checkup_id
+        LEFT JOIN hospital H ON CC.hospital_id = H.hospital_id
+        LEFT JOIN center HC ON H.hospital_id = HC.hospital_id
+        LEFT JOIN company C ON CH.company_id = C.company_id
+        WHERE CA.deleted_at IS NULL
+        AND CA.sent_at IS NOT NULL
+        AND C.company_id = (SELECT company_id FROM company_manager WHERE user_id = #{userId})
+        <if test="type == 1">
+            AND CA.type = 1
+        </if>
+        <if test="type == 0">
+            AND CA.type = 0
+        </if>
+        ORDER BY CA.registered_at DESC
+    </select>
+
+    <insert id="insertCompanyArchive" parameterType="CompanyArchiveVO">
+        INSERT INTO company_archive
+        ( checkup_contract_id
+        , title
+        , type
+        , registered_at
+        , registered_user_id
+        , created_user_id
+        , updated_user_id )
+        VALUES(
+         (SELECT checkup_contract_id
+        FROM checkup_contract
+        JOIN company_checkup ON checkup_contract.company_checkup_id = company_checkup.company_checkup_id
+        AND company_checkup.company_id = #{companyId} AND company_checkup.checkup_year = #{checkupYear}
+        WHERE checkup_contract.hospital_id = #{hospitalId})
+        , #{title}
+        , #{type}
+        , NOW()
+        , #{sessionUserId}
+        , #{sessionUserId}
+        , #{sessionUserId})
+        <selectKey keyProperty="companyArchiveId" order="AFTER" resultType="Integer">
+            SELECT LAST_INSERT_ID()
+        </selectKey>
+    </insert>
+
+    <insert id="insertCompanyArchiveFile" parameterType="CompanyArchiveFileVO">
+        INSERT INTO company_archive_file
+        ( company_archive_id
+        , archive_filename
+        , created_user_id
+        , updated_user_id)
+        VALUES( #{companyArchiveId}
+        , #{archiveFilename}
+        , #{sessionUserId}
+        , #{sessionUserId})
+        <selectKey keyProperty="companyArchiveFileId" order="AFTER" resultType="Integer">
+            SELECT LAST_INSERT_ID()
+        </selectKey>
+    </insert>
+
+    <update id="updateCompanyArchive" parameterType="CompanyArchiveVO">
+        UPDATE company_archive
+        SET sent_at      = NOW()
+          , updated_at   = NOW()
+          , sent_user_id = #{sessionUserId}
+          , updated_user_id = #{sessionUserId}
+        WHERE sent_at IS NULL
+          AND type = #{type}
+    </update>
+
+    <update id="deleteCompanyArchive" parameterType="CompanyArchiveVO">
+        UPDATE company_archive
+        SET deleted_at      = NOW()
+          , deleted_user_id = #{sessionUserId}
+        WHERE company_archive_id = #{companyArchiveId}
+    </update>
+</mapper>

@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="kr.co.dsong.ggsj.commune.service.mapper.NoticeMapper">
+    <resultMap id="mapNotice" type="NoticeVO" autoMapping="true">
+        <id property="noticeId" column="notice_id"/>
+        <result property="writedUserNameCrypt" column="writed_user_name"/>
+    </resultMap>
+
+    <select id="selectNoticeList" resultMap="mapNotice">
+        SELECT N.notice_id
+             , N.`group`
+             , N.target_id
+             , C.company_id
+             , H.hospital_id
+             , (CASE N.`group`
+                WHEN 'CM' THEN IF(N.target_id = 0, '전체', C.company_name)
+                WHEN 'HM' THEN IF(N.target_id = 0, '전체', H.hospital_name)
+                <!-- IF(CTR.head = 0, CONCAT(h.hospital_name, ' ', CTR.center_name), CTR.center_name) 센터명으로 할 경우-->
+                WHEN 'US' THEN IF(N.target_id = 0, '전체', C.company_name)
+                ELSE '' END)                AS target_name
+             , N.title
+             , N.contents
+             , N.top_list
+             , N.attach_filename
+             , N.attach_filename            AS org_attach_filename
+             , N.writed_at
+             , N.writed_user_id
+             , sf_user_name(writed_user_id) AS writed_user_name
+        FROM notice N
+                     LEFT JOIN company C ON C.company_id = N.target_id
+                     <!-- LEFT JOIN center CTR ON N.target_id = CTR.center_id -->
+                     LEFT JOIN hospital H ON N.target_id = H.hospital_id
+        WHERE N.deleted_at IS NULL
+        ORDER BY N.top_list DESC, N.writed_at DESC
+    </select>
+
+    <select id="selectUsNoticeList" resultMap="mapNotice">
+        SELECT N.notice_id
+             , N.`group`
+             , N.target_id
+             , C.company_id
+             , H.hospital_id
+             , (CASE N.`group`
+                WHEN 'CM' THEN IF(N.target_id = 0, '전체', C.company_name)
+                WHEN 'HM' THEN IF(N.target_id = 0, '전체', H.hospital_name)
+                WHEN 'US' THEN IF(N.target_id = 0, '전체', C.company_name)
+                ELSE '' END)                AS target_name
+             , N.title
+             , N.contents
+             , N.top_list
+             , N.writed_at
+             , N.writed_user_id
+             , sf_user_name(writed_user_id) AS writed_user_name
+        FROM notice N
+                     LEFT JOIN company C ON C.company_id = N.target_id
+                     LEFT JOIN hospital H ON N.target_id = H.hospital_id
+        WHERE N.deleted_at IS NULL
+          AND N.`group` = 'US'
+          AND N.target_id IN (#{companyId}, 0)
+        ORDER BY N.top_list DESC, N.writed_at DESC
+    </select>
+
+    <select id="hospitalNoticeList" resultMap="mapNotice">
+        SELECT N.notice_id
+             , N.`group`
+             , N.target_id
+             , C.company_id
+             , H.hospital_id
+             , (CASE N.`group`
+                WHEN 'CM' THEN IF(N.target_id = 0, '전체', C.company_name)
+                WHEN 'HM' THEN IF(N.target_id = 0, '전체', H.hospital_name)
+                WHEN 'US' THEN IF(N.target_id = 0, '전체', C.company_name)
+                ELSE '' END)                AS target_name
+             , N.title
+             , N.contents
+             , N.top_list
+             , N.attach_filename
+             , N.attach_filename            AS org_attach_filename
+             , N.writed_at
+             , N.writed_user_id
+             , sf_user_name(writed_user_id) AS writed_user_name
+        FROM notice N
+                     LEFT JOIN company C ON C.company_id = N.target_id
+                     LEFT JOIN hospital H ON N.target_id = H.hospital_id
+        WHERE N.deleted_at IS NULL
+          AND N.`group` = 'HM'
+          AND N.target_id IN ((SELECT h.hospital_id
+                               FROM hospital h
+                                            JOIN center HC ON h.hospital_id = HC.hospital_id
+                                            JOIN center_manager cm ON HC.center_id = cm.center_id
+                               WHERE user_id = #{userId}), 0)
+        ORDER BY N.top_list DESC, N.writed_at DESC
+    </select>
+
+    <select id="companyNoticeList" resultMap="mapNotice">
+        SELECT N.notice_id
+             , N.`group`
+             , N.target_id
+             , C.company_id
+             , H.hospital_id
+             , (CASE N.`group`
+                WHEN 'CM' THEN IF(N.target_id = 0, '전체', C.company_name)
+                WHEN 'HM' THEN IF(N.target_id = 0, '전체', H.hospital_name)
+                WHEN 'US' THEN IF(N.target_id = 0, '전체', C.company_name)
+                ELSE '' END)                AS target_name
+             , N.title
+             , N.contents
+             , N.top_list
+             , N.attach_filename
+             , N.attach_filename            AS org_attach_filename
+             , N.writed_at
+             , N.writed_user_id
+             , sf_user_name(writed_user_id) AS writed_user_name
+        FROM notice N
+                     LEFT JOIN company C ON C.company_id = N.target_id
+                     LEFT JOIN hospital H ON N.target_id = H.hospital_id
+        WHERE N.deleted_at IS NULL
+          AND N.`group` = 'CM'
+          AND N.target_id IN ((SELECT company_id FROM company_manager WHERE user_id = #{userId}), 0)
+        ORDER BY N.top_list DESC, N.writed_at DESC
+    </select>
+
+    <select id="selectNotice" resultMap="mapNotice" parameterType="NoticeVO">
+        SELECT N.notice_id
+             , N.`group`
+             , N.target_id
+             , C.company_id
+             , H.hospital_id
+             , (CASE N.`group`
+                WHEN 'CM' THEN IF(N.target_id = 0, '전체', C.company_name)
+                WHEN 'HM' THEN IF(N.target_id = 0, '전체', H.hospital_name)
+                WHEN 'US' THEN IF(N.target_id = 0, '전체', C.company_name)
+                ELSE '' END)                AS target_name
+             , N.title
+             , N.contents
+             , N.top_list
+             , N.attach_filename
+             , N.attach_filename            AS org_attach_filename
+             , N.writed_at
+             , N.writed_user_id
+             , sf_user_name(writed_user_id) AS writed_user_name
+        FROM notice N
+                     LEFT JOIN company C ON C.company_id = N.target_id
+                     LEFT JOIN hospital H ON N.target_id = H.hospital_id
+        WHERE N.notice_id = #{noticeId}
+    </select>
+
+    <select id="nextNotice" resultMap="mapNotice" parameterType="NoticeVO">
+        SELECT N.notice_id
+             , N.`group`
+             , N.target_id
+             , C.company_id
+             , H.hospital_id
+             , (CASE N.`group`
+                WHEN 'CM' THEN IF(N.target_id = 0, '전체', C.company_name)
+                WHEN 'HM' THEN IF(N.target_id = 0, '전체', H.hospital_name)
+                WHEN 'US' THEN IF(N.target_id = 0, '전체', C.company_name)
+                ELSE '' END)                AS target_name
+             , N.title
+             , N.contents
+             , N.top_list
+             , N.writed_at
+             , N.writed_user_id
+             , sf_user_name(writed_user_id) AS writed_user_name
+        FROM notice N
+                     LEFT JOIN company C ON C.company_id = N.target_id
+                     LEFT JOIN hospital H ON N.target_id = H.hospital_id
+        WHERE N.deleted_at IS NULL
+          AND N.`group` = 'US'
+          AND N.target_id IN (#{companyId}, 0)
+          AND N.notice_id > #{noticeId}
+        ORDER BY N.writed_at
+        LIMIT 0, 1
+    </select>
+
+    <select id="beforeNotice" resultMap="mapNotice" parameterType="NoticeVO">
+        SELECT N.notice_id
+             , N.`group`
+             , N.target_id
+             , C.company_id
+             , H.hospital_id
+             , (CASE N.`group`
+                WHEN 'CM' THEN IF(N.target_id = 0, '전체', C.company_name)
+                WHEN 'HM' THEN IF(N.target_id = 0, '전체', H.hospital_name)
+                WHEN 'US' THEN IF(N.target_id = 0, '전체', C.company_name)
+                ELSE '' END)                AS target_name
+             , N.title
+             , N.contents
+             , N.top_list
+             , N.writed_at
+             , N.writed_user_id
+             , sf_user_name(writed_user_id) AS writed_user_name
+        FROM notice N
+                     LEFT JOIN company C ON C.company_id = N.target_id
+                     LEFT JOIN hospital H ON N.target_id = H.hospital_id
+        WHERE N.deleted_at IS NULL
+          AND N.`group` = 'US'
+          AND N.target_id IN (#{companyId}, 0)
+          AND N.notice_id <![CDATA[<]]> #{noticeId}
+        ORDER BY N.writed_at DESC
+        LIMIT 0, 1
+    </select>
+
+    <insert id="insertNotice" parameterType="NoticeVO">
+        INSERT INTO notice
+                ( `group`
+                , target_id
+                , title
+                , contents
+                , top_list
+                , attach_filename
+                , writed_user_id
+                , created_user_id
+                , updated_user_id)
+        VALUES ( #{group}
+               , #{targetId}
+               , #{title}
+               , #{contents}
+               , #{topList}
+               , #{attachFilename}
+               , #{sessionUserId}
+               , #{sessionUserId}
+               , #{sessionUserId})
+        <selectKey keyProperty="noticeId" order="AFTER" resultType="Integer">
+            SELECT LAST_INSERT_ID()
+        </selectKey>
+    </insert>
+
+    <update id="updateNotice" parameterType="NoticeVO">
+        UPDATE notice
+        SET `group`         = #{group}
+          , target_id       = #{targetId}
+          , title           = #{title}
+          , contents        = #{contents}
+          , top_list        = #{topList}
+          , attach_filename = #{attachFilename}
+          , updated_at      = NOW()
+          , updated_user_id = #{sessionUserId}
+        WHERE notice_id = #{noticeId}
+    </update>
+
+    <update id="deleteNotice" parameterType="NoticeVO">
+        UPDATE notice
+        SET deleted_at      = NOW()
+          , updated_user_id = #{sessionUserId}
+        WHERE notice_id = #{noticeId}
+    </update>
+</mapper>

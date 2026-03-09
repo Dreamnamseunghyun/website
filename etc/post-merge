@@ -1,0 +1,4 @@
+#!/bin/sh
+
+echo "git.revision=`git rev-list --count HEAD`"
+echo "git.revision=`git rev-list --count HEAD`" > src/main/resources/git.revision.properties

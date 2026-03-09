@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>건강살자(사용자) 검진 희망일 선택</title>
+    <link href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css" rel="stylesheet"  type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/css/swiper.min.css" rel="stylesheet" type="text/css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css" rel="stylesheet" type="text/css">
+    <link href="../css/us/bootstrap.css" rel="stylesheet"  type="text/css">
+    <link href="../css/us/common.css" rel="stylesheet" type="text/css">
+    <link href="../css/us/header.css" rel="stylesheet" type="text/css">
+    <link href="../css/us/footer.css" rel="stylesheet" type="text/css">
+    <link href="../css/us/reserve_step_line.css" rel="stylesheet" type="text/css">
+    <link href="../css/us/sub_common.css" rel="stylesheet" type="text/css">
+    <link href="../css/us/jquery_ui.css" rel="stylesheet" type="text/css">
+
+<style>
+    .ui-widget {
+        font-family: inherit;
+    }
+    .ui-datepicker {
+        border-color: #f7f7f7 !important;
+        border-radius:5px;
+        box-shadow: 0 20px 70px rgba(0, 0, 0, 0.07);
+    }
+    .ui-datepicker table {
+        border: none;
+    }
+    .ui-datepicker table tr {
+        border: none;
+    }
+    .ui-datepicker .ui-state-default {
+        width: 30px;
+        height: 30px;
+        padding: 0;
+        background: none;
+        border: none;
+        font-size: 13px;
+        line-height: 30px;
+        border-radius: 50em;
+        text-align: center;
+    }
+    .ui-datepicker .ui-state-default:hover {
+        background-color: var(--color-primary);
+        color: #fff;
+    }
+    .ui-datepicker .ui-state-active, .ui-datepicker .ui-state-highlight {
+        color: #fff;
+    }
+    .ui-datepicker .ui-state-highlight {
+        background-color: #666;
+    }
+    .ui-datepicker .ui-state-active {
+        background-color: var(--color-primary);
+    }
+    .ui-datepicker .ui-state-active {
+        box-shadow: 0 5px 12px rgba(0, 0, 0, 0.12);
+    }
+    .ui-datepicker-header {
+        border: none;
+        border-bottom: 1px solid #eee;
+        border-radius: 0;
+        background: none;
+    }
+    .ui-datepicker-prev, .ui-datepicker-next {
+        top: 2px !important;
+        border: none !important;
+        background: none !important;
+        cursor: pointer;
+        font-weight: 400;
+    }
+    .ui-datepicker-prev span, .ui-datepicker-next span {
+        position: relative;
+        /*
+        background: none !important;
+        font-size: 12px;
+        */
+        font-size:0;
+        transition: transform 0.3s;
+    }
+    .ui-datepicker-prev span:before, .ui-datepicker-next span:before {
+        display: inline-flex;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        font-family: fontAwesome;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        text-indent: 0;
+    }
+    .ui-datepicker-prev {
+        left: 2px !important;
+    }
+    .ui-datepicker-prev span:before {
+        content: '\f060';
+    }
+    .ui-datepicker-prev:hover span {
+        transform: translateX(-2px);
+    }
+    .ui-datepicker-next {
+        right: 2px !important;
+    }
+    .ui-datepicker-next span:before {
+        content: '\f061';
+    }
+    .ui-datepicker-next:hover span {
+        transform: translateX(2px);
+    }
+
+
+
+    .schedule_wrap{height:340px;}
+    #datepicker{width:calc(50% - 10px); float:left; margin-right:20px;}
+    .ui-widget.ui-widget-content{ width:100%; height:340px; padding:0; overflow:hidden; padding:10px}
+    .ui-datepicker table{height:calc(100% - 50px); margin:0; }
+    .ui-datepicker .ui-datepicker-header{height:50px; padding:0;}
+    .ui-datepicker .ui-state-default{width:auto;}
+    .ui-datepicker .ui-state-active{position:relative; background:#0288ed}
+    .ui-datepicker .ui-state-default:hover{ background:#0288ed}
+    .ui-datepicker .ui-datepicker-title{margin:0; line-height:50px;}
+    .ui-datepicker select.ui-datepicker-month, .ui-datepicker select.ui-datepicker-year{width:70px; text-align-last:center; margin:0; font-size:15px; font-family:'Noto Sans',sans-serif; border:1px solid #acbdbf; transition: all 0.3s ease; background:#f6f7fa; outline: none;
+        line-height: normal; margin-left: 10px; color:#333; font-weight: bold;}
+
+    .ui-datepicker .ui-datepicker-prev, .ui-datepicker .ui-datepicker-next{top:50%!important; transform:translateY(-50%)}
+    .ui-datepicker .ui-datepicker-next{right:15px!important;}
+    .ui-datepicker .ui-datepicker-prev{left:15px!important;}
+    .ui-datepicker th:first-of-type{color:#df4545;}
+    .ui-datepicker th:last-of-type{color:#3d82bc;}
+    .reservation{float:left; width:calc(50% - 10px); height:340px;}
+    .reservation .res_title{line-height: normal; color:#333; text-align:center; font-weight:700; }
+
+
+
+
+
+
+
+
+
+    .res_time{height:160px; overflow:hidden; padding:0 100px; position:relative; margin:30px 0 0 0}
+    .res_time > div{height:100%; overflow:hidden; width:calc(100% / 3); float:left;}
+    .res_time .swiper-slide{line-height:57px; text-align:center; color:#333; transition:opacity .3s linear 0s; font-size:15px;  opacity:0; }
+    .res_time .swiper-slide-prev{transform:rotateX(0deg) translateZ(40px);  opacity:0.3; }
+    .res_time .swiper-slide-next{transform:rotateX(0deg) translateZ(40px);  opacity:0.3; }
+    .res_title{position:relative;}
+    .res_title .caution{font-size:12px; position:absolute; top:35px; right:0; color:#666; font-weight:normal;}
+    .res_time .swiper-slide-active{transform:rotateX(0deg) translateZ(85px); opacity:1;}
+    .res_time .select_box{width:70%; height:40px; border:2px solid #333; position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); box-shadow:0 20px 40px rgba(0, 0, 0, 0.07)}
+    .res_time .select_box:after{content:""; clear:both; display:block; height:0; visibility:hidden; }
+    .res_btn{width:100%; position:relative; margin-top:30px;}
+
+    .ap_wrap{pointer-events:none; }
+    .ap_wrap .swiper-slide-next{opacity:0!important;}
+    .ap_wrap .swiper-slide-prev{opacity:0!important;}
+
+    .select_date_box > div{display:flex; align-items:center; justify-content: center; margin-bottom:20px}
+    .select_date_box > div:last-of-type{margin-bottom: 0;}
+    .select_date_box > span{float:left; margin-right:10px; font-size:13px; color:#333}
+    .select_date_box .select_date{color:#333; font-size:14px;}
+    .select_date .date_comment{font-size:14px;}
+
+    .res_btn .select_btn{width: 100%;}
+    .select_btn > button{box-shadow:-5px -5px 20px #FFF, 5px 5px 10px #BABECC; font-weight:300; color:#fff; height:35px; line-height:35px; width:150px; background:#333; font-size:12px; border:0; transition: all 0.2s ease-in-out;outline:none; }
+    .select_btn > button:active{box-shadow:none;}
+
+    .confirm_btn{padding:40px 0 35px 0;}
+
+    @media (max-width: 767px){
+
+        #calendar > div > div{width:100%; float:none; margin-bottom:20px;}
+        #calendar > div > div:last-of-type{margin-bottom:0;}
+        .RESERVATION{margin-bottom:0;}
+
+
+    }
+
+
+
+
+
+</style>
+
+</head>
+<body>
+    <header></header>
+    <div class="header_blank"></div>
+    <!--header-->
+    <main>
+        <section class="main_section">
+           <div class="main_cont">
+
+               <div class="step_line four_step_line"> <!--step_line-->
+                   <div class="step_line_color">
+                       <div class="step_color step_color_first active">
+                       </div>
+                       <div class="container">
+                       </div>
+                       <div class="step_color step_color_last">
+                       </div>
+                   </div>
+                   <div class="container">
+                       <div class="row">
+                           <div class="step_area">
+                               <div class="step step01 active">
+                                   <div class="step_inner">
+                                       <div class="left_area">
+                                           <div class="title">
+                                               <h3>STEP 1</h3>
+                                           </div>
+                                           <div class="info">
+                                               검진 예약
+                                           </div>
+                                       </div>
+                                       <div class="right_area">
+                                           <img src="../img/us/reserve/step_line/step_line_img01_active.png">
+                                       </div>
+                                   </div>
+                                   <div class="step_border">
+                                   </div>
+                               </div><!--step01-->
+
+                               <div class="step step02 active">
+                                   <div class="step_inner">
+                                       <div class="left_area">
+                                           <div class="title">
+                                               <h3>STEP 2</h3>
+                                           </div>
+                                           <div class="info">
+                                               검진 희망일 선택
+                                           </div>
+                                       </div>
+                                       <div class="right_area">
+                                           <img src="../img/us/reserve/step_line/step_line_img04_active.png">
+                                       </div>
+                                   </div>
+                                   <div class="step_border">
+                                   </div>
+                               </div><!--step02-->
+
+                               <div class="step step03">
+                                   <div class="step_inner">
+                                       <div class="left_area">
+                                           <div class="title">
+                                               <h3>STEP 3</h3>
+                                           </div>
+                                           <div class="info">
+                                               병원 및 항목 선택
+                                           </div>
+                                       </div>
+                                       <div class="right_area">
+                                           <img src="../img/us/reserve/step_line/step_line_img03.png">
+                                       </div>
+                                   </div>
+                                   <div class="step_border">
+                                   </div>
+                               </div><!--step03-->
+
+
+                               <div class="step step05">
+                                   <div class="step_inner">
+                                       <div class="left_area">
+                                           <div class="title">
+                                               <h3>STEP 4</h3>
+                                           </div>
+                                           <div class="info">
+                                               최종 예약 정보
+                                           </div>
+                                       </div>
+                                       <div class="right_area">
+                                           <img src="../img/us/reserve/step_line/step_line_img05.png">
+                                       </div>
+                                   </div>
+                               </div><!--step04-->
+
+                           </div><!--step_area-->
+                       </div><!--row-->
+                   </div><!--container-->
+               </div><!--step_line-->
+
+                <div class="container">
+
+
+                    <div class="reserve_checkup_date_area">
+
+                            <div class="title_area">
+                                     <div class="title">
+                                        <span class="point_line point_color"></span>
+                                        <h2>검진 희망일  선택</h2>
+                                     </div>
+                                     <div class="title_add_txt">※ 달력의 예약일자 선택 버튼을 클릭하여 원하시는 검진 예약일과 시간을 설정해 주세요.</div>
+                             </div>
+                           <div class="calendar">
+
+                               <div class="schedule_wrap">
+                                  <div id="datepicker"></div>
+                                  <div class="reservation">
+                                        <div class="res_title">
+                                          <p>예약 시간 선택</p>
+                                          <p class="caution">( ※ 진료 예약 가능한 시간 : 7시 ~ 18시 )</p>
+                                      </div>
+
+
+                                      <div class="res_time">
+                                             <div class="select_box"></div>
+                                            <div class="ap_wrap swiper-container">
+                                                <div class="swiper-wrapper">
+                                                  <div class="swiper-slide" data-ap="am">오전</div>
+                                                  <div class="swiper-slide" data-ap="pm">오후</div>
+                                              </div>
+                                           </div>
+                                            <div class="hour_wrap swiper-container">
+                                                <div class="swiper-wrapper">
+                                                 <div class="swiper-slide" data-h="7" data-ap2="am"><span class="number">7</span> 시</div>
+                                                  <div class="swiper-slide" data-h="8" data-ap2="am"><span class="number">8</span> 시</div>
+                                                   <div class="swiper-slide" data-h="9" data-ap2="am"><span class="number">9</span> 시</div>
+                                                    <div class="swiper-slide" data-h="10" data-ap2="am"><span class="number">10</span> 시</div>
+                                                  <div class="swiper-slide" data-h="11" data-ap2="am"><span class="number">11</span> 시</div>
+                                                  <div class="swiper-slide" data-h="12" data-ap2="pm"><span class="number">12</span> 시</div>
+                                                    <div class="swiper-slide" data-h="13" data-ap2="pm"><span class="number">13</span> 시</div>
+                                                    <div class="swiper-slide" data-h="14" data-ap2="pm"><span class="number">14</span> 시</div>
+                                                    <div class="swiper-slide" data-h="15" data-ap2="pm"><span class="number">15</span> 시</div>
+                                                    <div class="swiper-slide" data-h="16" data-ap2="pm"><span class="number">16</span> 시</div>
+                                                    <div class="swiper-slide" data-h="17" data-ap2="pm"><span class="number">17</span> 시</div>
+                                                    <div class="swiper-slide" data-h="18" data-ap2="pm"><span class="number">18</span> 시</div>
+                                                    <!--<div class="swiper-slide" data-h="19" data-ap2="pm"><span class="number">19</span> 시</div>-->
+                                              </div>
+                                          </div>
+                                          <div class="min_wrap swiper-container">
+                                                <div class="swiper-wrapper">
+                                                  <div class="swiper-slide"><span class="number">00</span> 분</div>
+                                                  <div class="swiper-slide"><span class="number">30</span> 분</div>
+                                              </div>
+                                          </div>
+
+                                      </div>
+
+
+                                      <div class="res_btn">
+                                        <div class="select_date_box">
+                                          <div class="select_date"><span class="date_comment">예약 일자 및 예약 시간을 선택한 후 버튼을 클릭 해주세요.</span><span class="form_coment"><span class="year"></span> <span class="month"></span> <span class="day"></span> <span class="ap"></span> <span class="hour"></span> <span class="min"></span></span><span class="last_comment"></span></div>
+                                             <div class="select_btn">
+                                                <button>예약일자 선택</button>
+                                             </div>
+                                        </div>
+                                      </div>
+                                  </div><!--reservation-->
+				            </div><!--schedule_wrap-->
+
+                           </div><!--calendar-->
+
+                    </div><!--reserve_checkup_date_area-->
+
+                <input type="hidden" name="s_v1" id="s_v1" value="" class="reserve_info">
+                   <div class="confirm_btn">
+                    <div class="btn_area">
+                        <div class="btn date_btn">
+                                <span class="button_on_circle"></span>
+                                <a href="#none" class="btn_inner blue_gradient">
+                                 <span class="btn_txt_area">검진희망일 선택완료</span>
+                                </a>
+                         </div>
+                      </div>
+                    </div>
+
+               </div><!--container-->
+
+
+            </div><!--main_cont-->
+        </section><!--main_section-->
+
+    </main>
+
+
+
+    <footer>
+
+    </footer>
+
+<script src="https://code.jquery.com/jquery-latest.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+<script src="../js/us/sub_common.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.js"></script>
+<script>
+/****
+추가해야할 팝업 입니다
+****/
+
+//패키지에 예약 마감된 항목이 존재할때 뜨는 팝업 입니다.
+
+//closing_item_area안에 예약마감된 항목을
+//<p class='closing_item'>예약마감된항목</p>의 형태로 넣어주시면 됩니다.
+
+/*
+Swal.fire({
+         icon: 'warning',
+         title: "선택하신 검진 패키지에<br>포함된 검사 중 예약이 마감된<br>항목이 존재합니다.<div class='closing_item_area'><p class='closing_item'>마감된항목</p><p class='closing_item'>마감된항목</p></div>다른 예약 가능한<br>요일로 예약 바랍니다."
+})
+*/
+
+
+$("header").load("header.html");
+$("footer").load("footer.html");
+
+
+
+
+ // 특정일
+var disabledDays = [/*"4-30-2020","5-5-2020","9-30-2020","10-1-2020","10-2-2020","10-9-2020","12-25-2020"*/];
+
+// 특정일 금지
+function nationalDays(date) {
+	var m = date.getMonth(), d = date.getDate(), y = date.getFullYear();
+	for (i = 0; i < disabledDays.length; i++) {
+		if($.inArray((m+1) + '-' + d + '-' + y,disabledDays) != -1){
+			disabledDays[i];
+			return [false];
+		}
+	}
+	return [true];
+}
+
+//주말 선택 금지
+function noWeekendsOrHolidays(date) {
+	var noWeekend = jQuery.datepicker.noWeekends(date);
+	return noWeekend[0] ? nationalDays(date) : noWeekend;
+}
+
+
+ $("#datepicker").datepicker({
+             dateFormat: 'yy-mm-dd' //Input Display Format 변경
+                ,showOtherMonths: true //빈 공간에 현재월의 앞뒤월의 날짜를 표시
+                ,showMonthAfterYear:true //년도 먼저 나오고, 뒤에 월 표시
+                ,changeYear: false //콤보박스에서 년 선택 가능
+                ,changeMonth: true //콤보박스에서 월 선택 가능
+                ,showOn: "both" //button:버튼을 표시하고,버튼을 눌러야만 달력 표시 ^ both:버튼을 표시하고,버튼을 누르거나 input을 클릭하면 달력 표시
+                ,buttonImage: "http://jqueryui.com/resources/demos/datepicker/images/calendar.gif" //버튼 이미지 경로
+                ,buttonImageOnly: true //기본 버튼의 회색 부분을 없애고, 이미지만 보이게 함
+                ,buttonText: "선택" //버튼에 마우스 갖다 댔을 때 표시되는 텍스트
+                ,yearSuffix: "년" //달력의 년도 부분 뒤에 붙는 텍스트
+                ,monthNamesShort: ['1','2','3','4','5','6','7','8','9','10','11','12'] //달력의 월 부분 텍스트
+                ,monthNames: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'] //달력의 월 부분 Tooltip 텍스트
+                ,dayNamesMin: ['일','월','화','수','목','금','토'] //달력의 요일 부분 텍스트
+                ,dayNames: ['일요일','월요일','화요일','수요일','목요일','금요일','토요일'] //달력의 요일 부분 Tooltip 텍스트
+   				   ,minDate: "1D" // -1D:하루전, -1M:한달전, -1Y:일년전
+     		    	/* ,maxDate: "+9M" // +1D:하루후, -1M:한달후, -1Y:일년후  */
+               /*,beforeShowDay: noWeekendsOrHolidays*/
+              ,monthNamesShort: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'] //콤보박스에서 월 텍스트
+
+            });
+
+
+
+
+   var ap_options = {
+  slidesPerView: 3,
+      direction: 'vertical',
+   centeredSlides: true,
+   loop: true,
+   dots:false,
+   arrow:false
+};
+
+
+
+var hour_options = {
+    slidesPerView: 3,
+    direction: 'vertical',
+    centeredSlides: true,
+    loop: true,
+    dots:false,
+    arrow:false,
+
+    on : {
+    slideChangeTransitionStart: function () {
+        var t = $(".hour_wrap .swiper-slide-active").attr("data-h");
+        var ap2 = $(".hour_wrap .swiper-slide-active").attr("data-ap2");
+        var ap = $(".ap_wrap .swiper-slide-active").attr("data-ap");
+
+    if(ap2 == "am"){
+        if(ap == "pm"){
+        ap_swiper.slideNext();
+        }
+    }// 시간대가 오전으로 맞춰지면 오전오후 슬라이드도 맞게 움직임
+
+    if(ap2 == "pm"){
+        if(ap == "am"){
+        ap_swiper.slideNext();
+        }
+    }// 시간대가 오후로 맞춰지면 오전오후 슬라이드도 맞게 움직임
+
+    if(t == "18"){
+      min_swiper.slideTo(2)
+         $(".min_wrap").css({"pointer-events":"none"})
+       }
+      else{
+         $(".min_wrap").css({"pointer-events":"auto"})
+      }
+
+    }//슬라이드 될때마다
+}//on
+
+
+}
+
+  var min_options = {
+  slidesPerView: 3,
+      direction: 'vertical',
+   centeredSlides: true,
+   loop: true,
+   dots:false,
+   arrow:false,
+    allowTouchMove:true
+
+};
+
+
+var ap_swiper = new Swiper(".ap_wrap", ap_options);
+var hour_swiper = new Swiper(".hour_wrap", hour_options);
+var min_swiper = new Swiper(".min_wrap", min_options);
+
+
+
+$(".select_btn").click(function(){
+var select_ap = $(".ap_wrap .swiper-slide-active").attr("data-ap")
+
+var year = $(".ui-datepicker-year").text();
+var month = $(".ui-datepicker-month option:selected").text();
+var day = $(".ui-datepicker-calendar .ui-datepicker-current-day").text();
+var ap = $(".ap_wrap .swiper-slide-active").text();
+var hour = $(".hour_wrap .swiper-slide-active .number").text()
+var min = $(".min_wrap .swiper-slide-active .number").text();
+
+function select_date(){
+$(".select_date .date_comment").empty().css({"display":"none"})
+$(".select_date .year").empty().append(year + "년")
+$(".select_date .month").empty().append(month)
+$(".select_date .day").empty().append(day + "일")
+$(".select_date .ap").empty().append(ap)
+$(".select_date .hour").empty().append(hour + "시")
+$(".select_date .min").empty().append(min + "분")
+$(".select_date .last_comment").empty().append("으로 선택 하셨습니다.")
+}
+  select_date();
+
+
+
+  var reserve_info = $(".form_coment").text();
+  $(".reserve_info").val(reserve_info);
+
+})
+
+$(".date_btn").click(function(){
+
+    if(!s_v1.value){ //예약정보
+
+    $(".res_btn .select_btn button").addClass("btn_focus")
+        setTimeout(() => {
+                $(".res_btn .select_btn button").removeClass("btn_focus")
+        },  1000);
+    Swal.fire('예약일자 및 예약시간을\n선택해 주세요.', '', 'warning' );
+	return;
+    }
+
+    //통과
+    location.href="reserve_checkup_d.html"
+})
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="kr.co.dsong.ggsj.hospital.service.mapper.HsubcontractMapper">
+    <!--    <select id="selectHsub" resultType="HsubcontractVO" parameterType="HsubcontractVO">-->
+    <!--        SELECT C.company_id-->
+    <!--             , C.company_code-->
+    <!--             , C.company_name-->
+    <!--             , CC.company_checkup_id-->
+    <!--             , CC.checkup_year-->
+    <!--             , CCT.company_checkup_type_id-->
+    <!--             , CCT.company_checkup_type_code-->
+    <!--             , CCT.company_checkup_type_name-->
+    <!--             , CCT.support_pay-->
+    <!--             , CCT.copay-->
+    <!--             , CCT.hospital_pay-->
+    <!--             , CCT.platform_pay-->
+    <!--             , CTTST.checkup_contract_sub_type_id-->
+    <!--             , CTTST.checkup_contract_type_id-->
+    <!--             , CTTST.sub_type_name-->
+    <!--             , CTTST.select_a_count-->
+    <!--             , CTTST.select_a_memo-->
+    <!--             , CTTST.select_b_count-->
+    <!--             , CTTST.select_b_memo-->
+    <!--             , CTTST.select_c_count-->
+    <!--             , CTTST.select_c_memo-->
+    <!--             , CTTST.select_d_count-->
+    <!--             , CTTST.select_d_memo-->
+    <!--             , CTTST.select_e_count-->
+    <!--             , CTTST.select_e_memo-->
+    <!--             , CTTST.select_f_count-->
+    <!--             , CTTST.select_f_memo-->
+    <!--             , H.hospital_id-->
+    <!--             , H.hospital_code-->
+    <!--             , H.hospital_name-->
+    <!--             , CTR.center_id-->
+    <!--             , CTR.center_code-->
+    <!--             , CTR.center_name-->
+    <!--        FROM checkup_contract_sub_type CTTST-->
+    <!--                     JOIN checkup_contract_type CTTT ON CTTST.checkup_contract_type_id = CTTT.checkup_contract_type_id-->
+    <!--                     JOIN company_checkup_type CCT ON CTTT.company_checkup_type_id = CCT.company_checkup_type_id-->
+    <!--                     JOIN checkup_contract CTT ON CTTT.checkup_contract_id = CTT.checkup_contract_id-->
+    <!--                     JOIN company_checkup CC-->
+    <!--                ON CTT.company_checkup_id = CC.company_checkup_id AND CCT.company_checkup_id = CC.company_checkup_id-->
+    <!--                     JOIN company C ON CC.company_id = C.company_id-->
+    <!--                     JOIN center CTR ON CTT.center_id = CTR.center_id-->
+    <!--                     JOIN hospital H ON CTR.hospital_id = H.hospital_id-->
+    <!--        WHERE CTTST.deleted_at IS NULL-->
+    <!--          AND CCT.deleted_at IS NULL-->
+    <!--          AND CC.deleted_at IS NULL-->
+    <!--          AND C.deleted_at IS NULL-->
+    <!--          AND CTR.deleted_at IS NULL-->
+    <!--          AND H.deleted_at IS NULL-->
+    <!--          AND CTTST.checkup_contract_sub_type_id = #{checkupContractSubTypeId}-->
+    <!--    </select>-->
+
+    <select id="selectHsub" resultType="HsubcontractVO" parameterType="HsubcontractVO">
+        SELECT C.company_id
+             , C.company_code
+             , C.company_name
+             , CC.company_checkup_id
+             , CC.checkup_year
+             , CCT.company_checkup_type_id
+             , CCT.company_checkup_type_code
+             , CCT.company_checkup_type_name
+             , CCT.support_pay
+             , CCT.copay
+             , CCT.hospital_pay
+             , CCT.platform_pay
+             , CTTT.checkup_contract_type_id
+             , CTTST.checkup_contract_sub_type_id
+             , CTTST.sub_type_name
+             , CTTST.select_a_count
+             , CTTST.select_a_memo
+             , CTTST.select_b_count
+             , CTTST.select_b_memo
+             , CTTST.select_c_count
+             , CTTST.select_c_memo
+             , CTTST.select_d_count
+             , CTTST.select_d_memo
+             , CTTST.select_e_count
+             , CTTST.select_e_memo
+             , CTTST.select_f_count
+             , CTTST.select_f_memo
+             , H.hospital_id
+             , H.hospital_code
+             , H.hospital_name
+             , CTR.center_id
+             , CTR.center_code
+             , CTR.center_name
+        FROM center CTR
+                     JOIN checkup_contract CTT ON CTT.center_id = CTR.center_id
+                     JOIN hospital H ON CTR.hospital_id = H.hospital_id
+                     JOIN checkup_contract_type CTTT ON CTT.checkup_contract_id = CTTT.checkup_contract_id
+                     JOIN company_checkup_type CCT ON CTTT.company_checkup_type_id = CCT.company_checkup_type_id AND
+                                                      CCT.company_checkup_type_id = #{companyCheckupTypeId}
+                     JOIN company_checkup CC ON CCT.company_checkup_id = CC.company_checkup_id
+                     JOIN company C ON CC.company_id = C.company_id
+                     LEFT JOIN checkup_contract_sub_type CTTST
+                ON CTTT.checkup_contract_type_id = CTTST.checkup_contract_type_id AND CTTST.deleted_at IS NULL
+        WHERE CCT.deleted_at IS NULL
+          AND CC.deleted_at IS NULL
+          AND C.deleted_at IS NULL
+          AND CTR.deleted_at IS NULL
+          AND H.deleted_at IS NULL
+          AND CTR.center_id = #{centerId}
+    </select>
+
+    <select id="selectHsubItems" resultType="HsuItemsVO" parameterType="HsuItemsVO">
+        SELECT item_class_id   AS id
+             , item_class_id   AS key_id
+             , NULL            AS parent_id
+             , NULL            AS key_parent_id
+             , 'class'         AS item_type
+             , item_class_code AS code
+             , item_class_name AS name
+             , NULL            AS hospital_checkup_id
+             , NULL            AS hospital_id
+             , NULL            AS checkup_year
+             , NULL            AS bill
+             , NULL            AS checkup_contract_item_id
+             , NULL            AS checkup_contract_sub_type_id
+             , NULL            AS register
+             , NULL            AS copay
+             , NULL            AS discount_bill
+        FROM item_class
+        WHERE deleted_at IS NULL
+        UNION ALL
+        SELECT item_category_id         AS id
+             , item_category_id + 10000 AS key_id
+             , item_class_id            AS parent_id
+             , item_class_id            AS key_parent_id
+             , 'category'               AS item_type
+             , item_category_code       AS code
+             , item_category_name       AS name
+             , NULL                     AS hospital_checkup_id
+             , NULL                     AS hospital_id
+             , NULL                     AS checkup_year
+             , NULL                     AS bill
+             , NULL                     AS checkup_contract_item_id
+             , NULL                     AS checkup_contract_sub_type_id
+             , NULL                     AS register
+             , NULL                     AS copay
+             , NULL                     AS discount_bill
+        FROM item_category
+        WHERE deleted_at IS NULL
+        UNION ALL
+
+        SELECT I.item_id                         AS id
+             , I.item_id + 1000000               AS key_id
+             , I.item_category_id                AS parent_id
+             , I.item_category_id + 10000        AS key_parent_id
+             , 'item'                            AS item_type
+             , I.item_code                       AS code
+             , I.item_name                       AS name
+             , HC.hospital_checkup_id            AS hospital_checkup_id
+             , HC.hospital_id                    AS hospital_id
+             , HC.checkup_year                   AS checkup_year
+             , HC.bill                           AS bill
+             , CTTI.checkup_contract_item_id     AS checkup_contract_item_id
+             , CTTI.checkup_contract_sub_type_id AS checkup_contract_sub_type_id
+             , IFNULL(CTTI.register, 0)          AS register
+             , CTTI.copay                        AS copay
+             , CTTI.discount_bill                AS discount_bill
+        FROM item I
+                     LEFT JOIN hospital_checkup HC
+                ON I.item_id = HC.item_id AND HC.hospital_id = #{hospitalId} AND HC.checkup_year = #{checkupYear}
+                     LEFT JOIN checkup_contract_item CTTI
+                ON I.item_id = CTTI.item_id
+                        AND CTTI.checkup_contract_sub_type_id = #{checkupContractSubTypeId}
+    </select>
+
+    <insert id="insertCheckupContractSub" parameterType="HsubcontractVO">
+        INSERT INTO checkup_contract_sub_type
+                ( checkup_contract_type_id
+                , sub_type_name
+                , select_a_count
+                , select_a_memo
+                , select_b_count
+                , select_b_memo
+                , select_c_count
+                , select_c_memo
+                , select_d_count
+                , select_d_memo
+                , select_e_count
+                , select_e_memo
+                , select_f_count
+                , select_f_memo
+                , created_user_id
+                , updated_user_id)
+        VALUES ( #{checkupContractTypeId}
+               , #{subTypeName}
+               , #{selectACount}
+               , #{selectAMemo}
+               , #{selectBCount}
+               , #{selectBMemo}
+               , #{selectCCount}
+               , #{selectCMemo}
+               , #{selectDCount}
+               , #{selectDMemo}
+               , #{selectECount}
+               , #{selectEMemo}
+               , #{selectFCount}
+               , #{selectFMemo}
+               , #{sessionUserId}
+               , #{sessionUserId})
+    </insert>
+
+    <insert id="insertItemClass" parameterType="HsuItemsVO">
+        INSERT INTO item_class
+        ( item_class_code
+        , item_class_name
+        , created_user_id
+        , updated_user_id)
+        VALUES ( #{code}
+        , #{name}
+        , #{sessionUserId}
+        , #{sessionUserId})
+        <selectKey keyProperty="id" order="AFTER" resultType="Integer">
+            SELECT LAST_INSERT_ID()
+        </selectKey>
+    </insert>
+
+    <insert id="insertItemCategory" parameterType="HsuItemsVO">
+        INSERT INTO item_category
+        ( item_class_id
+        , item_category_code
+        , item_category_name
+        , created_user_id
+        , updated_user_id)
+        VALUES ( #{parentId}
+        , #{code}
+        , #{name}
+        , #{sessionUserId}
+        , #{sessionUserId})
+        <selectKey keyProperty="id" order="AFTER" resultType="Integer">
+            SELECT LAST_INSERT_ID()
+        </selectKey>
+    </insert>
+
+    <insert id="insertItem" parameterType="HsuItemsVO">
+        INSERT INTO item
+        ( item_category_id
+        , item_code
+        , item_name
+        , item_desc
+        , created_user_id
+        , updated_user_id)
+        VALUES ( #{parentId}
+        , #{code}
+        , #{name}
+        , #{itemDesc}
+        , #{sessionUserId}
+        , #{sessionUserId})
+        <selectKey keyProperty="id" order="AFTER" resultType="Integer">
+            SELECT LAST_INSERT_ID()
+        </selectKey>
+    </insert>
+
+    <update id="updateCheckupContractSub" parameterType="HsubcontractVO">
+        UPDATE checkup_contract_sub_type
+        SET checkup_contract_type_id = #{checkupContractTypeId}
+          , sub_type_name            = #{subTypeName}
+          , select_a_count           = #{selectACount}
+          , select_a_memo            = #{selectAMemo}
+          , select_b_count           = #{selectBCount}
+          , select_b_memo            = #{selectBMemo}
+          , select_c_count           = #{selectCCount}
+          , select_c_memo            = #{selectCMemo}
+          , select_d_count           = #{selectDCount}
+          , select_d_memo            = #{selectDMemo}
+          , select_e_count           = #{selectECount}
+          , select_e_memo            = #{selectEMemo}
+          , select_f_count           = #{selectFCount}
+          , select_f_memo            = #{selectFMemo}
+          , updated_at               = NOW()
+          , updated_user_id          = #{sessionUserId}
+        WHERE checkup_contract_sub_type_id = #{checkupContractSubTypeId}
+    </update>
+
+    <update id="updateItemClass" parameterType="HsuItemsVO">
+        UPDATE item_class
+        SET item_class_code = #{code}
+          , item_class_name = #{name}
+          , updated_at      = NOW()
+          , updated_user_id = #{sessionUserId}
+        WHERE item_class_id = #{id}
+    </update>
+
+    <update id="updateItemCategory" parameterType="HsuItemsVO">
+        UPDATE item_category
+        SET item_category_code = #{code}
+          , item_category_name = #{name}
+          , updated_at         = NOW()
+          , updated_user_id    = #{sessionUserId}
+        WHERE item_category_id = #{id}
+    </update>
+
+    <update id="updateItem" parameterType="HsuItemsVO">
+        UPDATE item
+        SET item_code       = #{code}
+          , item_name       = #{name}
+          , item_desc       = #{itemDesc}
+          , updated_at      = NOW()
+          , updated_user_id = #{sessionUserId}
+        WHERE item_id = #{id}
+    </update>
+
+    <update id="deleteItemClass" parameterType="HsuItemsVO">
+        UPDATE item_class
+        SET deleted_at      = NOW()
+          , deleted_user_id = #{sessionUserId}
+        WHERE item_class_id = #{id}
+    </update>
+
+    <update id="deleteItemCategory" parameterType="HsuItemsVO">
+        UPDATE item_category
+        SET deleted_at      = NOW()
+          , deleted_user_id = #{sessionUserId}
+        WHERE item_category_id = #{id}
+    </update>
+
+    <update id="deleteItem" parameterType="HsuItemsVO">
+        UPDATE item
+        SET deleted_at      = NOW()
+          , deleted_user_id = #{sessionUserId}
+        WHERE item_id = #{id}
+    </update>
+</mapper>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+    <settings>
+        <setting name="mapUnderscoreToCamelCase" value="true"/>
+        <setting name="jdbcTypeForNull" value="NULL"/>
+    </settings>
+    <typeAliases>
+        <typeAlias alias="egovMap" type="egovframework.rte.psl.dataaccess.util.EgovMap"/>
+
+        <package name="kr.co.dsong.ggsj"/>
+        <package name="kr.co.dsong.ggsj.company.vo"/>
+        <package name="kr.co.dsong.ggsj.employee.vo"/>
+        <package name="kr.co.dsong.ggsj.user.vo"/>
+        <package name="kr.co.dsong.ggsj.commune.vo"/>
+        <package name="kr.co.dsong.ggsj.hospital.vo"/>
+        <package name="kr.co.dsong.ggsj.center.vo"/>
+        <package name="kr.co.dsong.ggsj.qna.vo"/>
+        <package name="kr.co.dsong.ggsj.manager.vo"/>
+        <package name="kr.co.dsong.ggsj.contract.vo"/>
+    </typeAliases>
+</configuration>
