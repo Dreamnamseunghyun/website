@@ -2,7 +2,7 @@
 <Context path="">
     <Resource name="jndi/sitebuilder" auth="Container" type="javax.sql.DataSource"
               maxIdle="3" maxTotal="10" maxWaitMillis="10000"
-              factory="org.apache.commons.dbcp2.BasicDataSourceFactory"
+              factory="org.apache.tomcat.dbcp.dbcp.BasicDataSourceFactory"
               driverClassName="net.sf.log4jdbc.sql.jdbcapi.DriverSpy"
               url="jdbc:log4jdbc:mysql://db-72q68-kr.vpc-pub-cdb.ntruss.com:16033/sitebuilder"
               username="sitebuilderuser" password="Dsitebuilder12#"
