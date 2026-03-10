@@ -1,0 +1,253 @@
+﻿* {
+    box-sizing: border-box;
+}
+
+.login-page {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 56px;
+    font-family: 'Apple SD Gothic Neo', 'Malgun Gothic', 'Noto Sans KR', sans-serif;
+}
+
+.login-page-light {
+    background: #f5f5f5;
+    color: #202124;
+}
+
+.login-page-dark {
+    background: #0f1115;
+    color: #ffffff;
+}
+
+.login-wrapper {
+    width: 100%;
+    max-width: 430px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login-title {
+    margin: 0;
+    font-size: 52px;
+    font-weight: 700;
+    letter-spacing: -1px;
+    line-height: 1.2;
+}
+
+.dark-title {
+    color: #ffffff;
+}
+
+.login-subtitle {
+    margin: 24px 0 44px;
+    font-size: 26px;
+    line-height: 1.45;
+    color: #5f6368;
+    text-align: center;
+    letter-spacing: -0.4px;
+}
+
+.dark-subtitle {
+    color: #c7c9ce;
+}
+
+.login-card {
+    width: 100%;
+    border-radius: 14px;
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    overflow: hidden;
+}
+
+.dark-card {
+    background: #17191f;
+    border: 1px solid #23262d;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
+}
+
+.login-card-body {
+    padding: 30px 28px 26px;
+}
+
+.login-label {
+    display: block;
+    margin-bottom: 18px;
+    font-size: 28px;
+    font-weight: 600;
+    color: #202124;
+}
+
+.dark-label {
+    color: #ffffff;
+}
+
+.login-input {
+    width: 100%;
+    height: 58px;
+    border: 1px solid #d5d7da;
+    border-radius: 6px;
+    padding: 0 16px;
+    font-size: 22px;
+    outline: none;
+    background: #ffffff;
+    color: #202124;
+    margin-bottom: 12px;
+}
+
+.login-input::placeholder {
+    color: #9aa0a6;
+}
+
+.login-input:focus {
+    border-color: #1a73e8;
+}
+
+.dark-input {
+    background: #17191f;
+    border: 1px solid #3a3f47;
+    color: #ffffff;
+}
+
+.dark-input::placeholder {
+    color: #9aa0a6;
+}
+
+.dark-input:focus {
+    border-color: #5c8dff;
+}
+
+.login-link-button {
+    border: none;
+    background: transparent;
+    padding: 0;
+    margin: 6px 0 26px;
+    font-size: 18px;
+    color: #1a73e8;
+    cursor: pointer;
+}
+
+.dark-link {
+    color: #9aa0a6;
+}
+
+.login-submit {
+    width: 100%;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+.login-submit:hover {
+    opacity: 0.92;
+}
+
+.light-submit {
+    background: #1a73e8;
+    color: #ffffff;
+}
+
+.dark-submit {
+    background: #101217;
+    color: #ffffff;
+    border: 1px solid #111318;
+}
+
+.login-card-footer {
+    border-top: 1px solid #e8eaed;
+    padding: 20px 28px;
+    background: #ffffff;
+}
+
+.dark-footer {
+    border-top: 1px solid #23262d;
+    background: #17191f;
+}
+
+.signup-link {
+    border: none;
+    background: transparent;
+    padding: 0;
+    font-size: 18px;
+    color: #1a73e8;
+    cursor: pointer;
+}
+
+.dark-signup-link {
+    color: #b8c7ff;
+}
+
+.login-footer-links {
+    display: flex;
+    gap: 24px;
+    margin-top: 42px;
+    font-size: 16px;
+    color: #5f6368;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.dark-footer-links {
+    color: #d0d2d7;
+}
+
+@media (max-width: 768px) {
+    .login-page {
+        padding: 36px 20px;
+        align-items: flex-start;
+    }
+
+    .login-wrapper {
+        max-width: 100%;
+    }
+
+    .login-title {
+        font-size: 34px;
+    }
+
+    .login-subtitle {
+        font-size: 18px;
+        margin: 18px 0 28px;
+    }
+
+    .login-card-body {
+        padding: 24px 20px 22px;
+    }
+
+    .login-label {
+        font-size: 22px;
+    }
+
+    .login-input {
+        height: 50px;
+        font-size: 16px;
+    }
+
+    .login-link-button,
+    .signup-link {
+        font-size: 14px;
+    }
+
+    .login-submit {
+        height: 46px;
+        font-size: 16px;
+    }
+
+    .login-card-footer {
+        padding: 16px 20px;
+    }
+
+    .login-footer-links {
+        gap: 14px;
+        font-size: 13px;
+        margin-top: 28px;
+    }
+}

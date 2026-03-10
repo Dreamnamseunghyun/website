@@ -5,44 +5,45 @@ import javax.annotation.Resource;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import kr.co.sitebuilder.login.service.LoginService;
-import kr.co.sitebuilder.login.service.mapper.LoginMapper;
 import kr.co.sitebuilder.login.vo.LoginVO;
 
-@Service("loginService")
-public class LoginServiceImpl implements LoginService {
+import egovframework.rte.fdl.cmmn.EgovAbstractServiceImpl;
+import kr.co.sitebuilder.login.service.LoginService;
+import kr.co.sitebuilder.login.service.mapper.LoginMapper;
+import lombok.extern.slf4j.Slf4j;
 
-    @Resource(name = "loginMapper")
-    private LoginMapper loginMapper;
+@Service
+@Slf4j
+public class LoginServiceImpl extends EgovAbstractServiceImpl implements LoginService {
 
-    @Resource(name = "passwordEncoder")
-    private BCryptPasswordEncoder passwordEncoder;
+    @Resource
+    private BCryptPasswordEncoder bCryptPasswordEncoder;
 
-    @Override
-    public LoginVO login(LoginVO loginVO) throws Exception {
-        LoginVO dbUser = loginMapper.selectUserById(loginVO.getId());
-
-        if (dbUser == null) {
-            return null;
-        }
-
-        boolean isMatched = passwordEncoder.matches(
-            loginVO.getPassword(),
-            dbUser.getPassword()
-        );
-
-        if (!isMatched) {
-            return null;
-        }
-
-        return dbUser;
-    }
+    @Resource
+    LoginMapper loginMapper;
 
     @Override
-    public int registerUser(LoginVO loginVO) throws Exception {
-        String encodedPassword = passwordEncoder.encode(loginVO.getPassword());
-        loginVO.setPassword(encodedPassword);
+    public LoginVO login(LoginVO vo) throws Exception {
+        LoginVO user = loginMapper.login(vo);
 
-        return loginMapper.insertUser(loginVO);
+        if (bCryptPasswordEncoder.matches(vo.getPassword(), user.getPassword())) {
+            if (user != null) {
+
+                user.setSuccess(true);
+                user.setMessage("로그인 성공");
+
+                return user;
+
+            } else {
+
+                LoginVO result = new LoginVO();
+                result.setSuccess(false);
+                result.setMessage("아이디 또는 비밀번호 오류");
+
+                return result;
+            }
+        }
+
+        return null;
     }
 }

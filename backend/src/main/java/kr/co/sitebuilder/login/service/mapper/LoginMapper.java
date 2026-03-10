@@ -7,8 +7,6 @@ import kr.co.sitebuilder.login.vo.LoginVO;
 @Mapper
 public interface LoginMapper {
 
-    LoginVO selectUserById(String id) throws Exception;
-
-    int insertUser(LoginVO loginVO) throws Exception;
+    LoginVO login(LoginVO vo) throws Exception;
 }
 
